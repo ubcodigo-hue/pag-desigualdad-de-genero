@@ -1,38 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Fuente para toda la página */
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Sacar los puntitos de la lista */
 ul {
     list-style: none;
 }
 
-/*selector de etiqueta*/
+/* Estilo de imágenes */
 img {
     border-radius: 20%;
 }
 
-/*selector de clase*/
+/* Secciones */
 .seccion1 {
     color: black;
     background-color: #d450f9;
     padding: 10px;
 }
+
 .seccion2 {
     color: black;
     background-color: #9e0dc6;
     padding: 10px;
 }
+
 .seccion3 {
-   color: black;
+    color: black;
     background-color: #770098;
     padding: 10px;
 }
 
-
+/* Imagen dentro del header */
 header img {
     border: 2px solid black;
 }
 
-/*argupamiento de sectores*/
-h1, {
+/* Títulos */
+h1, h2, h3, h4 {
     text-decoration: underline;
-    font-family: "Roboto", sans-serif;
 }
