@@ -4,7 +4,12 @@ ul {
 
 /*selector de etiqueta*/
 img {
-    border-radius: 5%;
+    border-radius: 20%;
 }
 
+/*argupamiento de sectores*/
+h1, h2, h3 {
+    background-color: blueviolet;
+    color: white;
+}
 
