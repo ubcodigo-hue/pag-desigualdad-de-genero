@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 ul {
     list-style: none;
 }
@@ -27,4 +29,10 @@ img {
 
 header img {
     border: 2px solid black;
+}
+
+/*argupamiento de sectores*/
+h1, h2, h3, h4 {
+    text-decoration: underline;
+    font-family: "Roboto", sans-serif;
 }
