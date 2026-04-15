@@ -31,7 +31,8 @@ header img {
     border: 2px solid black;
 }
 
-/*argupamiento de sectores*/
-body {
-    font-family: "Roboto", sans-serif;
+
+h1, h2, h3, h4 {
+    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
