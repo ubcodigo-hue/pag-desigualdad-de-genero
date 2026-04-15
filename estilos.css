@@ -32,6 +32,7 @@ header img {
 }
 
 /*argupamiento de sectores*/
-h1, h2, h3, h4 {
+h1, {
     text-decoration: underline;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+}
