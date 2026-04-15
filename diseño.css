@@ -1,3 +1,5 @@
+
+
 h1 {
 
     color: bisque;
@@ -9,7 +11,17 @@ color: aquamarine;
 text-decoration: overline;
 }
 
+/*argupamiento de sectores*/
 h1, h2, h3, h4 {
     text-decoration: underline;
 }
 
+/*selector de id*/
+#archivodecarpeta{
+font-size: 25px;
+}
+
+/*selector de clase*/   
+.destacado{
+    font-weight: bold;
+}
