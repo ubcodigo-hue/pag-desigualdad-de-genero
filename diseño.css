@@ -8,3 +8,8 @@ a{
 color: aquamarine;
 text-decoration: overline;
 }
+
+h1, h2, h3, h4 {
+    text-decoration: underline;
+}
+
