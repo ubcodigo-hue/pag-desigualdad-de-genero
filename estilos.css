@@ -7,9 +7,16 @@ img {
     border-radius: 20%;
 }
 
-/*argupamiento de sectores*/
-h1, h2, h3 {
-    background-color: blueviolet;
-    color: white;
+/*selector de clase*/
+.seccion1 {
+    background-color: #d450f9;
+    padding: 20px;
 }
-
+.seccion2 {
+    background-color: #d450f9;
+    padding: 20px;
+}
+.seccion3 {
+    background-color: #d450f9;
+    padding: 20px;
+}
