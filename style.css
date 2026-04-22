@@ -1,3 +1,4 @@
+@media (min-width: 700px) {
 body {
   background-color: rgb(148, 0, 211); /* violeta */
   }
@@ -5,7 +6,7 @@ body {
   column-count: 1; /* celulares */
   column-gap: 20px;
 
-
+}
 }
 
 
