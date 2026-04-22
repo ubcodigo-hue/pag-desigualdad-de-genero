@@ -1,11 +1,21 @@
 body {
   background-color: rgb(148, 0, 211); /* violeta */
+  }
+  p {
+  column-count: 1; /* celulares */
+  column-gap: 20px;
+
+
 }
+
 
 /* tablets */
 @media (min-width: 700px) {
   body {
     background-color: rgb(0, 0, 255); /* azul */
+  } 
+  p {
+    column-count: 2;
   }
 }
 
@@ -13,5 +23,9 @@ body {
 @media (min-width: 1200px) {
   body {
     background-color: rgb(0, 128, 0); /* verde */
+  }
+
+  p {
+    column-count: 3;
   }
 }
