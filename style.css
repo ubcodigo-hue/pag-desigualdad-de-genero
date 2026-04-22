@@ -20,6 +20,27 @@ p {
   background-color: lightgray;
 }
 
+/* BASE → celular */
+body {
+  background-color: rgb(148, 0, 211); /* violeta */
+}
+
+p {
+  column-count: 1;
+  column-gap: 20px;
+}
+
+.contenedor {
+  display: flex;              /* IMPORTANTE */
+  flex-direction: column;     /* vertical en mobile */
+}
+
+.caja {
+  margin: 10px;
+  padding: 20px;
+  background-color: lightgray;
+}
+
 /* tablets */
 @media (min-width: 700px) {
   body {
@@ -31,7 +52,7 @@ p {
   }
 
   .contenedor {
-    flex-direction: row; /* se ponen en fila */
+    flex-direction: row; /* horizontal */
   }
 
   .caja {
