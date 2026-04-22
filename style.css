@@ -1,22 +1,41 @@
-@media (min-width: 250px) {
 body {
   background-color: rgb(148, 0, 211); /* violeta */
-  }
-  p {
-  column-count: 1; /* celulares */
+}
+
+/* texto en columnas */
+p {
+  column-count: 1;
   column-gap: 20px;
-
-}
 }
 
+/* FLEXBOX */
+.contenedor {
+  display: flex;
+  flex-direction: column; /* mobile */
+}
+
+.caja {
+  margin: 10px;
+  padding: 20px;
+  background-color: lightgray;
+}
 
 /* tablets */
 @media (min-width: 700px) {
   body {
     background-color: rgb(0, 0, 255); /* azul */
-  } 
+  }
+
   p {
     column-count: 2;
+  }
+
+  .contenedor {
+    flex-direction: row; /* se ponen en fila */
+  }
+
+  .caja {
+    flex: 1;
   }
 }
 
