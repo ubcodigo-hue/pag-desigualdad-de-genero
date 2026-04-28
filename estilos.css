@@ -46,15 +46,16 @@ nav a {
 
 .hero h1 {
     position: absolute;
-    top: 95px;
-    left: 30px;
-    right: 30px;
+    bottom: 20px;   /* 👈 lo baja pero dentro de la imagen */
+    left: 20px;
+    right: 20px;
 
     color: white;
-    font-size: 32px;   /* 👈 más grande */
-    line-height: 36px; /* 👈 separa las líneas */
+    font-size: 30px;   /* 👈 más grande */
+    line-height: 34px;
+    font-weight: 700;
 
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
 .hero p {
