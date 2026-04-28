@@ -1,16 +1,8 @@
-/* Fuente */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
-    background-color: white;
-    color: black;
-}
-
-/* CONTENEDOR MOBILE */
-body {
-    max-width: 430px;
 }
 
 /* HEADER */
@@ -18,34 +10,42 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 16px;
+    padding: 20px;
 }
 
 header img {
     width: 110px;
 }
 
-/* BOTÓN HAMBURGUESA */
-.menu-toggle {
-    font-size: 26px;
-    background: none;
-    border: none;
+/* ================= */
+/* MENÚ HAMBURGUESA */
+/* ================= */
+
+/* oculto checkbox */
+#menu {
+    display: none;
+}
+
+/* icono ☰ */
+.menu-icon {
+    font-size: 28px;
     cursor: pointer;
 }
 
-/* NAV MOBILE */
+/* menú oculto */
 nav {
     display: none;
 }
 
-nav.active {
+/* cuando se activa → aparece */
+#menu:checked + .menu-icon + nav {
     display: block;
 }
 
+/* lista */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
 }
 
 nav li {
@@ -55,125 +55,82 @@ nav li {
 nav a {
     text-decoration: none;
     color: black;
-    font-size: 14px;
 }
 
-/* CONTENIDO GENERAL */
-main,
-footer {
-    padding: 0 16px;
+/* CONTENIDO */
+main {
+    padding: 0 20px;
 }
 
 /* HERO */
-.hero {
-    margin: 0;
-}
-
 .hero-imagen {
     position: relative;
 }
 
 .hero-imagen img {
     width: 100%;
-    display: block;
     border-radius: 20px;
+    display: block;
 }
 
+/* TEXTO SOBRE IMAGEN */
 .hero-imagen h1 {
     position: absolute;
+    bottom: 20px;
     left: 20px;
-    bottom: 25px;
     right: 20px;
 
-    margin: 0;
     color: white;
-    font-size: 28px;
-    line-height: 32px;
-    font-weight: 700;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+
+    text-shadow: 2px 2px 5px black;
 }
 
+/* TEXTO */
 .hero p {
-    margin-top: 12px;
+    margin-top: 10px;
     border-left: 5px solid #2d00ff;
     padding-left: 10px;
-    font-size: 14px;
-    line-height: 18px;
 }
 
 /* VIDEO */
 .video {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .video h2 {
     color: #2d00ff;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.video p {
     font-size: 14px;
-    line-height: 18px;
 }
 
 .video iframe {
     width: 100%;
     height: 220px;
     border: none;
-    margin-top: 10px;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 30px;
-    padding-bottom: 30px;
+    padding: 20px;
 }
 
 footer img {
     width: 90px;
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-}
+/* ================= */
+/* 💻 PC VERSION */
+/* ================= */
+@media (min-width: 1024px) {
 
-footer li {
-    margin: 5px 0;
-}
-
-footer a {
-    text-decoration: none;
-    color: black;
-}
-
-/* ========================= */
-/* 💻 VERSION PC (RESPONSIVE) */
-/* ========================= */
-@media (min-width: 768px) {
-
-    body {
-        max-width: none;
-    }
-
-    header {
-        padding: 20px 40px;
-    }
-
-    main,
-    footer {
-        padding: 0 40px;
-    }
-
-    /* ocultar hamburguesa */
-    .menu-toggle {
+    /* oculto hamburguesa */
+    .menu-icon {
         display: none;
     }
 
-    /* mostrar menú */
+    /* muestro menú */
     nav {
         display: block;
     }
@@ -187,46 +144,8 @@ footer a {
         margin: 0;
     }
 
-    /* hero más grande */
-    .hero h1 {
+    /* agrando hero */
+    .hero-imagen h1 {
         font-size: 32px;
-        line-height: 36px;
-        bottom: 30px;
-    }
-
-    .video iframe {
-        height: 300px;
-    }
-   
-    /* MOBILE Y TABLET */
-.menu-toggle {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-header nav {
-    display: none;
-}
-
-header nav.active {
-    display: block;
-}
-
-/* PC */
-@media (min-width: 1024px) {
-    .menu-toggle {
-        display: none;
-    }
-
-    header nav {
-        display: block;
-    }
-
-    header nav ul {
-        display: flex;
-        gap: 20px;
     }
 }
