@@ -58,8 +58,8 @@ footer {
 /* TEXTO SOBRE LA IMAGEN */
 .hero h1 {
     position: absolute;
-    left: 60px;
-    bottom: 130px;
+    left: 20px;
+    bottom: 80px;
     right: 18px;
 
     margin: 0;
