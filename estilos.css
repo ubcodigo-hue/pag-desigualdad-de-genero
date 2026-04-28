@@ -66,37 +66,37 @@ footer {
 
 /* HERO */
 .hero {
+    margin: 0;
+}
+
+.hero-imagen {
     position: relative;
 }
 
-.hero img {
+.hero-imagen img {
     width: 100%;
-    border-radius: 20px;
     display: block;
+    border-radius: 20px;
 }
 
-/* TEXTO SOBRE IMAGEN */
-.hero h1 {
-       position: absolute;
-    bottom: 20px;
-    left: 16px;
-    right: 16px;
-    
+.hero-imagen h1 {
+    position: absolute;
+    left: 20px;
+    bottom: 25px;
+    right: 20px;
+
     margin: 0;
     color: white;
-    font-size: 24px;
-    line-height: 26px;
+    font-size: 28px;
+    line-height: 32px;
     font-weight: 700;
-
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* TEXTO PROPÓSITO */
 .hero p {
     margin-top: 12px;
     border-left: 5px solid #2d00ff;
     padding-left: 10px;
-
     font-size: 14px;
     line-height: 18px;
 }
@@ -196,5 +196,13 @@ footer a {
 
     .video iframe {
         height: 300px;
+    }
+    @media (max-width: 767px) {
+    .hero-imagen h1 {
+        font-size: 22px;
+        line-height: 25px;
+        left: 16px;
+        right: 16px;
+        bottom: 18px;
     }
 }
