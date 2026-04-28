@@ -41,28 +41,30 @@ nav a {
 .hero img {
     width: 100%;
     border-radius: 20px;
+    display: block;
 }
-
 
 .hero h1 {
     position: absolute;
-    top: 20px;     /* lo pone arriba */
-    left: 20px;
-    right: 20px;
+    top: 95px;
+    left: 30px;
+    right: 30px;
 
     color: white;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 32px;   /* 👈 más grande */
+    line-height: 36px; /* 👈 separa las líneas */
 
     text-shadow: 2px 2px 5px black;
 }
 
-/* TEXTO DE ABAJO */
 .hero p {
     margin-top: 15px;
-    border-left: 5px solid #3b00ff;
+    border-left: 5px solid #2d00ff;
     padding-left: 10px;
+    font-size: 16px;
+    line-height: 20px;
 }
+
 .video {
     padding: 15px;
 }
