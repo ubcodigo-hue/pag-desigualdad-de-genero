@@ -46,7 +46,7 @@ nav a {
 
 .hero h1 {
     position: absolute;
-    bottom: 20px;   /* 👈 lo baja pero dentro de la imagen */
+    bottom: 40px;   /* 👈 lo baja pero dentro de la imagen */
     left: 20px;
     right: 20px;
 
