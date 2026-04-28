@@ -8,7 +8,7 @@ body {
     color: black;
 }
 
-/* ancho de página mobile */
+/* CONTENEDOR MOBILE */
 body {
     max-width: 430px;
 }
@@ -18,17 +18,38 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 16px 35px 16px;
+    padding: 20px 16px;
 }
 
 header img {
-    width: 105px;
+    width: 110px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* NAV MOBILE */
+nav {
+    display: none;
+}
+
+nav.active {
+    display: block;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0 0;
+}
+
+nav li {
+    margin: 10px 0;
 }
 
 nav a {
@@ -37,7 +58,7 @@ nav a {
     font-size: 14px;
 }
 
-/* MISMO MARGEN PARA TODO */
+/* CONTENIDO GENERAL */
 main,
 footer {
     padding: 0 16px;
@@ -46,43 +67,43 @@ footer {
 /* HERO */
 .hero {
     position: relative;
-    margin: 0;
 }
 
 .hero img {
     width: 100%;
+    border-radius: 20px;
     display: block;
-    border-radius: 22px;
 }
 
-/* TEXTO SOBRE LA IMAGEN */
+/* TEXTO SOBRE IMAGEN */
 .hero h1 {
     position: absolute;
-    left: 20px;
     bottom: 80px;
-    right: 18px;
+    left: 20px;
+    right: 16px;
 
     margin: 0;
     color: white;
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 26px;
     font-weight: 700;
-    text-shadow: 2px 2px 5px black;
+
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-/* TEXTO DE PROPÓSITO */
+/* TEXTO PROPÓSITO */
 .hero p {
-    margin: 12px 0 0 0;
+    margin-top: 12px;
     border-left: 5px solid #2d00ff;
-    padding-left: 8px;
+    padding-left: 10px;
 
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 /* VIDEO */
 .video {
-    margin-top: 36px;
+    margin-top: 30px;
 }
 
 .video h2 {
@@ -90,24 +111,24 @@ footer {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .video p {
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .video iframe {
     width: 100%;
     height: 220px;
     border: none;
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 24px;
+    margin-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -118,10 +139,62 @@ footer img {
 footer ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+}
+
+footer li {
+    margin: 5px 0;
 }
 
 footer a {
     text-decoration: none;
     color: black;
+}
+
+/* ========================= */
+/* 💻 VERSION PC (RESPONSIVE) */
+/* ========================= */
+@media (min-width: 768px) {
+
+    body {
+        max-width: none;
+    }
+
+    header {
+        padding: 20px 40px;
+    }
+
+    main,
+    footer {
+        padding: 0 40px;
+    }
+
+    /* ocultar hamburguesa */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* mostrar menú */
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    /* hero más grande */
+    .hero h1 {
+        font-size: 32px;
+        line-height: 36px;
+        bottom: 30px;
+    }
+
+    .video iframe {
+        height: 300px;
+    }
 }
