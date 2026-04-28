@@ -197,12 +197,36 @@ footer a {
     .video iframe {
         height: 300px;
     }
-    @media (max-width: 767px) {
-    .hero-imagen h1 {
-        font-size: 22px;
-        line-height: 25px;
-        left: 16px;
-        right: 16px;
-        bottom: 18px;
+   
+    /* MOBILE Y TABLET */
+.menu-toggle {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header nav {
+    display: none;
+}
+
+header nav.active {
+    display: block;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 20px;
     }
 }
