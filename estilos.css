@@ -176,9 +176,28 @@ main {
 
 /* LINKS */
 .links {
-    margin-top: 15px;
-    font-size: 10px;
-    opacity: 0.8;
+    margin-top: 25px;
+
+    display: flex;
+    flex-wrap: wrap; /* 👈 baja si no entra */
+    gap: 10px;
+
+    font-size: 11px;
+}
+
+/* links */
+.links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+/* líneas separadoras */
+.links a:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+    color: white;
+    opacity: 0.6;
 }
 
 
