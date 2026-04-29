@@ -111,13 +111,63 @@ main {
     border: none;
 }
 
-/* FOOTER */
-footer {
-    padding: 20px;
+.footer {
+    background: linear-gradient(180deg, #2d00ff, #0000cc);
+    color: white;
+
+    margin-top: 40px;
+    padding: 30px 20px;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    text-align: center;
 }
 
-footer img {
-    width: 90px;
+/* logo */
+.footer img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* titulo */
+.footer h3 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* texto */
+.footer p {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+/* redes */
+.redes {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+}
+
+/* links redes */
+.redes a {
+    text-decoration: none;
+    color: white;
+}
+
+/* efecto hover (opcional pero suma) */
+.redes a:hover {
+    transform: scale(1.2);
+}
+
+/* links chicos */
+.links {
+    margin-top: 15px;
+    font-size: 11px;
+    opacity: 0.8;
 }
 
 /* ================= */
