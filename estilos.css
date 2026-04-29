@@ -5,7 +5,9 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+/* ================= */
 /* HEADER */
+/* ================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -57,12 +59,16 @@ nav a {
     color: black;
 }
 
+/* ================= */
 /* CONTENIDO */
+/* ================= */
 main {
     padding: 0 20px;
 }
 
+/* ================= */
 /* HERO */
+/* ================= */
 .hero-imagen {
     position: relative;
 }
@@ -95,7 +101,9 @@ main {
     padding-left: 10px;
 }
 
+/* ================= */
 /* VIDEO */
+/* ================= */
 .video {
     border: 4px solid #1a00ff;
     border-radius: 28px;
@@ -146,31 +154,24 @@ main {
     border-radius: 0 0 24px 24px;
 }
 
+/* ================= */
+/* FOOTER */
+/* ================= */
 .footer {
     background: linear-gradient(180deg, #1a00ff, #0000cc);
     color: white;
 
-    width: 80%;
-    margin: 40px auto;
-
-    padding: 40px 25px;
-
-    border-radius: 30px;
-
-    text-align: left; /* 👈 alineado a la izquierda */
-}
-
-/* LOGO */
-.footer {
-    background: linear-gradient(180deg, #1a00ff, #0000cc);
+    width: 100%;
+    margin-top: 40px;
     padding: 50px 0;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .footer-contenido {
     width: 85%;
     margin: 0 auto;
-
-    color: white;
     text-align: left;
 }
 
@@ -184,12 +185,18 @@ main {
 .footer h3 {
     font-size: 12px;
     margin-bottom: 10px;
+    color: white;
 }
 
 /* address */
 address {
-    font-style: normal; /* saca cursiva */
+    font-style: normal;
     font-size: 12px;
+}
+
+/* texto */
+.footer p {
+    color: white;
 }
 
 /* redes */
@@ -201,7 +208,7 @@ address {
     width: 120px;
 }
 
-/* links en fila */
+/* links */
 .links {
     margin-top: 25px;
     display: flex;
@@ -222,7 +229,7 @@ address {
     opacity: 0.6;
 }
 
-
+/* ================= */
 /* 💻 PC VERSION */
 /* ================= */
 @media (min-width: 1024px) {

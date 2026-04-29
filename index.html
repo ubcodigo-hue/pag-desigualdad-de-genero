@@ -3,44 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Desigualdad de género Inicio</title>
+
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <a href="index.html">
-            <img src="imagenes/logo nuevo.png" alt="Logo de Lente Violeta">
-        </a>
 
-  <input type="checkbox" id="menu">
-<label for="menu" class="menu-icon">☰</label>
+<header>
+    <a href="index.html">
+        <img src="imagenes/logo nuevo.png" alt="Logo de Lente Violeta">
+    </a>
 
+    <input type="checkbox" id="menu">
+    <label for="menu" class="menu-icon">☰</label>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="problemsocial.html">Problemática social</a></li>
-                <li><a href="#">Datos y estadísticas</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="#">Impacto social</a></li>
-                <li><a href="#">Iniciativas</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="problemsocial.html">Problemática social</a></li>
+            <li><a href="#">Datos y estadísticas</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="#">Impacto social</a></li>
+            <li><a href="#">Iniciativas</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <section class="hero">
-             <div class="hero-imagen"> 
-    <img src="imagenes/Nuestro genero no define.png" alt="Imagen principal">
+<main>
 
-    
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-imagen"> 
+        <img src="imagenes/nuestro genero... sin texto.png" alt="Imagen principal">
+        
+        <h1>
+            Nuestro género no<br>
+            define nuestro lugar
+        </h1>
     </div>
 
     <p>
         Hacia un futuro más justo, donde <strong>crecer, elegir y liderar</strong>
         sea un <em>derecho compartido</em>.
     </p>
-    
+
+</section>
+
+<!-- VIDEO -->
 <section class="video">
 
     <header class="video-header">
@@ -61,12 +72,15 @@
 
 </section>
 
-  <footer class="footer">
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
 
     <section class="footer-contenido">
 
         <a href="index.html">
-            <img src="imagenes/logo 2.png" alt="Logo de Lente Violeta">
+            <img src="imagenes/logo 2.png" alt="Logo">
         </a>
 
         <h3>Contactanos</h3>
@@ -78,7 +92,7 @@
 
         <nav class="redes">
             <a href="#">
-                <img src="imagenes/redes-01.png" alt="Redes sociales">
+                <img src="imagenes/redes-01.png" alt="Redes">
             </a>
         </nav>
 
@@ -94,15 +108,6 @@
     </section>
 
 </footer>
-
-<script>
-const boton = document.querySelector(".menu-toggle");
-const nav = document.querySelector("header nav");
-
-boton.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-</script>
 
 </body>
 </html>
