@@ -128,38 +128,36 @@ main {
 /* LOGO */
 .footer {
     background: linear-gradient(180deg, #1a00ff, #0000cc);
-    padding: 50px 0 40px;
+    padding: 50px 0;
 }
 
-/* CONTENIDO ALINEADO */
 .footer-contenido {
-    width: 85%;        /* 👈 mismo ancho que tu contenido */
-    max-width: 400px; /* 👈 opcional (para mobile queda prolijo) */
+    width: 85%;
     margin: 0 auto;
 
     color: white;
     text-align: left;
 }
 
-/* LOGO */
-.footer-contenido img {
+/* logo */
+.footer img {
     width: 80px;
     margin-bottom: 20px;
 }
 
-/* TITULO */
+/* título */
 .footer h3 {
     font-size: 12px;
     margin-bottom: 10px;
 }
 
-/* TEXTO */
-.footer p {
+/* address */
+address {
+    font-style: normal; /* saca cursiva */
     font-size: 12px;
-    margin: 4px 0;
 }
 
-/* REDES */
+/* redes */
 .redes {
     margin: 20px 0;
 }
@@ -168,7 +166,7 @@ main {
     width: 120px;
 }
 
-/* LINKS EN LINEA */
+/* links en fila */
 .links {
     margin-top: 25px;
     display: flex;
@@ -177,7 +175,7 @@ main {
     font-size: 10px;
 }
 
-/* SEPARADORES */
+/* separadores */
 .links a {
     color: white;
     text-decoration: none;
