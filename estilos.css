@@ -127,22 +127,18 @@ main {
 
 /* LOGO */
 .footer {
-     background: linear-gradient(180deg, #1a00ff, #0000cc);
-    
-    width: 100%;              /* 👈 ocupa todo el ancho */
+    background: linear-gradient(180deg, #1a00ff, #0000cc);
     padding: 50px 0 40px;
-
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
 }
 
-/* CONTENIDO INTERNO */
+/* CONTENIDO ALINEADO */
 .footer-contenido {
-    width: 80%;
+    width: 85%;        /* 👈 mismo ancho que tu contenido */
+    max-width: 400px; /* 👈 opcional (para mobile queda prolijo) */
     margin: 0 auto;
 
+    color: white;
     text-align: left;
-    color: white; /* 👈 TODO el texto blanco */
 }
 
 /* LOGO */
@@ -155,14 +151,12 @@ main {
 .footer h3 {
     font-size: 12px;
     margin-bottom: 10px;
-    color: white; /* 👈 blanco */
 }
 
 /* TEXTO */
 .footer p {
     font-size: 12px;
     margin: 4px 0;
-    color: white; /* 👈 blanco */
 }
 
 /* REDES */
@@ -174,29 +168,24 @@ main {
     width: 120px;
 }
 
-/* LINKS */
+/* LINKS EN LINEA */
 .links {
     margin-top: 25px;
-
     display: flex;
-    flex-wrap: wrap; /* 👈 baja si no entra */
+    flex-wrap: wrap;
     gap: 10px;
-
-    font-size: 11px;
+    font-size: 10px;
 }
 
-/* links */
+/* SEPARADORES */
 .links a {
     color: white;
     text-decoration: none;
-    position: relative;
 }
 
-/* líneas separadoras */
 .links a:not(:last-child)::after {
     content: "|";
     margin-left: 10px;
-    color: white;
     opacity: 0.6;
 }
 
