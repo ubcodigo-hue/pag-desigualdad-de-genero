@@ -120,54 +120,55 @@ main {
     );
 
     color: white;
-    margin-top: 40px;
-    padding: 40px 20px 30px;
 
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    width: 80%;
+    margin: 60px auto;   /* centra la tarjeta */
+
+    padding: 40px 20px;
+
+    border-radius: 30px;
 
     text-align: center;
 }
 
-/* logo */
+/* LOGO */
 .footer img {
-    width: 120px;
-    margin-bottom: 15px;
+    width: 90px;
+    margin-bottom: 20px;
 }
 
-/* título */
+/* TITULO */
 .footer h3 {
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 1px;
-    margin-bottom: 10px;
     color: #00ffff;
+    margin-bottom: 10px;
 }
 
-/* texto */
+/* TEXTO */
 .footer p {
-    font-size: 13px;
-    margin: 5px 0;
-    opacity: 0.9;
+    font-size: 12px;
+    margin: 4px 0;
 }
 
-/* redes (una sola imagen) */
+/* REDES (una sola imagen) */
 .redes {
     margin: 20px 0;
 }
 
 .redes img {
-    width: 140px; /* ajustalo a ojo */
+    width: 120px;
 }
 
-/* efecto hover */
+/* HOVER */
 .redes a:hover img {
     transform: scale(1.1);
 }
 
-/* links legales */
+/* LINKS LEGALES */
 .links {
     margin-top: 15px;
-    font-size: 11px;
+    font-size: 10px;
     opacity: 0.8;
 }
 
