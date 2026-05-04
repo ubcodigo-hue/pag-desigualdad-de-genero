@@ -225,7 +225,7 @@ address {
 }
 
 .redes img {
-    width: 120px; /* o el tamaño que venías usando */
+    width: 50px; /* o el tamaño que venías usando */
 }
 
 .links {
@@ -375,7 +375,7 @@ address {
     }
 
     .redes img {
-        width: 32px;
+        width: 60px;
     }
 
     /* links */
