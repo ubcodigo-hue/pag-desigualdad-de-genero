@@ -103,7 +103,8 @@ main {
 
 /* título dividido en líneas */
 .titulo-hero {
-    margin: 15px 0 0 18px;
+    margin: 12px 0 0 18px;
+    line-height: 1.2;
 }
 
 /* cada línea del título */
@@ -111,12 +112,12 @@ main {
     background-color: #9700c9;
     color: white;
 
-    display: inline-block;
-    padding: 4px 8px;
-    margin-bottom: 5px;
-
-    font-size: 24px;
+    display: inline;
+    padding: 2px 6px;   /* 👈 más chico */
+    
+    font-size: 22px;
     font-weight: 900;
+    line-height: 1.2;   /* 👈 más compacto */
 }
 
 /* texto propósito */
@@ -252,7 +253,9 @@ main {
 
     /* título más grande */
     .titulo-hero span {
-        font-size: 40px;
+
+        font-size: 38px;
+        padding: 3px 8px;
     }
 
     /* video */
