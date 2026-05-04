@@ -179,12 +179,12 @@ main {
 .footer {
     background-color: #4b0068;
 
-    width: 100%;          /* 👈 ocupa todo */
-    margin: 40px 0 0;     /* 👈 sin laterales */
+    width: 100%;
+    margin: 40px 0 0;
 
-    padding: 40px 0;      /* 👈 solo arriba/abajo */
-    
-    border-radius: 40px 40px 0 0;
+    padding: 40px 0;
+
+    border-radius: 0; /* 👈 ACÁ está el cambio */
     color: white;
 }
 
@@ -213,15 +213,19 @@ address {
 }
 
 .redes {
-    display: flex;
-    gap: 15px;
-    margin: 25px 0;
+    list-style: none;   /* ❌ saca los puntos */
     padding: 0;
-    list-style: none;
+    margin: 25px 0;
+
+    display: flex;
+}
+
+.redes li {
+    margin: 0;
 }
 
 .redes img {
-    width: 28px;
+    width: 120px; /* o el tamaño que venías usando */
 }
 
 .links {
@@ -344,14 +348,16 @@ address {
         margin-left: -70px;
         border-radius: 65px 65px 0 0;
     }
-    
+
     /* ========================= */
       /* FOOTER */
-    .footer {
-        width: 100%;              /* 👈 mantiene fondo full width */
-        margin: 70px 0 0;         /* 👈 sin centrado */
-        padding: 70px 0 120px;    /* 👈 solo vertical */
-    }
+   .footer {
+    width: 100%;              
+    margin: 70px 0 0;         
+    padding: 70px 0 120px;    
+
+    border-radius: 0; /* 👈 esto te faltaba */
+}
 
     .footer-contenido {
         max-width: 1200px;
