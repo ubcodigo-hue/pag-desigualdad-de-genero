@@ -239,20 +239,19 @@ address {
 .links {
     background-color: black;
 
-    width: 100%;
+    width: 100vw; /* 👈 ocupa TODA la pantalla */
+    margin-left: calc(-50vw + 50%); /* 👈 rompe el contenedor */
 
-    margin: 40px 0 0;
     padding: 25px 20px 35px;
+    box-sizing: border-box;
 
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 12px 20px;
-
-    /* 👇 CLAVE PARA QUE VAYA DE PUNTA A PUNTA */
-    margin-left: 0;
-    margin-right: 0;
+    
 }
+
 
 .links a {
     color: white;
@@ -400,18 +399,9 @@ address {
 
     /* 🔥 FRANJA NEGRA */
     .links {
-        background-color: black; /* 👈 esto faltaba */
-
-        width: 100%;
-        margin: 0;
-
-        padding: 30px 60px 40px;
-        box-sizing: border-box;
-
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px 30px;
-    }
+    padding: 30px 60px 40px;
+    gap: 20px 30px;
+}
 
     .links a {
         font-size: 13px;
