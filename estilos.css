@@ -57,7 +57,7 @@ header img {
 
 .menu-principal li {
     border-top: 2px solid white;
-    padding: 6px 0;
+    padding: 7px 0;
 }
 
 .menu-principal a {
@@ -75,10 +75,6 @@ main {
 }
 
 /* HERO */
-.hero-imagen {
-    margin: 0;
-}
-
 .hero-imagen img {
     width: 100%;
     display: block;
@@ -89,19 +85,19 @@ main {
     background-color: #9700c9;
     color: white;
     display: inline-block;
-    font-size: 30px;
-    line-height: 32px;
+    font-size: 34px;
+    line-height: 36px;
     font-weight: 900;
     margin: 14px 0 0 18px;
-    padding: 0 4px;
+    padding: 0 5px;
 }
 
 .hero p {
-    margin-top: 38px;
+    margin-top: 40px;
     border-left: 8px solid #9700c9;
     padding-left: 20px;
-    font-size: 19px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 .hero p::before {
@@ -110,7 +106,7 @@ main {
     margin-bottom: 14px;
     font-family: "Space Mono", monospace;
     color: #9700c9;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -119,26 +115,27 @@ main {
 .video {
     border: 4px solid #9700c9;
     border-radius: 45px;
-    padding: 45px 18px 0;
-    margin-top: 70px;
+    padding: 70px 18px 0;
+    margin-top: 90px;
     position: relative;
     overflow: hidden;
 }
 
 .video-header {
     position: absolute;
-    top: -35px;
+    top: -42px;
     left: 20px;
     right: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 .video h2 {
     color: #4b0068;
     font-family: "Space Mono", monospace;
-    font-size: 14px;
+    font-size: 17px;
     letter-spacing: 1px;
     margin: 0;
 }
@@ -147,25 +144,27 @@ main {
     background-color: #9700c9;
     color: white;
     text-decoration: none;
-    padding: 4px 20px;
-    border-radius: 20px;
+    padding: 6px 32px;
+    border-radius: 24px;
     font-style: italic;
-    font-size: 16px;
+    font-size: 20px;
+    white-space: nowrap;
 }
 
 .video p {
-    font-size: 22px;
-    line-height: 28px;
-    margin: 0 0 22px;
+    font-size: 23px;
+    line-height: 31px;
+    margin: 0 0 24px;
+    font-weight: 700;
 }
 
 .video iframe {
     width: calc(100% + 36px);
-    height: 220px;
+    height: 230px;
     margin-left: -18px;
     display: block;
     border: none;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
 }
 
 /* FOOTER */
@@ -187,12 +186,17 @@ main {
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    color: white;
 }
 
 address {
     font-style: normal;
     font-family: "Space Mono", monospace;
     font-size: 13px;
+}
+
+.footer p {
+    color: white;
 }
 
 .redes img {
@@ -214,6 +218,7 @@ address {
 
 /* PC */
 @media (min-width: 1024px) {
+
     header {
         padding: 35px 70px;
         display: flex;
@@ -232,10 +237,10 @@ address {
     .menu-principal {
         display: block;
         position: static;
-        width: auto;
         background: none;
         padding: 0;
         margin-top: 0;
+        width: auto;
     }
 
     .menu-principal ul {
@@ -245,6 +250,7 @@ address {
 
     .menu-principal li {
         border-top: none;
+        padding: 0;
     }
 
     .menu-principal a {
@@ -258,34 +264,39 @@ address {
     }
 
     .hero h1 {
-        font-size: 44px;
-        line-height: 46px;
+        font-size: 46px;
+        line-height: 48px;
         margin-left: 35px;
     }
 
-    .hero p,
-    .video p {
+    .hero p {
         font-size: 23px;
         line-height: 31px;
     }
 
     .video {
-        padding-top: 70px;
+        padding-top: 85px;
+        margin-top: 110px;
     }
 
     .video-header {
-        top: -40px;
+        top: -52px;
         left: 35px;
         right: 35px;
     }
 
     .video h2 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .etiqueta {
-        font-size: 22px;
-        padding: 6px 30px;
+        font-size: 28px;
+        padding: 8px 42px;
+    }
+
+    .video p {
+        font-size: 24px;
+        line-height: 32px;
     }
 
     .video iframe {
