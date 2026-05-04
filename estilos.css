@@ -7,57 +7,42 @@ body {
     color: black;
 }
 
-/* ================= */
 /* HEADER */
-/* ================= */
 header {
     background-color: #9700c9;
-    padding: 25px 20px;
+    padding: 28px 20px;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-/* LOGO MOBILE */
 header img {
-    width: 60px;
+    width: 58px;
 }
 
-/* BOTÓN ☰ */
-.menu-icon {
-    color: white;
-    font-size: 28px;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 30px;
-    padding: 5px 15px;
-    cursor: pointer;
-}
-
-/* OCULTO CHECKBOX */
+/* MENÚ HAMBURGUESA */
 #menu {
     display: none;
 }
 
-/* ================= */
-/* MENÚ */
-/* ================= */
-.menu-principal {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: #9700c9;
-    padding: 20px;
+.menu-icon {
+    color: white;
+    font-size: 28px;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 4px 16px;
+    float: right;
+    cursor: pointer;
 }
 
-/* abrir menú */
+.menu-principal {
+    display: none;
+    clear: both;
+    margin-top: 35px;
+}
+
 #menu:checked + .menu-icon + .menu-principal {
     display: block;
 }
 
-/* lista */
 .menu-principal ul {
     list-style: none;
     padding: 0;
@@ -74,235 +59,24 @@ header img {
     text-decoration: none;
     font-family: "Space Mono", monospace;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 19px;
+    letter-spacing: 1px;
 }
 
-/* SUBMENÚ */
-.submenu {
-    border: 1px solid white;
-    margin-left: 25px;
-    padding: 8px 15px;
-}
-
-.submenu li {
-    border: none;
-}
-
-.submenu a {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-style: italic;
-}
-
-.submenu li:first-child a {
-    color: yellow;
-    text-decoration: underline;
-}
-
-/* ================= */
 /* MAIN */
-/* ================= */
 main {
-    padding: 25px 20px;
+    padding: 28px 20px;
 }
 
-/* ================= */
 /* HERO */
-/* ================= */
 .hero-imagen {
-    position: relative;
-}
-
-.hero-imagen img {
-    width: 100%;
-    border-radius: 25px;
-    display: block;
-}
-
-.hero-imagen h1 {
-    position: absolute;
-    left: 18px;
-    bottom: 15px;
-
-    background-color: #9700c9;
-    color: white;
-
-    font-size: 26px;
-    line-height: 28px;
-    font-weight: 900;
     margin: 0;
 }
 
-/* PROPÓSITO */
-.hero p {
-    border-left: 7px solid #9700c9;
-    padding-left: 20px;
-    margin-top: 35px;
-
-    font-size: 18px;
-    line-height: 22px;
-}
-
-.hero p::before {
-    content: "NUESTRO PROPÓSITO";
-    display: block;
-    margin-bottom: 10px;
-
-    font-family: "Space Mono", monospace;
-    color: #9700c9;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-/* ================= */
-/* VIDEO */
-/* ================= */
-.video {
-    border: 4px solid #9700c9;
-    border-radius: 30px;
-    padding: 18px 18px 0;
-    margin-top: 35px;
-    overflow: hidden;
-}
-
-.video-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.video h2 {
-    color: #9700c9;
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.etiqueta {
-    background-color: #9700c9;
-    color: white;
-    text-decoration: none;
-    padding: 4px 18px;
-    border-radius: 20px;
-    font-style: italic;
-    font-weight: 700;
-}
-
-.video p {
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 700;
-}
-
-.video iframe {
-    width: calc(100% + 36px);
-    height: 200px;
-    margin-left: -18px;
-    border: none;
-    border-radius: 0 0 25px 25px;
-}
-
-/* ================= */
-/* FOOTER */
-/* ================= */
-.footer {
-    background-color: #4b0068;
-    margin: 40px 20px 0;
-    padding: 40px 25px 70px;
-    border-radius: 40px 40px 0 0;
-    color: white;
-}
-
-.footer img {
-    width: 140px;
-    margin-bottom: 30px;
-}
-
-.footer h3 {
-    font-family: "Space Mono", monospace;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-address {
-    font-style: normal;
-    font-size: 13px;
-}
-
-.redes img {
-    width: 140px;
-    margin: 20px 0;
-}
-
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 20px;
-    margin-top: 20px;
-    font-size: 11px;
-}
-
-.links a {
-    color: white;
-    text-decoration: none;
-}
-
-/* ================= */
-/* 💻 PC */
-/* ================= */
-@media (min-width: 1024px) {
-
-    header {
-        padding: 30px 60px;
-    }
-
-    /* logo grande */
-    header img {
-        width: 100px;
-    }
-
-    /* oculto hamburguesa */
-    .menu-icon {
-        display: none;
-    }
-
-    /* menú horizontal */
-    .menu-principal {
-        display: block;
-        position: static;
-        background: none;
-        padding: 0;
-    }
-
-    .menu-principal ul {
-        display: flex;
-        gap: 25px;
-        justify-content: flex-end;
-    }
-
-    .menu-principal li {
-        border-top: none;
-    }
-
-    .submenu {
-        display: none;
-    }
-
-    .menu-principal a {
-        font-size: 14px;
-    }
-
-    main {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 40px 60px;
-    }
-
-    /* HERO */
 .hero-imagen img {
     width: 100%;
-    border-radius: 25px;
     display: block;
+    border-radius: 28px;
 }
 
 .hero h1 {
@@ -310,23 +84,47 @@ address {
     color: white;
     display: inline-block;
 
-    font-size: 26px;
-    line-height: 28px;
+    font-size: 30px;
+    line-height: 32px;
     font-weight: 900;
 
-    margin: 12px 0 0 18px;
+    margin: 14px 0 0 18px;
+    padding: 0 4px;
+}
+
+.hero p {
+    margin-top: 38px;
+    border-left: 8px solid #9700c9;
+    padding-left: 20px;
+
+    font-size: 19px;
+    line-height: 25px;
+}
+
+.hero p::before {
+    content: "NUESTRO PROPÓSITO";
+    display: block;
+    margin-bottom: 14px;
+
+    font-family: "Space Mono", monospace;
+    color: #9700c9;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 /* VIDEO */
 .video {
     border: 4px solid #9700c9;
-    border-radius: 30px;
+    border-radius: 35px;
     padding: 18px 18px 0;
-    margin-top: 35px;
+    margin-top: 42px;
     overflow: hidden;
 }
 
 .video-header {
+    background: none;
+    padding: 0;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -340,20 +138,140 @@ address {
     border-radius: 20px;
     font-style: italic;
     font-weight: 700;
+    font-size: 14px;
 }
 
 .video h2 {
     color: #9700c9;
     font-family: "Space Mono", monospace;
     font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 0;
 }
+
+.video p {
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.video iframe {
+    width: calc(100% + 36px);
+    height: 220px;
+    margin-left: -18px;
+    display: block;
+    border: none;
+    border-radius: 0 0 30px 30px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #4b0068;
+    margin: 45px 20px 0;
+    padding: 45px 28px 75px;
+    border-radius: 50px 50px 0 0;
+    color: white;
+}
+
+.footer img {
+    width: 145px;
+    margin-bottom: 45px;
+}
+
+.footer h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+address {
+    font-style: normal;
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+}
+
+.redes img {
+    width: 145px;
+    margin: 20px 0 40px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    font-size: 12px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+
+    header {
+        padding: 35px 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img {
+        width: 95px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-principal {
+        display: block;
+        clear: none;
+        margin-top: 0;
+    }
+
+    .menu-principal ul {
+        display: flex;
+        gap: 28px;
+    }
+
+    .menu-principal li {
+        border-top: none;
+        padding: 0;
+    }
+
+    .menu-principal a {
+        font-size: 14px;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px 60px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+        line-height: 46px;
+        margin-left: 35px;
+    }
+
+    .hero p,
+    .video p {
+        font-size: 23px;
+        line-height: 31px;
+    }
+
+    .video iframe {
+        height: 420px;
+    }
 
     .footer {
         max-width: 900px;
         margin: 60px auto 0;
-        padding: 60px;
+        padding: 60px 70px 100px;
     }
 
     .footer img {
