@@ -233,13 +233,19 @@ address {
 }
 
 .links {
+    background-color: black; /* 👈 fondo negro */
+
+    width: 100%;
+    margin-top: 40px;
+
+    padding: 20px;
+
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 12px 20px;
-    margin-top: 20px;
 
-    list-style: none;   /* 👈 saca los puntitos */
-    padding: 0;
+    border-radius: 0; /* recto como diseño */
 }
 
 .links a {
@@ -389,6 +395,7 @@ address {
 
     /* links */
     .links {
+          padding: 25px 60px;
         gap: 20px 30px;
     }
 
