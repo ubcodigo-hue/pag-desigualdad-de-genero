@@ -3,6 +3,7 @@
 /* ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
 
+
 /* ========================= */
 /* ESTILOS GENERALES */
 /* ========================= */
@@ -14,16 +15,16 @@ body {
 
 
 /* ========================= */
-/* HEADER (barra superior) */
+/* HEADER PRINCIPAL */
 /* ========================= */
-header {
+body > header {
     background-color: #9700c9;
     padding: 28px 20px;
     position: relative;
 }
 
 /* logo */
-header img {
+body > header img {
     width: 58px;
 }
 
@@ -31,13 +32,10 @@ header img {
 /* ========================= */
 /* MENÚ HAMBURGUESA */
 /* ========================= */
-
-/* oculta el checkbox */
 #menu {
     display: none;
 }
 
-/* icono ☰ */
 .menu-icon {
     color: white;
     font-size: 26px;
@@ -48,7 +46,7 @@ header img {
     cursor: pointer;
 }
 
-/* menú desplegable */
+/* menú */
 .menu-principal {
     display: none;
     position: absolute;
@@ -58,7 +56,7 @@ header img {
     padding: 20px;
 }
 
-/* cuando se activa el menú */
+/* activar menú */
 #menu:checked + .menu-icon + .menu-principal {
     display: block;
 }
@@ -84,7 +82,7 @@ header img {
 
 
 /* ========================= */
-/* CONTENIDO PRINCIPAL */
+/* CONTENIDO */
 /* ========================= */
 main {
     padding: 25px 20px;
@@ -92,35 +90,31 @@ main {
 
 
 /* ========================= */
-/* HERO (imagen + título) */
+/* HERO */
 /* ========================= */
-
-/* imagen */
 .hero-imagen img {
     width: 100%;
     border-radius: 25px;
 }
 
-/* título dividido en líneas */
+/* título dividido */
 .titulo-hero {
     margin: 12px 0 0 18px;
-    line-height: 1.2;
 }
 
-/* cada línea del título */
 .titulo-hero span {
     background-color: #9700c9;
     color: white;
 
     display: inline;
-    padding: 2px 6px;   /* 👈 más chico */
-    
+    padding: 2px 6px;
+
     font-size: 22px;
     font-weight: 900;
-    line-height: 1.2;   /* 👈 más compacto */
+    line-height: 1.2;
 }
 
-/* texto propósito */
+/* texto */
 .hero p {
     margin-top: 25px;
     border-left: 6px solid #9700c9;
@@ -128,12 +122,10 @@ main {
     font-size: 16px;
 }
 
-/* subtítulo automático */
 .hero p::before {
     content: "NUESTRO PROPÓSITO";
     display: block;
     margin-bottom: 10px;
-
     font-family: "Space Mono", monospace;
     color: #9700c9;
     font-size: 12px;
@@ -141,22 +133,25 @@ main {
 
 
 /* ========================= */
-/* BLOQUE DE VIDEO */
+/* VIDEO (ARREGLADO) */
 /* ========================= */
-
-/* contenedor */
 .video {
     border: 4px solid #9700c9;
-    border-radius: 40px;
-    padding: 50px 18px 0;
-    margin-top: 70px;
+    border-radius: 45px;
+    padding: 55px 18px 0;
+    margin-top: 75px;
     position: relative;
+    overflow: hidden;
 }
 
 /* header flotante */
 .video-header {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+
     position: absolute;
-    top: -25px;
+    top: -42px;
     left: 30px;
     right: 30px;
 
@@ -167,42 +162,43 @@ main {
 
 /* texto izquierda */
 .video h2 {
-    font-family: "Space Mono", monospace;
-    font-size: 13px;
     color: #4b0068;
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    margin: 0;
 }
 
 /* pastilla derecha */
 .etiqueta {
     background-color: #9700c9;
     color: white;
-    padding: 5px 25px;
-    border-radius: 20px;
-    font-size: 15px;
+    padding: 5px 28px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-style: italic;
     text-decoration: none;
 }
 
 /* descripción */
 .video p {
-    font-size: 17px;
-    margin: 0 10px 20px;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0 12px 22px;
 }
 
-/* iframe video */
+/* video */
 .video iframe {
     width: calc(100% + 36px);
-    height: 200px;
+    height: 220px;
     margin-left: -18px;
     border: none;
-    border-radius: 25px;
+    border-radius: 35px 35px 0 0;
 }
 
 
 /* ========================= */
 /* FOOTER */
 /* ========================= */
-
-/* contenedor */
 .footer {
     background-color: #4b0068;
     margin: 40px 20px 0;
@@ -211,29 +207,21 @@ main {
     color: white;
 }
 
-/* logo */
 .footer img {
     width: 120px;
 }
 
-/* links */
-.links a {
-    color: white;
-    text-decoration: none;
-}
-
 
 /* ========================= */
-/* VERSIÓN PC */
+/* PC */
 /* ========================= */
 @media (min-width: 1024px) {
 
-    /* ocultar hamburguesa */
+    /* menú */
     .menu-icon {
         display: none;
     }
 
-    /* mostrar menú horizontal */
     .menu-principal {
         display: block;
         position: static;
@@ -245,27 +233,26 @@ main {
         gap: 20px;
     }
 
-    /* ancho contenido */
+    /* ancho */
     main {
         max-width: 900px;
         margin: auto;
     }
 
-    /* título más grande */
+    /* título */
     .titulo-hero span {
-
         font-size: 38px;
         padding: 3px 8px;
     }
 
     /* video */
     .video {
-        padding-top: 70px;
         margin-top: 100px;
+        padding-top: 70px;
     }
 
     .video-header {
-        top: -35px;
+        top: -50px;
     }
 
     .video p {
@@ -273,6 +260,6 @@ main {
     }
 
     .video iframe {
-        height: 400px;
+        height: 420px;
     }
 }
