@@ -284,25 +284,24 @@ address {
         margin: 0 70px 18px;
     }
 
-    .video-header h2 {
-        font-size: 26px;
+  .video-header h2 {
+        font-size: 16px; /* antes 26 */
     }
 
     .etiqueta {
-        font-size: 30px;
-        padding: 8px 55px;
-    }
-
-    .video-box {
-        border-radius: 65px;
-        padding: 55px 70px 0;
+        font-size: 18px; /* antes 30 */
+        padding: 6px 28px;
     }
 
     .video-box p {
-        font-size: 36px;
-        line-height: 48px;
-        margin-bottom: 60px;
+        font-size: 20px; /* antes 36 */
+        line-height: 28px;
     }
+
+    .video-box iframe {
+        height: 420px; /* más equilibrado */
+    }
+}
 
     .video-box iframe {
         width: calc(100% + 140px);
