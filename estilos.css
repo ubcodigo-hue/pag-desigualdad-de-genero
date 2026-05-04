@@ -178,10 +178,20 @@ main {
 /* FOOTER */
 .footer {
     background-color: #4b0068;
-    margin: 45px 20px 0;
-    padding: 45px 28px 75px;
-    border-radius: 50px 50px 0 0;
+
+    width: 100%;          /* 👈 ocupa todo */
+    margin: 40px 0 0;     /* 👈 sin laterales */
+
+    padding: 40px 0;      /* 👈 solo arriba/abajo */
+    
+    border-radius: 40px 40px 0 0;
     color: white;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 .footer img {
@@ -334,21 +344,26 @@ address {
         margin-left: -70px;
         border-radius: 65px 65px 0 0;
     }
-
+    
     /* ========================= */
-    /* FOOTER */
-    /* ========================= */
+      /* FOOTER */
     .footer {
+        width: 100%;              /* 👈 mantiene fondo full width */
+        margin: 70px 0 0;         /* 👈 sin centrado */
+        padding: 70px 0 120px;    /* 👈 solo vertical */
+    }
+
+    .footer-contenido {
         max-width: 1200px;
-        margin: 70px auto 0;
-        padding: 70px 80px 120px;
+        margin: auto;
+        padding: 0 60px;
     }
 
     .footer img {
         width: 180px;
     }
 
-    /* redes (con UL) */
+    /* redes */
     .redes {
         gap: 20px;
     }
@@ -357,7 +372,8 @@ address {
         width: 32px;
     }
 
-     .links {
+    /* links */
+    .links {
         gap: 20px 30px;
     }
 
