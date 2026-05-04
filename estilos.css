@@ -103,8 +103,8 @@ main {
     margin-top: 28px;
     border-left: 6px solid #9700c9;
     padding-left: 15px;
-    font-size: 16px;
-    line-height: 22px;
+   font-size: 18px; 
+    line-height: 24px;
 }
 
 .hero p::before {
@@ -202,26 +202,40 @@ address {
     font-size: 13px;
 }
 
+.redes {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    padding: 0;
+    list-style: none;
+}
+
 .redes img {
-    width: 140px;
-    margin: 20px 0 40px;
+    width: 28px;
 }
 
 .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px 28px;
-    font-size: 12px;
+    gap: 12px 20px;
+    margin-top: 20px;
+
+    list-style: none;   /* 👈 saca los puntitos */
+    padding: 0;
 }
 
 .links a {
     color: white;
     text-decoration: none;
+    font-size: 12px;
 }
 
 /* VERSIÓN PC */
 @media (min-width: 1024px) {
 
+    /* ========================= */
+    /* HEADER */
+    /* ========================= */
     body > header {
         padding: 35px 70px;
         display: flex;
@@ -233,6 +247,7 @@ address {
         width: 95px;
     }
 
+    /* menú */
     .menu-icon {
         display: none;
     }
@@ -260,22 +275,31 @@ address {
         font-size: 14px;
     }
 
+    /* ========================= */
+    /* MAIN */
+    /* ========================= */
     main {
         max-width: 1200px;
         margin: auto;
         padding: 50px 60px;
     }
 
+    /* ========================= */
+    /* HERO */
+    /* ========================= */
     .titulo-hero span {
         font-size: 40px;
         padding: 3px 8px;
     }
 
     .hero p {
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 24px;
+        line-height: 32px;
     }
 
+    /* ========================= */
+    /* VIDEO */
+    /* ========================= */
     .video {
         margin-top: 80px;
     }
@@ -284,32 +308,36 @@ address {
         margin: 0 70px 18px;
     }
 
-  .video-header h2 {
-        font-size: 16px; /* antes 26 */
+    .video-header h2 {
+        font-size: 16px;
     }
 
     .etiqueta {
-        font-size: 18px; /* antes 30 */
+        font-size: 18px;
         padding: 6px 28px;
     }
 
-    .video-box p {
-        font-size: 20px; /* antes 36 */
-        line-height: 28px;
+    .video-box {
+        border-radius: 65px;
+        padding: 55px 70px 0;
     }
 
-    .video-box iframe {
-        height: 420px; /* más equilibrado */
+    .video-box p {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 40px;
     }
-}
 
     .video-box iframe {
         width: calc(100% + 140px);
-        height: 520px;
+        height: 420px;
         margin-left: -70px;
         border-radius: 65px 65px 0 0;
     }
 
+    /* ========================= */
+    /* FOOTER */
+    /* ========================= */
     .footer {
         max-width: 1200px;
         margin: 70px auto 0;
@@ -320,6 +348,20 @@ address {
         width: 180px;
     }
 
-    .links {
+    /* redes (con UL) */
+    .redes {
+        gap: 20px;
+    }
+
+    .redes img {
+        width: 32px;
+    }
+
+     .links {
+        gap: 20px 30px;
+    }
+
+    .links a {
         font-size: 13px;
     }
+}
