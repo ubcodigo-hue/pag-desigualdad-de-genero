@@ -103,8 +103,14 @@ main {
     margin-top: 28px;
     border-left: 6px solid #9700c9;
     padding-left: 15px;
-   font-size: 18px; 
+    font-size: 18px;
     line-height: 24px;
+}
+
+
+.destacado {
+    font-weight: 900;
+    color: #9700c9;
 }
 
 .hero p::before {
@@ -308,6 +314,11 @@ address {
         font-size: 24px;
         line-height: 32px;
     }
+
+    .destacado {
+    font-weight: 900;
+    color: #9700c9;
+}
 
     /* ========================= */
     /* VIDEO */
