@@ -184,8 +184,6 @@ main {
 
     padding: 40px 0;
 
-    border-radius: 0; /* 👈 ACÁ está el cambio */
-    color: white;
 }
 
 .footer-contenido {
@@ -356,7 +354,6 @@ address {
     margin: 70px 0 0;         
     padding: 70px 0 120px;    
 
-    border-radius: 0; /* 👈 esto te faltaba */
 }
 
     .footer-contenido {
