@@ -189,7 +189,7 @@ main {
     margin: 40px 0 0;
 
     padding: 40px 0;
-
+     color: white;
 }
 
 .footer-contenido {
@@ -363,7 +363,8 @@ address {
    .footer {
     width: 100%;              
     margin: 70px 0 0;         
-    padding: 70px 0 120px;    
+    padding: 70px 0 120px;  
+     color: white;  
 
 }
 
