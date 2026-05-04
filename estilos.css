@@ -1,31 +1,43 @@
+/* ========================= */
+/* TIPOGRAFÍAS */
+/* ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
 
+/* ========================= */
+/* ESTILOS GENERALES */
+/* ========================= */
 body {
     margin: 0;
     background-color: #f3d9ff;
     font-family: "Roboto", sans-serif;
 }
 
-/* ================= */
-/* HEADER */
-/* ================= */
+
+/* ========================= */
+/* HEADER (barra superior) */
+/* ========================= */
 header {
     background-color: #9700c9;
     padding: 28px 20px;
     position: relative;
 }
 
+/* logo */
 header img {
     width: 58px;
 }
 
-/* ================= */
-/* MENÚ */
-/* ================= */
+
+/* ========================= */
+/* MENÚ HAMBURGUESA */
+/* ========================= */
+
+/* oculta el checkbox */
 #menu {
     display: none;
 }
 
+/* icono ☰ */
 .menu-icon {
     color: white;
     font-size: 26px;
@@ -36,6 +48,7 @@ header img {
     cursor: pointer;
 }
 
+/* menú desplegable */
 .menu-principal {
     display: none;
     position: absolute;
@@ -45,10 +58,12 @@ header img {
     padding: 20px;
 }
 
+/* cuando se activa el menú */
 #menu:checked + .menu-icon + .menu-principal {
     display: block;
 }
 
+/* lista */
 .menu-principal ul {
     list-style: none;
     padding: 0;
@@ -59,6 +74,7 @@ header img {
     padding: 6px 0;
 }
 
+/* links */
 .menu-principal a {
     color: white;
     font-family: "Space Mono", monospace;
@@ -66,28 +82,44 @@ header img {
     font-size: 16px;
 }
 
-/* ================= */
-/* MAIN */
-/* ================= */
+
+/* ========================= */
+/* CONTENIDO PRINCIPAL */
+/* ========================= */
 main {
     padding: 25px 20px;
 }
 
-/* ================= */
-/* HERO */
-/* ================= */
+
+/* ========================= */
+/* HERO (imagen + título) */
+/* ========================= */
+
+/* imagen */
 .hero-imagen img {
     width: 100%;
     border-radius: 25px;
 }
 
-.hero h1 {
-    background-color: #9700c9;
-    color: white;
-    font-size: 24px;
-    margin: 10px 0 0 15px;
+/* título dividido en líneas */
+.titulo-hero {
+    margin: 15px 0 0 18px;
 }
 
+/* cada línea del título */
+.titulo-hero span {
+    background-color: #9700c9;
+    color: white;
+
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 5px;
+
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* texto propósito */
 .hero p {
     margin-top: 25px;
     border-left: 6px solid #9700c9;
@@ -95,18 +127,23 @@ main {
     font-size: 16px;
 }
 
+/* subtítulo automático */
 .hero p::before {
     content: "NUESTRO PROPÓSITO";
     display: block;
     margin-bottom: 10px;
+
     font-family: "Space Mono", monospace;
     color: #9700c9;
     font-size: 12px;
 }
 
-/* ================= */
-/* VIDEO */
-/* ================= */
+
+/* ========================= */
+/* BLOQUE DE VIDEO */
+/* ========================= */
+
+/* contenedor */
 .video {
     border: 4px solid #9700c9;
     border-radius: 40px;
@@ -115,7 +152,7 @@ main {
     position: relative;
 }
 
-/* HEADER CORREGIDO */
+/* header flotante */
 .video-header {
     position: absolute;
     top: -25px;
@@ -127,14 +164,14 @@ main {
     align-items: center;
 }
 
-/* TEXTO IZQUIERDA */
+/* texto izquierda */
 .video h2 {
     font-family: "Space Mono", monospace;
     font-size: 13px;
     color: #4b0068;
 }
 
-/* PASTILLA DERECHA */
+/* pastilla derecha */
 .etiqueta {
     background-color: #9700c9;
     color: white;
@@ -144,13 +181,13 @@ main {
     text-decoration: none;
 }
 
-/* TEXTO */
+/* descripción */
 .video p {
     font-size: 17px;
     margin: 0 10px 20px;
 }
 
-/* VIDEO */
+/* iframe video */
 .video iframe {
     width: calc(100% + 36px);
     height: 200px;
@@ -159,9 +196,12 @@ main {
     border-radius: 25px;
 }
 
-/* ================= */
+
+/* ========================= */
 /* FOOTER */
-/* ================= */
+/* ========================= */
+
+/* contenedor */
 .footer {
     background-color: #4b0068;
     margin: 40px 20px 0;
@@ -170,19 +210,29 @@ main {
     color: white;
 }
 
+/* logo */
 .footer img {
     width: 120px;
 }
 
-/* ================= */
-/* 💻 PC */
-/* ================= */
+/* links */
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ========================= */
+/* VERSIÓN PC */
+/* ========================= */
 @media (min-width: 1024px) {
 
+    /* ocultar hamburguesa */
     .menu-icon {
         display: none;
     }
 
+    /* mostrar menú horizontal */
     .menu-principal {
         display: block;
         position: static;
@@ -194,15 +244,18 @@ main {
         gap: 20px;
     }
 
+    /* ancho contenido */
     main {
         max-width: 900px;
         margin: auto;
     }
 
-    .hero h1 {
-        font-size: 42px;
+    /* título más grande */
+    .titulo-hero span {
+        font-size: 40px;
     }
 
+    /* video */
     .video {
         padding-top: 70px;
         margin-top: 100px;
