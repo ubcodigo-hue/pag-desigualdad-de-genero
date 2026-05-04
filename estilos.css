@@ -8,45 +8,47 @@ body {
 }
 
 /* HEADER */
-body > header {
+/* HEADER */
+header {
     background-color: #9700c9;
-    padding: 35px 18px 25px;
+    padding: 25px 20px;
+    position: relative;
 }
 
-body > header img {
-    width: 75px;
-}
-
-#menu {
-    display: none;
-}
-
+/* BOTÓN ☰ */
 .menu-icon {
-    float: right;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+
     color: white;
-    font-size: 34px;
+    font-size: 28px;
     border: 1px solid rgba(255,255,255,0.5);
     border-radius: 30px;
-    padding: 4px 18px;
+    padding: 5px 15px;
     cursor: pointer;
 }
 
-/* MENU MOBILE */
+/* MENÚ (bloque violeta) */
 .menu-principal {
-    display: block;
-    clear: both;
-    margin-top: 35px;
+    display: none;
+    margin-top: 40px;
 }
 
+/* cuando clickeás */
+#menu:checked + .menu-icon + .menu-principal {
+    display: block;
+}
+
+/* LISTA */
 .menu-principal ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .menu-principal li {
     border-top: 2px solid white;
-    padding: 4px 0;
+    padding: 6px 0;
 }
 
 .menu-principal a {
@@ -55,19 +57,13 @@ body > header img {
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-size: 20px;
-    letter-spacing: 1px;
 }
 
+/* SUBMENÚ */
 .submenu {
-    border: 1px solid rgba(255,255,255,0.7);
-    width: fit-content;
-    margin-left: 32px !important;
-    padding: 6px 16px !important;
-}
-
-.submenu li {
-    border: none;
-    padding: 0;
+    border: 1px solid white;
+    margin-left: 25px;
+    padding: 8px 15px;
 }
 
 .submenu a {
@@ -78,7 +74,37 @@ body > header img {
 
 .submenu li:first-child a {
     color: yellow;
-    text-decoration: underline;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-principal {
+        display: block;
+        margin-top: 0;
+    }
+
+    .menu-principal ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    .menu-principal li {
+        border-top: none;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .menu-principal a {
+        font-size: 14px;
+    }
 }
 
 /* MAIN */
