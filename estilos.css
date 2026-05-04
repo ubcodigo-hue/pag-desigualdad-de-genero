@@ -1,37 +1,25 @@
-/* ========================= */
-/* TIPOGRAFÍAS */
-/* ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
 
-
-/* ========================= */
 /* ESTILOS GENERALES */
-/* ========================= */
 body {
     margin: 0;
     background-color: #f3d9ff;
     font-family: "Roboto", sans-serif;
+    color: black;
 }
 
-
-/* ========================= */
 /* HEADER PRINCIPAL */
-/* ========================= */
 body > header {
     background-color: #9700c9;
     padding: 28px 20px;
     position: relative;
 }
 
-/* logo */
 body > header img {
     width: 58px;
 }
 
-
-/* ========================= */
 /* MENÚ HAMBURGUESA */
-/* ========================= */
 #menu {
     display: none;
 }
@@ -46,25 +34,26 @@ body > header img {
     cursor: pointer;
 }
 
-/* menú */
 .menu-principal {
     display: none;
     position: absolute;
     top: 80px;
+    left: 0;
     width: 100%;
     background-color: #9700c9;
     padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
 }
 
-/* activar menú */
 #menu:checked + .menu-icon + .menu-principal {
     display: block;
 }
 
-/* lista */
 .menu-principal ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .menu-principal li {
@@ -72,54 +61,50 @@ body > header img {
     padding: 6px 0;
 }
 
-/* links */
 .menu-principal a {
     color: white;
     font-family: "Space Mono", monospace;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 700;
 }
 
-
-/* ========================= */
 /* CONTENIDO */
-/* ========================= */
 main {
     padding: 25px 20px;
 }
 
-
-/* ========================= */
 /* HERO */
-/* ========================= */
+.hero-imagen {
+    margin: 0;
+}
+
 .hero-imagen img {
     width: 100%;
+    display: block;
     border-radius: 25px;
 }
 
-/* título dividido */
 .titulo-hero {
     margin: 12px 0 0 18px;
+    line-height: 1.15;
 }
 
 .titulo-hero span {
     background-color: #9700c9;
     color: white;
-
     display: inline;
     padding: 2px 6px;
-
     font-size: 22px;
     font-weight: 900;
-    line-height: 1.2;
 }
 
-/* texto */
 .hero p {
-    margin-top: 25px;
+    margin-top: 28px;
     border-left: 6px solid #9700c9;
     padding-left: 15px;
     font-size: 16px;
+    line-height: 22px;
 }
 
 .hero p::before {
@@ -129,95 +114,125 @@ main {
     font-family: "Space Mono", monospace;
     color: #9700c9;
     font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-
-/* ========================= */
-/* VIDEO (ARREGLADO) */
-/* ========================= */
+/* BLOQUE DE VIDEO */
 .video {
-    border: 4px solid #9700c9;
-    border-radius: 45px;
-    padding: 55px 18px 0;
-    margin-top: 75px;
-    position: relative;
-    overflow: hidden;
+    margin-top: 60px;
 }
 
-/* header flotante */
 .video-header {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-
-    position: absolute;
-    top: -42px;
-    left: 30px;
-    right: 30px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
+    margin: 0 12px 12px;
+    background: transparent;
+    padding: 0;
 }
 
-/* texto izquierda */
-.video h2 {
-    color: #4b0068;
-    font-family: "Space Mono", monospace;
-    font-size: 14px;
+.video-header h2 {
     margin: 0;
+    font-family: "Space Mono", monospace;
+    color: #4b0068;
+    font-size: 13px;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }
 
-/* pastilla derecha */
 .etiqueta {
     background-color: #9700c9;
     color: white;
-    padding: 5px 28px;
-    border-radius: 25px;
-    font-size: 18px;
-    font-style: italic;
     text-decoration: none;
+    padding: 4px 22px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-style: italic;
+    white-space: nowrap;
 }
 
-/* descripción */
-.video p {
-    font-size: 20px;
-    line-height: 26px;
-    margin: 0 12px 22px;
+.video-box {
+    border: 4px solid #9700c9;
+    border-radius: 40px;
+    padding: 24px 18px 0;
+    overflow: hidden;
 }
 
-/* video */
-.video iframe {
+.video-box p {
+    font-size: 17px;
+    line-height: 23px;
+    margin: 0 10px 22px;
+}
+
+.video-box iframe {
     width: calc(100% + 36px);
-    height: 220px;
+    height: 210px;
     margin-left: -18px;
+    display: block;
     border: none;
-    border-radius: 35px 35px 0 0;
+    border-radius: 32px 32px 0 0;
 }
 
-
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 .footer {
     background-color: #4b0068;
-    margin: 40px 20px 0;
-    padding: 40px 25px;
-    border-radius: 40px 40px 0 0;
+    margin: 45px 20px 0;
+    padding: 45px 28px 75px;
+    border-radius: 50px 50px 0 0;
     color: white;
 }
 
 .footer img {
-    width: 120px;
+    width: 140px;
+    margin-bottom: 40px;
 }
 
+.footer h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
 
-/* ========================= */
-/* PC */
-/* ========================= */
+address {
+    font-style: normal;
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+}
+
+.redes img {
+    width: 140px;
+    margin: 20px 0 40px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    font-size: 12px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* VERSIÓN PC */
 @media (min-width: 1024px) {
 
-    /* menú */
+    body > header {
+        padding: 35px 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    body > header img {
+        width: 95px;
+    }
+
     .menu-icon {
         display: none;
     }
@@ -225,41 +240,88 @@ main {
     .menu-principal {
         display: block;
         position: static;
+        width: auto;
         background: none;
+        padding: 0;
+        margin-top: 0;
     }
 
     .menu-principal ul {
         display: flex;
-        gap: 20px;
+        gap: 28px;
     }
 
-    /* ancho */
+    .menu-principal li {
+        border-top: none;
+        padding: 0;
+    }
+
+    .menu-principal a {
+        font-size: 14px;
+    }
+
     main {
-        max-width: 900px;
+        max-width: 1200px;
         margin: auto;
+        padding: 50px 60px;
     }
 
-    /* título */
     .titulo-hero span {
-        font-size: 38px;
+        font-size: 40px;
         padding: 3px 8px;
     }
 
-    /* video */
+    .hero p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
     .video {
-        margin-top: 100px;
-        padding-top: 70px;
+        margin-top: 80px;
     }
 
     .video-header {
-        top: -50px;
+        margin: 0 70px 18px;
     }
 
-    .video p {
-        font-size: 22px;
+    .video-header h2 {
+        font-size: 26px;
     }
 
-    .video iframe {
-        height: 420px;
+    .etiqueta {
+        font-size: 30px;
+        padding: 8px 55px;
+    }
+
+    .video-box {
+        border-radius: 65px;
+        padding: 55px 70px 0;
+    }
+
+    .video-box p {
+        font-size: 36px;
+        line-height: 48px;
+        margin-bottom: 60px;
+    }
+
+    .video-box iframe {
+        width: calc(100% + 140px);
+        height: 520px;
+        margin-left: -70px;
+        border-radius: 65px 65px 0 0;
+    }
+
+    .footer {
+        max-width: 1200px;
+        margin: 70px auto 0;
+        padding: 70px 80px 120px;
+    }
+
+    .footer img {
+        width: 180px;
+    }
+
+    .links {
+        font-size: 13px;
     }
 }
