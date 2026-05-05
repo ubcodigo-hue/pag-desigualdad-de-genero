@@ -96,7 +96,8 @@ main {
 
 .titulo-hero em {
     font-style: italic;
-    font-weight: 300; /* 👈 pisa el 900 del span */
+    font-weight: 300;
+    display: inline; /* 👈 importante */
 }
 
 .titulo-hero span:last-child {
