@@ -85,11 +85,6 @@ main {
     border-radius: 25px;
 }
 
-.titulo-hero {
-    margin: 12px 0 0 18px;
-    line-height: 1.15;
-}
-
 .titulo-hero span {
     background-color: #9700c9;
     color: white;
@@ -97,6 +92,16 @@ main {
     padding: 2px 6px;
     font-size: 22px;
     font-weight: 900;
+}
+
+.titulo-hero em {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.titulo-hero span:last-child {
+    display: inline-block;
+    margin-top: 6px;
 }
 
 .hero p {
