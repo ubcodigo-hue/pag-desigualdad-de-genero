@@ -616,7 +616,7 @@ address {
     }
 
     .noticias-header h1 {
-        font-size: 20px;
+        font-size: 14px;
     }
 
   .noticias-header p strong em {
@@ -646,7 +646,7 @@ address {
     height: 170px;
     object-fit: cover;
 
-    border-radius: 80px 80px 0 0; /* 👈 mismo radio */
+    border-radius: 50% 50% 0 0;
     display: block;
     }
 
