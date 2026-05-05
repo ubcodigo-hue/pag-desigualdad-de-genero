@@ -492,3 +492,302 @@ address {
     font-size: 11px;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= */
+/* NOTICIAS */
+/* ========================= */
+
+.noticias-header h1 {
+    font-family: "Space Mono", monospace;
+    color: #4b0068;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.enterate {
+    display: inline-block;
+    background-color: yellow;
+    color: #9700c9;
+    font-size: 26px;
+    font-style: italic;
+    margin: 10px 0 25px;
+    padding: 0 20px;
+}
+
+/* LISTA */
+.noticias-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* TARJETAS */
+.noticia-card {
+    border: 4px solid #9700c9;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #f3d9ff;
+}
+
+.noticia-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.noticia-contenido {
+    padding: 15px;
+}
+
+.noticia-contenido h3 {
+    font-family: "Space Mono", monospace;
+    color: #9700c9;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.noticia-contenido h2 {
+    background-color: #9700c9;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 10px;
+}
+
+.noticia-contenido p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.leer-mas {
+    display: block;
+    text-align: right;
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    color: #4b0068;
+    text-decoration: none;
+}
+
+/* ========================= */
+/* MENU HAMBURGUESA */
+/* ========================= */
+
+#menu {
+    display: none;
+}
+
+.menu-icon {
+    color: white;
+    font-size: 26px;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 4px 14px;
+    float: right;
+    cursor: pointer;
+}
+
+.menu-principal {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #9700c9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#menu:checked + .menu-icon + .menu-principal {
+    display: block;
+}
+
+.menu-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-principal li {
+    border-top: 2px solid white;
+    padding: 6px 0;
+}
+
+.menu-principal a {
+    color: white;
+    font-family: "Space Mono", monospace;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    background-color: #4b0068;
+    width: 100%;
+    margin: 40px 0 0;
+    padding: 40px 0 0;
+    color: white;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer img {
+    width: 140px;
+}
+
+.footer h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+}
+
+.footer address p {
+    color: white;
+}
+
+.redes {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.redes img {
+    width: 120px;
+}
+
+.links {
+    background-color: black;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 25px 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.links a {
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* ========================= */
+/* PC */
+/* ========================= */
+
+@media (min-width: 1024px) {
+
+    main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-principal {
+        display: block;
+        position: static;
+        background: none;
+    }
+
+    .menu-principal ul {
+        display: flex;
+        gap: 28px;
+    }
+
+    .menu-principal li {
+        border-top: none;
+    }
+
+    /* TARJETAS EN PC */
+    .noticia-card {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+        border-radius: 35px;
+    }
+
+    .noticia-card img {
+        height: 100%;
+    }
+
+    .noticia-contenido {
+        padding: 25px 35px;
+    }
+
+    .noticia-contenido h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .noticia-contenido p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    /* FOOTER PC */
+    .footer-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 60px;
+    }
+
+    .footer-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .footer-right {
+        align-items: flex-end;
+    }
+
+    .links {
+        background: none;
+        width: auto;
+        margin: 0;
+    }
+}

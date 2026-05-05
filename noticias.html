@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
-     <title>Noticias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
 <header>
-        <a href="index.html">
-            <img src="imagenes/logo.png" alt="Logo de Lente Violeta">
-        </a>
+    <a href="index.html">
+        <img src="imagenes/logo.png" alt="Logo Lente Violeta">
+    </a>
 
-   <nav class="menu-principal">
+    <input type="checkbox" id="menu">
+    <label for="menu" class="menu-icon">☰</label>
+
+    <nav class="menu-principal">
         <ul>
             <li><a href="index.html">OBJETIVOS</a></li>
             <li><a href="problemsocial.html">PROBLEMÁTICA SOCIAL</a></li>
-            <li><a href="index.html">DATOS Y ESTADÍSTICAS</a></li>
+            <li><a href="#">DATOS Y ESTADÍSTICAS</a></li>
             <li><a href="noticias.html">NOTICIAS</a></li>
-            <li><a href="index.html">IMPACTO SOCIAL</a></li>
-            <li><a href="index.html">INICIATIVAS</a></li>
+            <li><a href="#">IMPACTO SOCIAL</a></li>
+            <li><a href="#">INICIATIVAS</a></li>
         </ul>
     </nav>
 </header>
@@ -27,68 +32,79 @@
 <main>
 
     <!-- TITULO -->
-        <h1>Noticias</h1>
+    <section class="noticias-header">
+        <h1>NOTICIAS</h1>
+        <p class="enterate">Enteráte yá</p>
+    </section>
 
-    <!-- NOTICIAS -->
-        <article><section class="seccion1">
+    <!-- LISTA DE NOTICIAS -->
+    <section class="noticias-lista">
+
+        <!-- NOTICIA 1 -->
+        <article class="noticia-card">
             <a href="https://tn.com.ar/tecno/ciencia/2026/03/11/los-articulos-cientificos-demoran-mas-en-publicarse-cuando-son-escritos-por-mujeres-revelo-un-estudio/" target="_blank">
                 <img src="imagenes/cientifica.jpg" alt="Mujer científica trabajando">
             </a>
-            <h2>Los artículos científicos demoran más en publicarse cuando son escritos por mujeres</h2>
-            <p>
-                Ellas esperan un promedio de entre 350 y 750 días más que sus contrapartes masculinas,
-                según un estudio basado en millones de papers.
-            </p>
-            <a href="https://tn.com.ar/tecno/ciencia/2026/03/11/los-articulos-cientificos-demoran-mas-en-publicarse-cuando-son-escritos-por-mujeres-revelo-un-estudio/" target="_blank">Leer más</a>
-        </article></section>
 
+            <section class="noticia-contenido">
+                <h3>CIENCIAS NATURALES</h3>
+                <h2>Los artículos científicos demoran más en publicarse cuando son escritos por mujeres</h2>
+                <p>
+                    Ellas esperan un promedio de entre 350 y 750 días más que sus contrapartes masculinas.
+                </p>
+                <a class="leer-mas" href="https://tn.com.ar/tecno/ciencia/2026/03/11/los-articulos-cientificos-demoran-mas-en-publicarse-cuando-son-escritos-por-mujeres-revelo-un-estudio/" target="_blank">LEER MÁS</a>
+            </section>
+        </article>
 
-        <article><section class="seccion2">
+        <!-- NOTICIA 2 -->
+        <article class="noticia-card">
             <a href="https://tn.com.ar/deportes/futbol/2022/06/30/el-salario-de-las-jugadoras-de-futbol-en-argentina-son-profesionales-pero-no-cubren-la-canasta-basica/" target="_blank">
                 <img src="imagenes/futbol.jpg" alt="Jugadoras de fútbol">
             </a>
-           <h2>La lucha de las jugadoras de fútbol argentino para llegar a fin de mes</h2>
-            <p>
-                Aunque compiten como profesionales, en muchos casos sus ingresos no alcanzan
-                para cubrir sus gastos básicos.
-            </p>
-            <a href="https://tn.com.ar/deportes/futbol/2022/06/30/el-salario-de-las-jugadoras-de-futbol-en-argentina-son-profesionales-pero-no-cubren-la-canasta-basica/" target="_blank">Leer más</a>
-        </article></section>
 
+            <section class="noticia-contenido">
+                <h3>DEPORTE</h3>
+                <h2>La lucha de las jugadoras de fútbol argentino para llegar a fin de mes</h2>
+                <p>
+                    Aunque compiten como profesionales, sus ingresos no alcanzan para cubrir sus gastos básicos.
+                </p>
+                <a class="leer-mas" href="https://tn.com.ar/deportes/futbol/2022/06/30/el-salario-de-las-jugadoras-de-futbol-en-argentina-son-profesionales-pero-no-cubren-la-canasta-basica/" target="_blank">LEER MÁS</a>
+            </section>
+        </article>
 
-        <article><section class="seccion3">
+        <!-- NOTICIA 3 -->
+        <article class="noticia-card">
             <a href="https://tn.com.ar/internacional/2021/09/21/desigualdad-de-genero-en-la-asamblea-general-de-la-onu-solo-hablo-mujer-entre-30-hombres-en-la-sesion-inaugural/" target="_blank">
                 <img src="imagenes/ONU.jpg" alt="Asamblea de la ONU">
             </a>
-           <h2>Desigualdad de género en la Asamblea General de la ONU</h2>
-            <p>
-                Solo una mujer habló entre decenas de líderes mundiales,
-                evidenciando la baja representación femenina en espacios de poder.
-            </p>
-            <a href="https://tn.com.ar/internacional/2021/09/21/desigualdad-de-genero-en-la-asamblea-general-de-la-onu-solo-hablo-mujer-entre-30-hombres-en-la-sesion-inaugural/" target="_blank">Leer más</a>
-        </article></section>
 
+            <section class="noticia-contenido">
+                <h3>POLÍTICA</h3>
+                <h2>Desigualdad de género en la Asamblea General de la ONU</h2>
+                <p>
+                    Solo una mujer habló entre decenas de líderes mundiales.
+                </p>
+                <a class="leer-mas" href="https://tn.com.ar/internacional/2021/09/21/desigualdad-de-genero-en-la-asamblea-general-de-la-onu-solo-hablo-mujer-entre-30-hombres-en-la-sesion-inaugural/" target="_blank">LEER MÁS</a>
+            </section>
+        </article>
 
-        <article>
+        <!-- NOTICIA 4 -->
+        <article class="noticia-card">
             <a href="https://tn.com.ar/show/novedades/2019/03/08/de-las-peliculas-argentinas-estrenadas-en-2018-solo-el-17-fue-dirigido-por-mujeres/" target="_blank">
                 <img src="imagenes/cine.jpg" alt="Mujer en cámara de cine">
             </a>
-            <h2>Solo el 17% de las películas fueron dirigidas por mujeres</h2>
-            <p>
-                La industria audiovisual sigue mostrando una fuerte desigualdad de género
-                en roles de dirección.
-            </p>
-            <a href="https://tn.com.ar/show/novedades/2019/03/08/de-las-peliculas-argentinas-estrenadas-en-2018-solo-el-17-fue-dirigido-por-mujeres/" target="_blank">Leer más</a>
+
+            <section class="noticia-contenido">
+                <h3>ARTE</h3>
+                <h2>Solo el 17% de las películas fueron dirigidas por mujeres</h2>
+                <p>
+                    La industria audiovisual sigue mostrando desigualdad en roles de dirección.
+                </p>
+                <a class="leer-mas" href="https://tn.com.ar/show/novedades/2019/03/08/de-las-peliculas-argentinas-estrenadas-en-2018-solo-el-17-fue-dirigido-por-mujeres/" target="_blank">LEER MÁS</a>
+            </section>
         </article>
 
-    <aside>
-        <h3>Suscribite e informate</h3>
-        <form>
-            <label>Correo electrónico:</label><br>
-            <input type="email" placeholder="Tu email"><br><br>
-            <button type="submit">Suscribirse</button>
-        </form>
-    </aside>
+    </section>
 
 </main>
 
@@ -102,7 +118,6 @@
 
             <section class="footer-texto">
                 <h3>CONTACTANOS</h3>
-
                 <address>
                     <p>infoigualdaddegenero@gmail.com</p>
                     <p>+54 11 6278 6427</p>
