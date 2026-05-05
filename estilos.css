@@ -511,105 +511,7 @@ address {
 
 
 
-.noticias-main {
-    padding: 25px 20px;
-}
-
-.noticias-header {
-    margin-bottom: 25px;
-}
-
-.noticias-header h1 {
-    font-family: "Space Mono", monospace;
-    color: #4b0068;
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-.noticias-header p {
-    display: inline-block;
-    background-color: yellow;
-    color: #9700c9;
-    font-size: 28px;
-    font-style: italic;
-    margin: 8px 0 25px;
-    padding: 0 14px;
-}
-
-.noticias-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
-.noticia-card {
-    border: 3px solid #9700c9;
-    border-radius: 26px;
-    overflow: hidden;
-    background-color: #f3d9ff;
-}
-
-.noticia-card > a img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-    border-radius: 0;
-}
-
-.noticia-contenido {
-    padding: 12px 14px 10px;
-}
-
-.noticia-contenido h3 {
-    font-family: "Space Mono", monospace;
-    color: #9700c9;
-    font-size: 10px;
-    letter-spacing: 4px;
-    margin: 0 0 10px;
-}
-
-.noticia-contenido h2 {
-    background-color: #4b0068;
-    color: yellow;
-    border-radius: 22px;
-    padding: 7px 14px;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    margin: 0 0 12px;
-}
-
-.noticia-contenido p {
-    font-size: 14px;
-    line-height: 18px;
-    margin: 0 0 8px;
-    color: #4b0068;
-}
-
-.leer-mas {
-    display: block;
-    text-align: right;
-    font-family: "Space Mono", monospace;
-    color: #4b0068;
-    font-size: 12px;
-    font-weight: 700;
-    text-decoration: none;
-    border: 2px solid #9700c9;
-    border-radius: 20px;
-    padding: 2px 12px;
-    width: fit-content;
-    margin-left: auto;
-}
-
-/* ========================= */
-/* PC */
-/* ========================= */
-
-@media (min-width: 1024px) {
-
-    .noticias-main {
+   .noticias-main {
         max-width: 1200px;
         margin: auto;
         padding: 70px 60px;
@@ -619,9 +521,9 @@ address {
         font-size: 14px;
     }
 
-  .noticias-header p strong em {
-    font-weight: 700;
-    font-style: italic;
+    .noticias-header p {
+        font-size: 42px;
+        margin-bottom: 50px;
     }
 
     .noticias-lista {
@@ -631,55 +533,57 @@ address {
     }
 
     .noticia-card {
-    border: 2px solid #9700c9;
-
-    border-radius: 80px 80px 0 0; /* 👈 curva arriba, recto abajo */
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    background-color: #f3d9ff;
+        border: 2px solid #9700c9;
+        border-radius: 70px 70px 0 0;
+        overflow: hidden;
+        padding-bottom: 6px;
+        display: flex;
+        flex-direction: column;
+        background-color: #f3d9ff;
+        height: 100%;
     }
 
-    .noticia-card img {
-    width: 100%;
-    height: 150px; /* 👈 bajamos un poco la altura */
-    object-fit: cover;
-
-    border-radius: 90px 90px 0 0; /* 👈 curva grande pero controlada */
-}
+    .noticia-card > a img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        display: block;
+        border-radius: 70px 70px 0 0;
+    }
 
     .noticia-contenido {
         display: flex;
         flex-direction: column;
         height: 100%;
+        padding: 0 0 8px;
     }
 
     .noticia-contenido h3 {
         font-size: 10px;
         letter-spacing: 3px;
-        margin: 10px 12px 6px;
-        border-bottom: 2px solid #9700c9; 
-    padding-bottom: 6px;
+        margin: 10px 12px 8px;
+        border-bottom: 2px solid #9700c9;
+        padding-bottom: 6px;
     }
 
     .noticia-contenido h2 {
         background-color: #4b0068;
         color: yellow;
         border-radius: 30px;
-        padding: 10px 12px;
-        font-size: 14px;
-        line-height: 18px;
-        margin: 0 12px 12px;
+        padding: 8px 10px;
+        font-size: 13px;
+        line-height: 16px;
+        margin: 0 12px 10px;
         text-align: center;
     }
 
     .noticia-contenido p {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 11px;
+        line-height: 14px;
         margin: 0 12px 10px;
         color: #4b0068;
     }
+
 
     .leer-mas {
         font-size: 10px;
