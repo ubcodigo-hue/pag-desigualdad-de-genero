@@ -69,6 +69,36 @@ body > header img {
     font-weight: 700;
 }
 
+
+/* esconder checkbox */
+#sub-objetivos {
+    display: none;
+}
+
+/* estilo del label como los links */
+.item-objetivos label {
+    color: white;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: block;
+}
+
+/* submenu oculto */
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 8px 14px;
+    margin: 6px 0 0 20px;
+    background-color: #9700c9;
+}
+
+/* cuando se toca */
+#sub-objetivos:checked + label + .submenu {
+    display: block;
+}
+
 /* CONTENIDO */
 main {
     padding: 25px 20px;
@@ -306,6 +336,37 @@ address {
     .menu-principal a {
         font-size: 14px;
     }
+
+    .item-objetivos {
+    position: relative;
+}
+
+/* importante: que no se rompa el flex */
+.menu-principal > ul {
+    display: flex;
+    gap: 28px;
+}
+
+/* submenu flotante */
+.submenu {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 160px;
+    display: none;
+    z-index: 20;
+}
+
+/* hover en PC */
+.item-objetivos:hover .submenu {
+    display: block;
+}
+
+/* que el label se vea igual que los links */
+.menu-principal a,
+.item-objetivos label {
+    font-size: 14px;
+}
 
     main {
         max-width: 1200px;
