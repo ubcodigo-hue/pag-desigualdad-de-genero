@@ -307,48 +307,49 @@ address {
         font-size: 14px;
     }
 
-    main {
-        max-width: 1200px;
-        margin: auto;
-        padding: 50px 60px;
-    }
+   main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 60px;
+}
 
     /* HERO PC EN DOS COLUMNAS */
 
     .hero {
-        display: grid;
-        grid-template-columns: 55% 45%;
-        column-gap: 40px;
-        align-items: start;
-    }
+    display: grid;
+    grid-template-columns: 55% 45%;
+    column-gap: 40px;
+    align-items: center;
+}
 
-    .hero-imagen {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-    }
+.hero-imagen {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
 
-    .hero-imagen img {
-        width: 100%;
-    }
+.hero-imagen img {
+    width: 100%;
+}
 
-    .titulo-hero {
-        grid-column: 2;
-        margin: 20px 0 0 0;
-    }
+.titulo-hero {
+    grid-column: 2;
+    margin: 0 0 18px 0;
+    align-self: end;
+}
 
-    .titulo-hero span {
-        font-size: 38px;
-        line-height: 1.1;
-    }
+.titulo-hero span {
+    font-size: 34px;
+    line-height: 1.1;
+    padding: 3px 8px;
+}
 
-    .hero p {
-        grid-column: 2;
-        margin-top: 20px;
-        font-size: 22px;
-        line-height: 30px;
-    
-    }
-
+.hero p {
+    grid-column: 2;
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 28px;
+    align-self: start;
+}
 
     .destacado {
         font-weight: 900;
