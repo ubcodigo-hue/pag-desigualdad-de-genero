@@ -384,7 +384,7 @@ address {
       /* FOOTER */
    .footer {
         width: 100%;
-        margin: 70px 0 0;
+        margin: 0px 0 0;
         padding: 70px 0 0; /* 👈 sin espacio abajo */
         color: white;
     }
@@ -408,10 +408,21 @@ address {
         width: 120px;
     }
 
-    /* 🔥 FRANJA NEGRA */
-    .links {
-    padding: 30px 60px 40px;
-    gap: 20px 30px;
+     .links {
+        background-color: black;
+
+        width: 100vw; /* 👈 ancho real de pantalla */
+        margin-left: calc(-50vw + 50%); /* 👈 rompe el contenedor */
+
+        margin-bottom: 0; /* 👈 importante */
+        padding: 30px 60px 50px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+    }
 }
 
     .links a {
