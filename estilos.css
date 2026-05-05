@@ -307,48 +307,57 @@ address {
         font-size: 14px;
     }
 
-   main {
-    max-width: 1100px;
+  main {
+    max-width: 1200px;
     margin: auto;
-    padding: 60px 60px;
+    padding: 80px 60px;
 }
 
     /* HERO PC EN DOS COLUMNAS */
 
-    .hero {
+   .hero {
     display: grid;
-    grid-template-columns: 55% 45%;
-    column-gap: 40px;
+    grid-template-columns: 52% 6% 42%;
     align-items: center;
+    column-gap: 0;
 }
 
-.hero-imagen {
+.hero a {
     grid-column: 1;
     grid-row: 1 / span 2;
 }
 
+.hero-imagen {
+    margin: 0;
+}
+
 .hero-imagen img {
     width: 100%;
+    border-radius: 35px;
 }
 
 .titulo-hero {
-    grid-column: 2;
-    margin: 0 0 18px 0;
+    grid-column: 3;
+    grid-row: 1;
     align-self: end;
+    margin: 0 0 22px 0;
 }
 
 .titulo-hero span {
     font-size: 34px;
-    line-height: 1.1;
+    line-height: 1.08;
     padding: 3px 8px;
 }
 
 .hero p {
-    grid-column: 2;
-    margin-top: 0;
+    grid-column: 3;
+    grid-row: 2;
+    align-self: start;
+
+    margin: 0;
     font-size: 20px;
     line-height: 28px;
-    align-self: start;
+    max-width: 520px;
 }
 
     .destacado {
