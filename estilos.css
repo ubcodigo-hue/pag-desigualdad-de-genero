@@ -524,8 +524,8 @@ address {
 .noticias-header h1 {
     font-family: "Space Mono", monospace;
     color: #4b0068;
-    font-size: 26px;
-    letter-spacing: 3px;
+    font-size: 14px;
+    letter-spacing: 2px;
     margin: 0;
 }
 
@@ -533,70 +533,76 @@ address {
     display: inline-block;
     background-color: yellow;
     color: #9700c9;
-    font-size: 30px;
+    font-size: 28px;
     font-style: italic;
-    margin: 8px 0 0;
+    margin: 8px 0 25px;
     padding: 0 14px;
 }
 
-/* LISTA */
 .noticias-lista {
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 32px;
 }
 
-/* BLOQUE NOTICIA (ESTILO EDITORIAL, SIN TARJETA) */
 .noticia-card {
-    display: grid;
-    grid-template-columns: 38% 62%;
-    gap: 14px;
-    align-items: start;
+    border: 3px solid #9700c9;
+    border-radius: 26px;
+    overflow: hidden;
+    background-color: #f3d9ff;
 }
 
-/* IMAGEN */
 .noticia-card > a img {
     width: 100%;
-    height: 125px;
+    height: 190px;
     object-fit: cover;
-    border-radius: 18px;
     display: block;
+    border-radius: 0;
 }
 
-/* CONTENIDO */
+.noticia-contenido {
+    padding: 12px 14px 10px;
+}
+
 .noticia-contenido h3 {
     font-family: "Space Mono", monospace;
     color: #9700c9;
     font-size: 10px;
-    letter-spacing: 2px;
-    margin: 0 0 6px;
+    letter-spacing: 4px;
+    margin: 0 0 10px;
 }
 
 .noticia-contenido h2 {
-    background-color: #9700c9;
-    color: white;
-    display: inline;
-    padding: 2px 6px;
-    font-size: 15px;
-    line-height: 21px;
-    font-weight: 400;
+    background-color: #4b0068;
+    color: yellow;
+    border-radius: 22px;
+    padding: 7px 14px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 0 12px;
 }
 
 .noticia-contenido p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 18px;
-    margin: 10px 0 8px;
+    margin: 0 0 8px;
+    color: #4b0068;
 }
 
-/* LEER MÁS */
 .leer-mas {
     display: block;
     text-align: right;
     font-family: "Space Mono", monospace;
     color: #4b0068;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     text-decoration: none;
+    border: 2px solid #9700c9;
+    border-radius: 20px;
+    padding: 2px 12px;
+    width: fit-content;
+    margin-left: auto;
 }
 
 /* ========================= */
