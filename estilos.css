@@ -858,4 +858,93 @@ body > header img {
     .links a {
         font-size: 11px;
     }
+
+/* PROBLEMATICA SOCIAL */
+.genero {
+    background-color: #d9c3e6;
+    padding: 25px 18px;
+    border-radius: 30px;
+}
+
+.etiqueta-seccion {
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    color: #4b0068;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.titulo-seccion {
+    font-size: 22px;
+    color: #6a00a3;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.intro {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.genero .subrayado {
+    text-decoration: underline;
+}
+
+/* BLOQUES */
+
+.bloque {
+    margin-top: 28px;
+}
+
+.bloque img {
+    width: 100%;
+    border-radius: 22px;
+    margin-bottom: 10px;
+}
+
+.bloque h2 {
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #6a00a3;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+}
+
+.bloque p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* SUSCRIPCION */
+
+.suscripcion {
+    margin-top: 40px;
+}
+
+.suscripcion h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    border-bottom: 2px solid black;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+.suscripcion input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.suscripcion button {
+    margin-top: 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+}
 }
