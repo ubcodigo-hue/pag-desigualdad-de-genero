@@ -319,9 +319,9 @@ address {
 
     /* HERO PC EN DOS COLUMNAS */
 
-   .hero {
+  .hero {
     display: grid;
-    grid-template-columns: 52% 6% 42%;
+    grid-template-columns: 60% 5% 35%; /* 👈 acá */
     align-items: center;
     column-gap: 0;
 }
