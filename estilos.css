@@ -269,9 +269,6 @@ address {
 /* VERSIÓN PC */
 @media (min-width: 1024px) {
 
-    /* ========================= */
-    /* HEADER */
-    /* ========================= */
     body > header {
         padding: 35px 70px;
         display: flex;
@@ -283,7 +280,6 @@ address {
         width: 95px;
     }
 
-    /* menú */
     .menu-icon {
         display: none;
     }
@@ -311,42 +307,54 @@ address {
         font-size: 14px;
     }
 
-    /* ========================= */
-    /* MAIN */
-    /* ========================= */
     main {
         max-width: 1200px;
         margin: auto;
         padding: 50px 60px;
     }
 
-    /* ========================= */
-    /* HERO */
-    /* ========================= */
+    /* HERO PC EN DOS COLUMNAS */
+    .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        column-gap: 60px;
+        align-items: center;
+    }
+
+    .hero-imagen {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .titulo-hero {
+        grid-column: 2;
+        margin: 0;
+    }
+
     .titulo-hero span {
-        font-size: 40px;
+        font-size: 34px;
         padding: 3px 8px;
     }
 
     .hero p {
-        font-size: 24px;
-        line-height: 32px;
+        grid-column: 2;
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 25px;
     }
 
     .destacado {
-    font-weight: 900;
-    color: #9700c9;
-}
+        font-weight: 900;
+        color: #9700c9;
+    }
 
-.subrayado {
-    text-decoration: underline;
-}
+    .subrayado {
+        text-decoration: underline;
+    }
 
-    /* ========================= */
-    /* VIDEO */
-    /* ========================= */
+    /* VIDEO PC HORIZONTAL */
     .video {
-        margin-top: 80px;
+        margin-top: 90px;
     }
 
     .video-header {
@@ -354,76 +362,84 @@ address {
     }
 
     .video-header h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .etiqueta {
-        font-size: 18px;
-        padding: 6px 28px;
+        font-size: 16px;
+        padding: 5px 28px;
     }
 
     .video-box {
-        border-radius: 65px;
-        padding: 55px 70px 0;
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        border-radius: 45px;
+        padding: 45px;
     }
 
     .video-box p {
-        font-size: 20px;
-        line-height: 28px;
-        margin-bottom: 40px;
+        width: 42%;
+        font-size: 17px;
+        line-height: 24px;
+        margin: 0;
     }
 
     .video-box iframe {
-        width: calc(100% + 140px);
-        height: 420px;
-        margin-left: -70px;
-        border-radius: 65px 65px 0 0;
+        width: 58%;
+        height: 260px;
+        margin-left: 0;
+        border-radius: 35px;
     }
 
-    /* ========================= */
-      /* FOOTER */
-   .footer {
+    /* FOOTER PC */
+    .footer {
         width: 100%;
-        margin: 0px 0 0;
-         padding-bottom: 0;
+        margin: 0;
+        padding: 55px 0 0;
         color: white;
     }
 
     .footer-contenido {
         max-width: 1200px;
         margin: auto;
-        padding: 0 60px 50px;
+        padding: 0 60px 45px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 40px;
     }
 
     .footer img {
         width: 180px;
+        margin-bottom: 0;
     }
 
-    /* redes */
+    .footer h3 {
+        margin-top: 0;
+    }
+
     .redes {
+        justify-content: flex-end;
         gap: 20px;
+        margin: 0;
     }
 
     .redes img {
         width: 120px;
     }
 
-     .links {
+    .links {
         background-color: black;
-
-        width: 100vw; /* 👈 ancho real de pantalla */
-        margin-left: calc(-50vw + 50%); /* 👈 rompe el contenedor */
-
-        margin-bottom: 0; /* 👈 importante */
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-bottom: 0;
         padding: 30px 60px 50px;
-
         box-sizing: border-box;
-
         display: flex;
         flex-wrap: wrap;
         gap: 20px 30px;
     }
-}
 
     .links a {
         font-size: 13px;
