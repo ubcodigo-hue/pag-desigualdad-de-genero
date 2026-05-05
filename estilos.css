@@ -112,6 +112,9 @@ main {
     font-weight: 900;
     color: #9700c9;
 }
+.subrayado {
+    text-decoration: underline;
+}
 
 .hero p::before {
     content: "NUESTRO PROPÓSITO";
@@ -258,6 +261,10 @@ address {
     text-decoration: none;
     font-size: 12px;
 }
+
+
+
+
 /* ========================= */  /* ========================= */ 
 /* VERSIÓN PC */
 @media (min-width: 1024px) {
@@ -329,6 +336,10 @@ address {
     .destacado {
     font-weight: 900;
     color: #9700c9;
+}
+
+.subrayado {
+    text-decoration: underline;
 }
 
     /* ========================= */
