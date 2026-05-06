@@ -639,7 +639,8 @@ address {
     border: 2px solid #4b0068;
     /* Usamos px en lugar de % para mantener la forma de arco perfecta */
     border-radius: 150px 150px 0 0; 
-    overflow: hidden;
+   position: relative;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     background-color: #f3d9ff;
@@ -697,18 +698,20 @@ address {
 }
 
 .leer-mas {
-    font-size: 11px;
-    margin-top: auto;
-    margin-right: 12px;
-    margin-bottom: 12px;
-    padding: 3px 12px;
-    border: 1px solid #9700c9;
+    position: absolute;
+    right: -2px;
+    bottom: -10px;
+
+    background-color: #f3d9ff;
+    border: 1px solid #4b0068;
     border-radius: 20px;
-    align-self: flex-end;
+
+    padding: 3px 12px;
+    font-size: 10px;
+    font-family: "Space Mono", monospace;
     color: #4b0068;
     text-decoration: none;
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
+
 }
 
     .footer {
