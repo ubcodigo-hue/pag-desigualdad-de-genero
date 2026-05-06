@@ -509,7 +509,9 @@ address {
 /* NOTICIAS */
 /* ========================= */
 
-
+body {
+    background-color: white;
+}
 
 .noticias-main {
     padding: 25px 20px;
@@ -609,9 +611,6 @@ address {
 
 @media (min-width: 1024px) {
 
-    body {
-    background-color: white;
-}
 
     .noticias-main {
         max-width: 1200px;
