@@ -812,73 +812,51 @@ body {
 
 
 @media (min-width: 1024px) {
-    /* CONTENEDOR LILA GENERAL (Como se ve en el PDF) */
-    .genero-bloque-principal {
+
+    .genero-main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 35px 0;
+        display: grid;
+        grid-template-columns: 72% 24%;
+        gap: 45px;
+        align-items: start;
+    }
+
+    .genero-header {
         grid-column: 1;
-        background-color: #f3d9ff; /* Lila suave del PDF */
-        border-radius: 60px;
-        padding: 40px;
+        background: none;
+        padding: 0 35px;
+        border-radius: 0;
     }
 
-    /* HEADER INTERNO */
-    .genero-header h1 {
-        color: #9700c9;
-        font-size: 34px;
-        font-style: italic;
-        font-weight: 300;
-        margin-bottom: 25px;
-    }
 
-    /* BLOQUES DE CONTENIDO (Grilla de 2 columnas) */
     .genero-contenido {
+        grid-column: 1;
+        background-color: #f3d9ff;
+        border-radius: 55px;
+        padding: 55px 85px 90px;
+        margin-top: 25px;
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 50px 40px;
-        margin-top: 40px;
+        gap: 80px 90px;
     }
 
-    /* IMÁGENES: Arco tipo túnel perfecto */
+
     .bloque img {
-        width: 100%;
-        height: 250px; /* Altura fija para mantener la forma del arco */
+        width: 220px;
+        height: 280px;
         object-fit: cover;
+        border-radius: 90px;
         display: block;
-        /* Radio alto para crear el arco semicircular del PDF */
-        border-radius: 150px 150px 0 0; 
-        border: 2px solid #4b0068;
-        box-sizing: border-box;
+        margin: 0 auto 25px;
     }
 
-    /* TÍTULOS: Línea de punta a punta */
-    .bloque h2 {
-        font-family: "Space Mono", monospace;
-        font-size: 13px;
-        color: #4b0068;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        
-        /* Eliminamos márgenes laterales para que la línea toque los bordes */
-        margin: 15px 0 10px; 
-        padding: 0 0 8px 0; 
-        border-bottom: 2px solid #4b0068;
-        display: block;
-    }
-
-    .bloque p {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #4b0068;
-        margin: 0;
-    }
-
-    /* SUSCRIPCIÓN (Lateral derecho) */
+    
     .suscripcion {
         grid-column: 2;
-        align-self: start;
-        margin-top: 100px;
-        background-color: #f3d9ff;
-        border-radius: 0 0 45px 45px;
-        padding: 22px;
-        border-top: 5px solid #4b0068; /* Detalle estético del PDF */
+        grid-row: 2;
+        margin-top: 210px;
     }
 }
