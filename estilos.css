@@ -928,13 +928,50 @@ body {
     }
 
     /* FORM A LA DERECHA */
-    .suscripcion {
-        grid-column: 2;
-        align-self: start;
-        margin-top: 120px;
+   .suscripcion {
+    grid-column: 2;
+    align-self: start;
+    margin-top: 210px;
 
-        background-color: #c3afd0;
-        border-radius: 0 0 40px 40px;
-        padding: 25px;
-    }
+    background-color: #c3afd0;
+    border-radius: 0 0 45px 45px;
+    padding: 18px 22px 22px;
+}
+
+.suscripcion h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    margin: 0 0 8px;
+    border-bottom: 2px solid black;
+    letter-spacing: 1px;
+}
+
+.suscripcion input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 22px;
+
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: transparent;
+
+    padding: 2px 12px;
+    font-size: 10px;
+}
+
+.suscripcion button {
+    margin-top: 8px;
+
+    background-color: #e42313;
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 6px 14px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
