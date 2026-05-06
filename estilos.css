@@ -4,7 +4,8 @@
 body {
     margin: 0;
 
-    background-color: #f3d9ff;
+    background-color: #f3d9ff !important;
+
     
     font-family: "Roboto", sans-serif;
     color: black;
@@ -975,6 +976,7 @@ body {
     border-bottom: 4px solid black;
     letter-spacing: 1px;
     white-space: nowrap;
+    text-align: center;
 }
 
 .form-suscripcion {
