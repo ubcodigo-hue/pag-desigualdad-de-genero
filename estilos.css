@@ -1005,8 +1005,7 @@ body {
 }
 
 .form-suscripcion button {
-    margin-top: 26px;
-    margin-left: -2px;
+    margin: 24px auto 0;
 
     background-color: #e42313;
     color: white;
@@ -1026,7 +1025,6 @@ body {
 
     display: block;
 }
-
     /* MENÚ */
     .menu-principal a {
         font-family: "Space Mono", monospace;
