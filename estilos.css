@@ -3,7 +3,9 @@
 /* ESTILOS GENERALES */
 body {
     margin: 0;
+
     background-color: #f3d9ff;
+    
     font-family: "Roboto", sans-serif;
     color: black;
 }
