@@ -844,17 +844,29 @@ body {
         border-radius: 0;
     }
 
-
     .genero-contenido {
-    padding: 35px 70px 55px;
+        grid-column: 1;
+        background-color: #f3d9ff;
+        border-radius: 55px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+        padding: 35px 70px 55px;
 
-    column-gap: 70px;
-    row-gap: 25px;
-}
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 70px;
+        row-gap: 25px;
+    }
 
+    .texto-lila {
+        grid-column: 1 / 3;
+        margin-bottom: 0;
+    }
+
+    .texto-lila p {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0 0 18px;
+    }
 
     .bloque img {
         width: 220px;
@@ -865,23 +877,9 @@ body {
         margin: 0 auto 25px;
     }
 
-
     .suscripcion {
         grid-column: 2;
         grid-row: 2;
         margin-top: 210px;
     }
-
-    .texto-lila {
-    grid-column: 1 / 3;
-    margin-bottom: 0;
-}
-
-.texto-lila p {
-    font-size: 18px;
-    line-height: 30px;
-
-    margin: 0 0 18px;
-}
-
 }
