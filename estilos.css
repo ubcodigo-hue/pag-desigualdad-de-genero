@@ -609,116 +609,111 @@ address {
 
 @media (min-width: 1024px) {
 
-  .noticias-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 70px 60px;
-}
+    .noticias-main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 70px 60px;
+    }
 
-.noticias-header h1 {
-    font-size: 14px;
-}
+    .noticias-header h1 {
+        font-size: 14px;
+        color: #4b0068;
+        font-family: "Space Mono", monospace;
+    }
 
-.noticias-header p {
-    display: inline-block;
-    background-color: yellow;
-    color: #9700c9;
-    font-size: 42px;
-    font-style: italic;
-    margin: 8px 0 50px;
-    padding: 0 14px;
-}
+    .noticias-header p {
+        display: inline-block;
+        background-color: yellow;
+        color: #9700c9;
+        font-size: 42px;
+        font-style: italic;
+        margin: 8px 0 50px;
+        padding: 0 14px;
+    }
 
-.noticias-lista {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px; /* Un poco más de espacio entre columnas ayuda a la lectura */
-}
+    .noticias-lista {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        align-items: stretch; /* 👈 TODAS IGUALES */
+    }
 
-.noticia-card {
-    border: 2px solid #4b0068;
-    border-radius: 200px 200px 0 0; /* Aumentamos a 200px para asegurar el arco redondo */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: #f3d9ff;
-    height: 100%;
-    position: relative;
-    padding-bottom: 26px; 
-}
+    .noticia-card {
+        position: relative; /* 👈 para el botón */
+        border: 2px solid #4b0068;
+        border-radius: 130px 130px 0 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: #f3d9ff;
+        height: 100%;
+    }
 
-.noticia-card > a img {
-    width: 100%;
-    height: 220px; /* Un poco más de altura para que el arco luzca mejor */
-    object-fit: cover;
-    display: block;
-    border-radius: 200px 200px 0 0; /* Debe ser igual al de la card */
-    border-bottom: 2px solid #4b0068;
-}
+    .noticia-card > a img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        display: block;
+        border-radius: 130px 130px 0 0;
+        border-bottom: 2px solid #4b0068;
+    }
 
-.noticia-contenido {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 10px 0; /* Espacio arriba y abajo */
-}
+    .noticia-contenido {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 25px; /* espacio para botón */
+    }
 
-.noticia-contenido h3 {
-    font-family: "Space Mono", monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    /* Quitamos el margen lateral para que la línea toque los bordes */
-    margin: 10px 0 10px; 
-    /* Usamos padding para que el TEXTO no toque el borde, pero la línea sí */
-    padding: 0 20px 5px; 
-    border-bottom: 1.5px solid #4b0068;
-    color: #4b0068;
-    text-transform: uppercase;
-    display: block; /* Asegura que ocupe todo el ancho */
-}
+    .noticia-contenido h3 {
+        font-family: "Space Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin: 12px 0 8px;
+        padding: 0 15px 6px;
+        border-bottom: 1.5px solid #4b0068;
+        color: #4b0068;
+        text-transform: uppercase;
+    }
 
-/* Mantenemos los márgenes en el resto para que el diseño respire */
-.noticia-contenido h2 {
-    background-color: #4b0068;
-    color: yellow;
-    border-radius: 28px; /* 👈 menos inflado */
-    padding: 8px 12px;   /* 👈 más chico */
+    .noticia-contenido h2 {
+        background-color: #4b0068;
+        color: yellow;
+        border-radius: 28px;
+        padding: 8px 12px;
+        font-size: 13px;
+        line-height: 16px;
+        margin: 5px 15px 12px;
+        text-align: center;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-    font-size: 13px;
-    line-height: 15px;
+    .noticia-contenido p {
+        font-size: 11px;
+        line-height: 14px;
+        margin: 0 15px 12px;
+        color: #4b0068;
+        flex-grow: 1; /* 👈 EMPUJA TODO */
+    }
 
-    margin: 5px 15px 12px;
-    text-align: center;
+    .leer-mas {
+        position: absolute;
+        right: -2px;
+        bottom: -10px;
 
-    min-height: 48px; /* 👈 más compacto */
+        background-color: #f3d9ff;
+        border: 1px solid #4b0068;
+        border-radius: 20px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.noticia-contenido p {
-    font-size: 12px;
-    line-height: 1.5;
-    margin: 0 20px 20px; 
-    color: #4b0068;
-}
-
-.leer-mas {
-   position: absolute;
-    right: -2px;
-    bottom: -10px;
-
-    background-color: #f3d9ff;
-    border: 1px solid #4b0068;
-    border-radius: 20px;
-
-    padding: 3px 12px;
-    font-size: 10px;
-    font-family: "Space Mono", monospace;
-    color: #4b0068;
-    text-decoration: none;
-
+        padding: 3px 12px;
+        font-size: 10px;
+        font-family: "Space Mono", monospace;
+        color: #4b0068;
+        text-decoration: none;
+    }
 }
 
     .footer {
