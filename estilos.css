@@ -955,7 +955,8 @@ body {
     grid-row: 2;
 
     margin-top: 90px;
-    width: 280px;
+
+    width: 240px;
 }
 
 .suscripcion h3 {
@@ -977,7 +978,6 @@ body {
 
     padding: 22px 18px 22px;
 
-    width: 240px;
 }
 
 .form-suscripcion input {
@@ -1002,8 +1002,6 @@ body {
 .form-suscripcion button {
     margin-top: 18px;
 
-    margin-left: 0;
-
     background-color: #e42313;
     color: white;
 
@@ -1020,7 +1018,8 @@ body {
 
     cursor: pointer;
 
-    display: block;
+    display: flex;
+    justify-content: flex-start;
 }
 
 
