@@ -643,6 +643,8 @@ address {
     flex-direction: column;
     background-color: #f3d9ff;
     height: 100%;
+    position: relative;
+    padding-bottom: 26px; 
 }
 
 .noticia-card > a img {
@@ -703,7 +705,7 @@ address {
 }
 
 .leer-mas {
-    position: absolute;
+   position: absolute;
     right: -2px;
     bottom: -10px;
 
