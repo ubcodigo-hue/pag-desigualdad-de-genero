@@ -636,10 +636,9 @@ address {
 }
 
 .noticia-card {
-    border: 2px solid #9700c9;
-    border-radius: 70px 70px 0 0;
+    border: 2px solid #4b0068;
+    border-radius: 100px 100px 0 0;
     overflow: hidden;
-    padding-bottom: 6px;
     display: flex;
     flex-direction: column;
     background-color: #f3d9ff;
@@ -648,10 +647,11 @@ address {
 
 .noticia-card > a img {
     width: 100%;
-    height: 140px;
+    height: 170px;
     object-fit: cover;
     display: block;
-    border-radius: 70px 70px 0 0;
+    border-radius: 100px 100px 0 0;
+    border-bottom: 2px solid #4b0068;
 }
 
 .noticia-contenido {
@@ -662,11 +662,13 @@ address {
 }
 
 .noticia-contenido h3 {
-    font-size: 10px; /* 👈 tu tamaño original */
-    letter-spacing: 3px;
-    margin: 10px 0 8px; /* 👈 sin margen lateral */
-    padding: 0 12px 6px;
-    border-bottom: 2px solid #9700c9;
+     font-family: "Space Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 10px 0 5px;
+    padding: 0 15px 5px;
+    border-bottom: 1.5px solid #4b0068;
+    color: #4b0068;
 }
 
 .noticia-contenido h2 {
