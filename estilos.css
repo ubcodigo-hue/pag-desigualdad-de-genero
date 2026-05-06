@@ -954,7 +954,7 @@ body {
     grid-column: 2;
     grid-row: 2;
 
-    margin-top: 185px;
+    margin-top: 90px;
     width: 280px;
 }
 
@@ -972,9 +972,12 @@ body {
 
 .form-suscripcion {
     background-color: #d9c3e6;
+
     border-radius: 0 0 80px 80px;
 
-    padding: 28px 35px 30px;
+    padding: 22px 18px 22px;
+
+    width: 240px;
 }
 
 .form-suscripcion input {
@@ -997,7 +1000,9 @@ body {
 }
 
 .form-suscripcion button {
-    margin-top: 28px;
+    margin-top: 18px;
+
+    margin-left: 0;
 
     background-color: #e42313;
     color: white;
@@ -1014,6 +1019,8 @@ body {
     letter-spacing: 1px;
 
     cursor: pointer;
+
+    display: block;
 }
 
 
