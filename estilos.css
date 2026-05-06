@@ -701,8 +701,8 @@ address {
 
     .leer-mas {
         position: absolute;
-    right: -2px;
-    bottom: -2px;
+    right: -6px;  /* 👈 más a la derecha */
+    bottom: -6px; /* 👈 más abajo */
 
     background-color: #f3d9ff;
     border: 1px solid #4b0068;
