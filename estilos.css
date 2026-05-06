@@ -632,12 +632,13 @@ address {
 .noticias-lista {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px; /* Un poco más de espacio entre columnas ayuda a la lectura */
+    gap: 30px; /* Reducido un poco para que no se aprieten las cards */
 }
 
 .noticia-card {
     border: 2px solid #4b0068;
-    border-radius: 200px 200px 0 0; /* Aumentamos a 200px para asegurar el arco redondo */
+    /* Usamos px en lugar de % para mantener la forma de arco perfecta */
+    border-radius: 150px 150px 0 0; 
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -647,10 +648,11 @@ address {
 
 .noticia-card > a img {
     width: 100%;
-    height: 220px; /* Un poco más de altura para que el arco luzca mejor */
+    height: 200px; /* Un poco más alta para que se vea bien el arco */
     object-fit: cover;
     display: block;
-    border-radius: 200px 200px 0 0; /* Debe ser igual al de la card */
+    /* El radio de la imagen debe ser igual al del contenedor */
+    border-radius: 150px 150px 0 0; 
     border-bottom: 2px solid #4b0068;
 }
 
@@ -658,14 +660,14 @@ address {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 10px 0; /* Espacio arriba y abajo */
+    padding: 0 0 15px; /* Más espacio abajo */
 }
 
 .noticia-contenido h3 {
     font-family: "Space Mono", monospace;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 2px;
-    margin: 10px 20px 10px; /* Aumentamos el margen lateral a 20px */
+    margin: 15px 15px 10px; /* Margen lateral para que no toque los bordes */
     padding-bottom: 5px;
     border-bottom: 1.5px solid #4b0068;
     color: #4b0068;
@@ -675,40 +677,38 @@ address {
 .noticia-contenido h2 {
     background-color: #4b0068;
     color: yellow;
-    border-radius: 50px; /* Súper redondeado como en tu imagen */
+    border-radius: 40px; /* Más redondeado */
     padding: 12px 15px;
     font-size: 13px;
-    line-height: 1.3;
-    margin: 10px 15px; /* Esto evita que el bloque morado toque los bordes */
+    line-height: 16px;
+    margin: 5px 15px 15px; /* Ajuste de márgenes laterales */
     text-align: center;
-    min-height: 75px; /* Mantiene todos los bloques morados alineados */
+    min-height: 60px; /* Para que todos midan lo mismo */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .noticia-contenido p {
-    font-size: 12px;
-    line-height: 1.5;
-    margin: 0 20px 20px; /* Margen de 20px a los costados para que "flote" el texto */
+    font-size: 11px;
+    line-height: 14px;
+    margin: 0 18px 15px; /* Más aire a los costados */
     color: #4b0068;
 }
 
 .leer-mas {
-    position: absolute;
-    right: -2px;
-    bottom: -10px;
-
-    background-color: #f3d9ff;
-    border: 1px solid #4b0068;
-    border-radius: 20px;
-
+    font-size: 11px;
+    margin-top: auto;
+    margin-right: 12px;
+    margin-bottom: 12px;
     padding: 3px 12px;
-    font-size: 10px;
-    font-family: "Space Mono", monospace;
+    border: 1px solid #9700c9;
+    border-radius: 20px;
+    align-self: flex-end;
     color: #4b0068;
     text-decoration: none;
-
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
 }
 
     .footer {
