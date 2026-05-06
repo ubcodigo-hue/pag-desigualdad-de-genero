@@ -609,6 +609,10 @@ address {
 
 @media (min-width: 1024px) {
 
+    body {
+    background-color: white;
+}
+
     .noticias-main {
         max-width: 1200px;
         margin: auto;
