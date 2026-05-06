@@ -810,252 +810,75 @@ body {
 
 
 
-.genero-main {
-    padding: 25px 20px;
-}
-
-/* HEADER */
-.genero-header {
-    background-color: #d9c3e6;
-    padding: 20px;
-    border-radius: 25px;
-}
-
-.genero-header h1 {
-    color: #6a00a3;
-    font-style: italic;
-    margin: 10px 0;
-}
-
-.genero-header p {
-    font-size: 15px;
-    line-height: 21px;
-}
-
-/* CONTENIDO */
-.genero-contenido {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.bloque img {
-    width: 100%;
-    border-radius: 25px;
-}
-
-.bloque h2 {
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    border-bottom: 2px solid #9700c9;
-    margin: 10px 0;
-}
-
-.bloque p {
-    font-size: 15px;
-}
-
-/* SUSCRIPCION */
-.suscripcion {
-    margin-top: 40px;
-}
-
-.suscripcion h3 {
-    font-family: "Space Mono", monospace;
-    border-bottom: 2px solid black;
-}
-
-.suscripcion input {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px;
-}
-
-.suscripcion button {
-    margin-top: 10px;
-    background: red;
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
-    border: none;
-}
-
-
-
-/* ========================= */
-/* PC */
-/* ========================= */
 
 @media (min-width: 1024px) {
-
-    .genero-main {
-        max-width: 1200px;
-        margin: auto;
-
-        padding: 60px;
-
-        display: grid;
-        grid-template-columns: 70% 25%;
-        gap: 50px;
-
-        align-items: start;
-    }
-
-    /* ========================= */
-    /* BLOQUE LILA GENERAL */
-    /* ========================= */
-
-    .genero-bloque {
+    /* CONTENEDOR LILA GENERAL (Como se ve en el PDF) */
+    .genero-bloque-principal {
         grid-column: 1;
-
-        background-color: #c3afd0;
-
-        border-radius: 40px;
-
-       padding: 25px 40px 40px;
+        background-color: #f3d9ff; /* Lila suave del PDF */
+        border-radius: 60px;
+        padding: 40px;
     }
 
-    /* HEADER */
-
-    .etiqueta-seccion {
-        font-family: "Space Mono", monospace;
-        font-size: 12px;
-        color: #4b0068;
-        letter-spacing: 1px;
-
-        margin-bottom: 12px;
-    }
-
+    /* HEADER INTERNO */
     .genero-header h1 {
         color: #9700c9;
-
         font-size: 34px;
         font-style: italic;
         font-weight: 300;
-
-        margin: 0 0 20px;
+        margin-bottom: 25px;
     }
 
-    .genero-header p {
-        font-size: 16px;
-        line-height: 24px;
-
-        margin: 0 0 18px;
-
-        max-width: 760px;
-    }
-
-    .subrayado {
-        text-decoration: underline;
-        font-weight: 700;
-    }
-
-    /* ========================= */
-    /* CONTENIDO */
-    /* ========================= */
-
+    /* BLOQUES DE CONTENIDO (Grilla de 2 columnas) */
     .genero-contenido {
-       margin-top: 20px;
-
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
-        gap: 35px 40px;
+        gap: 50px 40px;
+        margin-top: 40px;
     }
 
-    /* BLOQUES */
-
+    /* IMÁGENES: Arco tipo túnel perfecto */
     .bloque img {
         width: 100%;
-       height: 200px;
-
+        height: 250px; /* Altura fija para mantener la forma del arco */
         object-fit: cover;
+        display: block;
+        /* Radio alto para crear el arco semicircular del PDF */
+        border-radius: 150px 150px 0 0; 
+        border: 2px solid #4b0068;
+        box-sizing: border-box;
+    }
 
-        border-radius: 60px;
-
+    /* TÍTULOS: Línea de punta a punta */
+    .bloque h2 {
+        font-family: "Space Mono", monospace;
+        font-size: 13px;
+        color: #4b0068;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        
+        /* Eliminamos márgenes laterales para que la línea toque los bordes */
+        margin: 15px 0 10px; 
+        padding: 0 0 8px 0; 
+        border-bottom: 2px solid #4b0068;
         display: block;
     }
 
-    .bloque h2 {
-        font-family: "Space Mono", monospace;
-        font-size: 12px;
-
-        color: #4b0068;
-
-        border-bottom: 2px solid #4b0068;
-
-        margin: 14px 0 10px;
-        padding-bottom: 6px;
-    }
-
     .bloque p {
-        font-size: 15px;
-        line-height: 22px;
-
+        font-size: 14px;
+        line-height: 1.6;
+        color: #4b0068;
         margin: 0;
     }
 
-    /* ========================= */
-    /* SUSCRIPCIÓN */
-    /* ========================= */
-
+    /* SUSCRIPCIÓN (Lateral derecho) */
     .suscripcion {
         grid-column: 2;
-
         align-self: start;
-
-        margin-top: 150px;
-
-        background-color: #c3afd0;
-
+        margin-top: 100px;
+        background-color: #f3d9ff;
         border-radius: 0 0 45px 45px;
-
-        padding: 18px 22px 22px;
-    }
-
-    .suscripcion h3 {
-        font-family: "Space Mono", monospace;
-        font-size: 14px;
-
-        margin: 0 0 8px;
-
-        border-bottom: 2px solid black;
-
-        letter-spacing: 1px;
-    }
-
-    .suscripcion input {
-        width: 100%;
-        box-sizing: border-box;
-
-        height: 22px;
-
-        border: 3px solid black;
-        border-radius: 20px;
-
-        background-color: transparent;
-
-        padding: 2px 12px;
-
-        font-size: 10px;
-    }
-
-    .suscripcion button {
-        margin-top: 8px;
-
-        background-color: #e42313;
-        color: white;
-
-        border: none;
-        border-radius: 20px;
-
-        padding: 6px 14px;
-
-        font-family: "Space Mono", monospace;
-        font-size: 9px;
-        font-weight: 700;
-
-        letter-spacing: 1px;
+        padding: 22px;
+        border-top: 5px solid #4b0068; /* Detalle estético del PDF */
     }
 }
