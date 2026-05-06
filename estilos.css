@@ -8,6 +8,7 @@ body {
     color: black;
 }
 
+
 /* HEADER PRINCIPAL */
 body > header {
     background-color: #9700c9;
@@ -952,11 +953,13 @@ body {
 
 .suscripcion {
     grid-column: 2;
-    grid-row: 2;
 
-    margin-top: 90px;
 
-    width: 240px;
+    align-self: center; /* 👈 esto lo centra verticalmente */
+
+    width: 230px;
+
+    margin-top: 0;
 }
 
 .suscripcion h3 {
@@ -976,8 +979,7 @@ body {
 
     border-radius: 0 0 80px 80px;
 
-    padding: 22px 18px 22px;
-
+    padding: 18px 16px 22px;
 }
 
 .form-suscripcion input {
@@ -1001,8 +1003,7 @@ body {
 
 .form-suscripcion button {
     margin-top: 18px;
-    margin-left: 0;
-    margin-right: auto;
+
 
     background-color: #e42313;
     color: white;
@@ -1010,10 +1011,10 @@ body {
     border: none;
     border-radius: 35px;
 
-    padding: 12px 24px;
+    padding: 10px 22px;
 
     font-family: "Space Mono", monospace;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
 
     letter-spacing: 1px;
