@@ -974,6 +974,7 @@ body {
 
     border-bottom: 4px solid black;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .form-suscripcion {
