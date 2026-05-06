@@ -1001,6 +1001,8 @@ body {
 
 .form-suscripcion button {
     margin-top: 18px;
+    margin-left: 0;
+    margin-right: auto;
 
     background-color: #e42313;
     color: white;
@@ -1018,8 +1020,7 @@ body {
 
     cursor: pointer;
 
-    display: flex;
-    justify-content: flex-start;
+    display: block;
 }
 
 
