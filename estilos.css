@@ -887,161 +887,80 @@ body {
 /* PC */
 /* ========================= */
 
+
 @media (min-width: 1024px) {
 
     .genero-main {
         max-width: 1200px;
         margin: auto;
+
         padding: 60px;
 
         display: grid;
         grid-template-columns: 65% 30%;
         gap: 50px;
+
         align-items: start;
     }
 
-    /* ========================= */
-    /* BLOQUE LILA GENERAL */
-    /* ========================= */
-
-    .genero-header,
-    .genero-contenido {
+    /* BLOQUE IZQUIERDO */
+    .genero-bloque {
         grid-column: 1;
-        background-color: #c3afd0;
+
+        border-radius: 40px;
+
+        padding: 35px 60px 50px;
     }
 
-    /* PARTE SUPERIOR */
-    .genero-header {
-        border-radius: 40px 40px 0 0;
-        padding: 35px 60px 10px;
-        margin-bottom: 0;
-    }
+    /* HEADER */
 
     .etiqueta-seccion {
-        font-family: "Space Mono", monospace;
         font-size: 12px;
-        color: #4b0068;
-        letter-spacing: 1px;
-        margin-bottom: 12px;
     }
 
     .genero-header h1 {
-        color: #9700c9;
         font-size: 34px;
-        font-style: italic;
-        font-weight: 300;
-        margin: 0 0 20px;
     }
 
     .genero-header p {
         font-size: 16px;
         line-height: 24px;
-        margin: 0 0 18px;
+
         max-width: 760px;
     }
 
-    .subrayado {
-        text-decoration: underline;
-        font-weight: 700;
-    }
+    /* GRID DE BLOQUES */
 
-    /* PARTE INFERIOR */
     .genero-contenido {
-        border-radius: 0 0 40px 40px;
+        margin-top: 40px;
 
-        padding: 30px 60px 50px;
-
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
+
         gap: 50px 60px;
     }
 
-    /* BLOQUES */
+    /* IMÁGENES */
+
     .bloque img {
-        width: 100%;
         height: 220px;
-        object-fit: cover;
 
         border-radius: 60px;
-        display: block;
     }
 
-    .bloque h2 {
-        font-family: "Space Mono", monospace;
-        font-size: 12px;
-        color: #4b0068;
-
-        border-bottom: 2px solid #4b0068;
-
-        margin: 14px 0 10px;
-        padding-bottom: 6px;
-    }
+    /* TEXTOS */
 
     .bloque p {
         font-size: 15px;
         line-height: 22px;
-        margin: 0;
     }
 
-    /* ========================= */
     /* SUSCRIPCIÓN */
-    /* ========================= */
 
     .suscripcion {
         grid-column: 2;
+
         align-self: start;
 
         margin-top: 210px;
-
-        background-color: #c3afd0;
-
-        border-radius: 0 0 45px 45px;
-
-        padding: 18px 22px 22px;
-    }
-
-    .suscripcion h3 {
-        font-family: "Space Mono", monospace;
-        font-size: 14px;
-
-        margin: 0 0 8px;
-
-        border-bottom: 2px solid black;
-
-        letter-spacing: 1px;
-    }
-
-    .suscripcion input {
-        width: 100%;
-        box-sizing: border-box;
-
-        height: 22px;
-
-        border: 3px solid black;
-        border-radius: 20px;
-
-        background-color: transparent;
-
-        padding: 2px 12px;
-
-        font-size: 10px;
-    }
-
-    .suscripcion button {
-        margin-top: 8px;
-
-        background-color: #e42313;
-        color: white;
-
-        border: none;
-        border-radius: 20px;
-
-        padding: 6px 14px;
-
-        font-family: "Space Mono", monospace;
-        font-size: 9px;
-        font-weight: 700;
-
-        letter-spacing: 1px;
     }
 }
