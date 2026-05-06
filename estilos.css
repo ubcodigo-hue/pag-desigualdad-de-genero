@@ -900,31 +900,31 @@ body {
         gap: 50px;
     }
 
-    /* 🔥 CONTENEDOR LILA GENERAL */
+    /* 🔥 BLOQUE LILA UNIFICADO */
+    .genero-header,
+    .genero-contenido {
+        background-color: #c3afd0;
+    }
+
+    /* PARTE DE ARRIBA */
+    .genero-header {
+        grid-column: 1;
+
+        border-radius: 40px 40px 0 0;
+        padding: 30px 60px 10px;
+        margin-bottom: 0;
+    }
+
+    /* PARTE DE ABAJO */
     .genero-contenido {
         grid-column: 1;
 
-        background-color: #c3afd0;
-        border-radius: 40px;
-
-        padding: 40px 60px;
+        border-radius: 0 0 40px 40px;
+        padding: 30px 60px 40px;
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px 60px;
-    }
-
-    /* 🔥 METEMOS EL HEADER DENTRO VISUALMENTE */
-    .genero-header {
-        grid-column: 1 / 3; /* 👈 ocupa todo el ancho */
-        margin-bottom: 10px;
-    }
-
-    /* SACAMOS FONDO DEL HEADER */
-    .genero-header {
-        background: none;
-        padding: 0;
-        border-radius: 0;
     }
 
     /* FORM A LA DERECHA */
