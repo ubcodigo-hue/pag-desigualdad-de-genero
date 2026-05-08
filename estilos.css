@@ -906,6 +906,7 @@ body {
 
 
     .genero-main {
+         background-color: white;
         max-width: 1200px;
         margin: auto;
         padding: 50px 35px 0;
@@ -951,7 +952,7 @@ body {
     .genero-contenido {
         grid-column: 1;
 
-         background-color:white;
+         background-color:#d9c3e6;
         border-radius: 55px;
 
         padding: 35px 70px 55px;
