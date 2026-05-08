@@ -896,7 +896,7 @@ body {
         max-width: 1200px;
         margin: auto;
         padding: 50px 35px 0;
-
+background-color: white;
         display: grid;
         grid-template-columns: 72% 24%;
         gap: 45px;
