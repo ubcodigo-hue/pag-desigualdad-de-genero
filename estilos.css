@@ -813,7 +813,13 @@ body {
 /* ========/* ========================= */
 /* PROBLEMASSOCIAL */
 /* ========================= */
+
+body {
+    background-color: white;
+}
+
 .genero-main {
+    
     padding: 25px 20px;
      background-color: white;
 }
@@ -890,12 +896,8 @@ body {
 /* ========================= */
 
 
+
 @media (min-width: 1024px) {
-
-
-    body {
-    background-color: white;
-}
 
     .genero-main {
         max-width: 1200px;
