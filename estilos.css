@@ -821,7 +821,7 @@ body {
 .genero-main {
     
     padding: 25px 20px;
-     background-color: white;
+
 }
 
 /* HEADER */
@@ -899,11 +899,16 @@ body {
 
 @media (min-width: 1024px) {
 
+
+    body {
+    background-color: white;
+}
+
+
     .genero-main {
         max-width: 1200px;
         margin: auto;
         padding: 50px 35px 0;
-background-color: white;
         display: grid;
         grid-template-columns: 72% 24%;
         gap: 45px;
