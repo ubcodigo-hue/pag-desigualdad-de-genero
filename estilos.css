@@ -275,6 +275,8 @@ address {
 
 /* ========================= */  /* ========================= */ 
 /* VERSIÓN PC */
+
+
 @media (min-width: 1024px) {
 
     body > header {
@@ -813,6 +815,7 @@ body {
 /* ========================= */
 .genero-main {
     padding: 25px 20px;
+     background-color: white;
 }
 
 /* HEADER */
