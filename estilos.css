@@ -282,7 +282,7 @@ address {
     body > header {
         padding: 35px 70px;
         display: flex;
-        background-color: white
+
         align-items: center;
         justify-content: space-between;
     }
@@ -498,6 +498,7 @@ address {
     color: white;
     font-size: 11px;
 }
+
 }
 
 
@@ -816,12 +817,20 @@ body {
 /* ========================= */
 
 
+body {
+    margin: 0;
+    background-color: white !important;
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+
+/* A partir de aquí sigue tu código actual... */
 .genero-main {
 
     padding: 25px 20px;
-
     
 }
+
 
 /* HEADER */
 .genero-header {
