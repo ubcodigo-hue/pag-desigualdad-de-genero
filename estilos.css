@@ -1535,7 +1535,13 @@ header {
     .btn-acceptar:hover {
         background-color: #c9302c;
     }
-
+#menu-check, 
+.menu-checkbox {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+}
     .menu-principal a {
         font-family: "Space Mono", monospace;
     }
