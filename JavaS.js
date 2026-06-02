@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const enlace = item.querySelector("a");
 
             enlace.addEventListener("click", function(e) {
-                // Si NO está abierto, detenemos el enlace y añadimos la clase
+                // Si el menú NO está abierto, frena el enlace y lo abre
                 if (!item.classList.contains("abierto")) {
                     e.preventDefault();
 
-                    // Cerramos otros menús abiertos
+                    // Cierra cualquier otro submenú activo
                     document.querySelectorAll(".menu-principal li.abierto").forEach(li => {
                         if (li !== item) {
                             li.classList.remove("abierto");
@@ -21,12 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     item.classList.add("abierto");
                 }
-                // Si ya tiene la clase 'abierto', el segundo click no entra aquí y navega
+                // Si YA está abierto (segundo clic), el 'if' se salta y va a la página directamente
             });
         }
     });
 
-    // Cerrar el menú si se hace click en cualquier otra parte de la pantalla
+    // Cerrar el menú si haces clic en cualquier otro lado de la pantalla
     document.addEventListener("click", function(e) {
         if (!e.target.closest(".menu-principal")) {
             document.querySelectorAll(".menu-principal li.abierto").forEach(li => {
