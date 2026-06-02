@@ -1399,6 +1399,10 @@ header a img {
         flex-direction: column;
         align-items: flex-start; /* Todo alineado a la izquierda */
         padding: 10px 0;
+        /*  SOLUCIÓN: Evita que la imagen se salga de las esquinas al agrandarse */
+        overflow: hidden; 
+        border-radius: 25px; /* Mantiene la forma del contenedor igual a la de la foto */
+    }
     }
 
     .bloque img {
@@ -1412,6 +1416,14 @@ header a img {
         
         margin: 0 0 20px 0;    
         display: block;
+        /* 🌟 TRANSICIÓN: Hace que el efecto dure 0.3 segundos y sea suave */
+        transition: transform 0.3s ease-in-out; 
+    }
+        
+    /* 🌟 EFECTO HOVER: Agranda la imagen un 8% cuando pones el cursor encima */
+    .bloque:hover img {
+        transform: scale(1.08);
+        cursor: pointer; /* Cambia el cursor a la manito interactiva */
     }
 
     .bloque h2 {
