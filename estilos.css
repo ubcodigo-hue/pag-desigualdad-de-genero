@@ -1421,7 +1421,7 @@ header a img {
     }
 
     .form-suscripcion button {
-        margin: 24px auto 0;
+        margin: 35px auto 0; /* 🌟 Subió de 24px a 35px para separarlo del input */
         background-color: #e42313;
         border-radius: 35px;
         padding: 12px 30px;
