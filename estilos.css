@@ -1617,4 +1617,12 @@ header > a img {
     color: #ffff00 !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.genero-header,
+.bloque {
+    scroll-margin-top: 120px;
+}
 
