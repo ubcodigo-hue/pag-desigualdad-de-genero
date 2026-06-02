@@ -151,6 +151,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* ========/* ========================= */
-/* NOTICIAS */
+/* Problematicas */
 /* ========================= */
 
+function confirmarSuscripcion(event) {
+    // 🌟 Evita que la página se recargue automáticamente al presionar el botón
+    event.preventDefault(); 
+
+    // 🌟 Muestra la ventana nativa del navegador con las opciones Aceptar y Cancelar
+    let respuesta = confirm("¿Desea enviar suscripción?");
+
+    if (respuesta) {
+        // Si el usuario hace click en "Aceptar"
+        alert("¡Gracias por suscribirte a Lente Violeta!");
+        
+        // Aquí puedes limpiar el campo de texto si quieres
+        event.target.reset();
+    } else {
+        // Si el usuario hace click en "Cancelar"
+        alert("Suscripción cancelada.");
+    }
+}
