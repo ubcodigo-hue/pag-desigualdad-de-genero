@@ -1112,6 +1112,62 @@ body {
 
 @media (min-width: 1024px) {
 
+    /* 1. Escondemos el botón de las 3 rayitas por completo en la computadora */
+    .hamburguesa-btn {
+        display: none !important; 
+    }
+
+    /* 2. Resetamos la barra del menú para que no use el formato de celular */
+    .menu-principal {
+        background-color: transparent !important; /* Le quita el fondo violeta rígido */
+        padding: 20px 0 !important;
+        display: block !important;
+        width: 100%;
+    }
+
+    /* 3. ¡ESTA ES LA CLAVE! Forzamos a la lista a mostrarse de forma HORIZONTAL */
+    .menu-principal > ul {
+        display: flex !important;          /* 🌟 La vuelve a mostrar siempre en PC */
+        flex-direction: row !important;    /* 🌟 La pone de costado (horizontal) */
+        position: static !important;       /* Quita el posicionamiento flotante de mobile */
+        background-color: transparent !important; /* Quita el fondo blanco de mobile */
+        width: 100% !important;
+        justify-content: space-between;    /* Distribuye los botones a lo largo de la pantalla */
+        padding: 0;
+        margin: 0;
+        box-shadow: none !important;       /* Quita la sombra de celular */
+    }
+
+    /* 4. Estilo para los textos de los enlaces principales en PC */
+    .menu-principal > ul > li > a {
+        color: #4b0068 !important;         /* Color violeta para las letras sobre el fondo blanco general */
+        font-size: 14px !important;
+        font-family: "Space Mono", monospace;
+        text-decoration: none;
+        border-bottom: none !important;    /* Quita la línea divisoria de mobile */
+        padding-bottom: 0;
+    }
+
+    /* 5. Esconder las subsecciones en PC para que no estorben (Menú desplegable tradicional) */
+    .menu-principal ul ul {
+        display: none !important;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Al pasar el mouse por encima de una sección, se despliegan sus subsecciones */
+    .menu-principal > ul > li:hover ul {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .menu-principal ul ul a {
+        color: #666 !important;
+    }
+
    .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
