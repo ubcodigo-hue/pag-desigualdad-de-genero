@@ -1036,30 +1036,80 @@ header > a img {
 
    @media (max-width: 1023px) {
 
+    .footer {
+        background-color: #4b0068 !important;
+        padding: 30px 0 0 !important;
+    }
+
+    .footer-contenido {
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .footer-left {
+        width: 100% !important;
+        padding: 0 35px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
     .footer-left img {
-        width: 180px;
-        margin: 0 auto 25px;
+        width: 190px !important;
+        margin: 0 auto 30px !important;
+        display: block !important;
     }
 
     .footer-texto h3 {
-        font-size: 14px;
+        color: white !important;
+        font-size: 15px !important;
+        margin: 0 0 18px !important;
     }
 
     .footer address p {
-        font-size: 12px;
+        color: white !important;
+        font-size: 13px !important;
+        margin: 8px 0 !important;
+        text-decoration: none !important;
+    }
+
+    .footer-right {
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    .redes {
+        list-style: none !important;
+        padding: 0 35px !important;
+        margin: 25px 0 !important;
     }
 
     .redes img {
-        width: 120px;
+        width: 170px !important;
+        margin: 0 !important;
     }
 
     .links {
-        padding: 20px;
-        gap: 10px 15px;
+        background-color: black !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 28px 35px 45px !important;
+        box-sizing: border-box !important;
+
+        list-style: none !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 14px 28px !important;
     }
 
     .links a {
-        font-size: 11px;
+        color: white !important;
+        font-size: 12px !important;
+        text-decoration: none !important;
+        font-family: "Space Mono", monospace !important;
     }
 }
 
