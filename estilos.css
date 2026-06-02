@@ -540,49 +540,73 @@ html {
     .subrayado {
         text-decoration: underline;
     }
-/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA --- */
+/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA (ESTILO IMAGE_6) --- */
     .testimonios-header h2 {
         font-size: 32px;
-        color: #ffff00;      /* Título amarillo flúor */
-        text-align: center;  /* Centrado perfecto */
+        color: #ffff00;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .testimonio-carrusel {
+        flex-direction: row; /* Flechas a los costados del bloque */
+        justify-content: center;
+        max-width: 850px;
+        gap: 30px;
     }
 
     .testimonio-box {
-        flex-direction: row; /* Pone las flechas a los costados en línea horizontal */
-        padding: 40px 50px;
-        border-radius: 40px;
-        max-width: 850px;    /* Ancho ideal para que respiren los elementos */
-        gap: 40px;
+        max-width: 650px; /* Ancho de la caja morada central */
     }
 
-    .testimonio-contenido {
+    .testimonio-principal {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;     /* Permite que las comillas y el texto queden en fila y el nombre baje */
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 40px 35px;
+    }
+
+    .texto-dinamico {
+        flex: 1;
+        padding: 0 20px;
+        text-align: left; /* Alineado a la izquierda como tu Photoshop */
     }
 
     .comillas {
-        font-size: 60px;     /* Comillas más grandes al costado del texto */
+        font-size: 70px;
+        height: auto;
+    }
+
+    .comilla-apertura {
+        margin-top: -15px;
+    }
+
+    .comilla-cierre {
+        align-self: flex-end;
+        margin-bottom: -15px;
     }
 
     #testimonio-texto {
-        font-size: 18px;
-        max-width: 75%;      /* Equilibrio para que las comillas no pisen las letras */
-    }
-
-    .testimonio-contenido hr {
-        width: 100%;         /* Corta la fila para tirar la línea y el nombre abajo */
-        margin: 20px 0 10px 0;
+        font-size: 19px;
+        line-height: 1.6;
+        margin: 0 0 25px 0;
+        text-decoration: underline; /* Subrayado sutil que tiene tu maqueta */
+        text-underline-offset: 4px;
     }
 
     #testimonio-nombre {
-        width: 100%;         /* Fuerza al nombre a centrarse abajo del todo */
         font-size: 16px;
+        text-align: left;
+    }
+
+    .renglon-nombre {
+        font-size: 15px;
+        padding: 14px 45px; /* Más sangría a la izquierda */
     }
 
     .flecha-btn {
-        font-size: 45px;     /* Flechas grandes y visibles al costado */
+        font-size: 45px;
         transition: transform 0.2s ease, color 0.2s ease;
     }
 
