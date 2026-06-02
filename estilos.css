@@ -1326,7 +1326,7 @@ header > a img {
 
 /* MENÚ MOBILE PRINCIPAL */
 .menu-principal > ul {
-    display: none; /* Empieza escondido */
+   
     position: absolute;
     top: 100%;
     left: 0;
