@@ -1027,7 +1027,6 @@ body {
 MODO MOBILE
 /* ========================= */
 
-
 body {
     margin: 0;
     padding: 0;
@@ -1039,9 +1038,9 @@ body {
     box-sizing: border-box;
 }
 
-/* LA BARRA CONTENEDORA EN CELULARES */
+/* 🌟 LA BARRA CONTENEDORA EN CELULARES */
 header {
-    background-color: #6a00a3; 
+    background-color: #6a00a3; /* Mantiene la franja violeta arriba */
     width: 100%;
     position: relative;
     z-index: 1000;
@@ -1049,7 +1048,7 @@ header {
 
 .menu-principal {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end; /* Manda el botón hamburguesa a la derecha */
     align-items: center;
     padding: 15px 20px;
     width: 100%;
@@ -1057,11 +1056,12 @@ header {
     position: relative;
 }
 
+/* Ocultamos por completo el checkbox del truco interactivo */
 .menu-checkbox {
     display: none !important;
 }
 
-/* EL BOTÓN HAMBURGUESA */
+/* 🌟 EL BOTÓN HAMBURGUESA (SÓLO SE VE EN CELULAR) */
 .hamburguesa-btn {
     display: flex !important; 
     flex-direction: column;
@@ -1075,20 +1075,20 @@ header {
 .hamburguesa-btn span {
     width: 100%;
     height: 3px;
-    background-color: white; 
+    background-color: white; /* Tres líneas blancas */
     border-radius: 2px;
     display: block;
 }
 
-/* LA LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO) */
+/* 🌟 LA LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO Y OCULTA POR DEFECTO) */
 .menu-principal > ul {
-    display: none !important; 
+    display: none !important; /* Se oculta por defecto al cargar en celular */
     flex-direction: column !important;
     position: absolute !important;
-    top: 100%; 
+    top: 100%; /* Cae justo debajo de la barra violeta */
     left: 0;
     width: 100%;
-    background-color: white !important; 
+    background-color: white !important; /* El fondo blanco que necesitabas */
     margin: 0;
     padding: 25px 20px;
     list-style: none;
@@ -1097,23 +1097,24 @@ header {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* INTERACTIVIDAD: Cuando haces clic en la hamburguesa, se activa el check y despliega la lista */
 .menu-checkbox:checked ~ ul {
     display: flex !important;
 }
 
-/* Enlaces principales en celular */
+/* Estilo de los textos principales en el menú del celular (Oscuros sobre el fondo blanco) */
 .menu-principal > ul > li > a {
-    color: #4b0068 !important; 
+    color: #4b0068 !important; /* Letras oscuras legibles */
     text-decoration: none;
     font-family: "Space Mono", monospace;
     font-size: 15px;
     font-weight: bold;
     display: block;
-    border-bottom: 1px solid #f0f0f0; 
+    border-bottom: 1px solid #f0f0f0; /* Línea separadora sutil */
     padding-bottom: 5px;
 }
 
-/* Subsecciones internas en celular */
+/* Subsecciones anidadas en el celular */
 .menu-principal ul ul {
     list-style: none;
     padding-left: 15px;
@@ -1124,7 +1125,7 @@ header {
 }
 
 .menu-principal ul ul a {
-    color: #666 !important; 
+    color: #666 !important; /* Gris oscuro para las subopciones */
     text-decoration: none;
     font-family: sans-serif;
     font-size: 13px;
@@ -1213,30 +1214,33 @@ header {
 
 @media (min-width: 1024px) {
 
+    /* 🌟 ESCONDEMOS LA HAMBURGUESA EN PC POR COMPLETO */
     .hamburguesa-btn {
         display: none !important; 
     }
 
+    /* EL CONTENEDOR EN PC ADOPTA EL DISEÑO COMPLETO HORIZONTAL */
     .menu-principal {
-        background-color: transparent !important; 
+        background-color: transparent !important; /* Limpia el bloque chico */
         padding: 0 !important;
         display: block !important;
         width: 100% !important;
     }
 
+    /* 🌟 TU MODO WEB QUEDA FIEL A ILLUSTRATOR: SE ESTIRA HORIZONTALMENTE */
     .menu-principal > ul {
-        display: flex !important;           
-        flex-direction: row !important;     
-        position: static !important;        
-        background-color: transparent !important; 
+        display: flex !important;           /* Vuelve a estar siempre visible */
+        flex-direction: row !important;     /* Horizontal de corrido */
+        position: static !important;        /* Pierde el flotado de celular */
+        background-color: transparent !important; /* Quita el fondo blanco de mobile */
         width: 100% !important;
-        justify-content: space-between !important; 
+        justify-content: space-between !important; /* Distribuye a lo ancho como en tu diseño */
         padding: 0 !important;
         margin: 0 !important;
         box-shadow: none !important;
     }
 
-    /* Textos principales en modo PC: Violetas originales */
+    /* Textos principales en modo PC: Violetas originales sobre tu fondo claro */
     .menu-principal > ul > li > a {
         color: #4b0068 !important; 
         font-size: 14px !important;
@@ -1244,13 +1248,15 @@ header {
         padding-bottom: 0 !important;
     }
 
-    /* Regresa al submenú desplegable violeta original en PC */
+    /* Reseteo del comportamiento desplegable en PC para que no estorbe */
     .menu-principal ul ul {
         display: none !important;
         position: absolute !important;
-        background-color: #52007a !important; /* Tu violeta de antes */
-        padding: 10px !important;
-        border-radius: 4px;
+        background-color: white !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+        z-index: 100;
     }
 
     .menu-principal > ul > li:hover ul {
@@ -1259,10 +1265,10 @@ header {
     }
 
     .menu-principal ul ul a {
-        color: #dfbfff !important;
+        color: #666 !important;
     }
 
-    /* --- ESTRUCTURA CONTENIDO PC --- */
+    /* --- RESTO DE TUS ESTILOS DE GRID EN PC (ESTRUCTURA GENERAL) --- */
     .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
@@ -1366,6 +1372,7 @@ header {
         width: 100%;
     }
 
+    /* COLUMNA DERECHA: REGISTRO */
     .suscripcion {
         grid-column: 2;         
         grid-row: 1 / span 5;    
@@ -1421,6 +1428,7 @@ header {
         cursor: pointer;
     }
 
+    /* El <dialog> flotante que oscurece el fondo */
     dialog.modal-suscripcion {
         display: none; 
         position: fixed;
@@ -1435,6 +1443,7 @@ header {
         border: none; 
     }
 
+    /* El <fieldset> blanco con tu diseño */
     .modal-contenido {
         background-color: white;
         padding: 30px 40px;
@@ -1454,6 +1463,7 @@ header {
         font-family: sans-serif;
     }
 
+    /* El <menu> de los botones */
     .modal-botones {
         display: flex;
         justify-content: space-around;
@@ -1463,6 +1473,7 @@ header {
         list-style: none;
     }
 
+    /* Botones idénticos a tu Illustrator */
     .btn-modal {
         padding: 10px 25px;
         border-radius: 20px; 
