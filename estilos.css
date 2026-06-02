@@ -1034,83 +1034,32 @@ header > a img {
 
 /* FOOTER MOBILE */
 
-   .footer {
-        background-color: #4b0068 !important;
-        padding: 35px 0 0;
-        margin-top: 40px;
-    }
-
-    .footer-contenido {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-left {
-        width: 100%;
-        padding: 0 35px;
-        box-sizing: border-box;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+   @media (max-width: 1023px) {
 
     .footer-left img {
-        width: 190px;
-        margin: 0 auto 35px;
-        display: block;
+        width: 180px;
+        margin: 0 auto 25px;
     }
 
     .footer-texto h3 {
-        color: white;
-        font-size: 16px;
-        margin: 0 0 20px;
+        font-size: 14px;
     }
 
     .footer address p {
-        color: white;
-        font-size: 13px;
-        margin: 10px 0;
-        font-family: "Space Mono", monospace;
-        text-decoration: none;
-    }
-
-    .redes {
-        list-style: none;
-        padding: 0;
-        margin: 25px 0;
+        font-size: 12px;
     }
 
     .redes img {
-        width: 170px;
-        margin: 0;
-    }
-
-    .footer-right {
-        width: 100%;
-        margin-top: 10px;
+        width: 120px;
     }
 
     .links {
-        background-color: black;
-        width: 100%;
-        margin: 0;
-        padding: 28px 35px 45px;
-        box-sizing: border-box;
-
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px 28px;
+        padding: 20px;
+        gap: 10px 15px;
     }
 
     .links a {
-        color: white;
-        font-size: 12px;
-        font-family: "Space Mono", monospace;
-        text-decoration: none;
+        font-size: 11px;
     }
 }
 
