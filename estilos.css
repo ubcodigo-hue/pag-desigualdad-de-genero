@@ -1032,6 +1032,86 @@ header > a img {
     cursor: pointer;
 }
 
+/* FOOTER MOBILE */
+
+.footer {
+    background-color: #4b0068 !important;
+    width: 100%;
+    color: white;
+    margin-top: 40px;
+    padding: 35px 0 0;
+}
+
+.footer-contenido {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-left img {
+    width: 140px;
+    margin-bottom: 25px;
+}
+
+.footer-texto h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 0 0 15px;
+}
+
+.footer address p {
+    color: white;
+    margin: 4px 0;
+}
+
+.footer-right {
+    width: 100%;
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.links {
+    background-color: black;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    padding: 25px 20px 35px;
+    box-sizing: border-box;
+
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.redes {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.redes img {
+    width: 120px;
+}
 
 /* ==========================================================================
    2. MODO COMPUTADORA (PC) - SE ACTIVA A PARTIR DE 1024px
