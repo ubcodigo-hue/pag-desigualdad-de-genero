@@ -143,91 +143,111 @@ main {
     font-weight: 700;
     letter-spacing: 1px;
 }
-/* ======================================================= */
-/* TESTIMONIOS BASE (CELULAR) -                 */
+ /* ======================================================= */
+/* TESTIMONIOS BASE (CELULAR) - ESTILO IMAGE_6             */
 /* ======================================================= */
 .testimonios-header {
-    text-align: center; /* Centra el título en pantallas chicas */
-    margin-top: 50px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
     padding: 0 20px;
 }
 
 .testimonios-header h2 {
     font-family: "Space Mono", monospace;
-    color: #ffff00; /* ¡AHORA AMARILLO DESDE EL CELU! */
+    color: #ffff00;
     font-size: 22px;
     letter-spacing: 1px;
-    margin: 0 0 8px 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .testimonios-header h3 {
     font-size: 13px;
     font-weight: normal;
     color: #9700c9;
+    display: none;
+}
+
+.testimonio-carrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 90%;
+    margin: 20px auto;
 }
 
 .testimonio-box {
-    display: flex;
-    flex-direction: column; /* En celu sigue en columna para que no se rompa */
-    align-items: center;
-    justify-content: center;
-    background-color: #9700c9; 
-    padding: 30px 20px;
-    border-radius: 40px;       
-    max-width: 90%;          
-    margin: 20px auto;         
-    gap: 20px;                 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.testimonio-contenido {
-    text-align: center;
-    color: #FFFFFF;            
     width: 100%;
+    background-color: #9275bf; /* Color morado medio de tu diseño */
+    border-radius: 0px;        /* Rectangular como tu maqueta */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Ajuste clave: las comillas ahora acompañan al texto a los lados */
+/* El recuadro superior más claro */
+.testimonio-principal {
+    background-color: #a892d1; /* Morado claro de la foto */
+    padding: 30px 20px;
+    position: relative;
+    text-align: center;
+}
+
 .comillas {
-    font-size: 40px;
-    color: #4b0068;            
-    display: inline-block; /* Al costado del texto */
-    vertical-align: middle;
+    font-size: 60px;
+    color: #4b0068;
     font-family: "Space Mono", monospace;
+    display: block;
+    line-height: 0.2;
 }
 
 #testimonio-texto {
-    display: inline-block; /* Al costado de las comillas */
-    vertical-align: middle;
-    max-width: 80%; /* Deja espacio para las comillas a los lados */
+    color: #ffffff;
     font-size: 16px;
     line-height: 1.5;
-    margin: 10px 10px;
-    font-style: italic;
-}
-
-.testimonio-contenido hr {
-    border: none;
-    height: 1.5px;
-    background-color: rgba(255, 255, 255, 0.3);
-    margin: 15px auto;
-    width: 50%;
+    margin: 15px 0;
 }
 
 #testimonio-nombre {
-    color: #ffff00;            
+    color: #ffff00;
     font-family: "Space Mono", monospace;
     font-size: 14px;
     font-weight: 700;
+    margin-top: 15px;
 }
+
+/* La lista inferior de nombres */
+.lista-nombres-fija {
+    display: flex;
+    flex-direction: column;
+}
+
+.renglon-nombre {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    padding: 12px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Degradados sutiles para los renglones como en tu imagen */
+.renglon-nombre:nth-child(1) { background-color: #8869b8; }
+.renglon-nombre:nth-child(2) { background-color: #7e5eb1; }
+.renglon-nombre:nth-child(3) { background-color: #7454aa; }
+.renglon-nombre:nth-child(4) { background-color: #6a4aa3; }
 
 .flecha-btn {
     background: none;
     border: none;
     font-size: 35px;
-    color: #FFFFFF;            
+    color: #ffffff;
     cursor: pointer;
-    padding: 5px;
 }
 
 /* BLOQUE DE VIDEO */
