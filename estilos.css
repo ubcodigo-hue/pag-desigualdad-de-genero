@@ -176,7 +176,7 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* 🌟 Usamos order para tirar las flechas abajo de todo en el celular */
+/* Usamos order para tirar las flechas abajo de todo en el celular */
 #btn-anterior {
     order: 2; /* Baja la flecha izquierda */
     display: inline-block;
@@ -195,7 +195,7 @@ main {
     color: #FFFFFF;            
     width: 100%;
     display: flex;
-    flex-direction: row; /* 🌟 Cambia a fila para que las comillas abracen el texto */
+    flex-direction: row; /* Cambia a fila para que las comillas abracen el texto */
     flex-wrap: wrap;     /* Permite que la línea y el nombre bajen */
     align-items: center;
     justify-content: center;
