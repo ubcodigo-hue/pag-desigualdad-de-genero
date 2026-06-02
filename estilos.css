@@ -143,6 +143,106 @@ main {
     font-weight: 700;
     letter-spacing: 1px;
 }
+/* ======================================================= */
+/* SECCIÓN DE TESTIMONIOS (CARRUSEL INTERACTIVO)           */
+/* ======================================================= */
+
+/* Título superior de la sección */
+.testimonios-header {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.testimonios-header h2 {
+    font-family: "Space Mono", monospace;
+    color: #4b0068;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 0 0 8px 0;
+}
+
+.testimonios-header h3 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #9700c9;
+    margin: 0;
+}
+
+/* La caja contenedora morada (Estilo Flexbox) */
+.testimonio-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9700c9; /* Morado corporativo de tu página */
+    padding: 40px;
+    border-radius: 40px;       /* Bordes curvos como el bloque de video */
+    max-width: 750px;          /* Evita que se ensanche demasiado */
+    margin: 30px auto 60px;    /* Centra la caja y la separa del footer */
+    gap: 30px;                 /* Aire entre flechas y textos */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Bloque central de textos */
+.testimonio-contenido {
+    text-align: center;
+    color: #FFFFFF;            /* Letras de la historia en blanco */
+    flex: 1;
+}
+
+/* Las comillas decorativas gigantes */
+.comillas {
+    font-size: 70px;
+    color: #4b0068;            /* Morado oscuro para dar contraste */
+    display: block;
+    line-height: 0.4;
+    font-family: "Space Mono", monospace;
+}
+
+/* Párrafo dinámico de la historia */
+#testimonio-texto {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+/* Línea sutil de separación */
+.testimonio-contenido hr {
+    border: none;
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 15px auto;
+    width: 40%;
+}
+
+/* Nombre de la mujer en amarillo flúor de tu paleta */
+#testimonio-nombre {
+    color: #ffff00;            /* El amarillo idéntico al hover de tu menú */
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Botones de las flechas (Limpios y minimalistas) */
+.flecha-btn {
+    background: none;
+    border: none;
+    font-size: 38px;
+    color: #FFFFFF;            /* Flechas blancas */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    padding: 5px;
+}
+
+/* Efecto interactivo al pasar el mouse sobre las flechas */
+.flecha-btn:hover {
+    transform: scale(1.2);     /* Se agranda suavemente */
+    color: #ffff00;            /* Se tiñe de amarillo */
+}
 
 /* BLOQUE DE VIDEO */
 .video {
