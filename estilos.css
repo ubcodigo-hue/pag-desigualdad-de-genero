@@ -1535,16 +1535,14 @@ header a img {
     }
 
     /* COLUMNA DERECHA: REGISTRO */
-    .suscripcion {
-        grid-column: 2;
-        
-        /* 🌟 SOLUCIÓN: Quitamos el margen fijo y le decimos que se alinee al medio */
-        margin-top: 0; 
-        align-self: center; /* 🌟 Hace que la caja flote exactamente en el centro vertical de la página */
+   .suscripcion {
+        grid-column: 2;         /* Se ubica en la columna derecha */
+        grid-row: 1 / span 5;    /* 🌟 IMPORTANTE: Abarca el alto desde el texto lila hasta las fotos */
+        align-self: center;     /* 🌟 ESTO LO CENTRA EN EL MEDIO PERFECTO */
+        justify-self: end;      /* Lo empuja hacia el borde derecho */
         
         width: 100%;
-        max-width: 300px; /* Evita que la suscripción se ensanche de más */
-        justify-self: end; /* La mantiene pegada suavemente hacia la derecha */
+        max-width: 300px;
     }
 
     .suscripcion h3 {
