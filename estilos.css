@@ -540,18 +540,34 @@ html {
     .subrayado {
         text-decoration: underline;
     }
-/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA --- */
+/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA (CENTRADITO) --- */
+    .testimonios-header {
+        width: 100%;
+        text-align: center;
+        display: block; /* Asegura que no use flex del celu */
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
     .testimonios-header h2 {
         font-size: 32px;
-        color: #ffff00;      /* Título amarillo flúor */
-        text-align: center;  /* Centrado perfecto */
+        color: #ffff00;      /* Tu amarillo flúor */
+        text-align: center;  /* ¡Centrado de una! */
+        width: 100%;
+        margin: 0 auto;
+        display: block;
     }
 
     .testimonio-box {
-        flex-direction: row; /* Pone las flechas a los costados en línea horizontal */
+        display: flex;
+        flex-direction: row; /* Flechas a los costados */
+        align-items: center;
+        justify-content: center;
+        background-color: #9700c9; 
         padding: 40px 50px;
         border-radius: 40px;
-        max-width: 850px;    /* Ancho ideal para que respiren los elementos */
+        max-width: 850px;
+        margin: 30px auto 60px;
         gap: 40px;
     }
 
@@ -559,30 +575,49 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;     /* Permite que las comillas y el texto queden en fila y el nombre baje */
+        flex-wrap: wrap; /* Mantiene comillas al costado y tira el nombre abajo */
+        flex: 1;
     }
 
     .comillas {
-        font-size: 60px;     /* Comillas más grandes al costado del texto */
+        font-size: 60px;
+        color: #4b0068;
+        display: inline-block;
+        font-family: "Space Mono", monospace;
     }
 
     #testimonio-texto {
         font-size: 18px;
-        max-width: 75%;      /* Equilibrio para que las comillas no pisen las letras */
+        color: #ffffff;
+        display: inline-block;
+        max-width: 75%;
+        margin: 0 15px;
+        text-align: center;
+        font-style: italic;
     }
 
     .testimonio-contenido hr {
-        width: 100%;         /* Corta la fila para tirar la línea y el nombre abajo */
+        width: 100%; /* Rompe la línea para mandar el nombre abajo */
+        border: none;
+        height: 1.5px;
+        background-color: rgba(255, 255, 255, 0.3);
         margin: 20px 0 10px 0;
     }
 
     #testimonio-nombre {
-        width: 100%;         /* Fuerza al nombre a centrarse abajo del todo */
+        width: 100%;
+        text-align: center;
+        color: #ffff00;
+        font-family: "Space Mono", monospace;
         font-size: 16px;
     }
 
     .flecha-btn {
-        font-size: 45px;     /* Flechas grandes y visibles al costado */
+        background: none;
+        border: none;
+        font-size: 45px;
+        color: #ffffff;
+        cursor: pointer;
         transition: transform 0.2s ease, color 0.2s ease;
     }
 
