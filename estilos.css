@@ -1397,33 +1397,33 @@ header a img {
     .bloque {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Todo alineado a la izquierda */
+        align-items: flex-start;
         padding: 10px 0;
-        /*  SOLUCIÓN: Evita que la imagen se salga de las esquinas al agrandarse */
+        width: 100%;           /* Ocupa todo el ancho de su columna de la grilla */
         overflow: hidden; 
-        border-radius: 25px; /* Mantiene la forma del contenedor igual a la de la foto */
-    }
+        border-radius: 25px;   /* Conserva las esquinas redondeadas generales */
     }
 
     .bloque img {
-        /* 🌟 Escalamos el tamaño para que tengan mucho más peso visual */
-        width: 250px;          /* Subió de 180px a 250px */
-        height: 250px;         /* Subió de 180px a 250px para mantenerlo cuadrado */
+        /* Cambiamos px fijos por porcentaje para que se alinee con el texto */
+        width: 100%;           /* 🌟 SOLUCIÓN: Se estira al nivel exacto del texto */
+        
+        /* Forzamos que siga siendo un cuadrado perfecto sin importar el ancho */
+        aspect-ratio: 1 / 1;   /* 🌟 SOLUCIÓN: Hace que el alto sea igual al ancho automáticamente */
+        
         object-fit: cover;
-        
-        /* Mantenemos tus puntas redondeadas de 25px */
-        border-radius: 25px;   
-        
+        border-radius: 25px;   /* Puntas redondas como querías */
         margin: 0 0 20px 0;    
         display: block;
-        /* 🌟 TRANSICIÓN: Hace que el efecto dure 0.3 segundos y sea suave */
+        
+        /* Animación de hover suave */
         transition: transform 0.3s ease-in-out; 
     }
         
     /* 🌟 EFECTO HOVER: Agranda la imagen un 8% cuando pones el cursor encima */
     .bloque:hover img {
-        transform: scale(1.08);
-        cursor: pointer; /* Cambia el cursor a la manito interactiva */
+        transform: scale(1.05); /* Un zoom sutil del 5% para que no recorte demasiado la foto */
+        cursor: pointer;
     }
 
     .bloque h2 {
