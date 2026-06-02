@@ -36,11 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-// ==========================================
-// 1. LÓGICA DEL CARRUSEL DE TESTIMONIOS
-// ==========================================
-
-// Base de datos con las historias
+/* ========/* ========================= */
+/* mio */
+/* ========================= */
+// Base de datos con las historias reales
 const listaTestimonios = [
     {
         nombre: "Lucia, 28 años",
@@ -64,25 +63,25 @@ const listaTestimonios = [
     }
 ];
 
-// Control de posicion (Empezamos con Lucia en la posicion 0)
+// Control de posición inicial
 let posicion = 0;
 
-// Capturamos los moldes del HTML mediante sus IDs
+// Captura de moldes HTML
 const txtTexto = document.getElementById('testimonio-texto');
 const txtNombre = document.getElementById('testimonio-nombre');
 const btnSiguiente = document.getElementById('btn-siguiente');
 const btnAnterior = document.getElementById('btn-anterior');
+const botonesNombres = document.querySelectorAll('.btn-nombre');
 
-// Funcion para actualizar los datos en la pantalla
+// Función que actualiza el texto en pantalla
 function mostrarTestimonio() {
-    // Verificamos primero que los elementos existan en el HTML actual para que no tire error
     if (txtTexto && txtNombre) {
         txtTexto.textContent = listaTestimonios[posicion].texto;
         txtNombre.textContent = listaTestimonios[posicion].nombre;
     }
 }
 
-// Funcion para la flecha derecha (Avanzar)
+// Función avanzar (Flecha derecha)
 function avanzar() {
     posicion = posicion + 1;
     if (posicion >= listaTestimonios.length) {
@@ -91,7 +90,7 @@ function avanzar() {
     mostrarTestimonio();
 }
 
-// Funcion para la flecha izquierda (Retroceder)
+// Función retroceder (Flecha izquierda)
 function retroceder() {
     posicion = posicion - 1;
     if (posicion < 0) {
@@ -100,56 +99,19 @@ function retroceder() {
     mostrarTestimonio();
 }
 
-// Conectamos los botones con los clics del usuario si existen en la pagina
+// Escuchadores de eventos para las flechas
 if (btnSiguiente && btnAnterior) {
     btnSiguiente.addEventListener('click', avanzar);
     btnAnterior.addEventListener('click', retroceder);
 }
 
-
-// ==========================================
-// 2. LÓGICA DEL MENÚ PRINCIPAL DESPLEGABLE
-// ==========================================
-
-document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll(".menu-principal > ul > li");
-
-    items.forEach(item => {
-        const submenu = item.querySelector("ul");
-
-        if (submenu) {
-            const enlace = item.querySelector("a");
-
-            enlace.addEventListener("click", function(e) {
-                // Si el menú NO está abierto, frena el enlace y lo abre
-                if (!item.classList.contains("abierto")) {
-                    e.preventDefault();
-
-                    // Cierra cualquier otro submenú activo
-                    document.querySelectorAll(".menu-principal li.abierto").forEach(li => {
-                        if (li !== item) {
-                            li.classList.remove("abierto");
-                        }
-                    });
-
-                    item.classList.add("abierto");
-                }
-                // Si YA está abierto (segundo clic), va a la página directamente
-            });
-        }
-    });
-
-    // Cerrar el menú si haces clic en cualquier otro lado de la pantalla
-    document.addEventListener("click", function(e) {
-        if (!e.target.closest(".menu-principal")) {
-            document.querySelectorAll(".menu-principal li.abierto").forEach(li => {
-                li.classList.remove("abierto");
-            });
-        }
+// Escuchadores para los clics en la lista de nombres de abajo
+botonesNombres.forEach(boton => {
+    boton.addEventListener('click', (e) => {
+        posicion = parseInt(e.target.getAttribute('data-posicion'));
+        mostrarTestimonio();
     });
 });
-
-
 /* ========/* ========================= */
 /* Problematicas */
 /* ========================= */
