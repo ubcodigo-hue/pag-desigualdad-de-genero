@@ -994,6 +994,91 @@ body {
     padding: 25px 20px;
 }
 
+/* --- MENÚ HAMBURGUESA RESPONSIVE (CELULAR) --- */
+.menu-principal {
+    background-color: #6a00a3; /* 🌟 Rectángulo violeta de fondo en mobile */
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Manda las 3 líneas a la derecha */
+    align-items: center;
+}
+
+/* Escondemos el checkbox que controla el click */
+.menu-checkbox {
+    display: none;
+}
+
+/* El botón con las 3 rayitas blancas */
+.hamburguesa-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.hamburguesa-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Lista principal de enlaces (Escondida por defecto en celular) */
+.menu-principal > ul {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #52007a; /* Un violeta más oscuro para el despliegue */
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+/* TRUCO RESPONSIVE: Si el checkbox está marcado, abrimos el menú en celular */
+.menu-checkbox:checked ~ ul {
+    display: flex;
+}
+
+/* Links principales en celular */
+.menu-principal > ul > li > a {
+    color: white !important;
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+/* Subsecciones (Listas internas) en celular */
+.menu-principal ul ul {
+    list-style: none;
+    padding-left: 15px;
+    margin: 5px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-principal ul ul a {
+    color: #dfbfff !important; /* Lila claro */
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+/* --- CUERPO DE LA PÁGINA (CELULAR) --- */
 .genero-header {
     background-color: #d9c3e6;
     padding: 20px;
@@ -1019,89 +1104,6 @@ body {
     gap: 30px;
 }
 
-.menu-principal {
-    background-color: #6a00a3; /* 🌟 Rectángulo violeta oscuro de fondo */
-    padding: 15px 20px;
-    position: relative;
-    z-index: 1000;
-    display: flex;
-    justify-content: flex-end; /* Manda el botón a la derecha */
-    align-items: center;
-}
-
-/* Ocultamos el checkbox real */
-.menu-checkbox {
-    display: none;
-}
-
-/* El botón de las 3 rayitas (Hamburguesa) */
-.hamburguesa-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 18px;
-    cursor: pointer;
-}
-
-.hamburguesa-btn span {
-    width: 100%;
-    height: 3px;
-    background-color: white; /* Rayitas blancas para que contrasten */
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Lista principal de enlaces (Escondida por defecto en celular) */
-.menu-principal > ul {
-    display: none; /* 🌟 Oculto hasta que se haga click */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #52007a; /* Violeta un toque más oscuro para el despliegue */
-    margin: 0;
-    padding: 20px;
-    list-style: none;
-    box-sizing: border-box;
-    gap: 15px;
-}
-
-/* 🌟 LA MAGIA DEL TRUCO: Si el checkbox está marcado, mostramos la lista */
-.menu-checkbox:checked ~ ul {
-    display: flex;
-}
-
-/* Estilo de los enlaces principales (OBJETIVOS, PROBLEMÁTICA, etc.) */
-.menu-principal > ul > li > a {
-    color: white !important;
-    text-decoration: none;
-    font-family: "Space Mono", monospace;
-    font-size: 15px;
-    font-weight: bold;
-    display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 5px;
-}
-
-/* Estilo de las subsecciones (Las listas de adentro) */
-.menu-principal ul ul {
-    list-style: none;
-    padding-left: 15px;
-    margin: 5px 0 10px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.menu-principal ul ul a {
-    color: #dfbfff !important; /* Lila clarito para subsecciones */
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 13px;
-}
-
 .bloque {
     display: flex;
     flex-direction: column;
@@ -1109,62 +1111,124 @@ body {
 
 .bloque img {
     width: 100%;
+    aspect-ratio: 1 / 1; /* Cuadrado perfecto en celulares también */
+    object-fit: cover;
     border-radius: 25px;
 }
 
 .bloque h2 {
     font-family: "Space Mono", monospace;
-    font-size: 12px;
+    font-size: 14px;
+    color: #4b0068;
     border-bottom: 2px solid #9700c9;
-    margin: 10px 0;
+    margin: 15px 0 8px 0;
     padding-bottom: 4px;
+    display: inline-block;
+    align-self: flex-start;
 }
 
 .bloque p {
     font-size: 15px;
+    line-height: 22px;
     margin: 0;
 }
 
 .suscripcion {
     margin-top: 40px;
+    background-color: #d9c3e6;
+    border-radius: 25px;
+    padding: 20px;
 }
 
 .suscripcion h3 {
     font-family: "Space Mono", monospace;
     border-bottom: 2px solid black;
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    text-align: center;
 }
 
 .form-suscripcion input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .form-suscripcion button {
-    margin-top: 10px;
-    background: red;
+    margin-top: 15px;
+    background: #e42313;
     color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 12px 20px;
     border: none;
     width: 100%;
     cursor: pointer;
 }
 
-/* ========================================= */
-/* AJUSTES PARA COMPUTADORA (MODO PC)       */
-/* ========================================= */
+
+/* ==========================================================================
+   MODO PC (COMPUTADORAS) - Se activa automáticamente a partir de 1024px
+   ========================================================================== */
 
 @media (min-width: 1024px) {
 
-   .genero-main {
+    /* --- ADAPTACIÓN RESPONSIVE DEL MENÚ PARA PC --- */
+    .hamburguesa-btn {
+        display: none; /* 🌟 Esconde el botón de tres líneas en la computadora */
+    }
+
+    .menu-principal {
+        background: none; /* Quita el rectángulo violeta rígido de mobile */
+        padding: 0;
+        display: block; 
+    }
+
+    .menu-principal > ul {
+        display: flex !important; /* 🌟 Fuerza a que la lista se ponga horizontal en PC */
+        flex-direction: row; 
+        position: static;
+        background: transparent;
+        padding: 0;
+        justify-content: space-between; /* Distribuye los links a lo ancho */
+    }
+
+    .menu-principal > ul > li > a {
+        color: #4b0068 !important; /* Cambia a tu color original de PC */
+        font-size: 14px;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    /* Esconde las subsecciones en PC y las muestra solo al hacer Hover */
+    .menu-principal ul ul {
+        display: none;
+        position: absolute;
+        background-color: #6a00a3;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu-principal > ul > li:hover ul {
+        display: flex;
+    }
+
+    .menu-principal ul ul a {
+        color: white !important;
+    }
+
+    /* --- ADAPTACIÓN DEL CUERPO DE LA PÁGINA PARA PC --- */
+    .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
         margin: 50px auto 80px;
         padding: 0;
         display: grid;
-        grid-template-columns: 74% 22%; /* Proporciones fieles a Illustrator */
+        grid-template-columns: 74% 22%; 
         column-gap: 4%;
     }
 
@@ -1202,8 +1266,8 @@ body {
     }
 
     .texto-lila p {
-        font-size: 18px;       /* 🌟 Tamaño grande e imponente para los párrafos lilas */
-        line-height: 36px;     /* Separación óptima para que no se pisen las letras */
+        font-size: 18px;      
+        line-height: 36px;    
         margin: 0 0 20px;
         color: #111;
     }
@@ -1214,81 +1278,58 @@ body {
         font-weight: 500;
     }
 
-   
     .bloque {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         padding: 10px 0;
-        width: 100%;           /* Ocupa todo el ancho de su columna de la grilla */
+        width: 100%;          
         overflow: hidden; 
-        border-radius: 25px;   /* Conserva las esquinas redondeadas generales */
+        border-radius: 25px;   
     }
 
     .bloque img {
-        /* Cambiamos px fijos por porcentaje para que se alinee con el texto */
-        width: 100%;           /* 🌟 SOLUCIÓN: Se estira al nivel exacto del texto */
-        
-        /* Forzamos que siga siendo un cuadrado perfecto sin importar el ancho */
-        aspect-ratio: 1 / 1;   /* 🌟 SOLUCIÓN: Hace que el alto sea igual al ancho automáticamente */
-        
+        width: 100%;           
+        aspect-ratio: 1 / 1;   
         object-fit: cover;
-        border-radius: 25px;   /* Puntas redondas como querías */
+        border-radius: 25px;   
         margin: 0 0 20px 0;    
         display: block;
-        
-        /* Animación de hover suave */
         transition: transform 0.3s ease-in-out; 
     }
         
-    /* 🌟 EFECTO HOVER: Agranda la imagen un 8% cuando pones el cursor encima */
     .bloque:hover img {
-        transform: scale(1.05); /* Un zoom sutil del 5% para que no recorte demasiado la foto */
+        transform: scale(1.05); 
         cursor: pointer;
     }
 
     .bloque h2 {
-        font-family: "Space Mono", monospace;
         font-size: 14px;
-        color: #4b0068;
-        border-bottom: 2px solid #9700c9;
-        padding-bottom: 4px;
         margin: 0 0 12px 0;
         letter-spacing: 1px;
-        text-align: left;
-        display: inline-block;
-        align-self: flex-start;
     }
 
     .bloque p {
         font-size: 15px;
         line-height: 24px;
         color: #111;
-        text-align: left;
-        margin: 0;
-        width: 100%;
     }
 
-    /* COLUMNA DERECHA: REGISTRO */
-   .suscripcion {
-        grid-column: 2;         /* Se ubica en la columna derecha */
-        grid-row: 1 / span 5;    /* 🌟 IMPORTANTE: Abarca el alto desde el texto lila hasta las fotos */
-        align-self: center;     /* 🌟 ESTO LO CENTRA EN EL MEDIO PERFECTO */
-        justify-self: end;      /* Lo empuja hacia el borde derecho */
-        
+    .suscripcion {
+        grid-column: 2;         
+        grid-row: 1 / span 5;    
+        align-self: center;     
+        justify-self: end;      
         width: 100%;
         max-width: 300px;
+        margin-top: 0;
+        background: transparent;
+        padding: 0;
     }
 
     .suscripcion h3 {
         font-size: 16px;
-        color: black;
-        margin: 0;
         padding-bottom: 10px;
         border-bottom: 4px solid black;
         letter-spacing: 1px;
         white-space: nowrap;
-        text-align: center;
     }
 
     .form-suscripcion {
@@ -1304,10 +1345,7 @@ body {
         background-color: transparent;
         padding: 4px 15px;
         font-size: 13px;
-        outline: none;
-        text-align: center;
         width: 100%;
-        box-sizing: border-box;
     }
 
     .form-suscripcion button {
@@ -1315,89 +1353,8 @@ body {
         background-color: #e42313;
         border-radius: 35px;
         padding: 12px 30px;
-        font-family: "Space Mono", monospace;
         font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 1px;
         width: auto;
         display: block;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* El <dialog> flotante que oscurece el fondo */
-dialog.modal-suscripcion {
-    display: none; 
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-    border: none; /* Quita el borde por defecto de la etiqueta dialog */
-}
-
-/* El <fieldset> blanco con tu diseño */
-.modal-contenido {
-    background-color: white;
-    padding: 30px 40px;
-    border: 3px solid #d9534f; 
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%;
-    margin: auto; /* Centra el fieldset */
-}
-
-.modal-contenido h2 {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 25px;
-    font-family: sans-serif;
-}
-
-/* El <menu> de los botones */
-.modal-botones {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-/* Botones idénticos a tu Illustrator */
-.btn-modal {
-    padding: 10px 25px;
-    border-radius: 20px; 
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s;
-}
-
-.btn-cancelar {
-    background-color: transparent;
-    color: #555;
-    border: 1px solid #ccc;
-}
-
-.btn-acceptar {
-    background-color: #e54d42; 
-    color: white;
-    font-weight: bold;
-}
-
-.btn-acceptar:hover {
-    background-color: #c9302c;
-}
-
-    .menu-principal a {
-        font-family: "Space Mono", monospace;
     }
 }
