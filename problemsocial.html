@@ -9,19 +9,29 @@
 </head>
 <body>
 
+¡Ya encontré el problema exacto! Al ver tu HTML modificado, descubrí que le pusiste style="display:none;" directamente a la etiqueta del <input>. Cuando haces eso desde el HTML, el CSS pierde total control del elemento y por eso no funciona en celulares al hacer clic.
+
+Además, para que en la computadora (PC) se vea espaciado, con el tamaño ideal y las letras blancas sobre la barra violeta, el CSS necesitaba una estructura de Flexbox limpia sin tantas restricciones de ancho.
+
+Hagamos un borrón y cuenta nueva definitivo. Sigue estos dos pasos exactos para que te quede impecable:
+
+Paso 1: Reemplaza tu bloque <header> en el HTML (problemsocial.html)
+Busca tu parte de arriba y cámbiala por esta (le quité el style="display:none;" manual para que el CSS pueda operarlo en segundo plano sin que se vea el cuadrado):
+
+HTML
 <header>
     <a href="index.html">
         <img src="imagenes/logo.png" alt="Logo de Lente Violeta">
     </a>
 
-  <nav class="menu-principal">
-    <input type="checkbox" id="menu-check" class="menu-checkbox" style="display:none;">
-    
-    <label for="menu-check" class="hamburguesa-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
+    <nav class="menu-principal">
+        <input type="checkbox" id="menu-check" class="menu-checkbox">
+        
+        <label for="menu-check" class="hamburguesa-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
         <ul>
             <li>

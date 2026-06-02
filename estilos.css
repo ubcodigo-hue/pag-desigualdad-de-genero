@@ -1038,7 +1038,7 @@ body {
     box-sizing: border-box;
 }
 
-/* LA BARRA SUPERIOR VIOLETA */
+/* LA BARRA SUPERIOR VIOLETA EN MOBILE */
 header {
     background-color: #6a00a3 !important; 
     width: 100%;
@@ -1066,7 +1066,7 @@ header > a img {
     align-items: center;
 }
 
-/* OCULTAMOS EL CHECKBOX PERO LO DEJAMOS FUNCIONAL */
+/* 🌟 ESCONDEMOS EL CUADRITO DEL CHECKBOX DESDE EL CSS PARA QUE Siga FUNCIONANDO */
 .menu-checkbox {
     display: none !important;
 }
@@ -1079,6 +1079,7 @@ header > a img {
     width: 30px;
     height: 20px;
     cursor: pointer;
+    z-index: 1010;
 }
 
 .hamburguesa-btn span {
@@ -1091,7 +1092,7 @@ header > a img {
 
 /* LA LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO) */
 .menu-principal > ul {
-    display: none; 
+    display: none !important; 
     flex-direction: column !important;
     position: absolute !important;
     top: 100%; 
@@ -1107,7 +1108,7 @@ header > a img {
     z-index: 999;
 }
 
-/* 🌟 ACCIÓN EN MOBILE: Cuando se clickea la hamburguesa, el menú se muestra */
+/* 🌟 INTERACTIVIDAD MOBILE CORREGIDA: Al hacer clic en la hamburguesa se muestra */
 .menu-checkbox:checked ~ ul {
     display: flex !important;
 }
@@ -1229,43 +1230,47 @@ header > a img {
         display: none !important; 
     }
 
-    /* Estructura de la barra: el nav ocupa el espacio restante */
+    /* Estructura horizontal del header completo */
     header {
         padding: 20px 40px !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
+        background-color: #6a00a3 !important; /* Asegura la franja violeta superior en PC */
     }
 
+    /* El nav toma el ancho proporcional restante para distribuir el menú */
     .menu-principal {
-        width: 75% !important; /* Le damos buen espacio al menú para que no se achique */
+        width: 70% !important; 
+        display: block !important;
     }
 
-    /* 🌟 EL MENÚ WEB SE ESTIRA HASTA LOS BORDES */
+    /* 🌟 EL MENÚ COMPLETO SE VE EN HORIZONTAL DE PUNTA A PUNTA */
     .menu-principal > ul {
         display: flex !important;           
         flex-direction: row !important;     
         position: static !important;        
         background-color: transparent !important; 
         width: 100% !important;
-        justify-content: space-between !important; /* Distribuye a lo ancho */
+        justify-content: space-between !important; /* Distribuye las secciones uniformemente */
         padding: 0 !important;
         margin: 0 !important;
         box-shadow: none !important;
     }
 
-    /* 🌟 TEXTOS PRINCIPALES EN PC EN BLANCO PURO */
+    /* 🌟 TEXTOS PRINCIPALES DE LA BARRA EN BLANCO PURO (PC) */
     .menu-principal > ul > li > a {
-        color: #ffffff !important; /* Cambiados a blanco como me pediste */
-        font-size: 14px !important;
+        color: #ffffff !important; /* Letras blancas en la barra superior */
+        font-size: 13px !important;
         text-decoration: none !important;
         border-bottom: none !important;
         padding-bottom: 0 !important;
         font-family: "Space Mono", monospace !important;
         font-weight: bold !important;
+        letter-spacing: 0.5px;
     }
 
-    /* SUBMENÚ DESPLEGABLE EN PC (Cuadro flotante violeta original) */
+    /* 🌟 CUADRO FLOTANTE DEL SUBMENÚ (Mantiene su violeta oscuro de fondo) */
     .menu-principal ul ul {
         display: none !important;
         position: absolute !important;
@@ -1278,19 +1283,21 @@ header > a img {
         min-width: 180px;
     }
 
+    /* Despliegue en PC al pasar el mouse */
     .menu-principal > ul > li:hover ul {
         display: flex !important;
         flex-direction: column !important;
         gap: 10px !important;
     }
 
-    /* Textos del submenú en PC en blanco */
+    /* 🌟 TEXTOS INTERNOS DEL SUBMENÚ EN BLANCO PURO (PC) */
     .menu-principal ul ul a {
-        color: #ffffff !important; 
+        color: #ffffff !important; /* Letras del submenú en blanco */
         font-family: sans-serif !important;
         font-size: 13px !important;
         text-decoration: none !important;
         white-space: nowrap;
+        font-weight: normal !important;
     }
     
     .menu-principal ul ul a:hover {
