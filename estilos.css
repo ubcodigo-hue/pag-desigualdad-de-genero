@@ -1176,6 +1176,8 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
     font-size: 12px;
     border-bottom: 2px solid #9700c9;
     margin: 10px 0;
+    padding-bottom: 4px;
+}
 
 .bloque p {
     font-size: 15px;
@@ -1209,49 +1211,47 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
     cursor: pointer;
 }
 
-/* ========================================= */
-/* AJUSTES PARA COMPUTADORA (MODO PC)       */
-/* ========================================= */
+
+/* ==========================================================================
+   AJUSTES PARA COMPUTADORA (MODO PC) - Automático desde 1024px
+   ========================================================================== */
 
 @media (min-width: 1024px) {
 
-    /* 1. Escondemos el botón de las 3 rayitas por completo en la computadora */
+    /* 🌟 ELIMINAMOS LA HAMBURGUESA EN PC Y VOLVEMOS TODO HORIZONTAL */
     .hamburguesa-btn {
         display: none !important; 
     }
 
-    /* 2. Resetamos la barra del menú para que no use el formato de celular */
     .menu-principal {
-        background-color: transparent !important; /* Le quita el fondo violeta rígido */
+        background-color: transparent !important; /* Chau barra violeta rígida */
         padding: 20px 0 !important;
         display: block !important;
         width: 100%;
     }
 
-    /* 3. ¡ESTA ES LA CLAVE! Forzamos a la lista a mostrarse de forma HORIZONTAL */
     .menu-principal > ul {
-        display: flex !important;          /* 🌟 La vuelve a mostrar siempre en PC */
-        flex-direction: row !important;    /* 🌟 La pone de costado (horizontal) */
-        position: static !important;       /* Quita el posicionamiento flotante de mobile */
-        background-color: transparent !important; /* Quita el fondo blanco de mobile */
+        display: flex !important;          /* Se fuerza a mostrar siempre */
+        flex-direction: row !important;    /* Se alinean horizontalmente */
+        position: static !important;       /* Pierde el comportamiento flotante */
+        background-color: transparent !important; /* Chau fondo blanco de celular */
         width: 100% !important;
-        justify-content: space-between;    /* Distribuye los botones a lo largo de la pantalla */
+        justify-content: space-between;    /* Se distribuyen a lo ancho */
         padding: 0;
         margin: 0;
-        box-shadow: none !important;       /* Quita la sombra de celular */
+        box-shadow: none !important;
     }
 
-    /* 4. Estilo para los textos de los enlaces principales en PC */
     .menu-principal > ul > li > a {
-        color: #4b0068 !important;         /* Color violeta para las letras sobre el fondo blanco general */
+        color: #4b0068 !important;         /* Letras violetas tradicionales */
         font-size: 14px !important;
         font-family: "Space Mono", monospace;
         text-decoration: none;
-        border-bottom: none !important;    /* Quita la línea divisoria de mobile */
+        border-bottom: none !important;
         padding-bottom: 0;
     }
 
-    /* 5. Esconder las subsecciones en PC para que no estorben (Menú desplegable tradicional) */
+    /* Hover tradicional para submenús desplegables en PC */
     .menu-principal ul ul {
         display: none !important;
         position: absolute;
@@ -1261,7 +1261,6 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    /* Al pasar el mouse por encima de una sección, se despliegan sus subsecciones */
     .menu-principal > ul > li:hover ul {
         display: flex !important;
         flex-direction: column !important;
@@ -1271,13 +1270,14 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
         color: #666 !important;
     }
 
-   .genero-main {
+    /* --- ESTRUCTURA GENERAL EN PC --- */
+    .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
         margin: 50px auto 80px;
         padding: 0;
         display: grid;
-        grid-template-columns: 74% 22%; /* Proporciones fieles a Illustrator */
+        grid-template-columns: 74% 22%; 
         column-gap: 4%;
     }
 
@@ -1315,8 +1315,8 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
     }
 
     .texto-lila p {
-        font-size: 18px;       /* 🌟 Tamaño grande e imponente para los párrafos lilas */
-        line-height: 36px;     /* Separación óptima para que no se pisen las letras */
+        font-size: 18px;       
+        line-height: 36px;     
         margin: 0 0 20px;
         color: #111;
     }
@@ -1327,36 +1327,28 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
         font-weight: 500;
     }
 
-   
     .bloque {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 0;
-        width: 100%;           /* Ocupa todo el ancho de su columna de la grilla */
+        width: 100%;           
         overflow: hidden; 
-        border-radius: 25px;   /* Conserva las esquinas redondeadas generales */
+        border-radius: 25px;   
     }
 
     .bloque img {
-        /* Cambiamos px fijos por porcentaje para que se alinee con el texto */
-        width: 100%;           /* 🌟 SOLUCIÓN: Se estira al nivel exacto del texto */
-        
-        /* Forzamos que siga siendo un cuadrado perfecto sin importar el ancho */
-        aspect-ratio: 1 / 1;   /* 🌟 SOLUCIÓN: Hace que el alto sea igual al ancho automáticamente */
-        
+        width: 100%;           
+        aspect-ratio: 1 / 1;   
         object-fit: cover;
-        border-radius: 25px;   /* Puntas redondas como querías */
+        border-radius: 25px;   
         margin: 0 0 20px 0;    
         display: block;
-        
-        /* Animación de hover suave */
         transition: transform 0.3s ease-in-out; 
     }
         
-    /* 🌟 EFECTO HOVER: Agranda la imagen un 8% cuando pones el cursor encima */
     .bloque:hover img {
-        transform: scale(1.05); /* Un zoom sutil del 5% para que no recorte demasiado la foto */
+        transform: scale(1.05); 
         cursor: pointer;
     }
 
@@ -1383,14 +1375,14 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
     }
 
     /* COLUMNA DERECHA: REGISTRO */
-   .suscripcion {
-        grid-column: 2;         /* Se ubica en la columna derecha */
-        grid-row: 1 / span 5;    /* 🌟 IMPORTANTE: Abarca el alto desde el texto lila hasta las fotos */
-        align-self: center;     /* 🌟 ESTO LO CENTRA EN EL MEDIO PERFECTO */
-        justify-self: end;      /* Lo empuja hacia el borde derecho */
-        
+    .suscripcion {
+        grid-column: 2;         
+        grid-row: 1 / span 5;    
+        align-self: center;     
+        justify-self: end;      
         width: 100%;
         max-width: 300px;
+        margin-top: 0;
     }
 
     .suscripcion h3 {
@@ -1440,77 +1432,73 @@ input.menu-checkbox, .menu-checkbox, #menu-check {
     }
 
     /* El <dialog> flotante que oscurece el fondo */
-dialog.modal-suscripcion {
-    display: none; 
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-    border: none; /* Quita el borde por defecto de la etiqueta dialog */
-}
+    dialog.modal-suscripcion {
+        display: none; 
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        justify-content: center;
+        align-items: center;
+        border: none; 
+    }
 
-/* El <fieldset> blanco con tu diseño */
-.modal-contenido {
-    background-color: white;
-    padding: 30px 40px;
-    border: 3px solid #d9534f; 
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%;
-    margin: auto; /* Centra el fieldset */
-}
+    /* El <fieldset> blanco con tu diseño */
+    .modal-contenido {
+        background-color: white;
+        padding: 30px 40px;
+        border: 3px solid #d9534f; 
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 90%;
+        margin: auto; 
+    }
 
-.modal-contenido h2 {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 25px;
-    font-family: sans-serif;
-}
+    .modal-contenido h2 {
+        color: #333;
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-family: sans-serif;
+    }
 
-/* El <menu> de los botones */
-.modal-botones {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+    /* El <menu> de los botones */
+    .modal-botones {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
 
-/* Botones idénticos a tu Illustrator */
-.btn-modal {
-    padding: 10px 25px;
-    border-radius: 20px; 
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s;
-}
+    /* Botones idénticos a tu Illustrator */
+    .btn-modal {
+        padding: 10px 25px;
+        border-radius: 20px; 
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        transition: background 0.2s;
+    }
 
-.btn-cancelar {
-    background-color: transparent;
-    color: #555;
-    border: 1px solid #ccc;
-}
+    .btn-cancelar {
+        background-color: transparent;
+        color: #555;
+        border: 1px solid #ccc;
+    }
 
-.btn-acceptar {
-    background-color: #e54d42; 
-    color: white;
-    font-weight: bold;
-}
+    .btn-acceptar {
+        background-color: #e54d42; 
+        color: white;
+        font-weight: bold;
+    }
 
-.btn-acceptar:hover {
-    background-color: #c9302c;
-}
-
-    .menu-principal a {
-        font-family: "Space Mono", monospace;
+    .btn-acceptar:hover {
+        background-color: #c9302c;
     }
 }
