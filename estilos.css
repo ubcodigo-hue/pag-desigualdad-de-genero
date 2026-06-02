@@ -288,31 +288,46 @@ address {
     align-items: flex-start;
 }
 
+.menu-principal > ul {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    list-style: none; /* Quita puntitos si los hay */
+    padding: 0;
+}
+
 .menu-principal > ul > li {
     position: relative;
 }
 
-/* 1. OCULTAR EL SUBMENÚ POR DEFECTO */
+/* Oculto por defecto */
 .menu-principal > ul > li > ul {
-    display: none; /* <--- Cambiado de visible a oculto */
+    display: none; 
     position: absolute;
-    top: 24px;
+    top: 100%; /* Se posiciona justo abajo del texto principal */
     left: 0;
     background-color: #9700c9;
     padding: 12px 15px;
     min-width: 190px;
     z-index: 20;
+    list-style: none;
 }
 
-/* 2. MOSTRAR EL SUBMENÚ CUANDO LLEVE LA CLASE 'ABIERTO' */
+/* Mostrar cuando tiene la clase abierto */
 .menu-principal > ul > li.abierto > ul {
-    display: block; /* <--- Esto hace la magia en el primer click */
+    display: block !important; /* El !important asegura que ignore otros estilos que lo oculten */
 }
 
 .menu-principal > ul > li > ul li {
     display: block;
     white-space: nowrap;
     padding: 5px 0;
+}
+
+/* IMPORTANTE: Color de los textos de adentro para que se vean */
+.menu-principal > ul > li > ul li a {
+    color: #ffffff; 
+    text-decoration: none;
 }
 
   main {
