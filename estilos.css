@@ -1045,19 +1045,18 @@ header {
     position: relative;
     z-index: 1000;
     display: flex;
-    justify-content: space-between; /* Ponemos el logo a la izq y el menú a la der */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
     box-sizing: border-box;
 }
 
-/* El contenedor del logo */
 header > a {
     display: inline-block;
 }
 
 header > a img {
-    height: 40px !important; /* Forzamos tamaño de logo para que no rompa la barra */
+    height: 40px !important; 
     width: auto;
     display: block;
 }
@@ -1065,6 +1064,11 @@ header > a img {
 .menu-principal {
     display: flex;
     align-items: center;
+}
+
+/* OCULTAMOS EL CHECKBOX PERO LO DEJAMOS FUNCIONAL */
+.menu-checkbox {
+    display: none !important;
 }
 
 /* EL BOTÓN HAMBURGUESA */
@@ -1087,9 +1091,9 @@ header > a img {
 
 /* LA LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO) */
 .menu-principal > ul {
-    display: none; /* Oculta por defecto en celular */
-    flex-direction: column;
-    position: absolute;
+    display: none; 
+    flex-direction: column !important;
+    position: absolute !important;
     top: 100%; 
     left: 0;
     width: 100%;
@@ -1103,8 +1107,8 @@ header > a img {
     z-index: 999;
 }
 
-/* INTERACTIVIDAD MOBILE: Se abre al pasar el dedo o tocar la zona de la hamburguesa */
-.menu-principal:hover > ul {
+/* 🌟 ACCIÓN EN MOBILE: Cuando se clickea la hamburguesa, el menú se muestra */
+.menu-checkbox:checked ~ ul {
     display: flex !important;
 }
 
@@ -1225,59 +1229,72 @@ header > a img {
         display: none !important; 
     }
 
-    /* Ajuste estructural del header horizontal */
+    /* Estructura de la barra: el nav ocupa el espacio restante */
     header {
-        padding: 15px 40px !important;
+        padding: 20px 40px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
 
     .menu-principal {
-        width: auto !important;
+        width: 75% !important; /* Le damos buen espacio al menú para que no se achique */
     }
 
-    /* 🌟 EL MENÚ SE VUELVE VISIBLE, HORIZONTAL Y DISTRIBUIDO */
+    /* 🌟 EL MENÚ WEB SE ESTIRA HASTA LOS BORDES */
     .menu-principal > ul {
-        display: flex !important;           /* Fuerza a que se muestre siempre */
-        flex-direction: row !important;     /* Horizontal */
-        position: static !important;        /* Quita la posición absoluta de mobile */
-        background-color: transparent !important; /* Remueve el fondo blanco */
-        width: auto !important;
-        gap: 25px !important;               /* Separación elegante entre opciones */
+        display: flex !important;           
+        flex-direction: row !important;     
+        position: static !important;        
+        background-color: transparent !important; 
+        width: 100% !important;
+        justify-content: space-between !important; /* Distribuye a lo ancho */
         padding: 0 !important;
         margin: 0 !important;
         box-shadow: none !important;
     }
 
-    /* Links principales en PC (Texto violeta oscuro original) */
+    /* 🌟 TEXTOS PRINCIPALES EN PC EN BLANCO PURO */
     .menu-principal > ul > li > a {
-        color: #4b0068 !important; 
-        font-size: 13px !important;
+        color: #ffffff !important; /* Cambiados a blanco como me pediste */
+        font-size: 14px !important;
+        text-decoration: none !important;
         border-bottom: none !important;
         padding-bottom: 0 !important;
+        font-family: "Space Mono", monospace !important;
+        font-weight: bold !important;
     }
 
-    /* SUBMENÚ DESPLEGABLE EN PC (Fondo violeta oscuro original) */
+    /* SUBMENÚ DESPLEGABLE EN PC (Cuadro flotante violeta original) */
     .menu-principal ul ul {
         display: none !important;
         position: absolute !important;
         background-color: #52007a !important; 
-        padding: 12px !important;
+        padding: 15px !important;
         border-radius: 6px;
         z-index: 100;
-        margin-top: 5px;
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        margin-top: 8px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+        min-width: 180px;
     }
 
     .menu-principal > ul > li:hover ul {
         display: flex !important;
         flex-direction: column !important;
+        gap: 10px !important;
     }
 
-    /* 🌟 TEXTOS DENTRO DEL SUBMENÚ EN PC EN BLANCO PURO */
+    /* Textos del submenú en PC en blanco */
     .menu-principal ul ul a {
         color: #ffffff !important; 
         font-family: sans-serif !important;
         font-size: 13px !important;
+        text-decoration: none !important;
         white-space: nowrap;
+    }
+    
+    .menu-principal ul ul a:hover {
+        text-decoration: underline !important;
     }
 
     /* --- RESTO DEL GRID EN PC --- */
