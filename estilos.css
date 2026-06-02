@@ -1028,10 +1028,6 @@ MODO MOBILE
 /* ========================= */
 
 
-/* ==========================================================================
-   PROBLEMASSOCIAL - MODO MOBILE (CELULAR) - Estilos por defecto
-   ========================================================================== */
-
 body {
     margin: 0;
     padding: 0;
@@ -1043,9 +1039,9 @@ body {
     box-sizing: border-box;
 }
 
-/* 🌟 LA BARRA CONTENEDORA EN CELULARES */
+/* LA BARRA CONTENEDORA EN CELULARES */
 header {
-    background-color: #6a00a3; /* Mantiene la franja violeta arriba */
+    background-color: #6a00a3; 
     width: 100%;
     position: relative;
     z-index: 1000;
@@ -1053,7 +1049,7 @@ header {
 
 .menu-principal {
     display: flex;
-    justify-content: flex-end; /* Manda el botón hamburguesa a la derecha */
+    justify-content: flex-end; 
     align-items: center;
     padding: 15px 20px;
     width: 100%;
@@ -1061,12 +1057,11 @@ header {
     position: relative;
 }
 
-/* Ocultamos por completo el checkbox del truco interactivo */
 .menu-checkbox {
     display: none !important;
 }
 
-/* 🌟 EL BOTÓN HAMBURGUESA (SÓLO SE VE EN CELULAR) */
+/* EL BOTÓN HAMBURGUESA */
 .hamburguesa-btn {
     display: flex !important; 
     flex-direction: column;
@@ -1080,20 +1075,20 @@ header {
 .hamburguesa-btn span {
     width: 100%;
     height: 3px;
-    background-color: white; /* Tres líneas blancas */
+    background-color: white; 
     border-radius: 2px;
     display: block;
 }
 
-/* 🌟 LA LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO Y OCULTA POR DEFECTO) */
+/* LA LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO) */
 .menu-principal > ul {
-    display: none !important; /* Se oculta por defecto al cargar en celular */
+    display: none !important; 
     flex-direction: column !important;
     position: absolute !important;
-    top: 100%; /* Cae justo debajo de la barra violeta */
+    top: 100%; 
     left: 0;
     width: 100%;
-    background-color: white !important; /* El fondo blanco que necesitabas */
+    background-color: white !important; 
     margin: 0;
     padding: 25px 20px;
     list-style: none;
@@ -1102,24 +1097,23 @@ header {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* INTERACTIVIDAD: Cuando haces clic en la hamburguesa, se activa el check y despliega la lista */
 .menu-checkbox:checked ~ ul {
     display: flex !important;
 }
 
-/* Estilo de los textos principales en el menú del celular (Oscuros sobre el fondo blanco) */
+/* Enlaces principales en celular */
 .menu-principal > ul > li > a {
-    color: #4b0068 !important; /* Letras oscuras legibles */
+    color: #4b0068 !important; 
     text-decoration: none;
     font-family: "Space Mono", monospace;
     font-size: 15px;
     font-weight: bold;
     display: block;
-    border-bottom: 1px solid #f0f0f0; /* Línea separadora sutil */
+    border-bottom: 1px solid #f0f0f0; 
     padding-bottom: 5px;
 }
 
-/* Subsecciones anidadas en el celular */
+/* Subsecciones internas en celular */
 .menu-principal ul ul {
     list-style: none;
     padding-left: 15px;
@@ -1130,7 +1124,7 @@ header {
 }
 
 .menu-principal ul ul a {
-    color: #666 !important; /* Gris oscuro para las subopciones */
+    color: #666 !important; 
     text-decoration: none;
     font-family: sans-serif;
     font-size: 13px;
@@ -1212,53 +1206,52 @@ header {
     cursor: pointer;
 }
 
+
 /* ==========================================================================
-   AJUSTES PARA COMPUTADORA (MODO PC) - Automático desde 1024px
+   2. MODO COMPUTADORA (PC) - SE ACTIVA A PARTIR DE 1024px
    ========================================================================== */
 
 @media (min-width: 1024px) {
 
-    /* 🌟 ELIMINAMOS LA HAMBURGUESA EN PC Y VOLVEMOS TODO HORIZONTAL */
     .hamburguesa-btn {
         display: none !important; 
     }
 
     .menu-principal {
-        background-color: transparent !important; /* Chau barra violeta rígida */
-        padding: 20px 0 !important;
+        background-color: transparent !important; 
+        padding: 0 !important;
         display: block !important;
-        width: 100%;
+        width: 100% !important;
     }
 
     .menu-principal > ul {
-        display: flex !important;          /* Se fuerza a mostrar siempre */
-        flex-direction: row !important;    /* Se alinean horizontalmente */
-        position: static !important;       /* Pierde el comportamiento flotante */
-        background-color: transparent !important; /* Chau fondo blanco de celular */
+        display: flex !important;           
+        flex-direction: row !important;     
+        position: static !important;        
+        background-color: transparent !important; 
         width: 100% !important;
-        justify-content: space-between;    /* Se distribuyen a lo ancho */
-        padding: 0;
-        margin: 0;
+        justify-content: space-between !important; 
+        padding: 0 !important;
+        margin: 0 !important;
         box-shadow: none !important;
     }
 
+    /* Textos principales en modo PC */
     .menu-principal > ul > li > a {
-        color: #4b0068 !important;         /* Letras violetas tradicionales */
+        color: #4b0068 !important; 
         font-size: 14px !important;
-        font-family: "Space Mono", monospace;
-        text-decoration: none;
         border-bottom: none !important;
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
     }
 
-    /* Hover tradicional para submenús desplegables en PC */
+    /* Submenú desplegable con fondo violeta original en PC */
     .menu-principal ul ul {
         display: none !important;
-        position: absolute;
-        background-color: white;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        position: absolute !important;
+        background-color: #52007a !important; 
+        padding: 10px !important;
+        border-radius: 4px;
+        z-index: 100;
     }
 
     .menu-principal > ul > li:hover ul {
@@ -1266,11 +1259,12 @@ header {
         flex-direction: column !important;
     }
 
+    /* 🌟 TEXTOS DEL SUBMENÚ EN PC CAMBIADOS A BLANCO PURO */
     .menu-principal ul ul a {
-        color: #666 !important;
+        color: #ffffff !important; /* Ahora las letras del submenú se ven blancas */
     }
 
-    /* --- ESTRUCTURA GENERAL EN PC --- */
+    /* --- ESTRUCTURA CONTENIDO PC --- */
     .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
@@ -1374,7 +1368,6 @@ header {
         width: 100%;
     }
 
-    /* COLUMNA DERECHA: REGISTRO */
     .suscripcion {
         grid-column: 2;         
         grid-row: 1 / span 5;    
@@ -1382,7 +1375,6 @@ header {
         justify-self: end;      
         width: 100%;
         max-width: 300px;
-        margin-top: 0;
     }
 
     .suscripcion h3 {
@@ -1431,7 +1423,6 @@ header {
         cursor: pointer;
     }
 
-    /* El <dialog> flotante que oscurece el fondo */
     dialog.modal-suscripcion {
         display: none; 
         position: fixed;
@@ -1446,7 +1437,6 @@ header {
         border: none; 
     }
 
-    /* El <fieldset> blanco con tu diseño */
     .modal-contenido {
         background-color: white;
         padding: 30px 40px;
@@ -1466,7 +1456,6 @@ header {
         font-family: sans-serif;
     }
 
-    /* El <menu> de los botones */
     .modal-botones {
         display: flex;
         justify-content: space-around;
@@ -1476,7 +1465,6 @@ header {
         list-style: none;
     }
 
-    /* Botones idénticos a tu Illustrator */
     .btn-modal {
         padding: 10px 25px;
         border-radius: 20px; 
@@ -1500,5 +1488,9 @@ header {
 
     .btn-acceptar:hover {
         background-color: #c9302c;
+    }
+
+    .menu-principal a {
+        font-family: "Space Mono", monospace;
     }
 }
