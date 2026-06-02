@@ -284,68 +284,71 @@ html {
         display: none;
     }
 
-/* --- CONFIGURACIÓN DEL MENÚ PRINCIPAL --- */
-Aquí tienes el código completo y unificado de tu archivo CSS. Solo tienes que borrar lo que tenías antes en tu hoja de estilos y pegar este bloque entero:
 
-CSS
-/* --- CONFIGURACIÓN DEL MENÚ PRINCIPAL --- */
+
+
+
 .menu-principal > ul {
     display: flex;
     gap: 28px;
     align-items: center;
+
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .menu-principal > ul > li {
     position: relative;
 }
 
-/* Enlaces principales: Ahora en BLANCO para que se lean perfectamente */
 .menu-principal > ul > li > a {
-    color: #ffffff ; 
+    color: white;
+    font-family: "Space Mono", monospace;
     text-decoration: none;
-    font-weight: 600;
     font-size: 14px;
+    font-weight: 700;
+    display: block;
     padding: 10px 0;
-    display: block;
 }
 
-/* --- CONFIGURACIÓN DEL SUBMENÚ (OCULTO POR DEFECTO) --- */
+/* SUBMENÚ */
 .menu-principal > ul > li > ul {
-    display: none; /* Se mantiene escondido */
+    display: none;
+
     position: absolute;
-    top: 100%; /* Aparece justo abajo del texto */
+    top: 100%;
     left: 0;
+
     background-color: #9700c9;
-    padding: 12px 15px;
-    min-width: 190px;
-    z-index: 100;
     list-style: none;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.15); /* Sombra suave para separarlo del fondo */
+
+    padding: 12px 15px;
+    margin: 0;
+
+    min-width: 210px;
+    z-index: 100;
 }
 
-/* --- LA MAGIA DEL JAVASCRIPT --- */
-/* Cuando JS añade la clase 'abierto', el submenú pasa a ser visible */
 .menu-principal > ul > li.abierto > ul {
-    display: block !important;
-}
-
-/* Enlaces de adentro del submenú */
-.menu-principal > ul > li > ul li a {
-    color: #ffffff !important;
-    text-decoration: none;
     display: block;
-    padding: 6px 0;
-    font-size: 13px;
 }
 
-/* --- EFECTO HOVER (AMARILLO) --- */
-/* Cuando pasas el mouse por encima de las opciones del submenú */
+.menu-principal > ul > li > ul li {
+    padding: 6px 0;
+    white-space: nowrap;
+}
+
+.menu-principal > ul > li > ul li a {
+    color: white;
+    font-family: "Space Mono", monospace;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+}
+
 .menu-principal > ul > li > ul li a:hover {
-    color: #ffd700 !important; /* Cambia a amarillo/dorado como tu logo */
-    transition: color 0.2s ease; /* Hace que el cambio de color sea suave */
+    color: #ffff00;
 }
 
   main {
