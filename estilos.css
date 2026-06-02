@@ -1289,16 +1289,16 @@ header a img {
 @media (min-width: 1024px) {
 
    .genero-main {
-        max-width: 1200px;         
-        margin: 50px auto 80px;    
-        padding: 0 20px;
-        
-        display: grid;
-        /* ⬇️ CAMBIO: 70% izquierda para el bloque lila, 26% derecha para suscripción ⬇️ */
-        grid-template-columns: 70% 26%; 
-        column-gap: 4%;            /* Espacio intermedio */
-        align-items: start;
-    }
+    width: calc(100% - 8cm);
+    max-width: 1600px;
+
+    margin: 50px auto 80px;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 76% 20%;
+    column-gap: 4%;
+}
 
     .genero-bloque-principal {
         grid-column: 1;
@@ -1312,16 +1312,11 @@ header a img {
     }
 
     .genero-contenido {
-        background-color: #d9c3e6;
-        border-radius: 55px;
-        padding: 45px 45px 50px; 
-        margin-top: 0;
-        
-        display: grid !important; 
-        grid-template-columns: repeat(2, 1fr) !important; 
-        column-gap: 40px;
-        row-gap: 35px;
-    }
+    padding: 45px 60px 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
     .texto-lila {
         grid-column: 1 / 3; /* El texto introductorio ocupa todo el ancho del bloque lila */
     }
