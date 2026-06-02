@@ -1045,15 +1045,19 @@ header {
     position: relative;
     z-index: 1000;
     display: flex;
-    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    justify-content: space-between; /* Ponemos el logo a la izq y el menú a la der */
     align-items: center;
     padding: 10px 20px;
     box-sizing: border-box;
 }
 
-/* Forzamos que el logo se vea y escale bien */
+/* El contenedor del logo */
+header > a {
+    display: inline-block;
+}
+
 header > a img {
-    height: 40px !important;
+    height: 40px !important; /* Forzamos tamaño de logo para que no rompa la barra */
     width: auto;
     display: block;
 }
@@ -1063,7 +1067,7 @@ header > a img {
     align-items: center;
 }
 
-/* BOTÓN HAMBURGUESA (SÓLO PARA MOBILE) */
+/* EL BOTÓN HAMBURGUESA */
 .hamburguesa-btn {
     display: flex !important; 
     flex-direction: column;
@@ -1081,9 +1085,9 @@ header > a img {
     display: block;
 }
 
-/* LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO) */
+/* LA LISTA DESPLEGABLE EN MOBILE (FONDO BLANCO) */
 .menu-principal > ul {
-    display: none; /* Se oculta por defecto en celulares */
+    display: none; /* Oculta por defecto en celular */
     flex-direction: column;
     position: absolute;
     top: 100%; 
@@ -1099,12 +1103,12 @@ header > a img {
     z-index: 999;
 }
 
-/* 🌟 TRUCO MOBILE SÚPER LIMPIO: Se despliega al tocar el área del menú */
+/* INTERACTIVIDAD MOBILE: Se abre al pasar el dedo o tocar la zona de la hamburguesa */
 .menu-principal:hover > ul {
     display: flex !important;
 }
 
-/* Textos principales en celular (Oscuros sobre blanco) */
+/* Enlaces principales en celular (Oscuros sobre fondo blanco) */
 .menu-principal > ul > li > a {
     color: #4b0068 !important; 
     text-decoration: none;
@@ -1120,7 +1124,7 @@ header > a img {
 .menu-principal ul ul {
     list-style: none;
     padding-left: 15px;
-    margin: 5px 0;
+    margin: 5px 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -1221,7 +1225,7 @@ header > a img {
         display: none !important; 
     }
 
-    /* Ajuste de la barra horizontal */
+    /* Ajuste estructural del header horizontal */
     header {
         padding: 15px 40px !important;
     }
@@ -1230,28 +1234,28 @@ header > a img {
         width: auto !important;
     }
 
-    /* 🌟 TU MODO WEB HORIZONTAL VISIBLE E IMPECABLE */
+    /* 🌟 EL MENÚ SE VUELVE VISIBLE, HORIZONTAL Y DISTRIBUIDO */
     .menu-principal > ul {
-        display: flex !important;           /* Forzamos que se vea siempre */
+        display: flex !important;           /* Fuerza a que se muestre siempre */
         flex-direction: row !important;     /* Horizontal */
-        position: static !important;        /* Resetea el flotado de celular */
-        background-color: transparent !important; /* Sin fondo blanco */
+        position: static !important;        /* Quita la posición absoluta de mobile */
+        background-color: transparent !important; /* Remueve el fondo blanco */
         width: auto !important;
-        gap: 30px !important;               /* Separación de los links */
+        gap: 25px !important;               /* Separación elegante entre opciones */
         padding: 0 !important;
         margin: 0 !important;
         box-shadow: none !important;
     }
 
-    /* Links principales de PC (Violetas oscuros) */
+    /* Links principales en PC (Texto violeta oscuro original) */
     .menu-principal > ul > li > a {
         color: #4b0068 !important; 
-        font-size: 14px !important;
+        font-size: 13px !important;
         border-bottom: none !important;
         padding-bottom: 0 !important;
     }
 
-    /* Submenús en PC (Cuadro flotante con fondo violeta oscuro original) */
+    /* SUBMENÚ DESPLEGABLE EN PC (Fondo violeta oscuro original) */
     .menu-principal ul ul {
         display: none !important;
         position: absolute !important;
@@ -1260,6 +1264,7 @@ header > a img {
         border-radius: 6px;
         z-index: 100;
         margin-top: 5px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
     }
 
     .menu-principal > ul > li:hover ul {
@@ -1267,11 +1272,12 @@ header > a img {
         flex-direction: column !important;
     }
 
-    /* Textos del submenú en PC cambiados a BLANCO PURO */
+    /* 🌟 TEXTOS DENTRO DEL SUBMENÚ EN PC EN BLANCO PURO */
     .menu-principal ul ul a {
         color: #ffffff !important; 
         font-family: sans-serif !important;
         font-size: 13px !important;
+        white-space: nowrap;
     }
 
     /* --- RESTO DEL GRID EN PC --- */
