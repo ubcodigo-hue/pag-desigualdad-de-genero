@@ -17,6 +17,28 @@ body {
 
 
 /* HEADER PRINCIPAL */
+
+header {
+    background-color: #9700c9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+}
+
+header a img {
+    height: 50px;      /* Mantiene la altura controlada */
+    width: auto;       /* 9️/ SOLUCIÓN: Evita que el logo se aplaste o deforme */
+    display: block;
+    object-fit: contain; 
+}
+
+
 body > header {
     background-color: #9700c9;
     padding: 28px 20px;
