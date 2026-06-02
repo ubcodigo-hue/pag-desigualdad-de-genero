@@ -1232,71 +1232,73 @@ header > a img {
 
     /* Estructura de la barra: el nav ocupa el espacio restante */
     header {
-        padding: 20px 40px !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
+        padding: 28px 70px !important;
+    }
+
+    header > a img {
+        height: 75px !important;
+    }
+
+    .hamburguesa-btn {
+        display: none !important;
     }
 
     .menu-principal {
-        width: 75% !important; /* Le damos buen espacio al menú para que no se achique */
+        width: auto;
     }
 
-    /* 🌟 EL MENÚ WEB SE ESTIRA HASTA LOS BORDES */
     .menu-principal > ul {
-        display: flex !important;           
-        flex-direction: row !important;     
-        position: static !important;        
-        background-color: transparent !important; 
-        width: 100% !important;
-        justify-content: space-between !important; /* Distribuye a lo ancho */
-        padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: none !important;
-    }
-
-    /* 🌟 TEXTOS PRINCIPALES EN PC EN BLANCO PURO */
-    .menu-principal > ul > li > a {
-        color: #ffffff !important; /* Cambiados a blanco como me pediste */
-        font-size: 14px !important;
-        text-decoration: none !important;
-        border-bottom: none !important;
-        padding-bottom: 0 !important;
-        font-family: "Space Mono", monospace !important;
-        font-weight: bold !important;
-    }
-
-    /* SUBMENÚ DESPLEGABLE EN PC (Cuadro flotante violeta original) */
-    .menu-principal ul ul {
-        display: none !important;
-        position: absolute !important;
-        background-color: #52007a !important; 
-        padding: 15px !important;
-        border-radius: 6px;
-        z-index: 100;
-        margin-top: 8px;
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-        min-width: 180px;
-    }
-
-    .menu-principal > ul > li:hover ul {
         display: flex !important;
-        flex-direction: column !important;
-        gap: 10px !important;
+        position: static;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 28px;
+
+        width: auto;
+        background: none;
+
+        padding: 0;
+        box-shadow: none;
     }
 
-    /* Textos del submenú en PC en blanco */
-    .menu-principal ul ul a {
-        color: #ffffff !important; 
-        font-family: sans-serif !important;
-        font-size: 13px !important;
-        text-decoration: none !important;
+    .menu-principal > ul > li > a {
+        color: white !important;
+        font-size: 14px;
         white-space: nowrap;
     }
-    
-    .menu-principal ul ul a:hover {
-        text-decoration: underline !important;
+
+    .menu-principal ul ul {
+        display: none !important;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background-color: #9700c9;
+        padding: 12px 15px;
+        min-width: 210px;
+
+        margin: 0;
+        z-index: 100;
     }
+
+    .menu-principal > ul > li:hover > ul,
+    .menu-principal > ul > li.abierto > ul {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .menu-principal ul ul a {
+        color: white !important;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .menu-principal ul ul a:hover {
+        color: #ffd700 !important;
+    }
+}
 
     /* --- RESTO DEL GRID EN PC --- */
     .genero-main {
