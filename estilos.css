@@ -144,39 +144,110 @@ main {
     letter-spacing: 1px;
 }
  /* ======================================================= */
-/* TESTIMONIOS BASE (CELULAR)                              */
+/* TESTIMONIOS BASE (CELULAR) - ESTILO IMAGE_6             */
 /* ======================================================= */
-.testimonio-box {
+.testimonios-header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: #9700c9; 
-    padding: 30px 20px;
-    border-radius: 30px;       
-    max-width: 85%;          
-    margin: 20px auto;         
-    gap: 15px;                 
-}
-.testimonio-contenido {
+    align-items: center;
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+
+.testimonios-header h2 {
+    font-family: "Space Mono", monospace;
+    color: #ffff00;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonios-header h3 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #9700c9;
+    display: none;
+}
+
+.testimonio-carrusel {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    max-width: 90%;
+    margin: 20px auto;
 }
+
+.testimonio-box {
+    width: 100%;
+    background-color: #9275bf; /* Color morado medio de tu diseño */
+    border-radius: 0px;        /* Rectangular como tu maqueta */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El recuadro superior más claro */
+.testimonio-principal {
+    background-color: #a892d1; /* Morado claro de la foto */
+    padding: 30px 20px;
+    position: relative;
+    text-align: center;
+}
+
 .comillas {
-    font-size: 50px;
-    color: #4b0068;            
+    font-size: 60px;
+    color: #4b0068;
+    font-family: "Space Mono", monospace;
     display: block;
+    line-height: 0.2;
 }
+
 #testimonio-texto {
-    font-size: 15px;
-    color: white;
-    margin: 10px 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 15px 0;
 }
+
 #testimonio-nombre {
-    color: #ffff00;            
+    color: #ffff00;
+    font-family: "Space Mono", monospace;
     font-size: 14px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+/* La lista inferior de nombres */
+.lista-nombres-fija {
+    display: flex;
+    flex-direction: column;
+}
+
+.renglon-nombre {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    padding: 12px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Degradados sutiles para los renglones como en tu imagen */
+.renglon-nombre:nth-child(1) { background-color: #8869b8; }
+.renglon-nombre:nth-child(2) { background-color: #7e5eb1; }
+.renglon-nombre:nth-child(3) { background-color: #7454aa; }
+.renglon-nombre:nth-child(4) { background-color: #6a4aa3; }
+
+.flecha-btn {
+    background: none;
+    border: none;
+    font-size: 35px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* BLOQUE DE VIDEO */
@@ -469,34 +540,18 @@ html {
     .subrayado {
         text-decoration: underline;
     }
-/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA (CENTRADITO) --- */
-    .testimonios-header {
-        width: 100%;
-        text-align: center;
-        display: block; /* Asegura que no use flex del celu */
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-
+/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA --- */
     .testimonios-header h2 {
         font-size: 32px;
-        color: #ffff00;      /* Tu amarillo flúor */
-        text-align: center;  /* ¡Centrado de una! */
-        width: 100%;
-        margin: 0 auto;
-        display: block;
+        color: #ffff00;      /* Título amarillo flúor */
+        text-align: center;  /* Centrado perfecto */
     }
 
     .testimonio-box {
-        display: flex;
-        flex-direction: row; /* Flechas a los costados */
-        align-items: center;
-        justify-content: center;
-        background-color: #9700c9; 
+        flex-direction: row; /* Pone las flechas a los costados en línea horizontal */
         padding: 40px 50px;
         border-radius: 40px;
-        max-width: 850px;
-        margin: 30px auto 60px;
+        max-width: 850px;    /* Ancho ideal para que respiren los elementos */
         gap: 40px;
     }
 
@@ -504,49 +559,30 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap; /* Mantiene comillas al costado y tira el nombre abajo */
-        flex: 1;
+        flex-wrap: wrap;     /* Permite que las comillas y el texto queden en fila y el nombre baje */
     }
 
     .comillas {
-        font-size: 60px;
-        color: #4b0068;
-        display: inline-block;
-        font-family: "Space Mono", monospace;
+        font-size: 60px;     /* Comillas más grandes al costado del texto */
     }
 
     #testimonio-texto {
         font-size: 18px;
-        color: #ffffff;
-        display: inline-block;
-        max-width: 75%;
-        margin: 0 15px;
-        text-align: center;
-        font-style: italic;
+        max-width: 75%;      /* Equilibrio para que las comillas no pisen las letras */
     }
 
     .testimonio-contenido hr {
-        width: 100%; /* Rompe la línea para mandar el nombre abajo */
-        border: none;
-        height: 1.5px;
-        background-color: rgba(255, 255, 255, 0.3);
+        width: 100%;         /* Corta la fila para tirar la línea y el nombre abajo */
         margin: 20px 0 10px 0;
     }
 
     #testimonio-nombre {
-        width: 100%;
-        text-align: center;
-        color: #ffff00;
-        font-family: "Space Mono", monospace;
+        width: 100%;         /* Fuerza al nombre a centrarse abajo del todo */
         font-size: 16px;
     }
 
     .flecha-btn {
-        background: none;
-        border: none;
-        font-size: 45px;
-        color: #ffffff;
-        cursor: pointer;
+        font-size: 45px;     /* Flechas grandes y visibles al costado */
         transition: transform 0.2s ease, color 0.2s ease;
     }
 
@@ -988,6 +1024,7 @@ body {
 
 /* ========/* ========================= */
 /* PROBLEMASSOCIAL */
+MODO MOBILE
 /* ========================= */
 
 
@@ -1175,19 +1212,72 @@ header {
     cursor: pointer;
 }
 
-/* ========================================= */
-/* AJUSTES PARA COMPUTADORA (MODO PC)       */
-/* ========================================= */
+/* ==========================================================================
+   AJUSTES PARA COMPUTADORA (MODO PC) - Automático desde 1024px
+   ========================================================================== */
 
 @media (min-width: 1024px) {
 
-   .genero-main {
+    /* 🌟 ELIMINAMOS LA HAMBURGUESA EN PC Y VOLVEMOS TODO HORIZONTAL */
+    .hamburguesa-btn {
+        display: none !important; 
+    }
+
+    .menu-principal {
+        background-color: transparent !important; /* Chau barra violeta rígida */
+        padding: 20px 0 !important;
+        display: block !important;
+        width: 100%;
+    }
+
+    .menu-principal > ul {
+        display: flex !important;          /* Se fuerza a mostrar siempre */
+        flex-direction: row !important;    /* Se alinean horizontalmente */
+        position: static !important;       /* Pierde el comportamiento flotante */
+        background-color: transparent !important; /* Chau fondo blanco de celular */
+        width: 100% !important;
+        justify-content: space-between;    /* Se distribuyen a lo ancho */
+        padding: 0;
+        margin: 0;
+        box-shadow: none !important;
+    }
+
+    .menu-principal > ul > li > a {
+        color: #4b0068 !important;         /* Letras violetas tradicionales */
+        font-size: 14px !important;
+        font-family: "Space Mono", monospace;
+        text-decoration: none;
+        border-bottom: none !important;
+        padding-bottom: 0;
+    }
+
+    /* Hover tradicional para submenús desplegables en PC */
+    .menu-principal ul ul {
+        display: none !important;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-principal > ul > li:hover ul {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .menu-principal ul ul a {
+        color: #666 !important;
+    }
+
+    /* --- ESTRUCTURA GENERAL EN PC --- */
+    .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
         margin: 50px auto 80px;
         padding: 0;
         display: grid;
-        grid-template-columns: 74% 22%; /* Proporciones fieles a Illustrator */
+        grid-template-columns: 74% 22%; 
         column-gap: 4%;
     }
 
@@ -1225,8 +1315,8 @@ header {
     }
 
     .texto-lila p {
-        font-size: 18px;       /* 🌟 Tamaño grande e imponente para los párrafos lilas */
-        line-height: 36px;     /* Separación óptima para que no se pisen las letras */
+        font-size: 18px;       
+        line-height: 36px;     
         margin: 0 0 20px;
         color: #111;
     }
@@ -1237,36 +1327,28 @@ header {
         font-weight: 500;
     }
 
-   
     .bloque {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 0;
-        width: 100%;           /* Ocupa todo el ancho de su columna de la grilla */
+        width: 100%;           
         overflow: hidden; 
-        border-radius: 25px;   /* Conserva las esquinas redondeadas generales */
+        border-radius: 25px;   
     }
 
     .bloque img {
-        /* Cambiamos px fijos por porcentaje para que se alinee con el texto */
-        width: 100%;           /* 🌟 SOLUCIÓN: Se estira al nivel exacto del texto */
-        
-        /* Forzamos que siga siendo un cuadrado perfecto sin importar el ancho */
-        aspect-ratio: 1 / 1;   /* 🌟 SOLUCIÓN: Hace que el alto sea igual al ancho automáticamente */
-        
+        width: 100%;           
+        aspect-ratio: 1 / 1;   
         object-fit: cover;
-        border-radius: 25px;   /* Puntas redondas como querías */
+        border-radius: 25px;   
         margin: 0 0 20px 0;    
         display: block;
-        
-        /* Animación de hover suave */
         transition: transform 0.3s ease-in-out; 
     }
         
-    /* 🌟 EFECTO HOVER: Agranda la imagen un 8% cuando pones el cursor encima */
     .bloque:hover img {
-        transform: scale(1.05); /* Un zoom sutil del 5% para que no recorte demasiado la foto */
+        transform: scale(1.05); 
         cursor: pointer;
     }
 
@@ -1293,14 +1375,14 @@ header {
     }
 
     /* COLUMNA DERECHA: REGISTRO */
-   .suscripcion {
-        grid-column: 2;         /* Se ubica en la columna derecha */
-        grid-row: 1 / span 5;    /* 🌟 IMPORTANTE: Abarca el alto desde el texto lila hasta las fotos */
-        align-self: center;     /* 🌟 ESTO LO CENTRA EN EL MEDIO PERFECTO */
-        justify-self: end;      /* Lo empuja hacia el borde derecho */
-        
+    .suscripcion {
+        grid-column: 2;         
+        grid-row: 1 / span 5;    
+        align-self: center;     
+        justify-self: end;      
         width: 100%;
         max-width: 300px;
+        margin-top: 0;
     }
 
     .suscripcion h3 {
@@ -1350,77 +1432,73 @@ header {
     }
 
     /* El <dialog> flotante que oscurece el fondo */
-dialog.modal-suscripcion {
-    display: none; 
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-    border: none; /* Quita el borde por defecto de la etiqueta dialog */
-}
+    dialog.modal-suscripcion {
+        display: none; 
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        justify-content: center;
+        align-items: center;
+        border: none; 
+    }
 
-/* El <fieldset> blanco con tu diseño */
-.modal-contenido {
-    background-color: white;
-    padding: 30px 40px;
-    border: 3px solid #d9534f; 
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%;
-    margin: auto; /* Centra el fieldset */
-}
+    /* El <fieldset> blanco con tu diseño */
+    .modal-contenido {
+        background-color: white;
+        padding: 30px 40px;
+        border: 3px solid #d9534f; 
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 90%;
+        margin: auto; 
+    }
 
-.modal-contenido h2 {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 25px;
-    font-family: sans-serif;
-}
+    .modal-contenido h2 {
+        color: #333;
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-family: sans-serif;
+    }
 
-/* El <menu> de los botones */
-.modal-botones {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+    /* El <menu> de los botones */
+    .modal-botones {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
 
-/* Botones idénticos a tu Illustrator */
-.btn-modal {
-    padding: 10px 25px;
-    border-radius: 20px; 
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s;
-}
+    /* Botones idénticos a tu Illustrator */
+    .btn-modal {
+        padding: 10px 25px;
+        border-radius: 20px; 
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        transition: background 0.2s;
+    }
 
-.btn-cancelar {
-    background-color: transparent;
-    color: #555;
-    border: 1px solid #ccc;
-}
+    .btn-cancelar {
+        background-color: transparent;
+        color: #555;
+        border: 1px solid #ccc;
+    }
 
-.btn-acceptar {
-    background-color: #e54d42; 
-    color: white;
-    font-weight: bold;
-}
+    .btn-acceptar {
+        background-color: #e54d42; 
+        color: white;
+        font-weight: bold;
+    }
 
-.btn-acceptar:hover {
-    background-color: #c9302c;
-}
-
-    .menu-principal a {
-        font-family: "Space Mono", monospace;
+    .btn-acceptar:hover {
+        background-color: #c9302c;
     }
 }
