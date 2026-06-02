@@ -850,6 +850,11 @@ body {
 /* ========================= */
 
 
+/* --- COMPORTAMIENTO GLOBAL --- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: white !important;
@@ -857,38 +862,108 @@ body {
     color: black;
 }
 
-/* A partir de aquí sigue tu código actual... */
-.genero-main {
-
-    padding: 25px 20px;
-    
+/* --- ESTILOS COMPARTIDOS DEL HEADER MORADO --- */
+header {
+    background-color: #9700c9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
 }
 
+header a img {
+    height: 50px;
+    display: block;
+}
 
-/* HEADER */
+.menu-principal > ul {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-principal > ul > li {
+    position: relative;
+}
+
+.menu-principal > ul > li > a {
+    color: #ffffff !important; 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 0;
+    display: block;
+}
+
+.menu-principal > ul > li > ul {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #9700c9;
+    padding: 12px 15px;
+    min-width: 190px;
+    z-index: 100;
+    list-style: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.menu-principal > ul > li.abierto > ul {
+    display: block !important;
+}
+
+.menu-principal > ul > li > ul li a {
+    color: #ffffff !important;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+.menu-principal > ul > li > ul li a:hover {
+    color: #ffd700 !important; 
+    transition: color 0.2s ease;
+}
+
+/* ========================================= */
+/* ESTILOS DE LA SECCIÓN (MODO MOBILE)       */
+/* ========================================= */
+
+.genero-main {
+    padding: 25px 20px;
+}
+
 .genero-header {
     background-color: #d9c3e6;
     padding: 20px;
     border-radius: 25px;
 }
 
+.etiqueta-seccion {
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    margin: 0;
+}
+
 .genero-header h1 {
     color: #6a00a3;
     font-style: italic;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
 }
 
-.genero-header p {
-    font-size: 15px;
-    line-height: 21px;
-}
-
-/* CONTENIDO */
 .genero-contenido {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
 }
 
 .bloque img {
@@ -901,13 +976,14 @@ body {
     font-size: 12px;
     border-bottom: 2px solid #9700c9;
     margin: 10px 0;
+    padding-bottom: 4px;
 }
 
 .bloque p {
     font-size: 15px;
+    margin: 0;
 }
 
-/* SUSCRIPCION */
 .suscripcion {
     margin-top: 40px;
 }
@@ -915,33 +991,32 @@ body {
 .suscripcion h3 {
     font-family: "Space Mono", monospace;
     border-bottom: 2px solid black;
+    margin: 0 0 10px 0;
 }
 
-.suscripcion input {
+.form-suscripcion input {
     width: 100%;
-    margin-top: 10px;
     padding: 8px;
+    box-sizing: border-box;
 }
 
-.suscripcion button {
+.form-suscripcion button {
     margin-top: 10px;
     background: red;
     color: white;
     border-radius: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
+    width: 100%;
+    cursor: pointer;
 }
 
-/* ========================= */
-/* PC */
-/* ========================= */
-
+/* ========================================= */
+/* AJUSTES PARA COMPUTADORA (MODO PC)       */
+/* ========================================= */
 
 @media (min-width: 1024px) {
-
-    /* ========================= */
-    /* CONTENEDOR GENERAL */
-    /* ========================= */
+    
 
     .genero-main {
         max-width: 1200px;
@@ -955,20 +1030,18 @@ body {
         align-items: start;
     }
 
-    /* ========================= */
-    /* HEADER */
-    /* ========================= */
+    .genero-bloque-principal {
+        grid-column: 1;
+    }
 
     .genero-header {
-        grid-column: 1;
-
         background: none;
         padding: 0 35px;
         border-radius: 0;
     }
 
     .etiqueta-seccion {
-        font-family: "Space Mono", monospace;
+
         font-size: 12px;
         color: #4b0068;
         letter-spacing: 1px;
@@ -978,18 +1051,15 @@ body {
     .genero-header h1 {
         font-family: "Roboto", sans-serif;
         font-size: 42px;
-        font-style: italic;
+
         font-weight: 300;
         color: #7a00b4;
         margin: 0 0 20px;
     }
 
-    /* ========================= */
-    /* BLOQUE LILA */
-    /* ========================= */
 
     .genero-contenido {
-        grid-column: 1;
+
 
         background-color: #d9c3e6;
         border-radius: 55px;
@@ -997,16 +1067,14 @@ body {
         padding: 40px 55px 50px;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en PC para balancear el espacio */
         column-gap: 45px;
         row-gap: 30px;
     }
 
-    /* TEXTO SUPERIOR */
 
     .texto-lila {
-        grid-column: 1 / 4;
+        grid-column: 1 / 3;
     }
 
     .texto-lila p {
@@ -1021,14 +1089,6 @@ body {
         font-weight: 500;
     }
 
-    /* ========================= */
-    /* TARJETAS */
-    /* ========================= */
-
-    .bloque {
-        display: flex;
-        flex-direction: column;
-    }
 
     .bloque img {
         width: 140px;
@@ -1043,7 +1103,7 @@ body {
     }
 
     .bloque h2 {
-        font-family: "Space Mono", monospace;
+
         font-size: 12px;
         color: #4b0068;
 
@@ -1056,28 +1116,24 @@ body {
     }
 
     .bloque p {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 22px;
-        margin: 0;
+
         color: #111;
     }
 
-    /* ========================= */
-    /* SUSCRIPCIÓN */
-    /* ========================= */
+
 
     .suscripcion {
         grid-column: 2;
 
-        align-self: center;
-
-        width: 320px;
 
         margin-top: 120px;
+        width: 100%;
     }
 
     .suscripcion h3 {
-        font-family: "Space Mono", monospace;
+
         font-size: 18px;
         color: black;
 
@@ -1087,6 +1143,7 @@ body {
         border-bottom: 4px solid black;
 
         letter-spacing: 1px;
+
         white-space: nowrap;
         text-align: center;
     }
@@ -1100,11 +1157,7 @@ body {
     }
 
     .form-suscripcion input {
-        width: 100%;
-        height: 28px;
-
-        box-sizing: border-box;
-
+        height: 34px;
         border: 5px solid black;
         border-radius: 30px;
 
@@ -1115,15 +1168,14 @@ body {
         font-size: 14px;
 
         outline: none;
+        text-align: center;
     }
 
     .form-suscripcion button {
         margin: 24px auto 0;
 
         background-color: #e42313;
-        color: white;
 
-        border: none;
         border-radius: 35px;
 
         padding: 12px 24px;
@@ -1133,13 +1185,10 @@ body {
         font-weight: 700;
 
         letter-spacing: 1px;
-
-        cursor: pointer;
-
+        width: auto;
         display: block;
     }
 
-    /* MENÚ */
 
     .menu-principal a {
         font-family: "Space Mono", monospace;
