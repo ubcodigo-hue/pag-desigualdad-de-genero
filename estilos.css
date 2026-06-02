@@ -1181,13 +1181,68 @@ header {
 
 @media (min-width: 1024px) {
 
-   .genero-main {
+    /* 🌟 ESCONDEMOS LA HAMBURGUESA EN PC POR COMPLETO */
+    .hamburguesa-btn {
+        display: none !important; 
+    }
+
+    /* EL CONTENEDOR EN PC ADOPTA EL DISEÑO COMPLETO HORIZONTAL */
+    .menu-principal {
+        background-color: transparent !important; /* Limpia el bloque chico */
+        padding: 0 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* 🌟 TU MODO WEB QUEDA FIEL A ILLUSTRATOR: SE ESTIRA HORIZONTALMENTE */
+    .menu-principal > ul {
+        display: flex !important;           /* Vuelve a estar siempre visible */
+        flex-direction: row !important;     /* Horizontal de corrido */
+        position: static !important;        /* Pierde el flotado de celular */
+        background-color: transparent !important; /* Quita el fondo blanco de mobile */
+        width: 100% !important;
+        justify-content: space-between !important; /* Distribuye a lo ancho como en tu diseño */
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Textos principales en modo PC: Violetas originales sobre tu fondo claro */
+    .menu-principal > ul > li > a {
+        color: #4b0068 !important; 
+        font-size: 14px !important;
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Reseteo del comportamiento desplegable en PC para que no estorbe */
+    .menu-principal ul ul {
+        display: none !important;
+        position: absolute !important;
+        background-color: white !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+        z-index: 100;
+    }
+
+    .menu-principal > ul > li:hover ul {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .menu-principal ul ul a {
+        color: #666 !important;
+    }
+
+    /* --- RESTO DE TUS ESTILOS DE GRID EN PC (ESTRUCTURA GENERAL) --- */
+    .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
         margin: 50px auto 80px;
         padding: 0;
         display: grid;
-        grid-template-columns: 74% 22%; /* Proporciones fieles a Illustrator */
+        grid-template-columns: 74% 22%; 
         column-gap: 4%;
     }
 
@@ -1225,8 +1280,8 @@ header {
     }
 
     .texto-lila p {
-        font-size: 18px;       /* 🌟 Tamaño grande e imponente para los párrafos lilas */
-        line-height: 36px;     /* Separación óptima para que no se pisen las letras */
+        font-size: 18px;       
+        line-height: 36px;     
         margin: 0 0 20px;
         color: #111;
     }
@@ -1237,36 +1292,28 @@ header {
         font-weight: 500;
     }
 
-   
     .bloque {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 0;
-        width: 100%;           /* Ocupa todo el ancho de su columna de la grilla */
+        width: 100%;           
         overflow: hidden; 
-        border-radius: 25px;   /* Conserva las esquinas redondeadas generales */
+        border-radius: 25px;   
     }
 
     .bloque img {
-        /* Cambiamos px fijos por porcentaje para que se alinee con el texto */
-        width: 100%;           /* 🌟 SOLUCIÓN: Se estira al nivel exacto del texto */
-        
-        /* Forzamos que siga siendo un cuadrado perfecto sin importar el ancho */
-        aspect-ratio: 1 / 1;   /* 🌟 SOLUCIÓN: Hace que el alto sea igual al ancho automáticamente */
-        
+        width: 100%;           
+        aspect-ratio: 1 / 1;   
         object-fit: cover;
-        border-radius: 25px;   /* Puntas redondas como querías */
+        border-radius: 25px;   
         margin: 0 0 20px 0;    
         display: block;
-        
-        /* Animación de hover suave */
         transition: transform 0.3s ease-in-out; 
     }
         
-    /* 🌟 EFECTO HOVER: Agranda la imagen un 8% cuando pones el cursor encima */
     .bloque:hover img {
-        transform: scale(1.05); /* Un zoom sutil del 5% para que no recorte demasiado la foto */
+        transform: scale(1.05); 
         cursor: pointer;
     }
 
@@ -1293,12 +1340,11 @@ header {
     }
 
     /* COLUMNA DERECHA: REGISTRO */
-   .suscripcion {
-        grid-column: 2;         /* Se ubica en la columna derecha */
-        grid-row: 1 / span 5;    /* 🌟 IMPORTANTE: Abarca el alto desde el texto lila hasta las fotos */
-        align-self: center;     /* 🌟 ESTO LO CENTRA EN EL MEDIO PERFECTO */
-        justify-self: end;      /* Lo empuja hacia el borde derecho */
-        
+    .suscripcion {
+        grid-column: 2;         
+        grid-row: 1 / span 5;    
+        align-self: center;     
+        justify-self: end;      
         width: 100%;
         max-width: 300px;
     }
@@ -1350,75 +1396,75 @@ header {
     }
 
     /* El <dialog> flotante que oscurece el fondo */
-dialog.modal-suscripcion {
-    display: none; 
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-    border: none; /* Quita el borde por defecto de la etiqueta dialog */
-}
+    dialog.modal-suscripcion {
+        display: none; 
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        justify-content: center;
+        align-items: center;
+        border: none; 
+    }
 
-/* El <fieldset> blanco con tu diseño */
-.modal-contenido {
-    background-color: white;
-    padding: 30px 40px;
-    border: 3px solid #d9534f; 
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%;
-    margin: auto; /* Centra el fieldset */
-}
+    /* El <fieldset> blanco con tu diseño */
+    .modal-contenido {
+        background-color: white;
+        padding: 30px 40px;
+        border: 3px solid #d9534f; 
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 90%;
+        margin: auto; 
+    }
 
-.modal-contenido h2 {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 25px;
-    font-family: sans-serif;
-}
+    .modal-contenido h2 {
+        color: #333;
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-family: sans-serif;
+    }
 
-/* El <menu> de los botones */
-.modal-botones {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+    /* El <menu> de los botones */
+    .modal-botones {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
 
-/* Botones idénticos a tu Illustrator */
-.btn-modal {
-    padding: 10px 25px;
-    border-radius: 20px; 
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s;
-}
+    /* Botones idénticos a tu Illustrator */
+    .btn-modal {
+        padding: 10px 25px;
+        border-radius: 20px; 
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        transition: background 0.2s;
+    }
 
-.btn-cancelar {
-    background-color: transparent;
-    color: #555;
-    border: 1px solid #ccc;
-}
+    .btn-cancelar {
+        background-color: transparent;
+        color: #555;
+        border: 1px solid #ccc;
+    }
 
-.btn-acceptar {
-    background-color: #e54d42; 
-    color: white;
-    font-weight: bold;
-}
+    .btn-acceptar {
+        background-color: #e54d42; 
+        color: white;
+        font-weight: bold;
+    }
 
-.btn-acceptar:hover {
-    background-color: #c9302c;
-}
+    .btn-acceptar:hover {
+        background-color: #c9302c;
+    }
 
     .menu-principal a {
         font-family: "Space Mono", monospace;
