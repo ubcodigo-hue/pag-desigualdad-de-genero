@@ -265,7 +265,9 @@ address {
 
 
 @media (min-width: 1024px) {
-
+html {
+    scroll-behavior: smooth;
+}
     body > header {
         padding: 35px 70px;
         display: flex;
@@ -302,7 +304,7 @@ CSS
 
 /* Enlaces principales: Ahora en BLANCO para que se lean perfectamente */
 .menu-principal > ul > li > a {
-    color: #ffffff !important; 
+    color: #ffffff ; 
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
