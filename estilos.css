@@ -143,112 +143,143 @@ main {
     font-weight: 700;
     letter-spacing: 1px;
 }
- /* ======================================================= */
-/* TESTIMONIOS BASE (CELULAR) - ESTILO IMAGE_6             */
 /* ======================================================= */
-.testimonios-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    padding: 0 20px;
-}
+/* TESTIMONIOS BASE (CELULAR) - CORREGIDO Y AISLADO        */
+/* ======================================================= */
+@media (max-width: 1023px) {
+    .testimonios-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        padding: 0 20px;
+    }
 
-.testimonios-header h2 {
-    font-family: "Space Mono", monospace;
-    color: #ffff00;
-    font-size: 22px;
-    letter-spacing: 1px;
-    margin: 0;
-    text-align: center;
-    width: 100%;
-}
+    .testimonios-header h2 {
+        font-family: "Space Mono", monospace;
+        color: #ffff00 !important; /* 🌟 Título Amarillo en celular */
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
 
-.testimonios-header h3 {
-    font-size: 13px;
-    font-weight: normal;
-    color: #9700c9;
-    display: none;
-}
+    .testimonios-header h3 {
+        font-size: 13px;
+        font-weight: normal;
+        color: #9700c9;
+        display: none;
+    }
 
-.testimonio-carrusel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    max-width: 90%;
-    margin: 20px auto;
-}
+    .testimonio-carrusel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        max-width: 90%;
+        margin: 20px auto;
+    }
 
-.testimonio-box {
-    width: 100%;
-    background-color: #9275bf; /* Color morado medio de tu diseño */
-    border-radius: 0px;        /* Rectangular como tu maqueta */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+    .testimonio-box {
+        width: 100%;
+        background-color: #9275bf; 
+        border-radius: 40px; /* Redondeado lindo para celu */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column; /* Alinea los bloques para abajo */
+        padding: 20px 10px;
+    }
 
-/* El recuadro superior más claro */
-.testimonio-principal {
-    background-color: #a892d1; /* Morado claro de la foto */
-    padding: 30px 20px;
-    position: relative;
-    text-align: center;
-}
+    /* El recuadro superior más claro */
+    .testimonio-principal {
+        order: 1; /* Esto lo deja arriba */
+        background-color: #a892d1; 
+        padding: 30px 15px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: row; /*  Comillas al costado en celu */
+        flex-wrap: wrap;     /* Permite que la línea y el nombre bajen */
+        align-items: center;
+        justify-content: center;
+    }
 
-.comillas {
-    font-size: 60px;
-    color: #4b0068;
-    font-family: "Space Mono", monospace;
-    display: block;
-    line-height: 0.2;
-}
+    .comillas {
+        font-size: 45px;
+        color: #4b0068;
+        font-family: "Space Mono", monospace;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+    }
 
-#testimonio-texto {
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 15px 0;
-}
+    #testimonio-texto {
+        color: #ffffff;
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0 10px;
+        display: inline-block;
+        vertical-align: middle;
+        flex: 1;
+        max-width: 75%;
+        font-style: italic;
+    }
 
-#testimonio-nombre {
-    color: #ffff00;
-    font-family: "Space Mono", monospace;
-    font-size: 14px;
-    font-weight: 700;
-    margin-top: 15px;
-}
+    /*  Línea divisoria más larga y notoria */
+    .testimonio-principal hr {
+        width: 85% !important; /* Más larga */
+        border: none;
+        height: 2px !important; /* Más gruesa */
+        background-color: rgba(255, 255, 255, 0.7) !important; /* Blanco fuerte */
+        margin: 20px auto 10px;
+        display: block;
+    }
 
-/* La lista inferior de nombres */
-.lista-nombres-fija {
-    display: flex;
-    flex-direction: column;
-}
+    #testimonio-nombre {
+        width: 100%; /* Toma todo el ancho para quedar abajo de la línea */
+        color: #ffff00;
+        font-family: "Space Mono", monospace;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 10px;
+        text-align: center;
+    }
 
-.renglon-nombre {
-    color: rgba(255, 255, 255, 0.7);
-    font-family: "Space Mono", monospace;
-    font-size: 14px;
-    padding: 12px 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
+    /* La lista inferior de nombres */
+    .lista-nombres-fija {
+        order: 2; /* Va abajo del testimonio principal */
+        display: flex;
+        flex-direction: column;
+    }
 
-/* Degradados sutiles para los renglones como en tu imagen */
-.renglon-nombre:nth-child(1) { background-color: #8869b8; }
-.renglon-nombre:nth-child(2) { background-color: #7e5eb1; }
-.renglon-nombre:nth-child(3) { background-color: #7454aa; }
-.renglon-nombre:nth-child(4) { background-color: #6a4aa3; }
+    .renglon-nombre {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: "Space Mono", monospace;
+        font-size: 14px;
+        padding: 12px 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
 
-.flecha-btn {
-    background: none;
-    border: none;
-    font-size: 35px;
-    color: #ffffff;
-    cursor: pointer;
-}
+    .renglon-nombre:nth-child(1) { background-color: #8869b8; }
+    .renglon-nombre:nth-child(2) { background-color: #7e5eb1; }
+    .renglon-nombre:nth-child(3) { background-color: #7454aa; }
+    .renglon-nombre:nth-child(4) { background-color: #6a4aa3; }
+
+    /* Reordenamos las flechas abajo de todo */
+    .flecha-btn {
+        order: 3; /* Mandamos las flechas al final */
+        background: none;
+        border: none;
+        font-size: 35px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px 15px 0; /* Les da espacio */
+    }
+} /* Esta llave cierra el candado de celular */
 
 /* BLOQUE DE VIDEO */
 .video {
