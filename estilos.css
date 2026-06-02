@@ -28,14 +28,14 @@ body > header img {
 }
 
 /* MENÚ HAMBURGUESA */
-.menu-principal > ul {
-    display: flex;
-    gap: 28px;
-    align-items: flex-start;
+.menu-principal > ul > li > ul {
+    display: none;
+    padding-left: 18px;
+    margin-top: 8px;
 }
 
-.menu-principal > ul > li {
-    position: relative;
+.menu-principal > ul > li.abierto > ul {
+    display: block;
 }
 
 .menu-principal > ul > li > ul {
@@ -282,28 +282,32 @@ address {
         display: none;
     }
 
-    .menu-principal {
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
-        padding: 0;
-        margin-top: 0;
-    }
-
-    .menu-principal ul {
+       .menu-principal > ul {
         display: flex;
         gap: 28px;
+        align-items: flex-start;
     }
 
-    .menu-principal li {
-        border-top: none;
-        padding: 0;
+    .menu-principal > ul > li {
+        position: relative;
     }
 
-    .menu-principal a {
-        font-size: 14px;
+    .menu-principal > ul > li > ul {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        background-color: #9700c9;
+        padding: 12px 15px;
+        min-width: 190px;
+        z-index: 20;
     }
+
+    .menu-principal > ul > li > ul li {
+        display: block;
+        white-space: nowrap;
+        padding: 5px 0;
+    }
+}
 
   main {
     max-width: 1200px;
