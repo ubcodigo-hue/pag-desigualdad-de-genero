@@ -1017,24 +1017,20 @@ header a img {
 
 @media (min-width: 1024px) {
 
-
-    @media (min-width: 1024px) {
-
     .genero-main {
-        max-width: 1200px;
-        margin: auto;
-        padding: 50px 35px 80px;
+        max-width: 1100px;         /* 1. Limitamos el ancho total para que no sea gigante */
+        margin: 50px auto 80px;    /* 2. El 'auto' centra todo el contenedor en la pantalla */
+        padding: 0 20px;
+        
         display: grid;
-        
-        /* ⬇️ CAMBIO IMPORTANTE: Reequilibrio de columnas a 65% y 35% ⬇️ */
-        grid-template-columns: 65% 35%; 
-        
-        gap: 60px; /* Un poco más de espacio entre columnas */
+        grid-template-columns: 64% 32%; /* 3. Proporciones perfectas entre lila y registro */
+        gap: 4%;                        /* 4. Espacio de separación controlado */
         align-items: start;
     }
 
     .genero-bloque-principal {
         grid-column: 1;
+        width: 100%;
     }
 
     .genero-header {
@@ -1055,30 +1051,28 @@ header a img {
         font-size: 42px;
         font-weight: 300;
         color: #7a00b4;
-        margin: 0 0 20px;
+        margin: 0 0 25px;
     }
 
     .genero-contenido {
         background-color: #d9c3e6;
         border-radius: 55px;
-        
-        /* ⬇️ CAMBIO: Reducimos padding interno para que las tarjetas no se amontonen ⬇️ */
-        padding: 40px 45px 50px; 
+        padding: 45px 45px 50px; 
         
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en PC para balancear el espacio */
-        column-gap: 45px;
-        row-gap: 30px;
+        grid-template-columns: repeat(2, 1fr); /* Organiza las tarjetas en 2 columnas perfectas */
+        column-gap: 40px;
+        row-gap: 35px;
     }
 
     .texto-lila {
-        grid-column: 1 / 3;
+        grid-column: 1 / 3; /* El texto introductorio ocupa todo el ancho del bloque lila */
     }
 
     .texto-lila p {
-        font-size: 18px;
-        line-height: 30px;
-        margin: 0 0 18px;
+        font-size: 17px;
+        line-height: 28px;
+        margin: 0 0 15px;
         color: #111;
     }
 
@@ -1087,11 +1081,17 @@ header a img {
         font-weight: 500;
     }
 
+    /* Ajuste de las tarjetas con fotos de óvalo */
+    .bloque {
+        display: flex;
+        flex-direction: column;
+    }
+
     .bloque img {
         width: 140px;
         height: 170px;
         object-fit: cover;
-        border-radius: 70px;
+        border-radius: 70px; /* Hace el efecto de óvalo vertical de tu diseño */
         margin: 0 auto 18px;
         display: block;
     }
@@ -1107,21 +1107,24 @@ header a img {
 
     .bloque p {
         font-size: 14px;
-        line-height: 22px;
-        color: #111;
+        line-height: 21px;
+        color: #222;
     }
 
+    /* Columna de la derecha (Registro) */
     .suscripcion {
         grid-column: 2;
-        margin-top: 120px;
+        margin-top: 85px; /* Alinea la caja perfectamente a la altura del bloque lila */
         width: 100%;
+        max-width: 300px; /* Evita que la suscripción se ensanche de más */
+        justify-self: end; /* La pega suavemente hacia la derecha */
     }
 
     .suscripcion h3 {
-        font-size: 18px;
+        font-size: 16px;
         color: black;
         margin: 0;
-        padding-bottom: 8px;
+        padding-bottom: 10px;
         border-bottom: 4px solid black;
         letter-spacing: 1px;
         white-space: nowrap;
@@ -1131,31 +1134,36 @@ header a img {
     .form-suscripcion {
         background-color: #d9c3e6;
         border-radius: 0 0 80px 80px;
-        padding: 18px 16px 22px;
+        padding: 22px 20px 28px;
     }
 
     .form-suscripcion input {
-        height: 34px;
-        border: 5px solid black;
+        height: 36px;
+        border: 4px solid black; /* Grosor ideal como tu boceto */
         border-radius: 30px;
         background-color: transparent;
-        padding: 4px 18px;
-        font-size: 14px;
+        padding: 4px 15px;
+        font-size: 13px;
         outline: none;
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .form-suscripcion button {
         margin: 24px auto 0;
         background-color: #e42313;
         border-radius: 35px;
-        padding: 12px 24px;
+        padding: 12px 30px;
         font-family: "Space Mono", monospace;
         font-size: 12px;
         font-weight: 700;
         letter-spacing: 1px;
         width: auto;
         display: block;
+        color: white;
+        border: none;
+        cursor: pointer;
     }
 
     .menu-principal a {
