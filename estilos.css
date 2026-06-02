@@ -143,6 +143,92 @@ main {
     font-weight: 700;
     letter-spacing: 1px;
 }
+/* ======================================================= */
+/* TESTIMONIOS BASE (CELULAR) -                 */
+/* ======================================================= */
+.testimonios-header {
+    text-align: center; /* Centra el título en pantallas chicas */
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.testimonios-header h2 {
+    font-family: "Space Mono", monospace;
+    color: #ffff00; /* ¡AHORA AMARILLO DESDE EL CELU! */
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 0 0 8px 0;
+}
+
+.testimonios-header h3 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #9700c9;
+}
+
+.testimonio-box {
+    display: flex;
+    flex-direction: column; /* En celu sigue en columna para que no se rompa */
+    align-items: center;
+    justify-content: center;
+    background-color: #9700c9; 
+    padding: 30px 20px;
+    border-radius: 40px;       
+    max-width: 90%;          
+    margin: 20px auto;         
+    gap: 20px;                 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.testimonio-contenido {
+    text-align: center;
+    color: #FFFFFF;            
+    width: 100%;
+}
+
+/* Ajuste clave: las comillas ahora acompañan al texto a los lados */
+.comillas {
+    font-size: 40px;
+    color: #4b0068;            
+    display: inline-block; /* Al costado del texto */
+    vertical-align: middle;
+    font-family: "Space Mono", monospace;
+}
+
+#testimonio-texto {
+    display: inline-block; /* Al costado de las comillas */
+    vertical-align: middle;
+    max-width: 80%; /* Deja espacio para las comillas a los lados */
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 10px;
+    font-style: italic;
+}
+
+.testimonio-contenido hr {
+    border: none;
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 15px auto;
+    width: 50%;
+}
+
+#testimonio-nombre {
+    color: #ffff00;            
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.flecha-btn {
+    background: none;
+    border: none;
+    font-size: 35px;
+    color: #FFFFFF;            
+    cursor: pointer;
+    padding: 5px;
+}
 
 /* BLOQUE DE VIDEO */
 .video {
