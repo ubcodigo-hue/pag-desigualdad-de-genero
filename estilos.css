@@ -339,20 +339,27 @@ main {
 }
 
 /* FOOTER */
+;
+
+      
 .footer {
     background-color: #4b0068;
-
     width: 100%;
     margin: 40px 0 0;
-
     padding: 40px 0 0;
-     color: white;
+    color: white;
 }
 
 .footer-contenido {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 25px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer address p {
@@ -361,7 +368,7 @@ main {
 
 .footer img {
     width: 140px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .footer h3 {
@@ -377,27 +384,26 @@ address {
     font-size: 13px;
 }
 
-.redes {
-    list-style: none;   /* ❌ saca los puntos */
-    padding: 0;
-    margin: 25px 0;
-
-    display: flex;
+.footer-right {
+    margin-top: 25px;
 }
 
-.redes li {
-    margin: 0;
+.redes {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .redes img {
-    width: 120px; /* o el tamaño que venías usando */
+    width: 120px;
 }
 
 .links {
     background-color: black;
-
-    width: 100vw; /* 👈 ocupa TODA la pantalla */
-    margin-left: calc(-50vw + 50%); /* 👈 rompe el contenedor */
+    width: 100vw;
+    margin-left: -25px;
 
     padding: 25px 20px 35px;
     box-sizing: border-box;
@@ -406,15 +412,15 @@ address {
     display: flex;
     flex-wrap: wrap;
     gap: 12px 20px;
-    
 }
-
 
 .links a {
     color: white;
     text-decoration: none;
     font-size: 12px;
 }
+
+
 
 
 
@@ -662,85 +668,77 @@ html {
     }
 
     /* FOOTER PC */
-    .footer {
-    width: 100%;
-    margin: 0;
-    padding: 35px 0;
-    background-color: #4b0068;
-    color: white;
+   ;
+
+         .footer {
+        margin: 0;
+        padding: 35px 0;
+    }
+
+    .footer-contenido {
+        width: 100%;
+        max-width: none;
+
+        padding: 0 70px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .footer img {
+        width: 180px;
+        margin: 0;
+    }
+
+    .footer h3 {
+        margin: 0 0 10px;
+        font-size: 12px;
+    }
+
+    .footer address p {
+        margin: 4px 0;
+        font-size: 12px;
+    }
+
+    .footer-right {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 14px;
+    }
+
+    .redes {
+        margin: 0;
+        justify-content: flex-end;
+    }
+
+    .redes img {
+        width: 120px;
+    }
+
+    .links {
+        background: none;
+        width: auto;
+        margin: 0;
+        padding: 0;
+
+        justify-content: flex-end;
+        gap: 12px 25px;
+    }
+
+    .links a {
+        font-size: 11px;
+    }
 }
 
-.footer-contenido {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 60px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-.footer-texto {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer img {
-    width: 180px;
-    margin: 0;
-}
-
-.footer h3 {
-    margin: 0 0 10px;
-    font-size: 12px;
-}
-
-.footer address p {
-    color: white;
-    margin: 4px 0;
-    font-size: 12px;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 14px;
-}
-
-.redes {
-    margin: 0;
-    padding: 0;
-}
-
-.redes img {
-    width: 120px;
-}
-
-.links {
-    background: none;
-    width: auto;
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 12px 25px;
-}
-
-.links a {
-    color: white;
-    font-size: 11px;
-}
-
-}
 
 
 
@@ -1618,39 +1616,5 @@ header > a img {
     .menu-principal ul ul a:hover {
     color: #ffff00 !important;
 }
-/* FOOTER */
 
-.footer {
-    width: 100%;
-    background-color: #9700c9;
-}
 
-.footer-contenido {
-    width: 100%;
-    max-width: 1400px;
-
-    margin: 0 auto;
-    padding: 30px 60px;
-
-    box-sizing: border-box;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.footer-left {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.links {
-    text-align: right;
-}
