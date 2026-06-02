@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
                     });
 
+
                     item.classList.add("abierto");
                 }
                 // Si YA está abierto (segundo clic), el 'if' se salta y va a la página directamente
@@ -35,10 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-<<<<<<< HEAD
+
 
 /* ========/* ========================= */
 /* NOTICIAS */
 /* ========================= */
 
-=======
