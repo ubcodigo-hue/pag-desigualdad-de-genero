@@ -1328,13 +1328,14 @@ header a img {
     }
 
    .texto-lila p {
-        font-size: 20px; /* Subió de 17px a 19px */
+        /* Subió de 17px a 19px */
         line-height: 32px;
         margin: 0 0 20px;
         color: #111;
     }
 
     .subrayado {
+         font-size: 20px;
         text-decoration: underline;
         font-weight: 500;
     }
@@ -1348,12 +1349,12 @@ header a img {
 
     .bloque img {
         /* 🌟 Cambiamos las medidas para que sea un óvalo vertical como en Illustrator */
-        width: 170px;         /* Más angosto */
-        height: 220px;        /* Más alto */
+       width: 100%;         /* Más angosto */
+        width: 100%;       /* Más alto */
         object-fit: cover;
         
         /* 🌟 Un border-radius del 50% en un elemento rectangular crea el óvalo perfecto */
-        border-radius: 50%; 
+       border-radius: 25px;
         
         margin: 0 auto 22px;
         display: block;
