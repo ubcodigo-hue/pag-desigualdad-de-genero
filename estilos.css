@@ -1618,4 +1618,39 @@ header > a img {
     .menu-principal ul ul a:hover {
     color: #ffff00 !important;
 }
+/* FOOTER */
 
+.footer {
+    width: 100%;
+    background-color: #9700c9;
+}
+
+.footer-contenido {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 30px 60px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.links {
+    text-align: right;
+}
