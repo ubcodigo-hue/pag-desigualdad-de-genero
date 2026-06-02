@@ -144,39 +144,110 @@ main {
     letter-spacing: 1px;
 }
  /* ======================================================= */
-/* TESTIMONIOS BASE (CELULAR)                              */
+/* TESTIMONIOS BASE (CELULAR) - ESTILO IMAGE_6             */
 /* ======================================================= */
-.testimonio-box {
+.testimonios-header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: #9700c9; 
-    padding: 30px 20px;
-    border-radius: 30px;       
-    max-width: 85%;          
-    margin: 20px auto;         
-    gap: 15px;                 
-}
-.testimonio-contenido {
+    align-items: center;
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+
+.testimonios-header h2 {
+    font-family: "Space Mono", monospace;
+    color: #ffff00;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonios-header h3 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #9700c9;
+    display: none;
+}
+
+.testimonio-carrusel {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    max-width: 90%;
+    margin: 20px auto;
 }
+
+.testimonio-box {
+    width: 100%;
+    background-color: #9275bf; /* Color morado medio de tu diseño */
+    border-radius: 0px;        /* Rectangular como tu maqueta */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El recuadro superior más claro */
+.testimonio-principal {
+    background-color: #a892d1; /* Morado claro de la foto */
+    padding: 30px 20px;
+    position: relative;
+    text-align: center;
+}
+
 .comillas {
-    font-size: 50px;
-    color: #4b0068;            
+    font-size: 60px;
+    color: #4b0068;
+    font-family: "Space Mono", monospace;
     display: block;
+    line-height: 0.2;
 }
+
 #testimonio-texto {
-    font-size: 15px;
-    color: white;
-    margin: 10px 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 15px 0;
 }
+
 #testimonio-nombre {
-    color: #ffff00;            
+    color: #ffff00;
+    font-family: "Space Mono", monospace;
     font-size: 14px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+/* La lista inferior de nombres */
+.lista-nombres-fija {
+    display: flex;
+    flex-direction: column;
+}
+
+.renglon-nombre {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    padding: 12px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Degradados sutiles para los renglones como en tu imagen */
+.renglon-nombre:nth-child(1) { background-color: #8869b8; }
+.renglon-nombre:nth-child(2) { background-color: #7e5eb1; }
+.renglon-nombre:nth-child(3) { background-color: #7454aa; }
+.renglon-nombre:nth-child(4) { background-color: #6a4aa3; }
+
+.flecha-btn {
+    background: none;
+    border: none;
+    font-size: 35px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* BLOQUE DE VIDEO */
@@ -469,34 +540,18 @@ html {
     .subrayado {
         text-decoration: underline;
     }
-/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA (CENTRADITO) --- */
-    .testimonios-header {
-        width: 100%;
-        text-align: center;
-        display: block; /* Asegura que no use flex del celu */
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-
+/* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA --- */
     .testimonios-header h2 {
         font-size: 32px;
-        color: #ffff00;      /* Tu amarillo flúor */
-        text-align: center;  /* ¡Centrado de una! */
-        width: 100%;
-        margin: 0 auto;
-        display: block;
+        color: #ffff00;      /* Título amarillo flúor */
+        text-align: center;  /* Centrado perfecto */
     }
 
     .testimonio-box {
-        display: flex;
-        flex-direction: row; /* Flechas a los costados */
-        align-items: center;
-        justify-content: center;
-        background-color: #9700c9; 
+        flex-direction: row; /* Pone las flechas a los costados en línea horizontal */
         padding: 40px 50px;
         border-radius: 40px;
-        max-width: 850px;
-        margin: 30px auto 60px;
+        max-width: 850px;    /* Ancho ideal para que respiren los elementos */
         gap: 40px;
     }
 
@@ -504,49 +559,30 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap; /* Mantiene comillas al costado y tira el nombre abajo */
-        flex: 1;
+        flex-wrap: wrap;     /* Permite que las comillas y el texto queden en fila y el nombre baje */
     }
 
     .comillas {
-        font-size: 60px;
-        color: #4b0068;
-        display: inline-block;
-        font-family: "Space Mono", monospace;
+        font-size: 60px;     /* Comillas más grandes al costado del texto */
     }
 
     #testimonio-texto {
         font-size: 18px;
-        color: #ffffff;
-        display: inline-block;
-        max-width: 75%;
-        margin: 0 15px;
-        text-align: center;
-        font-style: italic;
+        max-width: 75%;      /* Equilibrio para que las comillas no pisen las letras */
     }
 
     .testimonio-contenido hr {
-        width: 100%; /* Rompe la línea para mandar el nombre abajo */
-        border: none;
-        height: 1.5px;
-        background-color: rgba(255, 255, 255, 0.3);
+        width: 100%;         /* Corta la fila para tirar la línea y el nombre abajo */
         margin: 20px 0 10px 0;
     }
 
     #testimonio-nombre {
-        width: 100%;
-        text-align: center;
-        color: #ffff00;
-        font-family: "Space Mono", monospace;
+        width: 100%;         /* Fuerza al nombre a centrarse abajo del todo */
         font-size: 16px;
     }
 
     .flecha-btn {
-        background: none;
-        border: none;
-        font-size: 45px;
-        color: #ffffff;
-        cursor: pointer;
+        font-size: 45px;     /* Flechas grandes y visibles al costado */
         transition: transform 0.2s ease, color 0.2s ease;
     }
 
