@@ -28,54 +28,35 @@ body > header img {
 }
 
 /* MENÚ HAMBURGUESA */
-#menu {
-    display: none;
+.menu-principal > ul {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
 }
 
-.menu-icon {
-    color: white;
-    font-size: 26px;
-    border: 1px solid white;
-    border-radius: 30px;
-    padding: 4px 14px;
-    float: right;
-    cursor: pointer;
+.menu-principal > ul > li {
+    position: relative;
 }
 
-.menu-principal {
+.menu-principal > ul > li > ul {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 22px;
     left: 0;
-    width: 100%;
     background-color: #9700c9;
-    padding: 20px;
-    box-sizing: border-box;
-    z-index: 10;
+    padding: 12px 15px;
+    min-width: 180px;
+    z-index: 20;
 }
 
-#menu:checked + .menu-icon + .menu-principal {
+.menu-principal > ul > li.abierto > ul {
     display: block;
 }
 
-.menu-principal li ul {
-    display: none;
-    padding-left: 18px;
-    margin-top: 8px;
-}
-
-.menu-principal li.abierto ul {
+.menu-principal > ul > li > ul li {
     display: block;
-}
-
-.menu-principal li ul li {
-    border-top: none;
     padding: 5px 0;
-}
-
-.menu-principal li ul a {
-    font-size: 13px;
-    font-weight: 400;
+    white-space: nowrap;
 }
 
 /* CONTENIDO */
