@@ -1458,4 +1458,8 @@ header > a img {
         border: none;
         cursor: pointer;
     }
+    .menu-principal ul ul a:hover {
+    color: #ffff00 !important;
+}
+
 }
