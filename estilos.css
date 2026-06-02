@@ -1256,81 +1256,202 @@ header > a img {
 
 @media (min-width: 1024px) {
 
-    /* ESCONDEMOS LA HAMBURGUESA EN PC */
-    .hamburguesa-btn {
-        display: none !important; 
-    }
+    /* ==========================================================================
+/* PROBLEMASSOCIAL MODO MOBILE 
+/* ========================================================================== */
 
-    /* Estructura de la barra: el nav ocupa el espacio restante */
-    header {
-        padding: 28px 70px !important;
-    }
-
-    header > a img {
-        height: 75px !important;
-    }
-
-    .hamburguesa-btn {
-        display: none !important;
-    }
-
-    .menu-principal {
-        width: auto;
-    }
-
-    .menu-principal > ul {
-        display: flex !important;
-        position: static;
-
-        flex-direction: row;
-        align-items: center;
-        gap: 28px;
-
-        width: auto;
-        background: none;
-
-        padding: 0;
-        box-shadow: none;
-    }
-
-    .menu-principal > ul > li > a {
-        color: white !important;
-        font-size: 14px;
-        white-space: nowrap;
-    }
-
-    .menu-principal ul ul {
-        display: none !important;
-
-        position: absolute;
-        top: 100%;
-        left: 0;
-
-        background-color: #9700c9;
-        padding: 12px 15px;
-        min-width: 210px;
-
-        margin: 0;
-        z-index: 100;
-    }
-
-    .menu-principal > ul > li:hover > ul,
-    .menu-principal > ul > li.abierto > ul {
-        display: flex !important;
-        flex-direction: column;
-    }
-
-    .menu-principal ul ul a {
-        color: white !important;
-        font-size: 13px;
-        white-space: nowrap;
-    }
-
-    .menu-principal ul ul a:hover {
-        color: #ffd700 !important;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
+.genero-main {
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+
+/* LA BARRA SUPERIOR VIOLETA */
+header {
+    background-color: #9700c9 !important;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    box-sizing: border-box;
+}
+
+header > a img {
+    height: 58px !important;
+    width: auto;
+    display: block;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+}
+
+.menu-checkbox {
+    display: none !important;
+}
+
+/* BOTÓN HAMBURGUESA */
+.hamburguesa-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.hamburguesa-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* MENÚ MOBILE PRINCIPAL */
+.menu-principal > ul {
+    display: none; /* Empieza escondido */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #9700c9;
+    list-style: none;
+    margin: 0;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* 🌟 CORRECCIÓN: Ahora sí se muestra con flex al clickear la hamburguesa */
+.menu-checkbox:checked ~ ul {
+    display: flex !important;
+}
+
+.menu-principal > ul > li {
+    position: relative;
+}
+
+.menu-principal > ul > li > a {
+    color: white !important;
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+}
+
+/* SUBMENÚ MOBILE */
+.menu-principal ul ul {
+    display: none; /* 🌟 CORRECCIÓN: Que empiece oculto en mobile para que no sature la pantalla */
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    padding-left: 18px;
+    margin-top: 10px;
+}
+
+/* 🌟 CORRECCIÓN: Si la pestaña madre tiene la clase 'abierto', desplegamos su submenú */
+.menu-principal > ul > li.abierto > ul {
+    display: flex;
+}
+
+.menu-principal ul ul a {
+    color: white !important;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 🌟 HOVER AMARILLO: El color flúor que querías al posar el dedo/mouse */
+.menu-principal ul ul a:hover {
+    color: #ffff00 !important;
+}
+
+/* --- INTERIOR DE LA PÁGINA (MOBILE) --- */
+.genero-header {
+    background-color: #d9c3e6;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.etiqueta-seccion {
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    margin: 0;
+}
+
+.genero-header h1 {
+    color: #6a00a3;
+    font-style: italic;
+    margin: 10px 0 0 0;
+}
+
+.genero-contenido {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloque img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.bloque h2 {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    border-bottom: 2px solid #9700c9;
+    margin: 10px 0;
+    padding-bottom: 4px;
+}
+
+.bloque p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.suscripcion {
+    margin-top: 40px;
+}
+
+.suscripcion h3 {
+    font-family: "Space Mono", monospace;
+    border-bottom: 2px solid black;
+    margin: 0 0 10px 0;
+}
+
+.form-suscripcion input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-suscripcion button {
+    margin-top: 10px;
+    background: red;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
     /* --- RESTO DEL GRID EN PC --- */
     .genero-main {
         width: calc(100% - 8cm);
