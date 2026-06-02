@@ -1093,7 +1093,7 @@ header {
 }
 
 .menu-principal ul ul a {
-    color: #666 !important; /* Gris oscuro para las subopciones */
+    color: #ffffff !important; /* Gris oscuro para las subopciones */
     text-decoration: none;
     font-family: sans-serif;
     font-size: 13px;
@@ -1232,7 +1232,7 @@ header {
     }
 
     .menu-principal ul ul a {
-        color: #ffffff !important;
+        color: #ffffff ;
     }
 
     /* --- RESTO DE TUS ESTILOS DE GRID EN PC (ESTRUCTURA GENERAL) --- */
