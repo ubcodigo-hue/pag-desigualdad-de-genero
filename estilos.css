@@ -1298,89 +1298,169 @@ header > a img {
     display: block;
 }
 
+.menu-principal {
+    display: flex;
+    align-items: center;
+}
+
+.menu-checkbox {
+    display: none !important;
+}
+
+/* BOTÓN HAMBURGUESA */
 .hamburguesa-btn {
-        display: none !important; 
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 22px;
+    cursor: pointer;
+}
 
-    /* Ajustamos el espacio del header en PC */
-    header {
-        padding: 28px 70px !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
+.hamburguesa-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
 
-    header > a img {
-        height: 75px !important;
-        width: auto !important;
-    }
+/* MENÚ MOBILE PRINCIPAL */
+.menu-principal > ul {
+    display: none; /* Empieza escondido */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #9700c9;
+    list-style: none;
+    margin: 0;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 18px;
+}
 
-    .menu-principal {
-        width: auto !important;
-    }
+/* 🌟 CORRECCIÓN: Ahora sí se muestra con flex al clickear la hamburguesa */
+.menu-checkbox:checked ~ ul {
+    display: flex !important;
+}
 
-    /* 🌟 CORREGIDO: Forzamos a que la lista de enlaces se muestre horizontal y siempre visible */
-    .menu-principal > ul {
-        display: flex !important;   /* Le gana al 'display: none' de mobile */
-        position: static !important; /* Vuelve a su posicion natural en la barra */
-        flex-direction: row !important; /* Se alinean uno al lado del otro */
-        align-items: center !important;
-        gap: 28px !important;
-        width: auto !important;
-        background: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: none !important;
-    }
+.menu-principal > ul > li {
+    position: relative;
+}
 
-    .menu-principal > ul > li > a {
-        color: white !important;
-        font-size: 14px !important;
-        white-space: nowrap !important;
-        font-family: "Space Mono", monospace !important;
-        text-decoration: none !important;
-    }
+.menu-principal > ul > li > a {
+    color: white !important;
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+}
 
-    /* SUBMENÚ FLOTANTE EN PC (Aparece abajo del enlace madre) */
-    .menu-principal ul ul {
-        display: none; /* Empieza oculto y solo se muestra al pasar el mouse */
-        position: absolute !important;
-        top: 100% !important;
-        left: 0 !important;
-        background-color: #9700c9 !important;
-        padding: 12px 15px !important;
-        min-width: 210px !important;
-        margin: 0 !important;
-        z-index: 100 !important;
-        list-style: none !important;
-    }
+/* SUBMENÚ MOBILE */
+.menu-principal ul ul {
+    display: none; /* 🌟 CORRECCIÓN: Que empiece oculto en mobile para que no sature la pantalla */
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    padding-left: 18px;
+    margin-top: 10px;
+}
 
-    /* Mostrar submenú al pasar el mouse en PC */
-    .menu-principal > ul > li:hover > ul,
-    .menu-principal > ul > li.abierto > ul {
-        display: flex !important;
-        flex-direction: column !important;
-    }
+/* 🌟 CORRECCIÓN: Si la pestaña madre tiene la clase 'abierto', desplegamos su submenú */
+.menu-principal > ul > li.abierto > ul {
+    display: flex;
+}
 
-    .menu-principal ul ul li {
-        display: block !important;
-        padding: 4px 0 !important;
-    }
+.menu-principal ul ul a {
+    color: white !important;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+}
 
-    .menu-principal ul ul a {
-        color: white !important;
-        font-size: 13px !important;
-        white-space: nowrap !important;
-        text-decoration: none !important;
-        display: block !important;
-    }
+/* 🌟 HOVER AMARILLO: El color flúor que querías al posar el dedo/mouse */
+.menu-principal ul ul a:hover {
+    color: #ffff00 !important;
+}
 
-    /* HOVER AMARILLO EN PC */
-    .menu-principal ul ul a:hover {
-        color: #ffff00 !important; 
-    }
+/* --- INTERIOR DE LA PÁGINA (MOBILE) --- */
+.genero-header {
+    background-color: #d9c3e6;
+    padding: 20px;
+    border-radius: 25px;
+}
 
-    /* --- ESTRUCTURA GRID EN PC (Se mantiene igual) --- */
+.etiqueta-seccion {
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    margin: 0;
+}
+
+.genero-header h1 {
+    color: #6a00a3;
+    font-style: italic;
+    margin: 10px 0 0 0;
+}
+
+.genero-contenido {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloque img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.bloque h2 {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    border-bottom: 2px solid #9700c9;
+    margin: 10px 0;
+    padding-bottom: 4px;
+}
+
+.bloque p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.suscripcion {
+    margin-top: 40px;
+}
+
+.suscripcion h3 {
+    font-family: "Space Mono", monospace;
+    border-bottom: 2px solid black;
+    margin: 0 0 10px 0;
+}
+
+.form-suscripcion input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-suscripcion button {
+    margin-top: 10px;
+    background: red;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+    /* --- RESTO DEL GRID EN PC --- */
     .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
@@ -1425,7 +1505,7 @@ header > a img {
     }
 
     .texto-lila p {
-        font-size: 18px;      
+        font-size: 18px;       
         line-height: 36px;     
         margin: 0 0 20px;
         color: #111;
@@ -1491,7 +1571,6 @@ header > a img {
         justify-self: end;      
         width: 100%;
         max-width: 300px;
-        margin-top: 0;
     }
 
     .suscripcion h3 {
@@ -1539,7 +1618,6 @@ header > a img {
         border: none;
         cursor: pointer;
     }
-}
     .menu-principal ul ul a:hover {
     color: #ffff00 !important;
 }
