@@ -1381,7 +1381,7 @@ header a img {
     }
 
     .texto-lila p {
-        font-size: 24px;       /* 🌟 Tamaño grande e imponente para los párrafos lilas */
+        font-size: 18px;       /* 🌟 Tamaño grande e imponente para los párrafos lilas */
         line-height: 36px;     /* Separación óptima para que no se pisen las letras */
         margin: 0 0 20px;
         color: #111;
@@ -1402,11 +1402,15 @@ header a img {
     }
 
     .bloque img {
-        width: 180px;          /* Mismo ancho */
-        height: 180px;         /* Mismo alto = Cuadrado perfecto */
+        /* 🌟 Escalamos el tamaño para que tengan mucho más peso visual */
+        width: 250px;          /* Subió de 180px a 250px */
+        height: 250px;         /* Subió de 180px a 250px para mantenerlo cuadrado */
         object-fit: cover;
-        border-radius: 25px;   /* 🌟 Puntas redondeadas exactas de tu boceto */
-        margin: 0 0 20px 0;    /* Pegado a la izquierda */
+        
+        /* Mantenemos tus puntas redondeadas de 25px */
+        border-radius: 25px;   
+        
+        margin: 0 0 20px 0;    
         display: block;
     }
 
