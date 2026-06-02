@@ -1298,92 +1298,89 @@ header > a img {
     display: block;
 }
 
-.menu-principal {
-    display: flex;
-    align-items: center;
-}
+ /* OCULTAR HAMBURGUESA */
 
-.menu-checkbox {
-    display: none !important;
-}
+    .hamburguesa-btn {
+        display: none !important;
+    }
 
-/* BOTÓN HAMBURGUESA */
-.hamburguesa-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 22px;
-    cursor: pointer;
-}
+    /* MENÚ WEB */
 
-.hamburguesa-btn span {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
-}
+    .menu-principal {
+        display: flex;
+        align-items: center;
+    }
 
-/* MENÚ MOBILE PRINCIPAL */
-.menu-principal > ul {
-    display: none; /* Empieza escondido */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #9700c9;
-    list-style: none;
-    margin: 0;
-    padding: 25px 20px;
-    box-sizing: border-box;
-    flex-direction: column;
-    gap: 18px;
-}
+    .menu-principal > ul {
+        display: flex !important;
+        flex-direction: row !important;
 
-/* 🌟 CORRECCIÓN: Ahora sí se muestra con flex al clickear la hamburguesa */
-.menu-checkbox:checked ~ ul {
-    display: flex !important;
-}
+        position: static !important;
 
-.menu-principal > ul > li {
-    position: relative;
-}
+        width: auto !important;
 
-.menu-principal > ul > li > a {
-    color: white !important;
-    font-family: "Space Mono", monospace;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    display: block;
-}
+        background: transparent !important;
+        box-shadow: none !important;
 
-/* SUBMENÚ MOBILE */
-.menu-principal ul ul {
-    display: none; /* 🌟 CORRECCIÓN: Que empiece oculto en mobile para que no sature la pantalla */
-    flex-direction: column;
-    gap: 8px;
-    list-style: none;
-    padding-left: 18px;
-    margin-top: 10px;
-}
+        list-style: none;
 
-/* 🌟 CORRECCIÓN: Si la pestaña madre tiene la clase 'abierto', desplegamos su submenú */
-.menu-principal > ul > li.abierto > ul {
-    display: flex;
-}
+        gap: 28px;
 
-.menu-principal ul ul a {
-    color: white !important;
-    font-size: 13px;
-    text-decoration: none;
-    display: block;
-}
+        margin: 0;
+        padding: 0;
+    }
 
-/* 🌟 HOVER AMARILLO: El color flúor que querías al posar el dedo/mouse */
-.menu-principal ul ul a:hover {
-    color: #ffff00 !important;
-}
+    .menu-principal > ul > li {
+        position: relative;
+    }
+
+    .menu-principal > ul > li > a {
+        color: white !important;
+
+        font-family: "Space Mono", monospace;
+        font-size: 14px;
+        font-weight: 700;
+
+        text-decoration: none;
+    }
+
+    /* SUBMENÚ WEB */
+
+    .menu-principal ul ul {
+        display: none !important;
+
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+
+        background-color: #9700c9 !important;
+
+        min-width: 220px;
+
+        padding: 12px 15px !important;
+        margin: 0;
+
+        list-style: none;
+
+        z-index: 100;
+    }
+
+    .menu-principal > ul > li:hover > ul,
+    .menu-principal > ul > li.abierto > ul {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-principal ul ul a {
+        color: white !important;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .menu-principal ul ul a:hover {
+        color: #ffff00 !important;
+    }
 
 /* --- INTERIOR DE LA PÁGINA (MOBILE) --- */
 .genero-header {
