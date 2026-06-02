@@ -283,6 +283,10 @@ address {
     }
 
 /* --- CONFIGURACIÓN DEL MENÚ PRINCIPAL --- */
+Aquí tienes el código completo y unificado de tu archivo CSS. Solo tienes que borrar lo que tenías antes en tu hoja de estilos y pegar este bloque entero:
+
+CSS
+/* --- CONFIGURACIÓN DEL MENÚ PRINCIPAL --- */
 .menu-principal > ul {
     display: flex;
     gap: 28px;
@@ -335,9 +339,11 @@ address {
     font-size: 13px;
 }
 
-/* Efecto al pasar el mouse por los subenlaces */
+/* --- EFECTO HOVER (AMARILLO) --- */
+/* Cuando pasas el mouse por encima de las opciones del submenú */
 .menu-principal > ul > li > ul li a:hover {
     color: #ffd700 !important; /* Cambia a amarillo/dorado como tu logo */
+    transition: color 0.2s ease; /* Hace que el cambio de color sea suave */
 }
 
   main {
