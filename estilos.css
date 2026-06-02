@@ -143,110 +143,40 @@ main {
     font-weight: 700;
     letter-spacing: 1px;
 }
+ /* ======================================================= */
+/* TESTIMONIOS BASE (CELULAR)                              */
 /* ======================================================= */
-/* TESTIMONIOS BASE (CELULAR) - REORDENADO DESDE CSS       */
-/* ======================================================= */
-.testimonios-header {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.testimonios-header h2 {
-    font-family: "Space Mono", monospace;
-    color: #ffff00; /* 🌟 Título Amarillo Flúor en celular */
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin: 0;
-    text-align: center;
-}
-
 .testimonio-box {
     display: flex;
-    flex-direction: column; /* Apila los elementos en vertical */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #9700c9; 
-    padding: 35px 20px 25px; 
-    border-radius: 40px;       
+    padding: 30px 20px;
+    border-radius: 30px;       
     max-width: 85%;          
     margin: 20px auto;         
     gap: 15px;                 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-
-/* Usamos order para tirar las flechas abajo de todo en el celular */
-#btn-anterior {
-    order: 2; /* Baja la flecha izquierda */
-    display: inline-block;
-    margin-right: 15px; /* Las separa un poco entre sí */
-}
-
-#btn-siguiente {
-    order: 3; /* Baja la flecha derecha */
-    display: inline-block;
-    margin-left: 15px; /* Las separa un poco entre sí */
-}
-
 .testimonio-contenido {
-    order: 1; /* El contenido se queda arriba de las flechas */
     text-align: center;
-    color: #FFFFFF;            
-    width: 100%;
     display: flex;
-    flex-direction: row; /* Cambia a fila para que las comillas abracen el texto */
-    flex-wrap: wrap;     /* Permite que la línea y el nombre bajen */
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-
 .comillas {
-    font-size: 45px;
+    font-size: 50px;
     color: #4b0068;            
-    display: inline-block;
-    vertical-align: middle;
-    font-family: "Space Mono", monospace;
-    line-height: 1;
+    display: block;
 }
-
 #testimonio-texto {
-    display: inline-block;
-    vertical-align: middle;
-    flex: 1; 
-    max-width: 75%; 
     font-size: 15px;
-    line-height: 1.5;
-    margin: 0 10px;
-    font-style: italic;
+    color: white;
+    margin: 10px 0;
 }
-
-/* 🌟 Línea separadora más larga y que se nota más */
-.testimonio-contenido hr {
-    width: 85%; /* Más larga (subió de 60% a 85%) */
-    border: none;
-    height: 2px; /* Más gruesa para que resalte */
-    background-color: rgba(184, 105, 234, 0.6); /* Blanco con más fuerza */
-    margin: 20px auto 15px;
-}
-
 #testimonio-nombre {
-    width: 100%; 
     color: #ffff00;            
-    font-family: "Space Mono", monospace;
     font-size: 14px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    text-align: center;
-}
-
-.flecha-btn {
-    background: none;
-    border: none;
-    font-size: 35px;
-    color: #FFFFFF;            
-    cursor: pointer;
-    padding: 5px 15px;
 }
 
 /* BLOQUE DE VIDEO */
@@ -1535,13 +1465,7 @@ header {
     .btn-acceptar:hover {
         background-color: #c9302c;
     }
-#menu-check, 
-.menu-checkbox {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    position: absolute !important;
-}
+
     .menu-principal a {
         font-family: "Space Mono", monospace;
     }
