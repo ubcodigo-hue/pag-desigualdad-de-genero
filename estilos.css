@@ -596,44 +596,44 @@ html {
         outline: none;
     }
     /* VIDEO PC HORIZONTAL */
-    .video {
-        margin-top: 90px;
-    }
+   .video {
+    margin-top: 90px;
+}
 
-    .video-header {
-        margin: 0 70px 18px;
-    }
+.video-header {
+    margin: 0 55px 15px;
+}
 
-    .video-header h2 {
-        font-size: 14px;
-    }
+.video-box {
+    display: flex;
+    align-items: center;
 
-    .etiqueta {
-        font-size: 16px;
-        padding: 5px 28px;
-    }
+    gap: 35px;
 
-    .video-box {
-        display: flex;
-        align-items: center;
-        gap: 45px;
-        border-radius: 45px;
-        padding: 45px;
-    }
+    border-radius: 45px;
 
-    .video-box p {
-        width: 42%;
-        font-size: 17px;
-        line-height: 24px;
-        margin: 0;
-    }
+    padding: 35px 40px;
+}
 
-    .video-box iframe {
-        width: 58%;
-        height: 260px;
-        margin-left: 0;
-        border-radius: 35px;
-    }
+.video-box p {
+    width: 28%;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+
+#seccion-video {
+    width: 72%;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 330px;
+
+    margin: 0;
+
+    border: none;
+    border-radius: 30px;
 }
    
 
@@ -1166,35 +1166,21 @@ header > a img {
 }
 
 .footer-right {
-<<<<<<< HEAD
     width: 100% !important;
     margin-top: 25px !important;
 
-=======
-    width: 100% !important;
->>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
 }
 
 .redes {
-<<<<<<< HEAD
     list-style: none !important;
     padding: 0 35px !important;
     margin: 0 0 25px !important;
 
     display: flex !important;
     justify-content: flex-start !important;
-=======
-    order: 1 !important;
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 25px 0 20px !important;
-
-    display: flex !important;
-    justify-content: center !important;
->>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
 }
 
 .redes li {
