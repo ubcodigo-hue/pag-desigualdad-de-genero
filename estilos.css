@@ -1034,6 +1034,101 @@ header > a img {
 
 /* FOOTER MOBILE */
 
+.footer {
+    /* 🌟 El truco: le damos el fondo negro al contenedor padre */
+    background-color: #0b020f !important; 
+    width: 100%;
+    font-family: "Space Mono", monospace;
+}
+
+/* Bloque Violeta en Mobile */
+.footer-contenido {
+    background-color: #4b0068 !important; /* Tu violeta oscuro */
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+/* Elementos de la izquierda (Logo + Contacto) apilados */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-left img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+.footer-texto h3 {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+}
+
+.footer-texto address {
+    font-style: normal;
+}
+
+.footer-texto p {
+    color: white;
+    font-size: 11px;
+    margin: 5px 0;
+}
+
+/* Elementos de la derecha (Links + Redes unificadas) */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+}
+
+/* La tira de redes (imagen única) va abajo en el bloque violeta */
+.redes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.redes img {
+    width: 110px; /* Ajustá el tamaño a tu gusto para que se vea bien */
+    height: auto;
+    display: block;
+}
+
+/* 🌟 LOS LINKS LEGALES SALEN DEL VIOLETA: Se posicionan abajo en el fondo negro */
+.links {
+    list-style: none;
+    padding: 25px 20px 10px 20px; /* Espaciado sobre el fondo negro */
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    
+    /* Movemos los links visualmente abajo del bloque violeta */
+    position: relative;
+    background-color: #0b020f; 
+}
+
+.links a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 10px;
+    opacity: 0.8;
+}
    
 
 
@@ -1404,65 +1499,73 @@ html {
     scroll-margin-top: 120px;
 }
 
-.footer {
-    background-color: #4b0068 !important;
-}
+.footer-contenido {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 40px 70px !important;
+        text-align: left !important;
+        
+        /* Modificamos el layout para meter el fondo negro de fondo general */
+        position: relative;
+    }
 
-  .footer-contenido{
-    padding: 0 120px;
+    /* Logo y datos de contacto uno al lado del otro */
+    .footer-left {
+        flex-direction: row !important;
+        gap: 45px !important;
+        align-items: center !important;
+    }
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    .footer-left img {
+        width: 170px !important;
+    }
 
-.footer-left{
-    display:flex;
-    align-items:center;
-    gap:45px;
-}
+    .footer-texto h3 {
+        font-size: 11px !important;
+        margin: 0 0 6px 0 !important;
+    }
 
-.footer-left img{
-    width:170px;
-    margin:0;
-}
+    .footer-texto p {
+        font-size: 11px !important;
+        margin: 2px 0 !important;
+    }
 
-.footer-texto{
-    display:flex;
-    flex-direction:column;
-}
+    /* Contenedor derecho en PC cambia el orden interno */
+    .footer-right {
+        flex-direction: column-reverse !important; /* Pone las redes arriba y los links abajo */
+        align-items: flex-end !important;
+        width: auto !important;
+        gap: 15px !important;
+    }
 
-.footer-right{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    gap:18px;
-}
+    /* La imagen de las redes se alinea a la derecha dentro del violeta */
+    .redes img {
+        width: 95px !important;
+    }
 
-.links{
-    background:none;
-    width:auto;
+    /* 🌟 Los links en PC se transforman en una tira horizontal en el bloque negro inferior */
+    .links {
+        flex-direction: row !important;
+        justify-content: flex-end !important;
+        gap: 25px !important;
+        padding: 0 !important;
+        
+        /* Desanclamos los links de la caja derecha y los mandamos al fondo absoluto */
+        position: absolute !important;
+        bottom: -45px; /* Empuja los links hacia la franja negra de abajo */
+        right: 70px;
+        width: auto;
+        background: transparent !important;
+    }
 
-    margin:0;
-    padding:0;
+    /* Añadimos un margen extra al footer completo para que no se pise el absoluto */
+    .footer {
+        padding-bottom: 45px !important;
+    }
 
-    display:flex;
-    gap:18px;
-
-    justify-content:flex-end;
-}
-
-.links a{
-    font-size:10px;
-    white-space:nowrap;
-}
-
-.redes{
-    margin:0;
-}
-
-.redes img{
-    width:95px;
-}
-
+    .links a {
+        font-size: 10px !important;
+        white-space: nowrap !important;
+    }
 }
