@@ -1047,6 +1047,11 @@ header > a img {
     display: block !important;
 }
 
+.menu-principal ul ul a:hover,
+    .menu-principal ul ul a:active {
+        color: #ffeb3b !important; /* El amarillo brillante */
+    }
+
 /* --- INTERIOR DE LA PÁGINA (MOBILE) --- */
 .genero-header {
     background-color: #d9c3e6;
