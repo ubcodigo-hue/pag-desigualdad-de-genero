@@ -875,248 +875,235 @@ body {
 /* PROBLEMÁTICA SOCIAL */
 /* ========================= */
 
-body {
-     background-color: white !important;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: "Roboto", sans-serif;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
-/* MOBILE */
-
-.genero-main {
-    padding: 25px 20px;
-    box-sizing: border-box;
-}
-
-.genero-header {
-    background-color: #d9c3e6;
-    padding: 20px;
-    border-radius: 25px;
-}
-
-.etiqueta-seccion {
-    font-family: "Space Mono", monospace;
-    font-size: 11px;
+body {
+    background-color: #ffffff !important;
     margin: 0;
-    color: #9700c9;
-}
-
-.genero-header h1 {
-    color: #6a00a3;
-    font-style: italic;
-    margin: 10px 0 0;
-}
-
-.genero-contenido {
-    margin-top: 20px;
-    background-color: #d9c3e6;
-    padding: 25px 20px;
-    border-radius: 25px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.bloque {
-    display: flex;
-    flex-direction: column;
-    scroll-margin-top: 120px;
-}
-
-.bloque img {
-    width: 100%;
-    border-radius: 25px;
-    display: block;
-}
-
-.bloque h2 {
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    color: #6a00a3;
-    border-bottom: 2px solid #9700c9;
-    margin: 10px 0;
-    padding-bottom: 4px;
-}
-
-.bloque p {
-    font-size: 15px;
-    margin: 0;
-    color: #111;
-}
-
-.genero-header {
-    scroll-margin-top: 120px;
-}
-
-/* SUSCRIPCIÓN MOBILE */
-
-.suscripcion {
-    margin-top: 40px;
-}
-
-.suscripcion h3 {
-    font-family: "Space Mono", monospace;
-    border-bottom: 2px solid black;
-    margin: 0 0 10px;
-}
-
-.form-suscripcion input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.form-suscripcion button {
-    margin-top: 10px;
-    background: red;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-}
-
-/* HEADER MOBILE */
-
-header {
-    background-color: #9700c9 !important;
-    width: 100%;
-    position: relative;
-    z-index: 1000;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 18px 5%;
-    box-sizing: border-box;
-}
-
-header > a img {
-    height: 58px !important;
-    width: auto;
-    display: block;
-}
-
-.menu-principal {
-    display: flex !important;
-    align-items: center !important;
-    position: relative !important;
-}
-
-.menu-checkbox {
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 32px !important;
-    height: 22px !important;
-    opacity: 0 !important;
-    cursor: pointer !important;
-    z-index: 1002 !important;
-    margin: 0 !important;
-}
-
-.hamburguesa-btn {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    width: 32px !important;
-    height: 22px !important;
-    cursor: pointer !important;
-    position: relative !important;
-    z-index: 1001 !important;
-}
-
-.hamburguesa-btn span {
-    width: 100% !important;
-    height: 3px !important;
-    background-color: white !important;
-    border-radius: 3px !important;
-    display: block !important;
-}
-
-.menu-principal > ul {
-    display: none !important;
-    position: absolute !important;
-    top: calc(100% + 18px) !important;
-    right: -5% !important;
-
-    width: 250px !important;
-    background-color: #9700c9 !important;
-
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 25px 20px !important;
-
-    box-sizing: border-box !important;
-    flex-direction: column !important;
-    gap: 18px !important;
-
-    border-radius: 0 0 0 20px !important;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3) !important;
-    z-index: 999 !important;
-}
-
-.menu-checkbox:checked ~ ul {
-    display: flex !important;
-}
-
-.menu-principal > ul > li {
-    list-style: none !important;
-    position: relative !important;
-}
-
-.menu-principal > ul > li > a {
-    color: white !important;
-    font-family: "Space Mono", monospace !important;
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    display: block !important;
-}
-
-.menu-principal ul ul {
-    display: none !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-
-    list-style: none !important;
-    padding-left: 15px !important;
-    margin-top: 10px !important;
-}
-
-/* SE ABRE SOLO CUANDO JS AGREGA LA CLASE abierto */
-
-.menu-principal > ul > li.abierto > ul {
-    display: flex !important;
-}
-
-.menu-principal ul ul a,
-.menu-principal ul ul a:link,
-.menu-principal ul ul a:visited {
-    color: white !important;
-    text-decoration: none !important;
+    padding: 0;
+    overflow-x: hidden;
+    /* Forzamos la tipografía Space Mono para mantener la estética de tu diseño */
     font-family: "Space Mono", monospace !important;
 }
-.menu-principal ul ul a:hover,
-.menu-principal ul ul a:active {
-    color: #ffeb3b !important;
+
+/* Tipografías y reinicios para el Footer global */
+.footer, .footer h3, .footer p, .footer a, .footer address, .links a {
+    font-family: "Space Mono", monospace !important;
+    text-decoration: none !important;
 }
 
 
+/* ==========================================================================
+   1. MODO MOBILE (Celular - Menor a 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    .genero-main {
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
 
-/* FOOTER MOBILE */
+    .genero-header {
+        background-color: #d9c3e6;
+        padding: 20px;
+        border-radius: 25px;
+        scroll-margin-top: 120px;
+    }
 
-   .footer {
+    .etiqueta-seccion {
+        font-size: 11px;
+        margin: 0;
+        color: #9700c9;
+    }
+
+    .genero-header h1 {
+        color: #6a00a3;
+        font-style: italic;
+        margin: 10px 0 0;
+    }
+
+    .genero-contenido {
+        margin-top: 20px;
+        background-color: #d9c3e6;
+        padding: 25px 20px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .bloque {
+        display: flex;
+        flex-direction: column;
+        scroll-margin-top: 120px;
+    }
+
+    .bloque img {
+        width: 100%;
+        border-radius: 25px;
+        display: block;
+    }
+
+    .bloque h2 {
+        font-size: 12px;
+        color: #6a00a3;
+        border-bottom: 2px solid #9700c9;
+        margin: 10px 0;
+        padding-bottom: 4px;
+    }
+
+    .bloque p {
+        font-size: 15px;
+        margin: 0;
+        color: #111;
+    }
+
+    /* SUSCRIPCIÓN MOBILE */
+    .suscripcion {
+        margin-top: 40px;
+    }
+
+    .suscripcion h3 {
+        border-bottom: 2px solid black;
+        margin: 0 0 10px;
+    }
+
+    .form-suscripcion input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .form-suscripcion button {
+        margin-top: 10px;
+        background: red;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    /* HEADER MOBILE */
+    header {
+        background-color: #9700c9 !important;
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 5%;
+        box-sizing: border-box;
+    }
+
+    header > a img {
+        height: 58px !important;
+        width: auto;
+        display: block;
+    }
+
+    .menu-principal {
+        display: flex !important;
+        align-items: center !important;
+        position: relative !important;
+    }
+
+    .menu-checkbox {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 32px !important;
+        height: 22px !important;
+        opacity: 0 !important;
+        cursor: pointer !important;
+        z-index: 1002 !important;
+        margin: 0 !important;
+    }
+
+    .hamburguesa-btn {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 32px !important;
+        height: 22px !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 1001 !important;
+    }
+
+    .hamburguesa-btn span {
+        width: 100% !important;
+        height: 3px !important;
+        background-color: white !important;
+        border-radius: 3px !important;
+        display: block !important;
+    }
+
+    .menu-principal > ul {
+        display: none !important;
+        position: absolute !important;
+        top: calc(100% + 18px) !important;
+        right: -5% !important;
+        width: 250px !important;
+        background-color: #9700c9 !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 25px 20px !important;
+        box-sizing: border-box !important;
+        flex-direction: column !important;
+        gap: 18px !important;
+        border-radius: 0 0 0 20px !important;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3) !important;
+        z-index: 999 !important;
+    }
+
+    .menu-checkbox:checked ~ ul {
+        display: flex !important;
+    }
+
+    .menu-principal > ul > li {
+        list-style: none !important;
+        position: relative !important;
+    }
+
+    .menu-principal > ul > li > a {
+        color: white !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        display: block !important;
+    }
+
+    .menu-principal ul ul {
+        display: none !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        list-style: none !important;
+        padding-left: 15px !important;
+        margin-top: 10px !important;
+    }
+
+    .menu-principal > ul > li.abierto > ul {
+        display: flex !important;
+    }
+
+    .menu-principal ul ul a,
+    .menu-principal ul ul a:link,
+    .menu-principal ul ul a:visited {
+        color: white !important;
+    }
+
+    /* Amarillo al pasar sobre el submenú en mobile */
+    .menu-principal ul ul a:hover,
+    .menu-principal ul ul a:active {
+        color: #ffeb3b !important;
+    }
+
+    /* FOOTER MOBILE */
+    .footer {
         background-color: #4b0068 !important;
         padding: 0 !important;
         margin-top: 40px !important;
@@ -1126,18 +1113,15 @@ header > a img {
         background-color: #4b0068 !important;
         padding: 35px 35px 0 !important;
         box-sizing: border-box !important;
-
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
-
         text-align: left !important;
     }
 
     .footer-left {
         width: 100% !important;
         padding: 0 !important;
-
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -1147,10 +1131,6 @@ header > a img {
         width: 240px !important;
         max-width: 85% !important;
         margin: 0 0 35px 0 !important;
-    }
-
-    .footer-texto {
-        text-align: left !important;
     }
 
     .footer-texto h3 {
@@ -1163,13 +1143,11 @@ header > a img {
         color: white !important;
         font-size: 13px !important;
         margin: 10px 0 !important;
-        text-decoration: none !important;
     }
 
     .footer-right {
         width: 100% !important;
         margin-top: 20px !important;
-
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -1179,9 +1157,7 @@ header > a img {
         order: 1 !important;
         padding: 0 !important;
         margin: 0 0 28px !important;
-
         list-style: none !important;
-
         display: flex !important;
         justify-content: flex-start !important;
     }
@@ -1193,21 +1169,15 @@ header > a img {
 
     .links {
         order: 2 !important;
-
         background-color: #000 !important;
-
         width: 100vw !important;
         margin-left: -35px !important;
-
         padding: 28px 35px 95px !important;
         box-sizing: border-box !important;
-
         list-style: none !important;
-
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
-
         justify-content: flex-start !important;
         gap: 14px 28px !important;
     }
@@ -1215,47 +1185,39 @@ header > a img {
     .links li {
         width: auto !important;
         list-style: none !important;
-        text-align: left !important;
     }
 
-    .links a,
-    .links a:link,
-    .links a:visited {
+    .links a, .links a:link, .links a:visited {
         color: white !important;
-        text-decoration: none !important;
         font-size: 11px !important;
-        font-family: "Space Mono", monospace !important;
         white-space: nowrap !important;
     }
+}
 
 
-/* ========================= */
-/* WEB */
-/* ========================= */
-
+/* ==========================================================================
+   2. MODO COMPUTADORA (PC - Desde 1024px en adelante)
+   ========================================================================== */
 @media (min-width: 1024px) {
-
     .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
         margin: 50px auto 80px;
         padding: 0;
-
         display: grid;
         grid-template-columns: 74% 22%;
         column-gap: 4%;
     }
 
+    /* HEADER EN PC */
     header {
         background-color: #9700c9 !important;
         width: 100%;
         position: relative;
         z-index: 1000;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         padding: 18px 5%;
         box-sizing: border-box;
     }
@@ -1266,8 +1228,7 @@ header > a img {
         display: block;
     }
 
-    .hamburguesa-btn,
-    .menu-checkbox {
+    .hamburguesa-btn, .menu-checkbox {
         display: none !important;
     }
 
@@ -1280,14 +1241,11 @@ header > a img {
         display: flex !important;
         flex-direction: row !important;
         position: static !important;
-
         width: auto !important;
         background: transparent !important;
         box-shadow: none !important;
-
         list-style: none !important;
         gap: 28px !important;
-
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -1299,24 +1257,20 @@ header > a img {
 
     .menu-principal > ul > li > a {
         color: white !important;
-        font-family: "Space Mono", monospace !important;
         font-size: 14px !important;
         font-weight: 700 !important;
-        text-decoration: none !important;
     }
 
+    /* SUBMENÚ EN PC */
     .menu-principal ul ul {
         display: none !important;
         position: absolute !important;
         top: 100% !important;
         left: 0 !important;
-
         background-color: #9700c9 !important;
         min-width: 220px !important;
-
         padding: 12px 15px !important;
         margin: 0 !important;
-
         list-style: none !important;
         z-index: 100 !important;
     }
@@ -1330,14 +1284,15 @@ header > a img {
 
     .menu-principal ul ul a {
         color: white !important;
-        text-decoration: none !important;
         font-size: 13px !important;
     }
 
+    /* Amarillo puro para el Hover de Escritorio */
     .menu-principal ul ul a:hover {
         color: #ffff00 !important;
     }
 
+    /* ESTRUCTURA DEL CONTENIDO EN PC */
     .genero-bloque-principal {
         grid-column: 1;
         width: 100%;
@@ -1356,16 +1311,16 @@ header > a img {
         margin: 0 0 25px;
     }
 
+    /* El contenedor lila grande con CSS Grid en 2 columnas */
     .genero-contenido {
-        background-color: #d9c3e6;
-        border-radius: 55px;
-        padding: 45px 45px 50px;
-        margin-top: 0;
-
+        background-color: #d9c3e6 !important;
+        border-radius: 55px !important;
+        padding: 45px 45px 50px !important;
+        margin-top: 0 !important;
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        column-gap: 60px;
-        row-gap: 35px;
+        column-gap: 60px !important;
+        row-gap: 35px !important;
     }
 
     .texto-lila {
@@ -1411,7 +1366,6 @@ header > a img {
     }
 
     .bloque h2 {
-        font-family: "Space Mono", monospace;
         font-size: 14px;
         color: #4b0068;
         border-bottom: 2px solid #9700c9;
@@ -1428,6 +1382,7 @@ header > a img {
         width: 100%;
     }
 
+    /* SECCIÓN LATERAL DE SUSCRIPCIÓN EN PC (Columna Derecha) */
     .suscripcion {
         grid-column: 2;
         grid-row: 1 / span 5;
@@ -1435,11 +1390,12 @@ header > a img {
         justify-self: end;
         width: 100%;
         max-width: 300px;
+        margin-top: 0;
     }
 
     .suscripcion h3 {
         font-size: 16px;
-        color: black;
+        color: black !important;
         margin: 0;
         padding-bottom: 10px;
         border-bottom: 4px solid black;
@@ -1472,7 +1428,6 @@ header > a img {
         background-color: #e42313;
         border-radius: 35px;
         padding: 12px 30px;
-        font-family: "Space Mono", monospace;
         font-size: 12px;
         font-weight: 700;
         letter-spacing: 1px;
@@ -1483,22 +1438,21 @@ header > a img {
         cursor: pointer;
     }
 
-    /* FOOTER WEB - IGUAL QUE LO TENÍAS */
-
+    /* FOOTER EN COMPUTADORA */
     .footer {
-        background-color: #0b020f !important; 
+        background-color: #0b020f !important;
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important; 
+        flex-direction: column !important;
         width: 100% !important;
     }
 
     .footer-contenido {
-        background-color: #4b0068 !important; 
+        background-color: #4b0068 !important;
         padding: 40px 120px !important;
         display: flex !important;
-        flex-direction: row !important; 
+        flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
         width: 100% !important;
@@ -1523,12 +1477,14 @@ header > a img {
     .footer-texto h3 {
         font-size: 11px !important;
         margin: 0 0 6px !important;
+        color: #ffffff !important;
     }
 
     .footer-texto p, 
     .footer address p {
         font-size: 11px !important;
         margin: 2px 0 !important;
+        color: #ffffff !important;
     }
 
     .footer-right {
@@ -1542,7 +1498,6 @@ header > a img {
 
     .redes {
         list-style: none !important;
-        list-style-type: none !important;
         padding: 0 !important;
         margin: 0 !important;
         display: flex !important;
@@ -1550,41 +1505,39 @@ header > a img {
 
     .redes li {
         list-style: none !important;
-        list-style-type: none !important;
     }
 
     .redes img {
-        width: 140px !important; 
+        width: 140px !important;
         min-width: 140px !important;
         height: auto !important;
         display: block !important;
     }
 
     .links {
-        background-color: #0b020f !important; 
+        background-color: #0b020f !important;
         position: absolute !important;
-        top: 100% !important; 
+        top: 100% !important;
         left: 0 !important;
-        display: flex !important; 
-        flex-direction: row !important; 
-        flex-wrap: nowrap !important; 
-        padding: 20px 120px !important; 
-        justify-content: flex-end !important; 
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        padding: 20px 120px !important;
+        justify-content: flex-end !important;
         gap: 22px !important;
         margin: 0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
         list-style: none !important;
-        list-style-type: none !important;
     }
 
     .links li {
         list-style: none !important;
-        list-style-type: none !important;
     }
 
     .links a {
         font-size: 10px !important;
         white-space: nowrap !important;
+        color: #ffffff !important;
     }
 }
