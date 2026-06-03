@@ -418,14 +418,14 @@ main {
 
     /* 🛠️ SOLUCIÓN FOOTER MOBILE */
     .footer {
-         background-color: #000000  !important;
+         background-color: #4b0068   !important;
         margin-top: 40px !important;
         padding: 40px 0 0 !important;
         width: 100% !important;
     }
 
     .footer-contenido {
-        background-color: #000000 !important;
+        background-color: #4b0068  !important;
         width: 100% !important;
         padding: 0 !important;
         display: flex !important;
@@ -487,7 +487,7 @@ main {
     /* Solución a desbordes por culpa de 100vw erróneos */
     .links {
         order: 2 !important;
-        background-color: #0b020f !important;
+        background-color: #000000  !important;
         width: 100% !important;
         margin: 0 !important;
         padding: 30px 20px 40px !important;
@@ -509,7 +509,14 @@ main {
         font-size: 13px !important;
         display: inline-block !important;
     }
-
+    
+.footer h3,
+.footer p,
+.footer address,
+.footer a,
+.links a {
+    color: white !important;
+}
     /* TESTIMONIOS MOBILE */
     .testimonios-header {
         display: flex;
