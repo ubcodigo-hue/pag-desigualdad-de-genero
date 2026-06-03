@@ -879,11 +879,8 @@ body {
 
 
 
-
-
-/* ========/* ========================= */
-/* PROBLEMASSOCIAL */
-MODO MOBILE
+/* ========================= */
+/* PROBLEMÁTICA SOCIAL */
 /* ========================= */
 
 body {
@@ -892,16 +889,109 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* MOBILE */
+
 .genero-main {
     padding: 25px 20px;
     box-sizing: border-box;
 }
+
 .genero-header {
-    background-color: transparent !important; 
-    padding: 0 0 10px 0;
+    background-color: #d9c3e6;
+    padding: 20px;
+    border-radius: 25px;
 }
 
-/* LA BARRA SUPERIOR VIOLETA */
+.etiqueta-seccion {
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    margin: 0;
+    color: #9700c9;
+}
+
+.genero-header h1 {
+    color: #6a00a3;
+    font-style: italic;
+    margin: 10px 0 0;
+}
+
+.genero-contenido {
+    margin-top: 20px;
+    background-color: #d9c3e6;
+    padding: 25px 20px;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 120px;
+}
+
+.bloque img {
+    width: 100%;
+    border-radius: 25px;
+    display: block;
+}
+
+.bloque h2 {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    color: #6a00a3;
+    border-bottom: 2px solid #9700c9;
+    margin: 10px 0;
+    padding-bottom: 4px;
+}
+
+.bloque p {
+    font-size: 15px;
+    margin: 0;
+    color: #111;
+}
+
+.genero-header {
+    scroll-margin-top: 120px;
+}
+
+/* SUSCRIPCIÓN MOBILE */
+
+.suscripcion {
+    margin-top: 40px;
+}
+
+.suscripcion h3 {
+    font-family: "Space Mono", monospace;
+    border-bottom: 2px solid black;
+    margin: 0 0 10px;
+}
+
+.form-suscripcion input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-suscripcion button {
+    margin-top: 10px;
+    background: red;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* HEADER MOBILE */
+
 header {
     background-color: #9700c9 !important;
     width: 100%;
@@ -928,7 +1018,6 @@ header > a img {
     position: relative !important;
 }
 
-/* El checkbox oculto pero funcional */
 .menu-checkbox {
     display: block !important;
     position: absolute !important;
@@ -936,13 +1025,12 @@ header > a img {
     left: 0 !important;
     width: 32px !important;
     height: 22px !important;
-    opacity: 0 !important; /* Invisible pero clickable arriba del botón */
+    opacity: 0 !important;
     cursor: pointer !important;
     z-index: 1002 !important;
     margin: 0 !important;
 }
 
-/* El diseño visual de las tres rayitas */
 .hamburguesa-btn {
     display: flex !important;
     flex-direction: column !important;
@@ -957,48 +1045,44 @@ header > a img {
 .hamburguesa-btn span {
     width: 100% !important;
     height: 3px !important;
-    background-color: #ffffff !important; /* Fuerza las rayitas a blanco */
+    background-color: white !important;
     border-radius: 3px !important;
     display: block !important;
 }
 
-/* ==========================================================================
-   MENÚ DESPLEGABLE MOBILE
-   ========================================================================== */
-
 .menu-principal > ul {
-    display: none !important; /* Oculto por defecto */
+    display: none !important;
     position: absolute !important;
-    top: calc(100% + 18px) !important; /* Baja justo abajo de la barra violeta */
-    right: -5% !important; /* Se pega al borde derecho de la pantalla */
-    width: 250px !important; /* Ancho cómodo tipo tarjeta flotante */
-    background-color: #9700c9 !important; /* Violeta del header */
+    top: calc(100% + 18px) !important;
+    right: -5% !important;
+
+    width: 250px !important;
+    background-color: #9700c9 !important;
+
     list-style: none !important;
-    list-style-type: none !important;
     margin: 0 !important;
     padding: 25px 20px !important;
+
     box-sizing: border-box !important;
     flex-direction: column !important;
     gap: 18px !important;
-    border-radius: 0 0 0 20px !important; /* Esquina redondeada abajo a la izq */
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.3) !important; /* Sombrita para que flote prolijo */
+
+    border-radius: 0 0 0 20px !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3) !important;
     z-index: 999 !important;
 }
 
-/* 🌟 EL ACTIVADOR CLAVE: Cuando el check está activo, muestra la lista */
 .menu-checkbox:checked ~ ul {
     display: flex !important;
 }
 
 .menu-principal > ul > li {
     list-style: none !important;
-    list-style-type: none !important;
     position: relative !important;
-    text-align: left !important;
 }
 
 .menu-principal > ul > li > a {
-    color: #ffffff !important;
+    color: white !important;
     font-family: "Space Mono", monospace !important;
     font-size: 15px !important;
     font-weight: 700 !important;
@@ -1006,427 +1090,252 @@ header > a img {
     display: block !important;
 }
 
-/* ==========================================================================
-   SUBMENÚ INTERNO (MOBILE)
-   ========================================================================== */
-
 .menu-principal ul ul {
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
+
     list-style: none !important;
-    list-style-type: none !important;
     padding-left: 15px !important;
     margin-top: 10px !important;
 }
 
-.menu-principal ul ul li {
-    list-style: none !important;
-    list-style-type: none !important;
-}
-
 .menu-principal ul ul a {
-    color: rgba(255, 255, 255, 0.85) !important; /* Blanco sutilmente traslúcido */
+    color: rgba(255,255,255,0.85) !important;
     font-size: 13px !important;
     text-decoration: none !important;
     font-family: "Space Mono", monospace !important;
-    display: block !important;
 }
 
 .menu-principal ul ul a:hover,
-    .menu-principal ul ul a:active {
-        color: #ffeb3b !important; /* El amarillo brillante */
-    }
-
-/* --- INTERIOR DE LA PÁGINA (MOBILE) --- */
-.genero-header {
-    background-color: #d9c3e6;
-    padding: 20px;
-    border-radius: 25px;
+.menu-principal ul ul a:active {
+    color: #ffeb3b !important;
 }
 
-.etiqueta-seccion {
-    font-family: "Space Mono", monospace;
-    font-size: 11px;
-    margin: 0;
-    color: #9700c9;
+/* FOOTER MOBILE */
+
+.footer,
+.footer h3,
+.footer p,
+.footer a,
+.footer address,
+.links a {
+    font-family: "Space Mono", monospace !important;
+    color: white !important;
+    text-decoration: none !important;
 }
 
-.genero-header h1 {
-    color: #6a00a3;
-    font-style: italic;
-    margin: 10px 0 0 0;
+.footer {
+    background-color: #4b0068 !important;
+    margin-top: 40px !important;
+    padding: 40px 0 0 !important;
+    width: 100% !important;
 }
 
-.genero-contenido {
-    margin-top: 20px;
-    background-color: #d9c3e6; /* El fondo lila se aplica acá */
-    padding: 25px 20px;        /* Espaciado interno para que no pegue al borde */
-    border-radius: 25px;       /* Bordes redondeados del bloque */
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.footer-contenido {
+    width: 100% !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    text-align: center !important;
+    box-sizing: border-box !important;
 }
 
-.bloque {
-    display: flex;
-    flex-direction: column;
+.footer-left {
+    padding: 0 20px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
-.bloque img {
-    width: 100%;
-    border-radius: 25px;
-    display: block;
+.footer-left img {
+    width: 220px !important;
+    max-width: 85% !important;
+    margin: 0 auto 25px !important;
+    display: block !important;
 }
 
-.bloque h2 {
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    border-bottom: 2px solid #9700c9;
-    margin: 10px 0;
-    padding-bottom: 4px;
-    color: #6a00a3;
+.footer-texto h3 {
+    font-size: 16px !important;
+    margin: 0 0 12px !important;
+    letter-spacing: 1px !important;
 }
 
-.bloque p {
-    font-size: 15px;
-    margin: 0;
-    color: #111;
+.footer address {
+    font-style: normal !important;
 }
 
-.suscripcion {
-    margin-top: 40px;
+.footer address p {
+    font-size: 13px !important;
+    margin: 6px 0 !important;
 }
 
-.suscripcion h3 {
-    font-family: "Space Mono", monospace;
-    border-bottom: 2px solid black;
-    margin: 0 0 10px 0;
+.footer-right {
+    width: 100% !important;
+    margin-top: 25px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
-.form-suscripcion input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+.redes {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 35px !important;
+
+    display: flex !important;
+    justify-content: center !important;
 }
 
-.form-suscripcion button {
-    margin-top: 10px;
-    background: red;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    border: none;
-    width: 100%;
-    cursor: pointer;
+.redes li {
+    list-style: none !important;
 }
 
+.redes img {
+    width: 160px !important;
+    height: auto !important;
+    display: block !important;
+}
 
+.links {
+    background-color: #0b020f !important;
+    width: 100% !important;
 
-/* ==========================================================================
-   2. MODO COMPUTADORA (PC) - SE ACTIVA A PARTIR DE 1024px
-   ========================================================================== */
+    margin: 0 !important;
+    padding: 30px 20px 40px !important;
+
+    box-sizing: border-box !important;
+    list-style: none !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.links li {
+    list-style: none !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.links a {
+    font-size: 13px !important;
+    display: inline-block !important;
+}
+
+/* ========================= */
+/* WEB */
+/* ========================= */
 
 @media (min-width: 1024px) {
 
-
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-.genero-main {
-    padding: 25px 20px;
-    box-sizing: border-box;
-}
-
-/* LA BARRA SUPERIOR VIOLETA */
-header {
-    background-color: #9700c9 !important;
-    width: 100%;
-    position: relative;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 5%;
-    box-sizing: border-box;
-}
-
-    .links li {
-        list-style: none !important;
-        list-style-type: none !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    .links a {
-        color: #ffffff !important;
-        font-size: 13px !important;
-        text-decoration: none !important;
-        display: inline-block !important;
-    }
-    @media (max-width: 1023px) {
-
-    .footer {
-        background-color: #4b0068 !important;
-        width: 100% !important;
-        margin-top: 40px !important;
-        padding: 35px 0 0 !important;
-        color: white !important;
-    }
-
-    .footer-contenido {
-        width: 100% !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        text-align: left !important;
-    }
-
-    .footer-left {
-        padding: 0 35px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-    }
-
-    .footer-left img {
-        width: 230px !important;
-        margin: 0 auto 30px !important;
-        display: block !important;
-    }
-
-    .footer-texto h3 {
-        color: white !important;
-        font-size: 15px !important;
-        margin: 0 0 15px !important;
-    }
-
-    .footer address p {
-        color: white !important;
-        font-size: 13px !important;
-        margin: 8px 0 !important;
-    }
-
-    .footer-right {
-        width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        margin-top: 25px !important;
-    }
-
-    .redes {
-        order: 1 !important;
-        list-style: none !important;
-        padding: 0 35px !important;
-        margin: 0 0 30px !important;
-        display: flex !important;
-        justify-content: flex-start !important;
-    }
-
-    .redes img {
-        width: 150px !important;
-        height: auto !important;
-    }
-
-    .links {
-        order: 2 !important;
-        background-color: #0b020f !important;
-        width: 100% !important;
-        padding: 28px 35px 45px !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-
-        list-style: none !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 14px 24px !important;
-    }
-
-    .links li {
-        list-style: none !important;
-    }
-
-    .links a {
-        color: white !important;
-        font-size: 12px !important;
-        text-decoration: none !important;
-    }
-}
-}
-
- /* OCULTAR HAMBURGUESA */
-
-    .hamburguesa-btn {
-        display: none !important;
-    }
-
-    /* MENÚ WEB */
-
-    .menu-principal {
-        display: flex;
-        align-items: center;
-    }
-
-    .menu-principal > ul {
-        display: flex !important;
-        flex-direction: row !important;
-
-        position: static !important;
-
-        width: auto !important;
-
-        background: transparent !important;
-        box-shadow: none !important;
-
-        list-style: none;
-
-        gap: 28px;
-
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu-principal > ul > li {
-        position: relative;
-    }
-
-    .menu-principal > ul > li > a {
-        color: white !important;
-
-        font-family: "Space Mono", monospace;
-        font-size: 14px;
-        font-weight: 700;
-
-        text-decoration: none;
-    }
-
-    /* SUBMENÚ WEB */
-
-    .menu-principal ul ul {
-        display: none !important;
-
-        position: absolute !important;
-        top: 100%;
-        left: 0;
-
-        background-color: #9700c9 !important;
-
-        min-width: 220px;
-
-        padding: 12px 15px !important;
-        margin: 0;
-
-        list-style: none;
-
-        z-index: 100;
-    }
-
-    .menu-principal > ul > li:hover > ul,
-    .menu-principal > ul > li.abierto > ul {
-        display: flex !important;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .menu-principal ul ul a {
-        color: white !important;
-        text-decoration: none;
-        font-size: 13px;
-    }
-
-    .menu-principal ul ul a:hover {
-        color: #ffff00 !important;
-    }
-
-/* --- INTERIOR DE LA PÁGINA (MOBILE) --- */
-.genero-header {
-    background-color: #d9c3e6;
-    padding: 20px;
-    border-radius: 25px;
-}
-
-.etiqueta-seccion {
-    font-family: "Space Mono", monospace;
-    font-size: 11px;
-    margin: 0;
-}
-
-.genero-header h1 {
-    color: #6a00a3;
-    font-style: italic;
-    margin: 10px 0 0 0;
-}
-
-.genero-contenido {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.bloque {
-    display: flex;
-    flex-direction: column;
-}
-
-.bloque img {
-    width: 100%;
-    border-radius: 25px;
-}
-
-.bloque h2 {
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    border-bottom: 2px solid #9700c9;
-    margin: 10px 0;
-    padding-bottom: 4px;
-}
-
-.bloque p {
-    font-size: 15px;
-    margin: 0;
-}
-
-.suscripcion {
-    margin-top: 40px;
-}
-
-.suscripcion h3 {
-    font-family: "Space Mono", monospace;
-    border-bottom: 2px solid black;
-    margin: 0 0 10px 0;
-}
-
-.form-suscripcion input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.form-suscripcion button {
-    margin-top: 10px;
-    background: red;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-}
-    /* --- RESTO DEL GRID EN PC --- */
     .genero-main {
         width: calc(100% - 8cm);
         max-width: 1600px;
         margin: 50px auto 80px;
         padding: 0;
+
         display: grid;
-        grid-template-columns: 74% 22%; 
+        grid-template-columns: 74% 22%;
         column-gap: 4%;
+    }
+
+    header {
+        background-color: #9700c9 !important;
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 18px 5%;
+        box-sizing: border-box;
+    }
+
+    header > a img {
+        height: 58px !important;
+        width: auto;
+        display: block;
+    }
+
+    .hamburguesa-btn,
+    .menu-checkbox {
+        display: none !important;
+    }
+
+    .menu-principal {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .menu-principal > ul {
+        display: flex !important;
+        flex-direction: row !important;
+        position: static !important;
+
+        width: auto !important;
+        background: transparent !important;
+        box-shadow: none !important;
+
+        list-style: none !important;
+        gap: 28px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .menu-principal > ul > li {
+        position: relative !important;
+        list-style: none !important;
+    }
+
+    .menu-principal > ul > li > a {
+        color: white !important;
+        font-family: "Space Mono", monospace !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+    }
+
+    .menu-principal ul ul {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+
+        background-color: #9700c9 !important;
+        min-width: 220px !important;
+
+        padding: 12px 15px !important;
+        margin: 0 !important;
+
+        list-style: none !important;
+        z-index: 100 !important;
+    }
+
+    .menu-principal > ul > li:hover > ul,
+    .menu-principal > ul > li.abierto > ul {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .menu-principal ul ul a {
+        color: white !important;
+        text-decoration: none !important;
+        font-size: 13px !important;
+    }
+
+    .menu-principal ul ul a:hover {
+        color: #ffff00 !important;
     }
 
     .genero-bloque-principal {
@@ -1435,9 +1344,9 @@ header {
     }
 
     .genero-header {
-        background: none;
-        padding: 0 35px;
-        border-radius: 0;
+        background: none !important;
+        padding: 0 35px !important;
+        border-radius: 0 !important;
     }
 
     .genero-header h1 {
@@ -1452,6 +1361,7 @@ header {
         border-radius: 55px;
         padding: 45px 45px 50px;
         margin-top: 0;
+
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         column-gap: 60px;
@@ -1463,8 +1373,8 @@ header {
     }
 
     .texto-lila p {
-        font-size: 18px;       
-        line-height: 36px;     
+        font-size: 18px;
+        line-height: 36px;
         margin: 0 0 20px;
         color: #111;
     }
@@ -1480,23 +1390,23 @@ header {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 0;
-        width: 100%;           
-        overflow: hidden; 
-        border-radius: 25px;   
+        width: 100%;
+        overflow: hidden;
+        border-radius: 25px;
     }
 
     .bloque img {
-        width: 100%;           
-        aspect-ratio: 1 / 1;   
+        width: 100%;
+        aspect-ratio: 1 / 1;
         object-fit: cover;
-        border-radius: 25px;   
-        margin: 0 0 20px 0;    
+        border-radius: 25px;
+        margin: 0 0 20px;
         display: block;
-        transition: transform 0.3s ease-in-out; 
+        transition: transform 0.3s ease-in-out;
     }
-        
+
     .bloque:hover img {
-        transform: scale(1.05); 
+        transform: scale(1.05);
         cursor: pointer;
     }
 
@@ -1506,27 +1416,23 @@ header {
         color: #4b0068;
         border-bottom: 2px solid #9700c9;
         padding-bottom: 4px;
-        margin: 0 0 12px 0;
+        margin: 0 0 12px;
         letter-spacing: 1px;
-        text-align: left;
-        display: inline-block;
-        align-self: flex-start;
     }
 
     .bloque p {
         font-size: 15px;
         line-height: 24px;
         color: #111;
-        text-align: left;
         margin: 0;
         width: 100%;
     }
 
     .suscripcion {
-        grid-column: 2;         
-        grid-row: 1 / span 5;    
-        align-self: center;     
-        justify-self: end;      
+        grid-column: 2;
+        grid-row: 1 / span 5;
+        align-self: center;
+        justify-self: end;
         width: 100%;
         max-width: 300px;
     }
@@ -1576,146 +1482,9 @@ header {
         border: none;
         cursor: pointer;
     }
-    .menu-principal ul ul a:hover {
-    color: #ffff00 !important;
-}
 
-html {
-    scroll-behavior: smooth;
-}
+    /* FOOTER WEB - IGUAL QUE LO TENÍAS */
 
-.genero-header,
-.bloque {
-    scroll-margin-top: 120px;
-}
-
-/* ==========================================================================
-   1. TIPOGRAFÍA Y COLORES GENERALES (Afecta a ambos por igual)
-   ========================================================================== */
-.footer, .footer h3, .footer p, .footer a, .footer address, .links a {
-    font-family: "Space Mono", monospace !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-}
-
-/* ==========================================================================
-   2. VERSION MOBILE (Tu código de celular que ya funciona perfecto)
-   ========================================================================== */
-@media (max-width: 1023px) {
-    .footer {
-        background-color: #4b0068 !important; /* Fondo violeta del celu */
-        padding: 40px 0 0 !important;
-        margin-top: 40px !important;
-        width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    .footer-contenido {
-        width: 100% !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; /* Centra todo en mobile */
-        text-align: center !important;
-    }
-
-    .footer-left {
-        padding: 0 20px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .footer-left img {
-        width: 220px !important;
-        max-width: 85% !important;
-        margin: 0 auto 25px !important;
-        display: block !important;
-    }
-
-    .footer h3 {
-        color: #ffffff !important; /* Título Blanco */
-        font-size: 16px !important;
-        margin: 0 0 12px !important;
-        font-weight: bold !important;
-        letter-spacing: 1px !important;
-    }
-
-    .footer address {
-        font-style: normal !important;
-    }
-
-    .footer address p {
-        color: #ffffff !important; /* Texto Blanco */
-        font-size: 13px !important;
-        margin: 6px 0 !important;
-    }
-
-    .footer-right {
-        width: 100% !important;
-        margin-top: 25px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Redes sociales en Mobile */
-    .redes {
-        list-style: none !important;
-        list-style-type: none !important;
-        padding: 0 !important;
-        margin: 0 0 35px !important; /* Espacio antes de la barra negra */
-        display: flex !important;
-        justify-content: center !important;
-    }
-
-    .redes li {
-        list-style: none !important;
-        list-style-type: none !important;
-    }
-
-    .redes img {
-        width: 160px !important; /* Tamaño original de tu móvil */
-        height: auto !important;
-        display: block !important;
-    }
-
-    /* 🌟 FRANJA NEGRA EN MOBILE: Corregida para ocupar todo el ancho */
-    .links {
-        background-color: #0b020f !important; /* Fondo negro de la captura */
-        position: static !important; /* Resetea el absoluto de la web */
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 20px 40px !important;
-        box-sizing: border-box !important;
-        list-style: none !important;
-        list-style-type: none !important;
-        display: flex !important;
-        flex-direction: column !important; /* Uno abajo del otro en vertical */
-        align-items: center !important;
-        gap: 15px !important;
-    }
-
-    .links li {
-        list-style: none !important;
-        list-style-type: none !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    .links a {
-        color: #ffffff !important; /* Links Blancos */
-        font-size: 13px !important;
-        text-decoration: none !important;
-        display: inline-block !important;
-    }
-}
-
-/* ==========================================================================
-   3. VERSION WEB (El código que te pasé recién para arreglar la compu)
-   ========================================================================== */
-@media (min-width: 1024px) {
     .footer {
         background-color: #0b020f !important; 
         padding: 0 !important;
