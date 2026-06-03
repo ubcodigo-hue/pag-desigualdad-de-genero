@@ -1402,21 +1402,33 @@ html {
 }
 
   .footer {
-        background-color: #4b0068 !important;
-        padding: 30px 0 45px !important;
-        margin: 0 !important;
-        color: white !important;
-    }
+    background-color: #4b0068 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+
+    display: block !important;
+
+    padding: 30px 0 45px !important;
+    margin: 0 !important;
+
+    color: white !important;
+    box-sizing: border-box !important;
+}
 
     .footer-contenido {
-        padding: 0 120px !important;
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        box-sizing: border-box !important;
-    }
+    width: 100% !important;
+    max-width: 1600px !important;
 
+    margin: 0 auto !important;
+
+    padding: 0 120px !important;
+
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    box-sizing: border-box !important;
+}
     .footer-left {
         display: flex !important;
         flex-direction: row !important;
