@@ -270,14 +270,19 @@ main {
 
     /* Reordenamos las flechas abajo de todo */
     .flecha-btn {
-        order: 3; /* Mandamos las flechas al final */
+        order: 3; 
         background: none;
         border: none;
         font-size: 35px;
         color: #ffffff;
         cursor: pointer;
         display: inline-block;
-        margin: 10px 15px 0; /* Les da espacio */
+        margin: -5px auto 0; /* 🌟 Esto hace que suba y se pegue al nombre */
+    }
+
+    /* 🌟 Esto hace que la flecha izquierda desaparezca en el celular */
+    #btn-anterior {
+        display: none !important;
     }
 } /* Esta llave cierra el candado de celular */
 
