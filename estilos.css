@@ -1149,10 +1149,109 @@ header {
     box-sizing: border-box;
 }
 
-header > a img {
-    height: 58px !important;
-    width: auto;
-    display: block;
+    .links li {
+        list-style: none !important;
+        list-style-type: none !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .links a {
+        color: #ffffff !important;
+        font-size: 13px !important;
+        text-decoration: none !important;
+        display: inline-block !important;
+    }
+    @media (max-width: 1023px) {
+
+    .footer {
+        background-color: #4b0068 !important;
+        width: 100% !important;
+        margin-top: 40px !important;
+        padding: 35px 0 0 !important;
+        color: white !important;
+    }
+
+    .footer-contenido {
+        width: 100% !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        text-align: left !important;
+    }
+
+    .footer-left {
+        padding: 0 35px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .footer-left img {
+        width: 230px !important;
+        margin: 0 auto 30px !important;
+        display: block !important;
+    }
+
+    .footer-texto h3 {
+        color: white !important;
+        font-size: 15px !important;
+        margin: 0 0 15px !important;
+    }
+
+    .footer address p {
+        color: white !important;
+        font-size: 13px !important;
+        margin: 8px 0 !important;
+    }
+
+    .footer-right {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        margin-top: 25px !important;
+    }
+
+    .redes {
+        order: 1 !important;
+        list-style: none !important;
+        padding: 0 35px !important;
+        margin: 0 0 30px !important;
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+
+    .redes img {
+        width: 150px !important;
+        height: auto !important;
+    }
+
+    .links {
+        order: 2 !important;
+        background-color: #0b020f !important;
+        width: 100% !important;
+        padding: 28px 35px 45px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+
+        list-style: none !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 14px 24px !important;
+    }
+
+    .links li {
+        list-style: none !important;
+    }
+
+    .links a {
+        color: white !important;
+        font-size: 12px !important;
+        text-decoration: none !important;
+    }
+}
 }
 
  /* OCULTAR HAMBURGUESA */
