@@ -1161,35 +1161,21 @@ header > a img {
 }
 
 .footer-right {
-<<<<<<< HEAD
     width: 100% !important;
     margin-top: 25px !important;
 
-=======
-    width: 100% !important;
->>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
 }
 
 .redes {
-<<<<<<< HEAD
     list-style: none !important;
     padding: 0 35px !important;
     margin: 0 0 25px !important;
 
     display: flex !important;
     justify-content: flex-start !important;
-=======
-    order: 1 !important;
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 25px 0 20px !important;
-
-    display: flex !important;
-    justify-content: center !important;
->>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
 }
 
 .redes li {
@@ -1203,13 +1189,14 @@ header > a img {
 }
 
 .links {
+    order: 2 !important;
+
     background-color: #0b020f !important;
 
-    width: 100% !important;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
 
-    margin: 0 !important;
     padding: 30px 20px 40px !important;
-
     box-sizing: border-box !important;
 
     list-style: none !important;
