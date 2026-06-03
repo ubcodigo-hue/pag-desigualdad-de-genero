@@ -874,6 +874,7 @@ body {
 /* ========================= */
 /* PROBLEMÁTICA SOCIAL */
 /* ========================= */
+@media (max-width: 1023px) {
 
 html {
     scroll-behavior: smooth;
@@ -1128,7 +1129,7 @@ body {
     }
 
     .footer-left img {
-        width: 240px !important;
+         width: 180px !important;
         max-width: 85% !important;
         margin: 0 0 35px 0 !important;
     }
@@ -1192,6 +1193,12 @@ body {
         font-size: 11px !important;
         white-space: nowrap !important;
     }
+    .links a,
+.links a:link,
+.links a:visited {
+    color: white !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
 }
 
 
