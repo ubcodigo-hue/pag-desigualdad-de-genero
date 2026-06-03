@@ -1458,19 +1458,24 @@ html {
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column !important; /* Apila caja violeta arriba y links abajo */
     }
 
     .footer-contenido {
         /* La caja violeta se limita arriba */
         background-color: #4b0068 !important; 
         padding: 40px 120px !important;
+        display: flex !important; /* 🌟 Agregado: Evita que se rompa el layout interno */
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
+        order: 1; /* 🌟 Agregado: Asegura que el bloque violeta se quede arriba */
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .footer-left {
+        display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
         gap: 45px !important;
@@ -1485,14 +1490,18 @@ html {
     .footer-texto h3 {
         font-size: 11px !important;
         margin: 0 0 6px !important;
+        font-family: "Space Mono", monospace !important;
     }
 
     .footer-texto p {
         font-size: 11px !important;
         margin: 2px 0 !important;
+        font-family: "Space Mono", monospace !important;
     }
 
     .footer-right {
+        display: flex !important;
+        flex-direction: column !important;
         align-items: flex-end !important;
         gap: 12px !important;
         margin-top: 0 !important;
@@ -1502,23 +1511,32 @@ html {
     .redes {
         padding: 0 !important;
         margin: 0 !important;
+        display: flex !important;
     }
 
     .redes img {
         width: 95px !important;
     }
 
-    /* Los links se acomodan horizontales sobre la base negra de PC */
+    /* 🌟 ACÁ ESTÁ EL ARREGLO DE LOS LINKS PARA PC */
     .links {
         background-color: transparent !important; /* Quita el bloque negro interno */
+        display: flex !important; /* 🌟 CLAVE: Activa el modo Flexbox que se había borrado */
+        flex-direction: row !important; /* 🌟 CLAVE: Fuerza la hilera horizontal */
+        flex-wrap: nowrap !important; /* 🌟 CLAVE: Evita saltos de línea raros */
         padding: 20px 120px !important; /* Misma alineación que la caja violeta */
-        justify-content: flex-end !important;
+        justify-content: flex-end !important; /* Los empuja alineados a la derecha */
         gap: 22px !important;
+        order: 2; /* 🌟 Agregado: Lo manda abajo de todo a la franja negra */
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .links a {
         font-size: 10px !important;
         white-space: nowrap !important;
+        font-family: "Space Mono", monospace !important;
     }
 }
 
