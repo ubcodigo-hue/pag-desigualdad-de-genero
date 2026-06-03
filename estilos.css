@@ -1111,6 +1111,18 @@ header > a img {
     color: #ffeb3b !important;
 }
 
+.menu-principal ul ul li a,
+.menu-principal ul ul li a:link,
+.menu-principal ul ul li a:visited {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.menu-principal ul ul li a:hover,
+.menu-principal ul ul li a:active {
+    color: #ffff00 !important;
+}
+
 /* FOOTER MOBILE */
 
 .footer,
