@@ -581,7 +581,7 @@ html {
         font-size: 16px;
     }
 
-    /* 🌟 FLECHAS LIMPIAS Y CON HOVER AMARILLO FLÚOR */
+    /* FLECHAS LIMPIAS Y CON HOVER AMARILLO FLÚOR */
     .flecha-btn {
         background: transparent !important; /* Saca cualquier recuadro gris */
         border: none !important;            /* Saca bordes raros */
@@ -594,61 +594,79 @@ html {
     .flecha-btn:hover,
     .flecha-btn:active,
     .flecha-btn:focus {
-        color: #ffff00 !important; /* 🌟 SE COPIAN EN AMARILLO AL TOCARLAS */
+        color: #ffff00 !important; /* SE COPIAN EN AMARILLO AL TOCARLAS */
         transform: scale(1.2);
         outline: none;
     }
-    /* VIDEO PC HORIZONTAL */
+    /* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA (CENTRADITO) --- */
     .video {
         margin-top: 90px;
+        position: relative; /* Nos permite acomodar el título con absoluta precisión */
+        padding-top: 40px;  /* Le da aire arriba para que el título no tape lo de arriba */
     }
 
+    /* La caja contenedora grande */
+    .video-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: 4px solid #9700c9;
+        border-radius: 55px; /* Súper redondeado como tu foto */
+        padding: 80px 50px 50px; /* Más padding arriba para hacerle lugar al título */
+        gap: 50px;
+        position: relative;
+    }
+
+    /* Movemos el header viejo para que se meta adentro de la caja */
     .video-header {
-        margin: 0 70px 18px;
+        position: absolute;
+        top: 35px;       /* Lo empuja hacia adentro de la caja */
+        left: 50px;      /* Lo alinea perfecto con el párrafo */
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 0;       /* Limpia el margen viejo */
     }
 
     .video-header h2 {
+        margin: 0;
+        font-family: "Space Mono", monospace;
+        color: #4b0068;
         font-size: 14px;
+        letter-spacing: 1px;
     }
 
     .etiqueta {
-        font-size: 16px;
-        padding: 5px 28px;
+        background-color: #4b0068; /* El color violeta de tu cápsula */
+        color: white;
+        text-decoration: none;
+        padding: 5px 24px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-family: "Space Mono", monospace;
+        font-weight: bold;
     }
 
-    .video-box {
-        display: flex;
-        align-items: center;
-        gap: 45px;
-        border-radius: 45px;
-        padding: 45px;
-    }
-
+    /* El párrafo de la izquierda */
     .video-box p {
-        width: 42%;
-        font-size: 17px;
-        line-height: 24px;
+        width: 40%; /* Se acorta para darle todo el espacio al video */
+        font-size: 18px;
+        line-height: 26px;
         margin: 0;
+        color: #000000;
+        align-self: center;
     }
 
+    /* EL VIDEO: Ahora se hace panorámico como en la foto 14 */
     .video-box iframe {
-        width: 58%;
-        height: 260px;
+        width: 55%;       /* Ocupa más de la mitad de la caja en horizontal */
+        height: 320px;    /* Más alto para que mantenga el formato cine */
         margin-left: 0;
-        border-radius: 35px;
+        border-radius: 40px; /* Bordes redondeados del video */
+        display: block;
+        border: none;
     }
-}
-   
-
-
-
-
-
-
-
-
-
-
 
 
 /* ========/* ========================= */
