@@ -1401,50 +1401,52 @@ html {
     scroll-margin-top: 120px;
 }
 
- .footer {
-        background-color: #0b020f !important; /* Cambia a negro para armar la franja inferior */
+@media (min-width: 1024px) { /* <- REVISÁ QUE ESTA LLAVE ESTÉ ARRIBA */
+
+    .footer {
+        background-color: #0b020f !important; 
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column !important; 
     }
 
     .footer-contenido {
-        background-color: #4b0068 !important; /* Bloque violeta superior */
-        padding: 40px 10% !important; /* Margen proporcional a los lados */
+        background-color: #4b0068 !important; 
+        padding: 40px 10% !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
+        order: 1; /* 🌟 CLAVE: Fuerza al bloque violeta a quedarse arriba */
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .footer-left {
         flex-direction: row !important;
         align-items: center !important;
-        gap: 50px !important;
+        gap: 45px !important;
         padding: 0 !important;
-        text-align: left !important;
     }
 
     .footer-left img {
-        width: 180px !important;
+        width: 170px !important;
         margin: 0 !important;
     }
 
     .footer-texto h3 {
-        font-size: 12px !important;
+        font-size: 11px !important;
         margin: 0 0 6px !important;
     }
 
     .footer-texto p {
         font-size: 11px !important;
-        margin: 3px 0 !important;
+        margin: 2px 0 !important;
     }
 
+    /* 🌟 EL TRUCO MAGISTRAL PARA PC */
     .footer-right {
-        align-items: flex-end !important;
-        margin-top: 0 !important;
-        width: auto !important;
-        gap: 0 !important;
+        display: contents !important; 
     }
 
     .redes {
@@ -1453,23 +1455,27 @@ html {
     }
 
     .redes img {
-        width: 110px !important;
+        width: 95px !important;
     }
 
-    /* ¡CORRECCIÓN CLAVE! Los links se vuelven horizontales abajo en el bloque negro */
+    /* Los links se eyectan abajo del bloque violeta */
     .links {
-        background-color: transparent !important; /* Desaparece el fondo interno */
+        background-color: transparent !important; 
         display: flex !important;
-        flex-direction: row !important; /* Fuerza la fila horizontal de la captura de Illustrator */
-        flex-wrap: nowrap !important; /* Impide que se rompa en dos líneas */
-        justify-content: flex-end !important; /* Los empuja a la derecha */
-        gap: 25px !important; /* Separación horizontal entre palabras */
-        padding: 20px 10% !important; /* Alineado simétrico al bloque violeta */
+        flex-direction: row !important; 
+        flex-wrap: nowrap !important;
+        justify-content: flex-end !important; 
+        gap: 22px !important;
+        padding: 20px 10% !important; 
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        order: 2; /* 🌟 CLAVE: Se posiciona abajo de todo en la franja negra */
     }
 
     .links a {
-        font-size: 11px !important;
-        white-space: nowrap !important; /* Evita saltos de renglón extraños */
+        font-size: 10px !important;
+        white-space: nowrap !important;
     }
 }
 
