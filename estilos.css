@@ -1091,7 +1091,7 @@ header > a img {
 }
 
 .menu-principal ul ul {
-    display: flex !important;
+    display: none !important;
     flex-direction: column !important;
     gap: 10px !important;
 
@@ -1100,11 +1100,10 @@ header > a img {
     margin-top: 10px !important;
 }
 
-.menu-principal ul ul a {
-    color: rgba(255,255,255,0.85) !important;
-    font-size: 13px !important;
-    text-decoration: none !important;
-    font-family: "Space Mono", monospace !important;
+/* SE ABRE SOLO CUANDO JS AGREGA LA CLASE abierto */
+
+.menu-principal > ul > li.abierto > ul {
+    display: flex !important;
 }
 
 .menu-principal ul ul a:hover,
