@@ -290,17 +290,15 @@ main {
 .video {
     margin-top: 60px;
 }
-
 .video-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* 🌟 Los junta a la izquierda */
     align-items: center;
-    gap: 12px;
-    margin: 0 12px 12px;
-    background: transparent;
+    gap: 15px;
+    margin: 0 12px 25px;        /* 🌟 Le da aire abajo para despegarlo de la caja */
+    background: transparent !important;
     padding: 0;
 }
-
 .video-header h2 {
     margin: 0;
     font-family: "Space Mono", monospace;
@@ -311,13 +309,15 @@ main {
 }
 
 .etiqueta {
-    background-color: #9700c9;
-    color: white;
+    background-color: #4b0068 !important;  /* 🌟 El violeta oscuro exacto de tu diseño */
+    color: white !important;
     text-decoration: none;
-    padding: 4px 22px;
-    border-radius: 24px;
-    font-size: 15px;
-    font-style: italic;
+    padding: 5px 24px !important;
+    border-radius: 25px !important;       /* Bien redondeado como querías */
+    font-size: 14px;
+    font-style: normal !important;        /* Le saca la itálica para que quede recto y prolijo */
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
     white-space: nowrap;
 }
 
