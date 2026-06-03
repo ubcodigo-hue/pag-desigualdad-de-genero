@@ -1452,6 +1452,9 @@ html {
     scroll-margin-top: 120px;
 }
 
+/* ==========================================================================
+   1. TIPOGRAFÍA Y COLORES GENERALES (Afecta a ambos por igual)
+   ========================================================================== */
 .footer, .footer h3, .footer p, .footer a, .footer address, .links a {
     font-family: "Space Mono", monospace !important;
     color: #ffffff !important;
@@ -1459,56 +1462,49 @@ html {
 }
 
 /* ==========================================================================
-   VERSION MOBILE (Celular - Hasta 1023px)
+   2. VERSION MOBILE (Tu código de celular que ya funciona perfecto)
    ========================================================================== */
 @media (max-width: 1023px) {
     .footer {
-        background-color: #4b0068 !important; /* Fondo violeta */
+        background-color: #4b0068 !important;
         padding: 30px 0 0 !important;
         margin-top: 40px !important;
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
     }
-
     .footer-contenido {
         width: 100% !important;
         padding: 0 !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* Centra todo en el celu */
+        align-items: center !important;
         text-align: center !important;
     }
-
     .footer-left {
         padding: 0 20px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
     }
-
     .footer-left img {
         width: 200px !important;
         max-width: 80% !important;
         margin: 0 auto 25px !important;
         display: block !important;
     }
-
     .footer h3 {
         font-size: 16px !important;
         margin: 0 0 12px !important;
         font-weight: bold !important;
     }
-
     .footer address {
         font-style: normal !important;
     }
-
     .footer address p {
         font-size: 13px !important;
         margin: 6px 0 !important;
     }
-
     .footer-right {
         width: 100% !important;
         margin-top: 25px !important;
@@ -1516,8 +1512,6 @@ html {
         flex-direction: column !important;
         align-items: center !important;
     }
-
-    /* Limpieza de puntos en Mobile */
     .redes {
         list-style: none !important;
         list-style-type: none !important;
@@ -1526,21 +1520,17 @@ html {
         display: flex !important;
         justify-content: center !important;
     }
-
     .redes li {
         list-style: none !important;
         list-style-type: none !important;
     }
-
     .redes img {
-        width: 160px !important; /* Tamaño móvil original */
+        width: 160px !important;
         height: auto !important;
         display: block !important;
     }
-
-    /* Franja Negra Celular */
     .links {
-        background-color: #000000 !important; /* Negro puro */
+        background-color: #000000 !important;
         width: 100% !important;
         margin: 0 !important;
         padding: 30px 20px 40px !important;
@@ -1548,43 +1538,42 @@ html {
         list-style: none !important;
         list-style-type: none !important;
         display: flex !important;
-        flex-direction: column !important; /* Uno abajo del otro */
+        flex-direction: column !important;
         align-items: center !important;
         gap: 15px !important;
     }
-
     .links li {
         list-style: none !important;
         list-style-type: none !important;
     }
-
     .links a {
         font-size: 13px !important;
     }
 }
 
 /* ==========================================================================
-   VERSION WEB (Computadora - Desde 1024px en adelante)
+   3. VERSION WEB (El código que te pasé recién para arreglar la compu)
    ========================================================================== */
 @media (min-width: 1024px) {
     .footer {
-        background-color: #0b020f !important; /* Fondo negro de base */
+        background-color: #0b020f !important; 
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column !important; 
         width: 100% !important;
     }
 
     .footer-contenido {
-        background-color: #4b0068 !important; /* Bloque violeta */
+        background-color: #4b0068 !important; 
         padding: 40px 120px !important;
         display: flex !important;
-        flex-direction: row !important;
+        flex-direction: row !important; 
         justify-content: space-between !important;
         align-items: center !important;
         width: 100% !important;
         box-sizing: border-box !important;
+        position: relative !important;
     }
 
     .footer-left {
@@ -1621,7 +1610,6 @@ html {
         width: auto !important;
     }
 
-    /* Redes grandes y limpias en Web */
     .redes {
         list-style: none !important;
         list-style-type: none !important;
@@ -1636,20 +1624,22 @@ html {
     }
 
     .redes img {
-        width: 140px !important; /* 🌟 Tamaño grande pedido para PC */
+        width: 140px !important; 
         min-width: 140px !important;
         height: auto !important;
         display: block !important;
     }
 
-    /* Links horizontales en la franja negra (Web) */
     .links {
-        background-color: transparent !important; 
+        background-color: #0b020f !important; 
+        position: absolute !important;
+        top: 100% !important; 
+        left: 0 !important;
         display: flex !important; 
-        flex-direction: row !important; /* Hacia la derecha */
+        flex-direction: row !important; 
         flex-wrap: nowrap !important; 
-        padding: 20px 120px !important;
-        justify-content: flex-end !important;
+        padding: 20px 120px !important; 
+        justify-content: flex-end !important; 
         gap: 22px !important;
         margin: 0 !important;
         width: 100% !important;
