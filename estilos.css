@@ -1186,21 +1186,14 @@ header > a img {
 }
 
 .footer-right {
-    width: 100% !important;
-    margin-top: 25px !important;
-
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
 }
 
 .redes {
-    list-style: none !important;
-    padding: 0 35px !important;
-    margin: 0 0 25px !important;
-
-    display: flex !important;
-    justify-content: flex-start !important;
+    order: 1 !important;
+    margin-bottom: 20px !important;
 }
 
 .redes li {
@@ -1214,6 +1207,8 @@ header > a img {
 }
 
 .links {
+    order: 2 !important;
+
     background-color: #0b020f !important;
 
     width: 100% !important;
