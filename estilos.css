@@ -1413,7 +1413,7 @@ html {
 
     .footer-contenido {
         background-color: #4b0068 !important; 
-        padding: 40px 10% !important;
+          padding:0 120px !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
@@ -1430,9 +1430,8 @@ html {
     }
 
     .footer-left img {
-        width: 170px !important;
-        margin: 0 !important;
-    }
+    width: 220px !important;
+}
 
     .footer-texto h3 {
         font-size: 11px !important;
@@ -1477,6 +1476,23 @@ html {
         font-size: 10px !important;
         white-space: nowrap !important;
     }
+    .footer,
+    .footer p,
+    .footer h3,
+    .footer address,
+    .footer a{
+        color:white !important;
+    }
+
+    .links a{
+        color:white !important;
+        text-decoration:none !important;
+    }
+
+    .footer address p{
+        color:white !important;
+    }
+
 }
 
 @media (max-width: 1023px) {
