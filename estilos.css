@@ -1524,7 +1524,7 @@ html {
     /* ARREGLO DE CAJA DE REDES (DERECHA) */
     .footer-right {
         display: flex !important;
-        flex-direction: row !important; /* Cambiado a row para que se alinee horizontalmente con el logo */
+        flex-direction: row !important;
         align-items: center !important;
         justify-content: flex-end !important;
         margin-top: 0 !important;
@@ -1532,16 +1532,25 @@ html {
     }
 
     .redes {
+        list-style: none !important; /* 🌟 Quita los puntos por completo */
+        list-style-type: none !important; /* Refuerzo para navegadores tercos */
         padding: 0 !important;
         margin: 0 !important;
         display: flex !important;
     }
 
+    .redes li {
+        list-style: none !important; /* 🌟 Quita los puntos del contenedor del ícono */
+        list-style-type: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     .redes img {
-        width: 140px !important; /* 🌟 Subido de 95px a 140px para que sea más grande */
+        width: 130px !important; /* 🌟 Tamaño ideal para que se vea grande y no se rompa */
         height: auto !important;
         display: block !important;
-        transition: transform 0.3s ease !important; /* Hace que el efecto de movimiento sea suave */
+        min-width: 130px !important; /* 🌟 Fuerza al navegador a mostrar la imagen y no achicarla a cero */
     }
 
     /* 💡 OPCIONAL: Un mini efecto para que cuando pases el mouse se mueva sutilmente */
