@@ -918,86 +918,114 @@ header > a img {
 }
 
 .menu-principal {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
 }
 
+/* El checkbox oculto pero funcional */
 .menu-checkbox {
-    display: none !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 32px !important;
+    height: 22px !important;
+    opacity: 0 !important; /* Invisible pero clickable arriba del botón */
+    cursor: pointer !important;
+    z-index: 1002 !important;
+    margin: 0 !important;
 }
 
-/* BOTÓN HAMBURGUESA */
-
+/* El diseño visual de las tres rayitas */
 .hamburguesa-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 32px;
-    height: 22px;
-    cursor: pointer;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 32px !important;
+    height: 22px !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 1001 !important;
 }
 
 .hamburguesa-btn span {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
+    width: 100% !important;
+    height: 3px !important;
+    background-color: #ffffff !important; /* Fuerza las rayitas a blanco */
+    border-radius: 3px !important;
+    display: block !important;
 }
 
-/* MENÚ MOBILE */
+/* ==========================================================================
+   MENÚ DESPLEGABLE MOBILE
+   ========================================================================== */
 
 .menu-principal > ul {
-    display: none;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    width: 100%;
-    background-color: #9700c9;
-
-    list-style: none;
-    margin: 0;
-    padding: 25px 20px;
-
-    box-sizing: border-box;
-    flex-direction: column;
-    gap: 18px;
+    display: none !important; /* Oculto por defecto */
+    position: absolute !important;
+    top: calc(100% + 18px) !important; /* Baja justo abajo de la barra violeta */
+    right: -5% !important; /* Se pega al borde derecho de la pantalla */
+    width: 250px !important; /* Ancho cómodo tipo tarjeta flotante */
+    background-color: #9700c9 !important; /* Violeta del header */
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 25px 20px !important;
+    box-sizing: border-box !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    border-radius: 0 0 0 20px !important; /* Esquina redondeada abajo a la izq */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3) !important; /* Sombrita para que flote prolijo */
+    z-index: 999 !important;
 }
 
+/* 🌟 EL ACTIVADOR CLAVE: Cuando el check está activo, muestra la lista */
 .menu-checkbox:checked ~ ul {
-    display: flex;
+    display: flex !important;
 }
 
 .menu-principal > ul > li {
-    position: relative;
+    list-style: none !important;
+    list-style-type: none !important;
+    position: relative !important;
+    text-align: left !important;
 }
 
 .menu-principal > ul > li > a {
-    color: white !important;
-    font-family: "Space Mono", monospace;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
+    color: #ffffff !important;
+    font-family: "Space Mono", monospace !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: block !important;
 }
 
-/* SUBMENÚ MOBILE */
+/* ==========================================================================
+   SUBMENÚ INTERNO (MOBILE)
+   ========================================================================== */
 
 .menu-principal ul ul {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    list-style: none !important;
+    list-style-type: none !important;
+    padding-left: 15px !important;
+    margin-top: 10px !important;
+}
 
-    list-style: none;
-    padding-left: 18px;
-    margin-top: 10px;
+.menu-principal ul ul li {
+    list-style: none !important;
+    list-style-type: none !important;
 }
 
 .menu-principal ul ul a {
-    color: white !important;
-    font-size: 13px;
-    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85) !important; /* Blanco sutilmente traslúcido */
+    font-size: 13px !important;
+    text-decoration: none !important;
+    font-family: "Space Mono", monospace !important;
+    display: block !important;
 }
 
 /* --- INTERIOR DE LA PÁGINA (MOBILE) --- */
