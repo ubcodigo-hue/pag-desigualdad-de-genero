@@ -1452,25 +1452,22 @@ html {
     scroll-margin-top: 120px;
 }
 
-@media (min-width: 1024px) { /* <- REVISÁ QUE ESTA LLAVE ESTÉ ARRIBA */
-
-    .footer {
+  .footer {
+        /* El truco para PC: el contenedor padre se vuelve negro */
         background-color: #0b020f !important; 
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important; 
+        flex-direction: column !important;
     }
 
     .footer-contenido {
+        /* La caja violeta se limita arriba */
         background-color: #4b0068 !important; 
-          padding:0 120px !important;
+        padding: 40px 120px !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        order: 1; /* 🌟 CLAVE: Fuerza al bloque violeta a quedarse arriba */
-        width: 100% !important;
-        box-sizing: border-box !important;
     }
 
     .footer-left {
@@ -1481,8 +1478,9 @@ html {
     }
 
     .footer-left img {
-    width: 220px !important;
-}
+        width: 170px !important;
+        margin: 0 !important;
+    }
 
     .footer-texto h3 {
         font-size: 11px !important;
@@ -1494,9 +1492,11 @@ html {
         margin: 2px 0 !important;
     }
 
-    /* 🌟 EL TRUCO MAGISTRAL PARA PC */
     .footer-right {
-        display: contents !important; 
+        align-items: flex-end !important;
+        gap: 12px !important;
+        margin-top: 0 !important;
+        width: auto !important;
     }
 
     .redes {
@@ -1508,42 +1508,18 @@ html {
         width: 95px !important;
     }
 
-    /* Los links se eyectan abajo del bloque violeta */
+    /* Los links se acomodan horizontales sobre la base negra de PC */
     .links {
-        background-color: transparent !important; 
-        display: flex !important;
-        flex-direction: row !important; 
-        flex-wrap: nowrap !important;
-        justify-content: flex-end !important; 
+        background-color: transparent !important; /* Quita el bloque negro interno */
+        padding: 20px 120px !important; /* Misma alineación que la caja violeta */
+        justify-content: flex-end !important;
         gap: 22px !important;
-        padding: 20px 10% !important; 
-        margin: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        order: 2; /* 🌟 CLAVE: Se posiciona abajo de todo en la franja negra */
     }
 
     .links a {
         font-size: 10px !important;
         white-space: nowrap !important;
     }
-    .footer,
-    .footer p,
-    .footer h3,
-    .footer address,
-    .footer a{
-        color:white !important;
-    }
-
-    .links a{
-        color:white !important;
-        text-decoration:none !important;
-    }
-
-    .footer address p{
-        color:white !important;
-    }
-
 }
 
 @media (max-width: 1023px) {
