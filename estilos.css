@@ -1452,24 +1452,24 @@ html {
     scroll-margin-top: 120px;
 }
 
-  .footer {
-        /* El truco para PC: el contenedor padre se vuelve negro */
+ .footer {
+        /* Fuerza la base negra abajo */
         background-color: #0b020f !important; 
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important; /* Apila caja violeta arriba y links abajo */
+        flex-direction: column !important; /* Caja violeta arriba, links abajo */
+        width: 100% !important;
     }
 
     .footer-contenido {
-        /* La caja violeta se limita arriba */
+        /* Mantiene el bloque de arriba violeta */
         background-color: #4b0068 !important; 
         padding: 40px 120px !important;
-        display: flex !important; /* 🌟 Agregado: Evita que se rompa el layout interno */
+        display: flex !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        order: 1; /* 🌟 Agregado: Asegura que el bloque violeta se quede arriba */
         width: 100% !important;
         box-sizing: border-box !important;
     }
@@ -1487,23 +1487,28 @@ html {
         margin: 0 !important;
     }
 
+    /* TEXTOS EN BLANCO Y CON SPACE MONO */
     .footer-texto h3 {
+        color: #ffffff !important;
         font-size: 11px !important;
         margin: 0 0 6px !important;
         font-family: "Space Mono", monospace !important;
     }
 
-    .footer-texto p {
+    .footer-texto p, 
+    .footer address p {
+        color: #ffffff !important;
         font-size: 11px !important;
         margin: 2px 0 !important;
         font-family: "Space Mono", monospace !important;
     }
 
+    /* ARREGLO DE CAJA DE REDES (DERECHA) */
     .footer-right {
         display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-end !important;
-        gap: 12px !important;
+        flex-direction: row !important; /* Cambiado a row para que se alinee horizontalmente con el logo */
+        align-items: center !important;
+        justify-content: flex-end !important;
         margin-top: 0 !important;
         width: auto !important;
     }
@@ -1516,27 +1521,31 @@ html {
 
     .redes img {
         width: 95px !important;
+        display: block !important;
     }
 
-    /* 🌟 ACÁ ESTÁ EL ARREGLO DE LOS LINKS PARA PC */
+    /* LINKS DE LA FRANJA NEGRA EN LA WEB */
     .links {
-        background-color: transparent !important; /* Quita el bloque negro interno */
-        display: flex !important; /* 🌟 CLAVE: Activa el modo Flexbox que se había borrado */
-        flex-direction: row !important; /* 🌟 CLAVE: Fuerza la hilera horizontal */
-        flex-wrap: nowrap !important; /* 🌟 CLAVE: Evita saltos de línea raros */
+        background-color: transparent !important; 
+        display: flex !important; 
+        flex-direction: row !important; /* Línea horizontal limpia */
+        flex-wrap: nowrap !important; 
         padding: 20px 120px !important; /* Misma alineación que la caja violeta */
-        justify-content: flex-end !important; /* Los empuja alineados a la derecha */
+        justify-content: flex-end !important; /* Tirados a la derecha */
         gap: 22px !important;
-        order: 2; /* 🌟 Agregado: Lo manda abajo de todo a la franja negra */
         margin: 0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    .links a {
+    /* COLOR BLANCO OBLIGATORIO PARA LINKS */
+    .links a, 
+    .footer a {
+        color: #ffffff !important;
         font-size: 10px !important;
         white-space: nowrap !important;
         font-family: "Space Mono", monospace !important;
+        text-decoration: none !important;
     }
 }
 
@@ -1635,18 +1644,5 @@ html {
     }
 
 
-    .footer h3, 
-.footer p, 
-.footer address, 
-.footer a, 
-.links a {
-    color: #ffffff !important;
-    text-decoration: none !important; /* De paso quita el subrayado de los links si quedó alguno */
-}
-
-/* EFECTO HOVER (Opcional): Por si querés que cuando pasen el mouse por encima de los links se sigan viendo bien */
-.links a:hover {
-    color: #9275bf !important;
-    opacity: 0.8; /* Les da un pequeño toque transparente al pasar el mouse */
-}
+    
 }
