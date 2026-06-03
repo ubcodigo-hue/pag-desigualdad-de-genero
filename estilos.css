@@ -233,7 +233,7 @@ main {
         width: 85% !important; /* Más larga */
         border: none;
         height: 2px !important; /* Más gruesa */
-        background-color: rgba(255, 255, 255, 0.7) !important; /* Blanco fuerte */
+        background-color: rgba(82, 11, 85, 0.938) !important; /* violeta fuerte */
         margin: 20px auto 10px;
         display: block;
     }
