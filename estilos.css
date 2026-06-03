@@ -1633,4 +1633,20 @@ html {
         font-size: 12px !important;
         text-decoration: none !important;
     }
+
+
+    .footer h3, 
+.footer p, 
+.footer address, 
+.footer a, 
+.links a {
+    color: #ffffff !important;
+    text-decoration: none !important; /* De paso quita el subrayado de los links si quedó alguno */
+}
+
+/* EFECTO HOVER (Opcional): Por si querés que cuando pasen el mouse por encima de los links se sigan viendo bien */
+.links a:hover {
+    color: #9275bf !important;
+    opacity: 0.8; /* Les da un pequeño toque transparente al pasar el mouse */
+}
 }
