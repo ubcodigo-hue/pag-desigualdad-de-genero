@@ -1466,45 +1466,55 @@ html {
    ========================================================================== */
 @media (max-width: 1023px) {
     .footer {
-        background-color: #4b0068 !important;
-        padding: 30px 0 0 !important;
+        background-color: #4b0068 !important; /* Fondo violeta del celu */
+        padding: 40px 0 0 !important;
         margin-top: 40px !important;
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
     }
+
     .footer-contenido {
         width: 100% !important;
         padding: 0 !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: center !important; /* Centra todo en mobile */
         text-align: center !important;
     }
+
     .footer-left {
         padding: 0 20px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
     }
+
     .footer-left img {
-        width: 200px !important;
-        max-width: 80% !important;
+        width: 220px !important;
+        max-width: 85% !important;
         margin: 0 auto 25px !important;
         display: block !important;
     }
+
     .footer h3 {
+        color: #ffffff !important; /* Título Blanco */
         font-size: 16px !important;
         margin: 0 0 12px !important;
         font-weight: bold !important;
+        letter-spacing: 1px !important;
     }
+
     .footer address {
         font-style: normal !important;
     }
+
     .footer address p {
+        color: #ffffff !important; /* Texto Blanco */
         font-size: 13px !important;
         margin: 6px 0 !important;
     }
+
     .footer-right {
         width: 100% !important;
         margin-top: 25px !important;
@@ -1512,25 +1522,32 @@ html {
         flex-direction: column !important;
         align-items: center !important;
     }
+
+    /* Redes sociales en Mobile */
     .redes {
         list-style: none !important;
         list-style-type: none !important;
         padding: 0 !important;
-        margin: 0 0 30px !important;
+        margin: 0 0 35px !important; /* Espacio antes de la barra negra */
         display: flex !important;
         justify-content: center !important;
     }
+
     .redes li {
         list-style: none !important;
         list-style-type: none !important;
     }
+
     .redes img {
-        width: 160px !important;
+        width: 160px !important; /* Tamaño original de tu móvil */
         height: auto !important;
         display: block !important;
     }
+
+    /* 🌟 FRANJA NEGRA EN MOBILE: Corregida para ocupar todo el ancho */
     .links {
-        background-color: #000000 !important;
+        background-color: #0b020f !important; /* Fondo negro de la captura */
+        position: static !important; /* Resetea el absoluto de la web */
         width: 100% !important;
         margin: 0 !important;
         padding: 30px 20px 40px !important;
@@ -1538,16 +1555,23 @@ html {
         list-style: none !important;
         list-style-type: none !important;
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column !important; /* Uno abajo del otro en vertical */
         align-items: center !important;
         gap: 15px !important;
     }
+
     .links li {
         list-style: none !important;
         list-style-type: none !important;
+        width: 100% !important;
+        text-align: center !important;
     }
+
     .links a {
+        color: #ffffff !important; /* Links Blancos */
         font-size: 13px !important;
+        text-decoration: none !important;
+        display: inline-block !important;
     }
 }
 
