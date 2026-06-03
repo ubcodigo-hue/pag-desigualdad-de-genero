@@ -143,6 +143,11 @@ main {
     font-weight: 700;
     letter-spacing: 1px;
 }
+
+#nuestro-presente {
+    scroll-margin-top: 120px;
+}
+
 /* ======================================================= */
 /* TESTIMONIOS BASE (CELULAR) - CORREGIDO Y AISLADO        */
 /* ======================================================= */
