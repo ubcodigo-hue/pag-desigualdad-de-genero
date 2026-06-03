@@ -1105,100 +1105,103 @@ body {
 
     /* FOOTER MOBILE */
     .footer {
-        background-color: #4b0068 !important;
-        padding: 0 !important;
-        margin-top: 40px !important;
-    }
+    background-color: #4b0068 !important;
+    margin-top: 40px !important;
+    padding: 40px 0 0 !important;
+    width: 100% !important;
+}
 
-    .footer-contenido {
-        background-color: #4b0068 !important;
-        padding: 35px 35px 0 !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-    }
+.footer-contenido {
+    width: 100% !important;
+    padding: 0 !important;
 
-    .footer-left {
-        width: 100% !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-    }
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 
-    .footer-left img {
-         width: 180px !important;
-        max-width: 85% !important;
-        margin: 0 0 35px 0 !important;
-    }
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
 
-    .footer-texto h3 {
-        color: white !important;
-        font-size: 15px !important;
-        margin: 0 0 18px !important;
-    }
+.footer-left {
+    padding: 0 20px !important;
 
-    .footer address p {
-        color: white !important;
-        font-size: 13px !important;
-        margin: 10px 0 !important;
-    }
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
 
-    .footer-right {
-        width: 100% !important;
-        margin-top: 20px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-    }
+.footer-left img {
+    width: 220px !important;
+    max-width: 85% !important;
+    margin: 0 auto 25px !important;
+    display: block !important;
+}
 
-    .redes {
-        order: 1 !important;
-        padding: 0 !important;
-        margin: 0 0 28px !important;
-        list-style: none !important;
-        display: flex !important;
-        justify-content: flex-start !important;
-    }
+.footer-texto h3 {
+    font-size: 16px !important;
+    margin: 0 0 12px !important;
+    letter-spacing: 1px !important;
+}
 
-    .redes img {
-        width: 170px !important;
-        display: block !important;
-    }
+.footer address {
+    font-style: normal !important;
+}
 
-    .links {
-        order: 2 !important;
-        background-color: #000 !important;
-        width: 100vw !important;
-        margin-left: -35px !important;
-        padding: 28px 35px 95px !important;
-        box-sizing: border-box !important;
-        list-style: none !important;
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        justify-content: flex-start !important;
-        gap: 14px 28px !important;
-    }
+.footer address p {
+    font-size: 13px !important;
+    margin: 6px 0 !important;
+}
 
-    .links li {
-        width: auto !important;
-        list-style: none !important;
-    }
+.footer-right {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+}
 
-    .links a, .links a:link, .links a:visited {
-        color: white !important;
-        font-size: 11px !important;
-        white-space: nowrap !important;
-    }
-    .links a,
-.links a:link,
-.links a:visited {
-    color: white !important;
-    font-size: 11px !important;
-    white-space: nowrap !important;
+.redes {
+    order: 1 !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 25px 0 20px !important;
+
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.redes img {
+    width: 160px !important;
+}
+
+.links {
+    order: 2 !important;
+
+    background-color: #0b020f !important;
+
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+
+    padding: 30px 20px 40px !important;
+    box-sizing: border-box !important;
+
+    list-style: none !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.links li {
+    list-style: none !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.links a {
+    font-size: 13px !important;
+    display: inline-block !important;
 }
 
 
