@@ -233,7 +233,7 @@ main {
         width: 85% !important; /* Más larga */
         border: none;
         height: 2px !important; /* Más gruesa */
-        background-color: rgba(82, 11, 85, 0.938) !important; /* violeta fuerte */
+        background-color: rgba(63, 0, 95, 0.938) !important; /* violeta fuerte */
         margin: 20px auto 10px;
         display: block;
     }
@@ -254,20 +254,7 @@ main {
         display: flex;
         flex-direction: column;
     }
-
-    .renglon-nombre {
-        color: rgba(255, 255, 255, 0.7);
-        font-family: "Space Mono", monospace;
-        font-size: 14px;
-        padding: 12px 25px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .renglon-nombre:nth-child(1) { background-color: #8869b8; }
-    .renglon-nombre:nth-child(2) { background-color: #7e5eb1; }
-    .renglon-nombre:nth-child(3) { background-color: #7454aa; }
-    .renglon-nombre:nth-child(4) { background-color: #6a4aa3; }
-
+    
     /* Reordenamos las flechas abajo de todo */
     .flecha-btn {
         order: 3; 
@@ -1111,18 +1098,6 @@ header > a img {
     color: #ffeb3b !important;
 }
 
-.menu-principal ul ul li a,
-.menu-principal ul ul li a:link,
-.menu-principal ul ul li a:visited {
-    color: white !important;
-    text-decoration: none !important;
-}
-
-.menu-principal ul ul li a:hover,
-.menu-principal ul ul li a:active {
-    color: #ffff00 !important;
-}
-
 /* FOOTER MOBILE */
 
 .footer,
@@ -1186,13 +1161,27 @@ header > a img {
 }
 
 .footer-right {
+<<<<<<< HEAD
     width: 100% !important;
+    margin-top: 25px !important;
+
+=======
+    width: 100% !important;
+>>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
 }
 
 .redes {
+<<<<<<< HEAD
+    list-style: none !important;
+    padding: 0 35px !important;
+    margin: 0 0 25px !important;
+
+    display: flex !important;
+    justify-content: flex-start !important;
+=======
     order: 1 !important;
     list-style: none !important;
     padding: 0 !important;
@@ -1200,6 +1189,7 @@ header > a img {
 
     display: flex !important;
     justify-content: center !important;
+>>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
 }
 
 .redes li {
@@ -1213,8 +1203,6 @@ header > a img {
 }
 
 .links {
-    order: 2 !important;
-
     background-color: #0b020f !important;
 
     width: 100% !important;
