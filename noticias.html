@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css?v=600">
 </head>
 
 <body class="pagina-noticias">
 
 <header>
     <a href="index.html">
-        <img src="imagenes/logo.png" alt="Logo Lente Violeta">
+        <img src="imagenes/logo.png" alt="Logo de Lente Violeta">
     </a>
 
-    <input type="checkbox" id="menu">
-    <label for="menu" class="menu-icon">☰</label>
+    <nav class="menu-principal">
+        <input type="checkbox" id="menu-check" class="menu-checkbox" style="display:none;">
 
-   <nav class="menu-principal">
+        <label for="menu-check" class="hamburguesa-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <ul>
             <li>
                 <a href="index.html">OBJETIVOS</a>
@@ -30,11 +35,11 @@
             <li>
                 <a href="problemsocial.html">PROBLEMÁTICA SOCIAL</a>
                 <ul>
-                    <li><a href="problemsocial.html">Desigualdad de género</a></li>
-                    <li><a href="problemsocial.html">Equidad de género</a></li>
-                    <li><a href="problemsocial.html">Violencia de género</a></li>
-                    <li><a href="problemsocial.html">Prácticas judiciales</a></li>
-                    <li><a href="problemsocial.html">Explotación sexual</a></li>
+                    <li><a href="problemsocial.html#desigualdad">Desigualdad de género</a></li>
+                    <li><a href="problemsocial.html#equidad">Equidad de género</a></li>
+                    <li><a href="problemsocial.html#violencia">Violencia de género</a></li>
+                    <li><a href="problemsocial.html#practicas">Prácticas judiciales</a></li>
+                    <li><a href="problemsocial.html#explotacion">Explotación sexual</a></li>
                 </ul>
             </li>
 
@@ -43,7 +48,7 @@
             <li>
                 <a href="noticias.html">NOTICIAS</a>
                 <ul>
-                    <li><a href="#seccion-video">Enterate ya</a></li>
+                    <li><a href="noticias.html">Enterate ya</a></li>
                     <li><a href="noticias.html">Ciencias naturales</a></li>
                     <li><a href="noticias.html">Deporte</a></li>
                     <li><a href="noticias.html">Política</a></li>
@@ -143,7 +148,6 @@
 
 <footer class="footer">
     <section class="footer-contenido">
-
         <section class="footer-left">
             <a href="index.html">
                 <img src="imagenes/logoentero.jpg" alt="Logo Lente Violeta">
@@ -159,10 +163,6 @@
         </section>
 
         <section class="footer-right">
-            <ul class="redes">
-                <li><a href="#"><img src="imagenes/redes-01.png" alt="Redes sociales"></a></li>
-            </ul>
-
             <ul class="links">
                 <li><a href="#">Transparencia</a></li>
                 <li><a href="#">Aviso legal</a></li>
@@ -171,8 +171,15 @@
                 <li><a href="#">Información a socios</a></li>
                 <li><a href="#">Canal de denuncias</a></li>
             </ul>
-        </section>
 
+            <ul class="redes">
+                <li>
+                    <a href="#">
+                        <img src="imagenes/redes-01.png" alt="Redes sociales">
+                    </a>
+                </li>
+            </ul>
+        </section>
     </section>
 </footer>
 
