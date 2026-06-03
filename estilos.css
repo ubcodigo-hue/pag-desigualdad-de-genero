@@ -1401,9 +1401,8 @@ html {
     scroll-margin-top: 120px;
 }
 
-  ..footer {
-        /* El truco para PC: el contenedor padre se vuelve negro */
-        background-color: #0b020f !important; 
+ .footer {
+        background-color: #0b020f !important; /* Cambia a negro para armar la franja inferior */
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
@@ -1411,9 +1410,8 @@ html {
     }
 
     .footer-contenido {
-        /* La caja violeta se limita arriba */
-        background-color: #4b0068 !important; 
-        padding: 40px 120px !important;
+        background-color: #4b0068 !important; /* Bloque violeta superior */
+        padding: 40px 10% !important; /* Margen proporcional a los lados */
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
@@ -1422,30 +1420,31 @@ html {
     .footer-left {
         flex-direction: row !important;
         align-items: center !important;
-        gap: 45px !important;
+        gap: 50px !important;
         padding: 0 !important;
+        text-align: left !important;
     }
 
     .footer-left img {
-        width: 170px !important;
+        width: 180px !important;
         margin: 0 !important;
     }
 
     .footer-texto h3 {
-        font-size: 11px !important;
+        font-size: 12px !important;
         margin: 0 0 6px !important;
     }
 
     .footer-texto p {
         font-size: 11px !important;
-        margin: 2px 0 !important;
+        margin: 3px 0 !important;
     }
 
     .footer-right {
         align-items: flex-end !important;
-        gap: 12px !important;
         margin-top: 0 !important;
         width: auto !important;
+        gap: 0 !important;
     }
 
     .redes {
@@ -1454,20 +1453,23 @@ html {
     }
 
     .redes img {
-        width: 95px !important;
+        width: 110px !important;
     }
 
-    /* Los links se acomodan horizontales sobre la base negra de PC */
+    /* ¡CORRECCIÓN CLAVE! Los links se vuelven horizontales abajo en el bloque negro */
     .links {
-        background-color: transparent !important; /* Quita el bloque negro interno */
-        padding: 20px 120px !important; /* Misma alineación que la caja violeta */
-        justify-content: flex-end !important;
-        gap: 22px !important;
+        background-color: transparent !important; /* Desaparece el fondo interno */
+        display: flex !important;
+        flex-direction: row !important; /* Fuerza la fila horizontal de la captura de Illustrator */
+        flex-wrap: nowrap !important; /* Impide que se rompa en dos líneas */
+        justify-content: flex-end !important; /* Los empuja a la derecha */
+        gap: 25px !important; /* Separación horizontal entre palabras */
+        padding: 20px 10% !important; /* Alineado simétrico al bloque violeta */
     }
 
     .links a {
-        font-size: 10px !important;
-        white-space: nowrap !important;
+        font-size: 11px !important;
+        white-space: nowrap !important; /* Evita saltos de renglón extraños */
     }
 }
 
