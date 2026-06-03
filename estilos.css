@@ -1116,88 +1116,117 @@ header > a img {
 
 /* FOOTER MOBILE */
 
- .footer-contenido {
-    width: 100% !important;
-   padding: 35px 35px 0 !important;
+   .footer {
+        background-color: #4b0068 !important;
+        padding: 0 !important;
+        margin-top: 40px !important;
+    }
 
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
+    .footer-contenido {
+        background-color: #4b0068 !important;
+        padding: 35px 35px 0 !important;
+        box-sizing: border-box !important;
 
-    text-align: left !important;
-    box-sizing: border-box !important;
-}
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
 
-.footer-left {
-    width: 100% !important;
+        text-align: left !important;
+    }
 
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
+    .footer-left {
+        width: 100% !important;
+        padding: 0 !important;
 
-    padding: 0 !important;
-}
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
 
-.footer-left img {
-   width: 180px !important;
-    max-width: 85% !important;
+    .footer-left img {
+        width: 240px !important;
+        max-width: 85% !important;
+        margin: 0 0 35px 0 !important;
+    }
 
-    margin: 0 0 30px 0 !important;
-}
+    .footer-texto {
+        text-align: left !important;
+    }
 
-.footer-texto {
-    text-align: left !important;
-}
+    .footer-texto h3 {
+        color: white !important;
+        font-size: 15px !important;
+        margin: 0 0 18px !important;
+    }
 
-.footer-texto h3 {
-    font-size: 15px !important;
-    margin-bottom: 18px !important;
-}
+    .footer address p {
+        color: white !important;
+        font-size: 13px !important;
+        margin: 10px 0 !important;
+        text-decoration: none !important;
+    }
 
-.footer address p {
-    font-size: 14px !important;
-    margin: 10px 0 !important;
-}
+    .footer-right {
+        width: 100% !important;
+        margin-top: 20px !important;
 
-.footer-right {
-    width: 100% !important;
-    margin-top: 25px !important;
-}
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
 
-.redes {
-    padding: 0 !important;
-     margin: 10px 0 20px !important;
+    .redes {
+        order: 1 !important;
+        padding: 0 !important;
+        margin: 0 0 28px !important;
 
-    display: flex !important;
-    justify-content: flex-start !important;
-}
+        list-style: none !important;
 
-.redes img {
-    width: 180px !important;
-}
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
 
-.links {
-    background-color: #000 !important;
+    .redes img {
+        width: 170px !important;
+        display: block !important;
+    }
 
-    width: 100vw !important;
-    margin-left: calc(-50vw + 50%) !important;
+    .links {
+        order: 2 !important;
 
-    padding: 28px 15px !important;
+        background-color: #000 !important;
 
-    display: flex !important;
-    flex-wrap: wrap !important;
-    flex-direction: row !important;
+        width: 100vw !important;
+        margin-left: -35px !important;
 
-    justify-content: center !important;
-    gap: 10px 18px !important;
+        padding: 28px 35px 95px !important;
+        box-sizing: border-box !important;
 
-.links li {
-    width: auto !important;
-}
+        list-style: none !important;
 
-.links a {
-    font-size: 11px !important;
-    white-space: nowrap !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+
+        justify-content: flex-start !important;
+        gap: 14px 28px !important;
+    }
+
+    .links li {
+        width: auto !important;
+        list-style: none !important;
+        text-align: left !important;
+    }
+
+    .links a,
+    .links a:link,
+    .links a:visited {
+        color: white !important;
+        text-decoration: none !important;
+        font-size: 11px !important;
+        font-family: "Space Mono", monospace !important;
+        white-space: nowrap !important;
+    }
 }
 
 /* ========================= */
