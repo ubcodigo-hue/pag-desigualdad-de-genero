@@ -1032,104 +1032,6 @@ header > a img {
     cursor: pointer;
 }
 
-/* FOOTER MOBILE */
-
-.footer {
-    /* 🌟 El truco: le damos el fondo negro al contenedor padre */
-    background-color: #0b020f !important; 
-    width: 100%;
-    font-family: "Space Mono", monospace;
-}
-
-/* Bloque Violeta en Mobile */
-.footer-contenido {
-    background-color: #4b0068 !important; /* Tu violeta oscuro */
-    padding: 35px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    text-align: center;
-}
-
-/* Elementos de la izquierda (Logo + Contacto) apilados */
-.footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-left img {
-    width: 160px;
-    height: auto;
-    display: block;
-}
-
-.footer-texto h3 {
-    color: white;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 0 0 10px 0;
-}
-
-.footer-texto address {
-    font-style: normal;
-}
-
-.footer-texto p {
-    color: white;
-    font-size: 11px;
-    margin: 5px 0;
-}
-
-/* Elementos de la derecha (Links + Redes unificadas) */
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 25px;
-}
-
-/* La tira de redes (imagen única) va abajo en el bloque violeta */
-.redes {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.redes img {
-    width: 110px; /* Ajustá el tamaño a tu gusto para que se vea bien */
-    height: auto;
-    display: block;
-}
-
-/* 🌟 LOS LINKS LEGALES SALEN DEL VIOLETA: Se posicionan abajo en el fondo negro */
-.links {
-    list-style: none;
-    padding: 25px 20px 10px 20px; /* Espaciado sobre el fondo negro */
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    
-    /* Movemos los links visualmente abajo del bloque violeta */
-    position: relative;
-    background-color: #0b020f; 
-}
-
-.links a {
-    color: white !important;
-    text-decoration: none;
-    font-size: 10px;
-    opacity: 0.8;
-}
-   
 
 
 /* ==========================================================================
@@ -1567,5 +1469,100 @@ html {
     .links a {
         font-size: 10px !important;
         white-space: nowrap !important;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .footer {
+        background-color: #4b0068 !important;
+        padding: 30px 0 0 !important;
+        margin-top: 40px !important;
+        color: white !important;
+    }
+
+    .footer-contenido {
+        width: 100% !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .footer-left {
+        padding: 0 35px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .footer-left img {
+        width: 230px !important;
+        max-width: 80% !important;
+        margin: 0 auto 35px !important;
+        display: block !important;
+    }
+
+    .footer h3 {
+        color: white !important;
+        font-family: "Space Mono", monospace !important;
+        font-size: 16px !important;
+        margin: 0 0 18px !important;
+    }
+
+    .footer address p {
+        color: white !important;
+        font-size: 13px !important;
+        margin: 8px 0 !important;
+        text-decoration: none !important;
+        font-family: "Space Mono", monospace !important;
+    }
+
+    .footer-right {
+        width: 100% !important;
+        margin-top: 25px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .redes {
+        list-style: none !important;
+        padding: 0 35px !important;
+        margin: 0 0 30px !important;
+        display: flex !important;
+    }
+
+    .redes li {
+        list-style: none !important;
+    }
+
+    .redes img {
+        width: 170px !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    .links {
+        background-color: black !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 28px 35px 45px !important;
+        box-sizing: border-box !important;
+
+        list-style: none !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 14px 24px !important;
+    }
+
+    .links li {
+        list-style: none !important;
+    }
+
+    .links a {
+        color: white !important;
+        font-family: "Space Mono", monospace !important;
+        font-size: 12px !important;
+        text-decoration: none !important;
     }
 }
