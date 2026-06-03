@@ -1520,8 +1520,15 @@ html {
     }
 
     .redes img {
-        width: 95px !important;
+        width: 140px !important; /* 🌟 Subido de 95px a 140px para que sea más grande */
+        height: auto !important;
         display: block !important;
+        transition: transform 0.3s ease !important; /* Hace que el efecto de movimiento sea suave */
+    }
+
+    /* 💡 OPCIONAL: Un mini efecto para que cuando pases el mouse se mueva sutilmente */
+    .redes img:hover {
+        transform: scale(1.05) !important; /* Se agranda un 5% al pasar el cursor */
     }
 
     /* LINKS DE LA FRANJA NEGRA EN LA WEB */
