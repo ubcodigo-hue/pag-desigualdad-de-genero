@@ -581,7 +581,7 @@ html {
         font-size: 16px;
     }
 
-    /* FLECHAS LIMPIAS Y CON HOVER AMARILLO FLÚOR */
+    /* 🌟 FLECHAS LIMPIAS Y CON HOVER AMARILLO FLÚOR */
     .flecha-btn {
         background: transparent !important; /* Saca cualquier recuadro gris */
         border: none !important;            /* Saca bordes raros */
@@ -594,79 +594,61 @@ html {
     .flecha-btn:hover,
     .flecha-btn:active,
     .flecha-btn:focus {
-        color: #ffff00 !important; /* SE COPIAN EN AMARILLO AL TOCARLAS */
+        color: #ffff00 !important; /* 🌟 SE COPIAN EN AMARILLO AL TOCARLAS */
         transform: scale(1.2);
         outline: none;
     }
-    /* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA (CENTRADITO) --- */
+    /* VIDEO PC HORIZONTAL */
     .video {
         margin-top: 90px;
-        position: relative; /* Nos permite acomodar el título con absoluta precisión */
-        padding-top: 40px;  /* Le da aire arriba para que el título no tape lo de arriba */
     }
 
-    /* La caja contenedora grande */
-    .video-box {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        border: 4px solid #9700c9;
-        border-radius: 55px; /* Súper redondeado como tu foto */
-        padding: 80px 50px 50px; /* Más padding arriba para hacerle lugar al título */
-        gap: 50px;
-        position: relative;
-    }
-
-    /* Movemos el header viejo para que se meta adentro de la caja */
     .video-header {
-        position: absolute;
-        top: 35px;       /* Lo empuja hacia adentro de la caja */
-        left: 50px;      /* Lo alinea perfecto con el párrafo */
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin: 0;       /* Limpia el margen viejo */
+        margin: 0 70px 18px;
     }
 
     .video-header h2 {
-        margin: 0;
-        font-family: "Space Mono", monospace;
-        color: #4b0068;
         font-size: 14px;
-        letter-spacing: 1px;
     }
 
     .etiqueta {
-        background-color: #4b0068; /* El color violeta de tu cápsula */
-        color: white;
-        text-decoration: none;
-        padding: 5px 24px;
-        border-radius: 25px;
-        font-size: 14px;
-        font-family: "Space Mono", monospace;
-        font-weight: bold;
+        font-size: 16px;
+        padding: 5px 28px;
     }
 
-    /* El párrafo de la izquierda */
+    .video-box {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        border-radius: 45px;
+        padding: 45px;
+    }
+
     .video-box p {
-        width: 40%; /* Se acorta para darle todo el espacio al video */
-        font-size: 18px;
-        line-height: 26px;
+        width: 42%;
+        font-size: 17px;
+        line-height: 24px;
         margin: 0;
-        color: #000000;
-        align-self: center;
     }
 
-    /* EL VIDEO: Ahora se hace panorámico como en la foto 14 */
     .video-box iframe {
-        width: 55%;       /* Ocupa más de la mitad de la caja en horizontal */
-        height: 320px;    /* Más alto para que mantenga el formato cine */
+        width: 58%;
+        height: 260px;
         margin-left: 0;
-        border-radius: 40px; /* Bordes redondeados del video */
-        display: block;
-        border: none;
+        border-radius: 35px;
     }
+}
+   
+
+
+
+
+
+
+
+
+
+
 
 
 /* ========/* ========================= */
@@ -1470,19 +1452,132 @@ html {
     scroll-margin-top: 120px;
 }
 
- .footer {
-        /* Fuerza la base negra abajo */
-        background-color: #0b020f !important; 
+.footer, .footer h3, .footer p, .footer a, .footer address, .links a {
+    font-family: "Space Mono", monospace !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* ==========================================================================
+   VERSION MOBILE (Celular - Hasta 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    .footer {
+        background-color: #4b0068 !important; /* Fondo violeta */
+        padding: 30px 0 0 !important;
+        margin-top: 40px !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .footer-contenido {
+        width: 100% !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centra todo en el celu */
+        text-align: center !important;
+    }
+
+    .footer-left {
+        padding: 0 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .footer-left img {
+        width: 200px !important;
+        max-width: 80% !important;
+        margin: 0 auto 25px !important;
+        display: block !important;
+    }
+
+    .footer h3 {
+        font-size: 16px !important;
+        margin: 0 0 12px !important;
+        font-weight: bold !important;
+    }
+
+    .footer address {
+        font-style: normal !important;
+    }
+
+    .footer address p {
+        font-size: 13px !important;
+        margin: 6px 0 !important;
+    }
+
+    .footer-right {
+        width: 100% !important;
+        margin-top: 25px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Limpieza de puntos en Mobile */
+    .redes {
+        list-style: none !important;
+        list-style-type: none !important;
+        padding: 0 !important;
+        margin: 0 0 30px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .redes li {
+        list-style: none !important;
+        list-style-type: none !important;
+    }
+
+    .redes img {
+        width: 160px !important; /* Tamaño móvil original */
+        height: auto !important;
+        display: block !important;
+    }
+
+    /* Franja Negra Celular */
+    .links {
+        background-color: #000000 !important; /* Negro puro */
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 30px 20px 40px !important;
+        box-sizing: border-box !important;
+        list-style: none !important;
+        list-style-type: none !important;
+        display: flex !important;
+        flex-direction: column !important; /* Uno abajo del otro */
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .links li {
+        list-style: none !important;
+        list-style-type: none !important;
+    }
+
+    .links a {
+        font-size: 13px !important;
+    }
+}
+
+/* ==========================================================================
+   VERSION WEB (Computadora - Desde 1024px en adelante)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    .footer {
+        background-color: #0b020f !important; /* Fondo negro de base */
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important; /* Caja violeta arriba, links abajo */
+        flex-direction: column !important;
         width: 100% !important;
     }
 
     .footer-contenido {
-        /* Mantiene el bloque de arriba violeta */
-        background-color: #4b0068 !important; 
+        background-color: #4b0068 !important; /* Bloque violeta */
         padding: 40px 120px !important;
         display: flex !important;
         flex-direction: row !important;
@@ -1498,6 +1593,7 @@ html {
         align-items: center !important;
         gap: 45px !important;
         padding: 0 !important;
+        text-align: left !important;
     }
 
     .footer-left img {
@@ -1505,23 +1601,17 @@ html {
         margin: 0 !important;
     }
 
-    /* TEXTOS EN BLANCO Y CON SPACE MONO */
     .footer-texto h3 {
-        color: #ffffff !important;
         font-size: 11px !important;
         margin: 0 0 6px !important;
-        font-family: "Space Mono", monospace !important;
     }
 
     .footer-texto p, 
     .footer address p {
-        color: #ffffff !important;
         font-size: 11px !important;
         margin: 2px 0 !important;
-        font-family: "Space Mono", monospace !important;
     }
 
-    /* ARREGLO DE CAJA DE REDES (DERECHA) */
     .footer-right {
         display: flex !important;
         flex-direction: row !important;
@@ -1531,152 +1621,50 @@ html {
         width: auto !important;
     }
 
+    /* Redes grandes y limpias en Web */
     .redes {
-        list-style: none !important; /* 🌟 Quita los puntos por completo */
-        list-style-type: none !important; /* Refuerzo para navegadores tercos */
+        list-style: none !important;
+        list-style-type: none !important;
         padding: 0 !important;
         margin: 0 !important;
         display: flex !important;
     }
 
     .redes li {
-        list-style: none !important; /* 🌟 Quita los puntos del contenedor del ícono */
+        list-style: none !important;
         list-style-type: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
     }
 
     .redes img {
-        width: 130px !important; /* 🌟 Tamaño ideal para que se vea grande y no se rompa */
+        width: 140px !important; /* 🌟 Tamaño grande pedido para PC */
+        min-width: 140px !important;
         height: auto !important;
         display: block !important;
-        min-width: 130px !important; /* 🌟 Fuerza al navegador a mostrar la imagen y no achicarla a cero */
     }
 
-    /* 💡 OPCIONAL: Un mini efecto para que cuando pases el mouse se mueva sutilmente */
-    .redes img:hover {
-        transform: scale(1.05) !important; /* Se agranda un 5% al pasar el cursor */
-    }
-
-    /* LINKS DE LA FRANJA NEGRA EN LA WEB */
+    /* Links horizontales en la franja negra (Web) */
     .links {
         background-color: transparent !important; 
         display: flex !important; 
-        flex-direction: row !important; /* Línea horizontal limpia */
+        flex-direction: row !important; /* Hacia la derecha */
         flex-wrap: nowrap !important; 
-        padding: 20px 120px !important; /* Misma alineación que la caja violeta */
-        justify-content: flex-end !important; /* Tirados a la derecha */
+        padding: 20px 120px !important;
+        justify-content: flex-end !important;
         gap: 22px !important;
         margin: 0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
-    }
-
-    /* COLOR BLANCO OBLIGATORIO PARA LINKS */
-    .links a, 
-    .footer a {
-        color: #ffffff !important;
-        font-size: 10px !important;
-        white-space: nowrap !important;
-        font-family: "Space Mono", monospace !important;
-        text-decoration: none !important;
-    }
-}
-
-@media (max-width: 1023px) {
-
-    .footer {
-        background-color: #4b0068 !important;
-        padding: 30px 0 0 !important;
-        margin-top: 40px !important;
-        color: white !important;
-    }
-
-    .footer-contenido {
-        width: 100% !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-    }
-
-    .footer-left {
-        padding: 0 35px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-    }
-
-    .footer-left img {
-        width: 230px !important;
-        max-width: 80% !important;
-        margin: 0 auto 35px !important;
-        display: block !important;
-    }
-
-    .footer h3 {
-        color: white !important;
-        font-family: "Space Mono", monospace !important;
-        font-size: 16px !important;
-        margin: 0 0 18px !important;
-    }
-
-    .footer address p {
-        color: white !important;
-        font-size: 13px !important;
-        margin: 8px 0 !important;
-        text-decoration: none !important;
-        font-family: "Space Mono", monospace !important;
-    }
-
-    .footer-right {
-        width: 100% !important;
-        margin-top: 25px !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    .redes {
         list-style: none !important;
-        padding: 0 35px !important;
-        margin: 0 0 30px !important;
-        display: flex !important;
-    }
-
-    .redes li {
-        list-style: none !important;
-    }
-
-    .redes img {
-        width: 170px !important;
-        margin: 0 !important;
-        display: block !important;
-    }
-
-    .links {
-        background-color: black !important;
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 28px 35px 45px !important;
-        box-sizing: border-box !important;
-
-        list-style: none !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 14px 24px !important;
+        list-style-type: none !important;
     }
 
     .links li {
         list-style: none !important;
+        list-style-type: none !important;
     }
 
     .links a {
-        color: white !important;
-        font-family: "Space Mono", monospace !important;
-        font-size: 12px !important;
-        text-decoration: none !important;
+        font-size: 10px !important;
+        white-space: nowrap !important;
     }
-
-
-    
 }
