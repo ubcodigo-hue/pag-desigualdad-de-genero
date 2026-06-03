@@ -595,55 +595,32 @@ html {
         transform: scale(1.2);
         outline: none;
     }
-    /* VIDEO PC HORIZONTAL - NUEVO ARREGLADO */
+    /* VIDEO PC HORIZONTAL */
     .video {
         margin-top: 90px;
-        position: relative;
     }
 
-    /* La caja contenedora grande */
-    .video-box {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        border: 4px solid #9700c9;
-        border-radius: 45px;
-        padding: 95px 45px 45px; /* Deja espacio arriba para que entre el título adentro */
-        position: relative;      /* Permite meter el título acá adentro */
-    }
-
-    /* EL TÍTULO: Se mete adentro del rectángulo arriba a la izquierda */
     .video-header {
-        position: absolute !important;
-        top: 35px !important;    /* Lo baja para que quede ADENTRO del borde */
-        left: 45px !important;   /* Lo alinea con el inicio del párrafo */
-        display: flex !important;
-        align-items: center !important;
-        gap: 15px !important;
-        margin: 0 !important;
-        background: transparent !important; /* Limpia cualquier franja de fondo */
-        width: auto !important;
-        padding: 0 !important;
+        margin: 0 70px 18px;
     }
 
     .video-header h2 {
         font-size: 14px;
-        margin: 0;
-        font-family: "Space Mono", monospace;
-        color: #4b0068;
     }
 
     .etiqueta {
         font-size: 16px;
         padding: 5px 28px;
-        background-color: #4b0068 !important; /* El violeta oscuro de la compu */
-        color: white;
-        border-radius: 25px;
-        font-style: normal;
     }
 
-    /* El párrafo de la izquierda */
+    .video-box {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        border-radius: 45px;
+        padding: 45px;
+    }
+
     .video-box p {
         width: 42%;
         font-size: 17px;
@@ -651,16 +628,24 @@ html {
         margin: 0;
     }
 
-    /* EL VIDEO: Se estira a la derecha y queda a 1cm del borde */
     .video-box iframe {
-        width: 50% !important;    /* Ocupa la mitad derecha */
-        height: 310px !important; /* Más alto y panorámico */
+        width: 58%;
+        height: 260px;
         margin-left: 0;
         border-radius: 35px;
-        display: block;
-        border: none;
     }
 }
+   
+
+
+
+
+
+
+
+
+
+
 
 
 /* ========/* ========================= */
@@ -1181,21 +1166,35 @@ header > a img {
 }
 
 .footer-right {
+<<<<<<< HEAD
     width: 100% !important;
     margin-top: 25px !important;
 
+=======
+    width: 100% !important;
+>>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
 }
 
 .redes {
+<<<<<<< HEAD
     list-style: none !important;
     padding: 0 35px !important;
     margin: 0 0 25px !important;
 
     display: flex !important;
     justify-content: flex-start !important;
+=======
+    order: 1 !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 25px 0 20px !important;
+
+    display: flex !important;
+    justify-content: center !important;
+>>>>>>> d9a929b11a1fffb8cd64fe11f333d66451503a13
 }
 
 .redes li {
@@ -1209,14 +1208,13 @@ header > a img {
 }
 
 .links {
-    order: 2 !important;
-
     background-color: #0b020f !important;
 
-    width: 100vw !important;
-    margin-left: calc(-50vw + 50%) !important;
+    width: 100% !important;
 
+    margin: 0 !important;
     padding: 30px 20px 40px !important;
+
     box-sizing: border-box !important;
 
     list-style: none !important;
