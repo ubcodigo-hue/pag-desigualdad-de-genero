@@ -581,7 +581,7 @@ html {
         font-size: 16px;
     }
 
-    /*  FLECHAS LIMPIAS Y CON HOVER AMARILLO FLÚOR */
+    /* FLECHAS LIMPIAS Y CON HOVER AMARILLO FLÚOR */
     .flecha-btn {
         background: transparent !important; /* Saca cualquier recuadro gris */
         border: none !important;            /* Saca bordes raros */
@@ -598,11 +598,11 @@ html {
         transform: scale(1.2);
         outline: none;
     }
-/* VIDEO PC HORIZONTAL */
+   /* --- AJUSTES DE TESTIMONIOS PARA COMPUTADORA (CENTRADITO) --- */
     .video {
         margin-top: 90px;
         position: relative; 
-        padding-top: 4px;  
+        padding-top: 4px;  /* Bajamos el aire de arriba para que no se separe de más */
     }
 
     /* La caja contenedora grande */
@@ -613,13 +613,13 @@ html {
         justify-content: space-between;
         border: 4px solid #9700c9;
         border-radius: 55px; 
-        padding: 90px 50px 50px; 
+        padding: 90px 50px 50px; /* Más espacio arriba para que el título respire adentro */
         gap: 50px;
         position: relative;
-        background: transparent !important; 
+        background: transparent !important; /* Asegura que la caja sea limpia adentro */
     }
 
-    /*  Metemos el título adentro y apagamos la barra violeta estirada */
+    /* 🌟 LA MAGIA: Metemos el título adentro y apagamos la barra violeta */
     .video-header {
         position: absolute !important;
         top: 35px !important;       
@@ -628,17 +628,18 @@ html {
         align-items: center !important;
         gap: 15px !important;
         margin: 0 !important;       
-        background-color: transparent !important; 
-        background: transparent !important;       
-        padding: 0 !important;                    
-        width: auto !important;                   
+        background-color: transparent !important; /* ❌ APAGA LA BARRA MORADA que tapaba el borde */
+        background: transparent !important;       /* Doble refuerzo por si acaso */
+        padding: 0 !important;                    /* Saca espacios raros de la barra */
+        width: auto !important;                   /* Evita que se estire al 100% */
     }
 
     .video-header h2 {
         margin: 0;
-        font-size: 14px;
         font-family: "Space Mono", monospace;
         color: #4b0068;
+        font-size: 14px;
+        letter-spacing: 1px;
     }
 
     .etiqueta {
@@ -654,22 +655,24 @@ html {
 
     /* El párrafo de la izquierda */
     .video-box p {
-        width: 42% !important; 
+        width: 42% !important; /* Controla el ancho del texto */
         font-size: 18px;
         line-height: 26px;
         margin: 0;
         color: #000000;
+        align-self: center;
     }
 
-    /* EL VIDEO: Ahora sí se hace panorámico horizontal */
+    /* 🌟 EL VIDEO: Ahora sí se hace panorámico gigante a la derecha */
     .video-box iframe {
-        width: 53% !important;   
-        height: 310px !important; 
+        width: 53% !important;   /* Ocupa la mitad derecha de la caja */
+        height: 310px !important; /* Más alto para formato horizontal de cine */
         margin-left: 0 !important;
         border-radius: 40px !important; 
         display: block !important;
         border: none !important;
     }
+
 /* ========/* ========================= */
 /* NOTICIAS */
 /* ========================= */
@@ -937,114 +940,86 @@ header > a img {
 }
 
 .menu-principal {
-    display: flex !important;
-    align-items: center !important;
-    position: relative !important;
+    display: flex;
+    align-items: center;
 }
 
-/* El checkbox oculto pero funcional */
 .menu-checkbox {
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 32px !important;
-    height: 22px !important;
-    opacity: 0 !important; /* Invisible pero clickable arriba del botón */
-    cursor: pointer !important;
-    z-index: 1002 !important;
-    margin: 0 !important;
+    display: none !important;
 }
 
-/* El diseño visual de las tres rayitas */
+/* BOTÓN HAMBURGUESA */
+
 .hamburguesa-btn {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    width: 32px !important;
-    height: 22px !important;
-    cursor: pointer !important;
-    position: relative !important;
-    z-index: 1001 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 32px;
+    height: 22px;
+    cursor: pointer;
 }
 
 .hamburguesa-btn span {
-    width: 100% !important;
-    height: 3px !important;
-    background-color: #ffffff !important; /* Fuerza las rayitas a blanco */
-    border-radius: 3px !important;
-    display: block !important;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
 }
 
-/* ==========================================================================
-   MENÚ DESPLEGABLE MOBILE
-   ========================================================================== */
+/* MENÚ MOBILE */
 
 .menu-principal > ul {
-    display: none !important; /* Oculto por defecto */
-    position: absolute !important;
-    top: calc(100% + 18px) !important; /* Baja justo abajo de la barra violeta */
-    right: -5% !important; /* Se pega al borde derecho de la pantalla */
-    width: 250px !important; /* Ancho cómodo tipo tarjeta flotante */
-    background-color: #9700c9 !important; /* Violeta del header */
-    list-style: none !important;
-    list-style-type: none !important;
-    margin: 0 !important;
-    padding: 25px 20px !important;
-    box-sizing: border-box !important;
-    flex-direction: column !important;
-    gap: 18px !important;
-    border-radius: 0 0 0 20px !important; /* Esquina redondeada abajo a la izq */
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.3) !important; /* Sombrita para que flote prolijo */
-    z-index: 999 !important;
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    background-color: #9700c9;
+
+    list-style: none;
+    margin: 0;
+    padding: 25px 20px;
+
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 18px;
 }
 
-/* 🌟 EL ACTIVADOR CLAVE: Cuando el check está activo, muestra la lista */
 .menu-checkbox:checked ~ ul {
-    display: flex !important;
+    display: flex;
 }
 
 .menu-principal > ul > li {
-    list-style: none !important;
-    list-style-type: none !important;
-    position: relative !important;
-    text-align: left !important;
+    position: relative;
 }
 
 .menu-principal > ul > li > a {
-    color: #ffffff !important;
-    font-family: "Space Mono", monospace !important;
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    display: block !important;
+    color: white !important;
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-/* ==========================================================================
-   SUBMENÚ INTERNO (MOBILE)
-   ========================================================================== */
+/* SUBMENÚ MOBILE */
 
 .menu-principal ul ul {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-    list-style: none !important;
-    list-style-type: none !important;
-    padding-left: 15px !important;
-    margin-top: 10px !important;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-.menu-principal ul ul li {
-    list-style: none !important;
-    list-style-type: none !important;
+    list-style: none;
+    padding-left: 18px;
+    margin-top: 10px;
 }
 
 .menu-principal ul ul a {
-    color: rgba(255, 255, 255, 0.85) !important; /* Blanco sutilmente traslúcido */
-    font-size: 13px !important;
-    text-decoration: none !important;
-    font-family: "Space Mono", monospace !important;
-    display: block !important;
+    color: white !important;
+    font-size: 13px;
+    text-decoration: none;
 }
 
 .menu-principal ul ul a:hover,
@@ -1504,152 +1479,26 @@ html {
     scroll-margin-top: 120px;
 }
 
-/* ==========================================================================
-   1. TIPOGRAFÍA Y COLORES GENERALES (Afecta a ambos por igual)
-   ========================================================================== */
-.footer, .footer h3, .footer p, .footer a, .footer address, .links a {
-    font-family: "Space Mono", monospace !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-}
-
-/* ==========================================================================
-   2. VERSION MOBILE (Tu código de celular que ya funciona perfecto)
-   ========================================================================== */
-@media (max-width: 1023px) {
-    .footer {
-        background-color: #4b0068 !important; /* Fondo violeta del celu */
-        padding: 40px 0 0 !important;
-        margin-top: 40px !important;
-        width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    .footer-contenido {
-        width: 100% !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; /* Centra todo en mobile */
-        text-align: center !important;
-    }
-
-    .footer-left {
-        padding: 0 20px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .footer-left img {
-        width: 220px !important;
-        max-width: 85% !important;
-        margin: 0 auto 25px !important;
-        display: block !important;
-    }
-
-    .footer h3 {
-        color: #ffffff !important; /* Título Blanco */
-        font-size: 16px !important;
-        margin: 0 0 12px !important;
-        font-weight: bold !important;
-        letter-spacing: 1px !important;
-    }
-
-    .footer address {
-        font-style: normal !important;
-    }
-
-    .footer address p {
-        color: #ffffff !important; /* Texto Blanco */
-        font-size: 13px !important;
-        margin: 6px 0 !important;
-    }
-
-    .footer-right {
-        width: 100% !important;
-        margin-top: 25px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Redes sociales en Mobile */
-    .redes {
-        list-style: none !important;
-        list-style-type: none !important;
-        padding: 0 !important;
-        margin: 0 0 35px !important; /* Espacio antes de la barra negra */
-        display: flex !important;
-        justify-content: center !important;
-    }
-
-    .redes li {
-        list-style: none !important;
-        list-style-type: none !important;
-    }
-
-    .redes img {
-        width: 160px !important; /* Tamaño original de tu móvil */
-        height: auto !important;
-        display: block !important;
-    }
-
-    /* 🌟 FRANJA NEGRA EN MOBILE: Corregida para ocupar todo el ancho */
-    .links {
-        background-color: #0b020f !important; /* Fondo negro de la captura */
-        position: static !important; /* Resetea el absoluto de la web */
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 20px 40px !important;
-        box-sizing: border-box !important;
-        list-style: none !important;
-        list-style-type: none !important;
-        display: flex !important;
-        flex-direction: column !important; /* Uno abajo del otro en vertical */
-        align-items: center !important;
-        gap: 15px !important;
-    }
-
-    .links li {
-        list-style: none !important;
-        list-style-type: none !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    .links a {
-        color: #ffffff !important; /* Links Blancos */
-        font-size: 13px !important;
-        text-decoration: none !important;
-        display: inline-block !important;
-    }
-}
-
-/* ==========================================================================
-   3. VERSION WEB (El código que te pasé recién para arreglar la compu)
-   ========================================================================== */
-@media (min-width: 1024px) {
-    .footer {
+ .footer {
+        /* Fuerza la base negra abajo */
         background-color: #0b020f !important; 
         padding: 0 !important;
         margin-top: 80px !important;
         display: flex !important;
-        flex-direction: column !important; 
+        flex-direction: column !important; /* Caja violeta arriba, links abajo */
         width: 100% !important;
     }
 
     .footer-contenido {
+        /* Mantiene el bloque de arriba violeta */
         background-color: #4b0068 !important; 
         padding: 40px 120px !important;
         display: flex !important;
-        flex-direction: row !important; 
+        flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
         width: 100% !important;
         box-sizing: border-box !important;
-        position: relative !important;
     }
 
     .footer-left {
@@ -1658,7 +1507,6 @@ html {
         align-items: center !important;
         gap: 45px !important;
         padding: 0 !important;
-        text-align: left !important;
     }
 
     .footer-left img {
@@ -1666,20 +1514,26 @@ html {
         margin: 0 !important;
     }
 
+    /* TEXTOS EN BLANCO Y CON SPACE MONO */
     .footer-texto h3 {
+        color: #ffffff !important;
         font-size: 11px !important;
         margin: 0 0 6px !important;
+        font-family: "Space Mono", monospace !important;
     }
 
     .footer-texto p, 
     .footer address p {
+        color: #ffffff !important;
         font-size: 11px !important;
         margin: 2px 0 !important;
+        font-family: "Space Mono", monospace !important;
     }
 
+    /* ARREGLO DE CAJA DE REDES (DERECHA) */
     .footer-right {
         display: flex !important;
-        flex-direction: row !important;
+        flex-direction: row !important; /* Cambiado a row para que se alinee horizontalmente con el logo */
         align-items: center !important;
         justify-content: flex-end !important;
         margin-top: 0 !important;
@@ -1687,50 +1541,142 @@ html {
     }
 
     .redes {
-        list-style: none !important;
-        list-style-type: none !important;
         padding: 0 !important;
         margin: 0 !important;
         display: flex !important;
     }
 
-    .redes li {
-        list-style: none !important;
-        list-style-type: none !important;
-    }
-
     .redes img {
-        width: 140px !important; 
-        min-width: 140px !important;
+        width: 140px !important; /* 🌟 Subido de 95px a 140px para que sea más grande */
         height: auto !important;
         display: block !important;
+        transition: transform 0.3s ease !important; /* Hace que el efecto de movimiento sea suave */
     }
 
+    /* 💡 OPCIONAL: Un mini efecto para que cuando pases el mouse se mueva sutilmente */
+    .redes img:hover {
+        transform: scale(1.05) !important; /* Se agranda un 5% al pasar el cursor */
+    }
+
+    /* LINKS DE LA FRANJA NEGRA EN LA WEB */
     .links {
-        background-color: #0b020f !important; 
-        position: absolute !important;
-        top: 100% !important; 
-        left: 0 !important;
+        background-color: transparent !important; 
         display: flex !important; 
-        flex-direction: row !important; 
+        flex-direction: row !important; /* Línea horizontal limpia */
         flex-wrap: nowrap !important; 
-        padding: 20px 120px !important; 
-        justify-content: flex-end !important; 
+        padding: 20px 120px !important; /* Misma alineación que la caja violeta */
+        justify-content: flex-end !important; /* Tirados a la derecha */
         gap: 22px !important;
         margin: 0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
+    }
+
+    /* COLOR BLANCO OBLIGATORIO PARA LINKS */
+    .links a, 
+    .footer a {
+        color: #ffffff !important;
+        font-size: 10px !important;
+        white-space: nowrap !important;
+        font-family: "Space Mono", monospace !important;
+        text-decoration: none !important;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .footer {
+        background-color: #4b0068 !important;
+        padding: 30px 0 0 !important;
+        margin-top: 40px !important;
+        color: white !important;
+    }
+
+    .footer-contenido {
+        width: 100% !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .footer-left {
+        padding: 0 35px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .footer-left img {
+        width: 230px !important;
+        max-width: 80% !important;
+        margin: 0 auto 35px !important;
+        display: block !important;
+    }
+
+    .footer h3 {
+        color: white !important;
+        font-family: "Space Mono", monospace !important;
+        font-size: 16px !important;
+        margin: 0 0 18px !important;
+    }
+
+    .footer address p {
+        color: white !important;
+        font-size: 13px !important;
+        margin: 8px 0 !important;
+        text-decoration: none !important;
+        font-family: "Space Mono", monospace !important;
+    }
+
+    .footer-right {
+        width: 100% !important;
+        margin-top: 25px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .redes {
         list-style: none !important;
-        list-style-type: none !important;
+        padding: 0 35px !important;
+        margin: 0 0 30px !important;
+        display: flex !important;
+    }
+
+    .redes li {
+        list-style: none !important;
+    }
+
+    .redes img {
+        width: 170px !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    .links {
+        background-color: black !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 28px 35px 45px !important;
+        box-sizing: border-box !important;
+
+        list-style: none !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 14px 24px !important;
     }
 
     .links li {
         list-style: none !important;
-        list-style-type: none !important;
     }
 
     .links a {
-        font-size: 10px !important;
-        white-space: nowrap !important;
+        color: white !important;
+        font-family: "Space Mono", monospace !important;
+        font-size: 12px !important;
+        text-decoration: none !important;
     }
+
+
+    
 }
